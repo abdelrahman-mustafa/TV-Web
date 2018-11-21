@@ -1,0 +1,17 @@
+# import * from "../../generated/prisma.graphql"
+
+
+type Query {
+
+  licensedTerms(where: LicensedTermWhereInput, orderBy: LicensedTermOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [LicensedTerm]!
+  licensedTerm(where: LicensedTermWhereUniqueInput!): LicensedTerm
+
+}
+
+type Mutation {
+
+   createLicensedTerm(data: LicensedTermCreateInput!): LicensedTerm!
+   updateLicensedTerm(data: LicensedTermUpdateInput!, where: LicensedTermWhereUniqueInput!): LicensedTerm
+   deleteLicensedTerm(where: LicensedTermWhereUniqueInput!): LicensedTerm
+   
+}

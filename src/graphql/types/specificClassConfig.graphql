@@ -1,0 +1,13 @@
+# import *  from "../../generated/prisma.graphql"
+
+type Query {
+  specificClassConfigs(where: SpecificClassConfigWhereInput, orderBy: SpecificClassConfigOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SpecificClassConfig]!
+  specificClassConfig(where: SpecificClassConfigWhereUniqueInput!): SpecificClassConfig
+}
+
+type Mutation {
+  createSpecificClassConfig(data: SpecificClassConfigCreateInput!): SpecificClassConfig!
+  updateSpecificClassConfig(data: SpecificClassConfigUpdateInput!, where: SpecificClassConfigWhereUniqueInput!): SpecificClassConfig
+  deleteSpecificClassConfig(where: SpecificClassConfigWhereUniqueInput!): SpecificClassConfig
+  
+}

@@ -1,0 +1,16 @@
+# import *  from "../../generated/prisma.graphql"
+
+type Query {
+  licensedTeacher(where: LicensedTeacherWhereUniqueInput!): LicensedTeacher
+  licensedTeachers(where: LicensedTeacherWhereInput, orderBy: LicensedTeacherOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [LicensedTeacher]!
+
+}
+
+type Mutation {
+      createLicensedTeacher(data: LicensedTeacherCreateInput!): LicensedTeacher!
+
+      updateLicensedTeacher(data: LicensedTeacherUpdateInput!, where: LicensedTeacherWhereUniqueInput!): LicensedTeacher
+    
+    deleteLicensedTeacher(where: LicensedTeacherWhereUniqueInput!): LicensedTeacher
+
+}

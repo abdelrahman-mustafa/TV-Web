@@ -1,0 +1,16 @@
+# import *  from "../../generated/prisma.graphql"
+
+type Query {
+
+  classes(where: ClassWhereInput, orderBy: ClassOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Class]!
+  class(where: ClassWhereUniqueInput!): Class
+
+}
+
+type Mutation {
+
+  createClass(data: ClassCreateInput!): Class!
+  updateClass(data: ClassUpdateInput!, where: ClassWhereUniqueInput!): Class
+  deleteClass(where: ClassWhereUniqueInput!): Class
+
+}

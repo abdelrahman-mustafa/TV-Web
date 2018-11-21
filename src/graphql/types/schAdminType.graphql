@@ -1,0 +1,25 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+  teachers(where: TeacherWhereInput, orderBy: TeacherOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Teacher]!
+  students(where: StudentWhereInput, orderBy: StudentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Student]!
+  parents(where: ParentWhereInput, orderBy: ParentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Parent]!
+  teacher(where: TeacherWhereUniqueInput!): Teacher
+  student(where: StudentWhereUniqueInput!): Student
+  parent(where: ParentWhereUniqueInput!): Parent
+
+}
+
+type Mutation {
+
+  createStudent(data: StudentCreateInput!): Student!
+  createTeacher(data: TeacherCreateInput!): Teacher!
+  createParent(data: ParentCreateInput!): Parent!
+  updateStudent(data: StudentUpdateInput!, where: StudentWhereUniqueInput!): Student
+  updateParent(data: ParentUpdateInput!, where: ParentWhereUniqueInput!): Parent
+  updateTeacher(data: TeacherUpdateInput!, where: TeacherWhereUniqueInput!): Teacher
+  deleteTeacher(where: TeacherWhereUniqueInput!): Teacher
+  deleteParent(where: ParentWhereUniqueInput!): Parent
+  deleteStudent(where: StudentWhereUniqueInput!): Student
+
+}

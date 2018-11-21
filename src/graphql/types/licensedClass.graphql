@@ -1,0 +1,17 @@
+# import *  from "../../generated/prisma.graphql"
+
+type Query {
+
+  licensedClasses(where: LicensedClassWhereInput, orderBy: LicensedClassOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [LicensedClass]!
+  licensedClass(where: LicensedClassWhereUniqueInput!): LicensedClass
+
+}
+
+type Mutation {
+
+  createLicensedClass(data: LicensedClassCreateInput!): LicensedClass!
+  updateLicensedClass(data: LicensedClassUpdateInput!, where: LicensedClassWhereUniqueInput!): LicensedClass
+  deleteLicensedClass(where: LicensedClassWhereUniqueInput!): LicensedClass
+
+   
+}

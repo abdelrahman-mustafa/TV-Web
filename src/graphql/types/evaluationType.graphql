@@ -1,0 +1,52 @@
+# import * from "../../generated/prisma.graphql"
+
+
+type Query {
+  evaluationStateses(where: EvaluationStatesWhereInput, orderBy: EvaluationStatesOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [EvaluationStates]!
+  evaluationOptionses(where: EvaluationOptionsWhereInput, orderBy: EvaluationOptionsOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [EvaluationOptions]!
+  evaluationStatuses(where: EvaluationStatusWhereInput, orderBy: EvaluationStatusOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [EvaluationStatus]!
+  evaluationResults(where: EvaluationResultWhereInput, orderBy: EvaluationResultOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [EvaluationResult]!
+  evaluationGradeses(where: EvaluationGradesWhereInput, orderBy: EvaluationGradesOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [EvaluationGrades]!
+  evaluations(where: EvaluationWhereInput, orderBy: EvaluationOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Evaluation]!
+  evaluationStates(where: EvaluationStatesWhereUniqueInput!): EvaluationStates
+  evaluationOptions(where: EvaluationOptionsWhereUniqueInput!): EvaluationOptions
+  evaluationStatus(where: EvaluationStatusWhereUniqueInput!): EvaluationStatus
+  evaluationResult(where: EvaluationResultWhereUniqueInput!): EvaluationResult
+  evaluationGrades(where: EvaluationGradesWhereUniqueInput!): EvaluationGrades
+  evaluation(where: EvaluationWhereUniqueInput!): Evaluation
+  question(where: QuestionWhereUniqueInput!): Question
+  questionType(where: QuestionTypeWhereUniqueInput!): QuestionType
+  questions(where: QuestionWhereInput, orderBy: QuestionOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Question]!
+  questionTypes(where: QuestionTypeWhereInput, orderBy: QuestionTypeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [QuestionType]!
+
+}
+
+type Mutation {
+
+    createEvaluationOptions(data: EvaluationOptionsCreateInput!): EvaluationOptions!
+    createEvaluationStates(data: EvaluationStatesCreateInput!): EvaluationStates!
+    createEvaluationStatus(data: EvaluationStatusCreateInput!): EvaluationStatus!
+    createEvaluationResult(data: EvaluationResultCreateInput!): EvaluationResult!
+    createEvaluationGrades(data: EvaluationGradesCreateInput!): EvaluationGrades!
+    createEvaluation(data: EvaluationCreateInput!): Evaluation!
+    updateEvaluationStates(data: EvaluationStatesUpdateInput!, where: EvaluationStatesWhereUniqueInput!): EvaluationStates
+    updateEvaluationOptions(data: EvaluationOptionsUpdateInput!, where: EvaluationOptionsWhereUniqueInput!): EvaluationOptions
+    updateEvaluationStatus(data: EvaluationStatusUpdateInput!, where: EvaluationStatusWhereUniqueInput!): EvaluationStatus
+    updateEvaluationResult(data: EvaluationResultUpdateInput!, where: EvaluationResultWhereUniqueInput!): EvaluationResult
+    updateEvaluationGrades(data: EvaluationGradesUpdateInput!, where: EvaluationGradesWhereUniqueInput!): EvaluationGrades
+    updateEvaluation(data: EvaluationUpdateInput!, where: EvaluationWhereUniqueInput!): Evaluation
+    deleteEvaluationStates(where: EvaluationStatesWhereUniqueInput!): EvaluationStates
+    deleteEvaluationOptions(where: EvaluationOptionsWhereUniqueInput!): EvaluationOptions
+    deleteEvaluationStatus(where: EvaluationStatusWhereUniqueInput!): EvaluationStatus
+    deleteEvaluationResult(where: EvaluationResultWhereUniqueInput!): EvaluationResult
+    deleteEvaluationGrades(where: EvaluationGradesWhereUniqueInput!): EvaluationGrades
+    deleteEvaluation(where: EvaluationWhereUniqueInput!): Evaluation
+    createQuestionType(data: QuestionTypeCreateInput!): QuestionType!
+    createQuestion(data: QuestionCreateInput!): Question!
+    updateQuestionType(data: QuestionTypeUpdateInput!, where: QuestionTypeWhereUniqueInput!): QuestionType
+    updateQuestion(data: QuestionUpdateInput!, where: QuestionWhereUniqueInput!): Question
+    deleteQuestionType(where: QuestionTypeWhereUniqueInput!): QuestionType
+    deleteQuestion(where: QuestionWhereUniqueInput!): Question
+
+
+}

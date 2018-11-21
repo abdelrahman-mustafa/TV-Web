@@ -1,0 +1,40 @@
+# import * from "../../generated/prisma.graphql"
+
+
+
+type Query {
+  cities(where: CityWhereInput, orderBy: CityOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [City]!
+  city(where: CityWhereUniqueInput!): City
+  geoArea(where: GeoAreaWhereUniqueInput!): GeoArea
+  geoAreas(where: GeoAreaWhereInput, orderBy: GeoAreaOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [GeoArea]!
+  studyYears(where: StudyYearWhereInput, orderBy: StudyYearOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [StudyYear]!
+  studyYear(where: StudyYearWhereUniqueInput!): StudyYear
+  levelTwo(where: LevelTwoWhereUniqueInput!): LevelTwo
+  levelOne(where: LevelOneWhereUniqueInput!): LevelOne
+  levelThree(where: LevelThreeWhereUniqueInput!): LevelThree
+  levelTwoes(where: LevelTwoWhereInput, orderBy: LevelTwoOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [LevelTwo]!
+  levelOnes(where: LevelOneWhereInput, orderBy: LevelOneOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [LevelOne]!
+  levelThrees(where: LevelThreeWhereInput, orderBy: LevelThreeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [LevelThree]!
+}
+
+type Mutation {
+  createCity(data: CityCreateInput!): City!
+  createLevelThree(data: LevelThreeCreateInput!): LevelThree!
+  createLevelTwo(data: LevelTwoCreateInput!): LevelTwo!
+  createGeoArea(data: GeoAreaCreateInput!): GeoArea!
+  createLevelOne(data: LevelOneCreateInput!): LevelOne!
+  createStudyYear(data: StudyYearCreateInput!): StudyYear!
+  deleteStudyYear(where: StudyYearWhereUniqueInput!): StudyYear
+  deleteCity(where: CityWhereUniqueInput!): City
+  deleteLevelTwo(where: LevelTwoWhereUniqueInput!): LevelTwo
+  deleteLevelOne(where: LevelOneWhereUniqueInput!): LevelOne
+  deleteGeoArea(where: GeoAreaWhereUniqueInput!): GeoArea
+  deleteLevelThree(where: LevelThreeWhereUniqueInput!): LevelThree
+  updateGeoArea(data: GeoAreaUpdateInput!, where: GeoAreaWhereUniqueInput!): GeoArea
+  updateLevelTwo(data: LevelTwoUpdateInput!, where: LevelTwoWhereUniqueInput!): LevelTwo
+  updateLevelOne(data: LevelOneUpdateInput!, where: LevelOneWhereUniqueInput!): LevelOne
+  updateCity(data: CityUpdateInput!, where: CityWhereUniqueInput!): City
+  updateLevelThree(data: LevelThreeUpdateInput!, where: LevelThreeWhereUniqueInput!): LevelThree
+  updateStudyYear(data: StudyYearUpdateInput!, where: StudyYearWhereUniqueInput!): StudyYear
+ 
+}

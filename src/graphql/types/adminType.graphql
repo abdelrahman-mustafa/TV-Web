@@ -1,0 +1,24 @@
+# import * from "../../generated/prisma.graphql"
+
+
+type Query {
+  nahjAdmin(where: NahjAdminWhereUniqueInput!): NahjAdmin
+  nahjAdmins(where: NahjAdminWhereInput, orderBy: NahjAdminOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [NahjAdmin]!
+
+}
+
+
+type Mutation {
+    signup(username: String!, password: String!): AuthPayload!
+    login(username: String!, password: String!): AuthPayload
+    createNahjAdmin(data: NahjAdminCreateInput!): NahjAdmin!
+    updateNahjAdmin(data: NahjAdminUpdateInput!, where: NahjAdminWhereUniqueInput!): NahjAdmin
+    deleteNahjAdmin(where: NahjAdminWhereUniqueInput!): NahjAdmin
+    deleteUser(id: ID!): User
+  
+}
+
+type AuthPayload {
+  token: String!
+  userId: String!
+}
