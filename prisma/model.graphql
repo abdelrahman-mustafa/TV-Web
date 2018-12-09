@@ -1,0 +1,115 @@
+type Admin {
+    id: ID! @unique
+    username: String!
+    password: String!
+}
+
+
+
+type Program {
+  id: ID! @unique 
+  name: String
+  programDate: String 
+  description: String
+  duration: Int 
+  webBanner: String
+  mobBanner: String
+  icon: String
+  scheduale: [Scheduale!]!
+  playlistUrl: String
+  isShowen: Boolean
+}
+
+type Presenter {
+  id: ID! @unique 
+  name: String
+  position: String
+  cv: String
+  image: String
+}
+
+type Article {
+  id: ID! @unique 
+  name: String
+  writer: String 
+  caption: String
+  publishDate: DateTime
+  publishTime: DateTime
+  article: String
+  images: [String!]!
+  videos: String
+}
+
+type SportsArticle {
+  id: ID! @unique 
+  name: String
+  writer: String 
+  caption: String
+  publishDate: DateTime
+  publishTime: DateTime
+  article: String
+  images: [String!]!
+  videos: String
+}
+
+type Setting {
+  id: ID! @unique 
+  logo: String
+  articlesIcon: String
+  programIcon: String
+  teamIcon: String
+  sportsArticleIcon: String
+  newsPrograms: [Program!]! @relation(name: "News")
+  specialBanners: [Program!]! @relation(name: "Banners")
+  specialPrograms: [Program!]! @relation(name: "Specials")
+  liveUrl: String
+  videoIcon: String
+  infoDaTa: InfoData
+}
+
+type InfoData {
+  id: ID! @unique 
+  address: String
+  phone: Int
+  email: String
+  aboutUs: String
+  policy: String
+  termsOfUse: String
+  fbUrl: String
+  twUrl: String
+  ytUrl: String
+  instUrl: String
+  iosUrl: String
+  andUrl: String
+  videosUrl: String
+  links: [Link!]!
+}
+
+type Link {
+  id: ID! @unique 
+  name: String
+  url: String
+  icon: String
+}
+
+type Event {
+  id: ID! @unique 
+  name: String
+  duration: Int 
+  banner: String 
+  icon: String 
+  scheduales: [Scheduale!]!
+  isShowen: Boolean
+}
+
+type Scheduale {
+  id: ID! @unique 
+  days: [String!]!
+  timeDate: DateTime 
+  startDate: DateTime 
+  endDate: DateTime
+  type: String
+  program: Program
+  event: Event
+}
+

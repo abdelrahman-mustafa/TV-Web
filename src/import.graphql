@@ -1,0 +1,55 @@
+# import *  from "./graphql/types/evaluationType.graphql"
+# import Query.*  from "./graphql/types/evaluationType.graphql"
+# import Mutation*  from "./graphql/types/evaluationType.graphql"
+
+# import *  from "./graphql/types/publicDataType.graphql"
+# import Query.*  from "./graphql/types/publicDataType.graphql"
+# import Mutation.*  from "./graphql/types/publicDataType.graphql"
+
+# import Query.*  from "./graphql/types/schoolType.graphql"
+# import Mutation.*  from "./graphql/types/schoolType.graphql"
+# import *  from "./graphql/types/schoolType.graphql"
+
+# import *  from "./graphql/types/content.graphql"
+# import Query.*  from "./graphql/types/content.graphql"
+# import Mutation.*  from "./graphql/types/content.graphql"
+
+# import *  from "./graphql/types/adminType.graphql"
+# import Query.*  from "./graphql/types/adminType.graphql"
+# import Mutation.*  from "./graphql/types/adminType.graphql"
+
+# import *  from "./graphql/types/schAdminType.graphql"
+# import Query.*  from "./graphql/types/schAdminType.graphql"
+# import Mutation.*  from "./graphql/types/schAdminType.graphql"
+
+# import *  from "./graphql/types/licenseTerm.graphql"
+# import Query.*  from "./graphql/types/licenseTerm.graphql"
+# import Mutation.*  from "./graphql/types/licenseTerm.graphql"
+
+# import *  from "./graphql/types/licensedClass.graphql"
+# import Query.*  from "./graphql/types/licensedClass.graphql"
+# import Mutation.*  from "./graphql/types/licensedClass.graphql"
+
+# import *  from "./graphql/types/studyLevel.graphql"
+# import Query.*  from "./graphql/types/studyLevel.graphql"
+# import Mutation.*  from "./graphql/types/studyLevel.graphql"
+
+# import *  from "./graphql/types/class.graphql"
+# import Query.*  from "./graphql/types/class.graphql"
+# import Mutation.*  from "./graphql/types/class.graphql"
+
+# import *  from "./graphql/types/licensedStudent.graphql"
+# import Query.*  from "./graphql/types/licensedStudent.graphql"
+# import Mutation.*  from "./graphql/types/licensedStudent.graphql"
+
+# import *  from "./graphql/types/licensedTeacher.graphql"
+# import Query.*  from "./graphql/types/licensedTeacher.graphql"
+# import Mutation.*  from "./graphql/types/licensedTeacher.graphql"
+
+# import *  from "./graphql/types/studentTermEvaluation.graphql"
+# import Query.*  from "./graphql/types/studentTermEvaluation.graphql"
+# import Mutation.*  from "./graphql/types/studentTermEvaluation.graphql"
+
+# import *  from "./graphql/types/specificClassConfig.graphql"
+# import Query.*  from "./graphql/types/specificClassConfig.graphql"
+# import Mutation.*  from "./graphql/types/specificClassConfig.graphql"
