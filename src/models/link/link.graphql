@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    links(where: LinkWhereInput, orderBy: LinkOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Link]!
+    link(where: LinkWhereUniqueInput!): Link
+}
+
+type Mutation {
+    createLink(data: LinkCreateInput!): Link!
+    updateLink(data: LinkUpdateInput!, where: LinkWhereUniqueInput!): Link
+    deleteLink(where: LinkWhereUniqueInput!): Link
+}

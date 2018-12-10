@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    infoDatas(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [InfoData]!
+    infoData(where: InfoDataWhereUniqueInput!): InfoData
+}
+
+type Mutation {
+    createInfoData(data: InfoDataCreateInput!): InfoData!
+    updateInfoData(data: InfoDataUpdateInput!, where: InfoDataWhereUniqueInput!): InfoData
+    deleteInfoData(where: InfoDataWhereUniqueInput!): InfoData
+}

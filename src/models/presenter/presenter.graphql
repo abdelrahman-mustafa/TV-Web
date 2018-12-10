@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    presenters(where: PresenterWhereInput, orderBy: PresenterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Presenter]!
+    presenter(where: PresenterWhereUniqueInput!): Presenter
+}
+
+type Mutation {
+    createPresenter(data: PresenterCreateInput!): Presenter!
+    updatePresenter(data: PresenterUpdateInput!, where: PresenterWhereUniqueInput!): Presenter
+    deletePresenter(where: PresenterWhereUniqueInput!): Presenter
+}

@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    schedules(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule]!
+    schedule(where: ScheduleWhereUniqueInput!): Schedule
+}
+
+type Mutation {
+    createSchedule(data: ScheduleCreateInput!): Schedule!
+    updateSchedule(data: ScheduleUpdateInput!, where: ScheduleWhereUniqueInput!): Schedule
+    deleteSchedule(where: ScheduleWhereUniqueInput!): Schedule
+}

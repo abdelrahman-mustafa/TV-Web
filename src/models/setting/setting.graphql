@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    settings(where: SettingWhereInput, orderBy: SettingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Setting]!
+    setting(where: SettingWhereUniqueInput!): Setting
+}
+
+type Mutation {
+    createSetting(data: SettingCreateInput!): Setting!
+    updateSetting(data: SettingUpdateInput!, where: SettingWhereUniqueInput!): Setting
+    deleteSetting(where: SettingWhereUniqueInput!): Setting
+}

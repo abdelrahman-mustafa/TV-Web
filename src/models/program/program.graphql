@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    programs(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program]!
+    program(where: ProgramWhereUniqueInput!): Program
+}
+
+type Mutation {
+    createProgram(data: ProgramCreateInput!): Program!
+    updateProgram(data: ProgramUpdateInput!, where: ProgramWhereUniqueInput!): Program
+    deleteProgram(where: ProgramWhereUniqueInput!): Program
+}

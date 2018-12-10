@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Mon Dec 10 2018 00:19:29 GMT+0200 (Eastern European Standard Time)
+# timestamp: Mon Dec 10 2018 13:41:55 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -257,7 +257,7 @@ type AggregateProgram {
   count: Int!
 }
 
-type AggregateScheduale {
+type AggregateSchedule {
   count: Int!
 }
 
@@ -716,7 +716,7 @@ type Event implements Node {
   duration: Int
   banner: String
   icon: String
-  scheduales(where: SchedualeWhereInput, orderBy: SchedualeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Scheduale!]
+  schedules(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule!]
   isShowen: Boolean
 }
 
@@ -736,15 +736,15 @@ input EventCreateInput {
   banner: String
   icon: String
   isShowen: Boolean
-  scheduales: SchedualeCreateManyWithoutEventInput
+  schedules: ScheduleCreateManyWithoutEventInput
 }
 
-input EventCreateOneWithoutSchedualesInput {
-  create: EventCreateWithoutSchedualesInput
+input EventCreateOneWithoutSchedulesInput {
+  create: EventCreateWithoutSchedulesInput
   connect: EventWhereUniqueInput
 }
 
-input EventCreateWithoutSchedualesInput {
+input EventCreateWithoutSchedulesInput {
   name: String
   duration: Int
   banner: String
@@ -834,19 +834,19 @@ input EventUpdateInput {
   banner: String
   icon: String
   isShowen: Boolean
-  scheduales: SchedualeUpdateManyWithoutEventInput
+  schedules: ScheduleUpdateManyWithoutEventInput
 }
 
-input EventUpdateOneWithoutSchedualesInput {
-  create: EventCreateWithoutSchedualesInput
+input EventUpdateOneWithoutSchedulesInput {
+  create: EventCreateWithoutSchedulesInput
   connect: EventWhereUniqueInput
   disconnect: Boolean
   delete: Boolean
-  update: EventUpdateWithoutSchedualesDataInput
-  upsert: EventUpsertWithoutSchedualesInput
+  update: EventUpdateWithoutSchedulesDataInput
+  upsert: EventUpsertWithoutSchedulesInput
 }
 
-input EventUpdateWithoutSchedualesDataInput {
+input EventUpdateWithoutSchedulesDataInput {
   name: String
   duration: Int
   banner: String
@@ -854,9 +854,9 @@ input EventUpdateWithoutSchedualesDataInput {
   isShowen: Boolean
 }
 
-input EventUpsertWithoutSchedualesInput {
-  update: EventUpdateWithoutSchedualesDataInput!
-  create: EventCreateWithoutSchedualesInput!
+input EventUpsertWithoutSchedulesInput {
+  update: EventUpdateWithoutSchedulesDataInput!
+  create: EventCreateWithoutSchedulesInput!
 }
 
 input EventWhereInput {
@@ -1054,9 +1054,9 @@ input EventWhereInput {
 
   """All values that are not equal to given value."""
   isShowen_not: Boolean
-  scheduales_every: SchedualeWhereInput
-  scheduales_some: SchedualeWhereInput
-  scheduales_none: SchedualeWhereInput
+  schedules_every: ScheduleWhereInput
+  schedules_some: ScheduleWhereInput
+  schedules_none: ScheduleWhereInput
 }
 
 input EventWhereUniqueInput {
@@ -2145,7 +2145,7 @@ type Mutation {
   createSportsArticle(data: SportsArticleCreateInput!): SportsArticle!
   createSetting(data: SettingCreateInput!): Setting!
   createEvent(data: EventCreateInput!): Event!
-  createScheduale(data: SchedualeCreateInput!): Scheduale!
+  createSchedule(data: ScheduleCreateInput!): Schedule!
   createInfoData(data: InfoDataCreateInput!): InfoData!
   createLink(data: LinkCreateInput!): Link!
   createProgram(data: ProgramCreateInput!): Program!
@@ -2155,7 +2155,7 @@ type Mutation {
   updateSportsArticle(data: SportsArticleUpdateInput!, where: SportsArticleWhereUniqueInput!): SportsArticle
   updateSetting(data: SettingUpdateInput!, where: SettingWhereUniqueInput!): Setting
   updateEvent(data: EventUpdateInput!, where: EventWhereUniqueInput!): Event
-  updateScheduale(data: SchedualeUpdateInput!, where: SchedualeWhereUniqueInput!): Scheduale
+  updateSchedule(data: ScheduleUpdateInput!, where: ScheduleWhereUniqueInput!): Schedule
   updateInfoData(data: InfoDataUpdateInput!, where: InfoDataWhereUniqueInput!): InfoData
   updateLink(data: LinkUpdateInput!, where: LinkWhereUniqueInput!): Link
   updateProgram(data: ProgramUpdateInput!, where: ProgramWhereUniqueInput!): Program
@@ -2165,7 +2165,7 @@ type Mutation {
   deleteSportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
   deleteSetting(where: SettingWhereUniqueInput!): Setting
   deleteEvent(where: EventWhereUniqueInput!): Event
-  deleteScheduale(where: SchedualeWhereUniqueInput!): Scheduale
+  deleteSchedule(where: ScheduleWhereUniqueInput!): Schedule
   deleteInfoData(where: InfoDataWhereUniqueInput!): InfoData
   deleteLink(where: LinkWhereUniqueInput!): Link
   deleteProgram(where: ProgramWhereUniqueInput!): Program
@@ -2175,7 +2175,7 @@ type Mutation {
   upsertSportsArticle(where: SportsArticleWhereUniqueInput!, create: SportsArticleCreateInput!, update: SportsArticleUpdateInput!): SportsArticle!
   upsertSetting(where: SettingWhereUniqueInput!, create: SettingCreateInput!, update: SettingUpdateInput!): Setting!
   upsertEvent(where: EventWhereUniqueInput!, create: EventCreateInput!, update: EventUpdateInput!): Event!
-  upsertScheduale(where: SchedualeWhereUniqueInput!, create: SchedualeCreateInput!, update: SchedualeUpdateInput!): Scheduale!
+  upsertSchedule(where: ScheduleWhereUniqueInput!, create: ScheduleCreateInput!, update: ScheduleUpdateInput!): Schedule!
   upsertInfoData(where: InfoDataWhereUniqueInput!, create: InfoDataCreateInput!, update: InfoDataUpdateInput!): InfoData!
   upsertLink(where: LinkWhereUniqueInput!, create: LinkCreateInput!, update: LinkUpdateInput!): Link!
   upsertProgram(where: ProgramWhereUniqueInput!, create: ProgramCreateInput!, update: ProgramUpdateInput!): Program!
@@ -2185,7 +2185,7 @@ type Mutation {
   updateManySportsArticles(data: SportsArticleUpdateInput!, where: SportsArticleWhereInput): BatchPayload!
   updateManySettings(data: SettingUpdateInput!, where: SettingWhereInput): BatchPayload!
   updateManyEvents(data: EventUpdateInput!, where: EventWhereInput): BatchPayload!
-  updateManyScheduales(data: SchedualeUpdateInput!, where: SchedualeWhereInput): BatchPayload!
+  updateManySchedules(data: ScheduleUpdateInput!, where: ScheduleWhereInput): BatchPayload!
   updateManyInfoDatas(data: InfoDataUpdateInput!, where: InfoDataWhereInput): BatchPayload!
   updateManyLinks(data: LinkUpdateInput!, where: LinkWhereInput): BatchPayload!
   updateManyPrograms(data: ProgramUpdateInput!, where: ProgramWhereInput): BatchPayload!
@@ -2195,7 +2195,7 @@ type Mutation {
   deleteManySportsArticles(where: SportsArticleWhereInput): BatchPayload!
   deleteManySettings(where: SettingWhereInput): BatchPayload!
   deleteManyEvents(where: EventWhereInput): BatchPayload!
-  deleteManyScheduales(where: SchedualeWhereInput): BatchPayload!
+  deleteManySchedules(where: ScheduleWhereInput): BatchPayload!
   deleteManyInfoDatas(where: InfoDataWhereInput): BatchPayload!
   deleteManyLinks(where: LinkWhereInput): BatchPayload!
   deleteManyPrograms(where: ProgramWhereInput): BatchPayload!
@@ -2557,7 +2557,7 @@ type Program implements Node {
   webBanner: String
   mobBanner: String
   icon: String
-  scheduale(where: SchedualeWhereInput, orderBy: SchedualeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Scheduale!]
+  schedule(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule!]
   playlistUrl: String
   isShowen: Boolean
 }
@@ -2582,7 +2582,7 @@ input ProgramCreateInput {
   icon: String
   playlistUrl: String
   isShowen: Boolean
-  scheduale: SchedualeCreateManyWithoutProgramInput
+  schedule: ScheduleCreateManyWithoutProgramInput
 }
 
 input ProgramCreateManyInput {
@@ -2590,12 +2590,12 @@ input ProgramCreateManyInput {
   connect: [ProgramWhereUniqueInput!]
 }
 
-input ProgramCreateOneWithoutSchedualeInput {
-  create: ProgramCreateWithoutSchedualeInput
+input ProgramCreateOneWithoutScheduleInput {
+  create: ProgramCreateWithoutScheduleInput
   connect: ProgramWhereUniqueInput
 }
 
-input ProgramCreateWithoutSchedualeInput {
+input ProgramCreateWithoutScheduleInput {
   name: String
   programDate: String
   description: String
@@ -2705,7 +2705,7 @@ input ProgramUpdateDataInput {
   icon: String
   playlistUrl: String
   isShowen: Boolean
-  scheduale: SchedualeUpdateManyWithoutProgramInput
+  schedule: ScheduleUpdateManyWithoutProgramInput
 }
 
 input ProgramUpdateInput {
@@ -2718,7 +2718,7 @@ input ProgramUpdateInput {
   icon: String
   playlistUrl: String
   isShowen: Boolean
-  scheduale: SchedualeUpdateManyWithoutProgramInput
+  schedule: ScheduleUpdateManyWithoutProgramInput
 }
 
 input ProgramUpdateManyInput {
@@ -2730,16 +2730,16 @@ input ProgramUpdateManyInput {
   upsert: [ProgramUpsertWithWhereUniqueNestedInput!]
 }
 
-input ProgramUpdateOneWithoutSchedualeInput {
-  create: ProgramCreateWithoutSchedualeInput
+input ProgramUpdateOneWithoutScheduleInput {
+  create: ProgramCreateWithoutScheduleInput
   connect: ProgramWhereUniqueInput
   disconnect: Boolean
   delete: Boolean
-  update: ProgramUpdateWithoutSchedualeDataInput
-  upsert: ProgramUpsertWithoutSchedualeInput
+  update: ProgramUpdateWithoutScheduleDataInput
+  upsert: ProgramUpsertWithoutScheduleInput
 }
 
-input ProgramUpdateWithoutSchedualeDataInput {
+input ProgramUpdateWithoutScheduleDataInput {
   name: String
   programDate: String
   description: String
@@ -2756,9 +2756,9 @@ input ProgramUpdateWithWhereUniqueNestedInput {
   data: ProgramUpdateDataInput!
 }
 
-input ProgramUpsertWithoutSchedualeInput {
-  update: ProgramUpdateWithoutSchedualeDataInput!
-  create: ProgramCreateWithoutSchedualeInput!
+input ProgramUpsertWithoutScheduleInput {
+  update: ProgramUpdateWithoutScheduleDataInput!
+  create: ProgramCreateWithoutScheduleInput!
 }
 
 input ProgramUpsertWithWhereUniqueNestedInput {
@@ -3122,9 +3122,9 @@ input ProgramWhereInput {
 
   """All values that are not equal to given value."""
   isShowen_not: Boolean
-  scheduale_every: SchedualeWhereInput
-  scheduale_some: SchedualeWhereInput
-  scheduale_none: SchedualeWhereInput
+  schedule_every: ScheduleWhereInput
+  schedule_some: ScheduleWhereInput
+  schedule_none: ScheduleWhereInput
   _MagicalBackRelation_News_every: SettingWhereInput
   _MagicalBackRelation_News_some: SettingWhereInput
   _MagicalBackRelation_News_none: SettingWhereInput
@@ -3147,7 +3147,7 @@ type Query {
   sportsArticles(where: SportsArticleWhereInput, orderBy: SportsArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SportsArticle]!
   settings(where: SettingWhereInput, orderBy: SettingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Setting]!
   events(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Event]!
-  scheduales(where: SchedualeWhereInput, orderBy: SchedualeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Scheduale]!
+  schedules(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule]!
   infoDatas(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [InfoData]!
   links(where: LinkWhereInput, orderBy: LinkOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Link]!
   programs(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program]!
@@ -3157,7 +3157,7 @@ type Query {
   sportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
   setting(where: SettingWhereUniqueInput!): Setting
   event(where: EventWhereUniqueInput!): Event
-  scheduale(where: SchedualeWhereUniqueInput!): Scheduale
+  schedule(where: ScheduleWhereUniqueInput!): Schedule
   infoData(where: InfoDataWhereUniqueInput!): InfoData
   link(where: LinkWhereUniqueInput!): Link
   program(where: ProgramWhereUniqueInput!): Program
@@ -3167,7 +3167,7 @@ type Query {
   sportsArticlesConnection(where: SportsArticleWhereInput, orderBy: SportsArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SportsArticleConnection!
   settingsConnection(where: SettingWhereInput, orderBy: SettingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SettingConnection!
   eventsConnection(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): EventConnection!
-  schedualesConnection(where: SchedualeWhereInput, orderBy: SchedualeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SchedualeConnection!
+  schedulesConnection(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ScheduleConnection!
   infoDatasConnection(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): InfoDataConnection!
   linksConnection(where: LinkWhereInput, orderBy: LinkOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): LinkConnection!
   programsConnection(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ProgramConnection!
@@ -3179,7 +3179,7 @@ type Query {
   ): Node
 }
 
-type Scheduale implements Node {
+type Schedule implements Node {
   id: ID!
   days: [String!]!
   timeDate: DateTime
@@ -3191,67 +3191,67 @@ type Scheduale implements Node {
 }
 
 """A connection to a list of items."""
-type SchedualeConnection {
+type ScheduleConnection {
   """Information to aid in pagination."""
   pageInfo: PageInfo!
 
   """A list of edges."""
-  edges: [SchedualeEdge]!
-  aggregate: AggregateScheduale!
+  edges: [ScheduleEdge]!
+  aggregate: AggregateSchedule!
 }
 
-input SchedualeCreatedaysInput {
+input ScheduleCreatedaysInput {
   set: [String!]
 }
 
-input SchedualeCreateInput {
+input ScheduleCreateInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: SchedualeCreatedaysInput
-  program: ProgramCreateOneWithoutSchedualeInput
-  event: EventCreateOneWithoutSchedualesInput
+  days: ScheduleCreatedaysInput
+  program: ProgramCreateOneWithoutScheduleInput
+  event: EventCreateOneWithoutSchedulesInput
 }
 
-input SchedualeCreateManyWithoutEventInput {
-  create: [SchedualeCreateWithoutEventInput!]
-  connect: [SchedualeWhereUniqueInput!]
+input ScheduleCreateManyWithoutEventInput {
+  create: [ScheduleCreateWithoutEventInput!]
+  connect: [ScheduleWhereUniqueInput!]
 }
 
-input SchedualeCreateManyWithoutProgramInput {
-  create: [SchedualeCreateWithoutProgramInput!]
-  connect: [SchedualeWhereUniqueInput!]
+input ScheduleCreateManyWithoutProgramInput {
+  create: [ScheduleCreateWithoutProgramInput!]
+  connect: [ScheduleWhereUniqueInput!]
 }
 
-input SchedualeCreateWithoutEventInput {
+input ScheduleCreateWithoutEventInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: SchedualeCreatedaysInput
-  program: ProgramCreateOneWithoutSchedualeInput
+  days: ScheduleCreatedaysInput
+  program: ProgramCreateOneWithoutScheduleInput
 }
 
-input SchedualeCreateWithoutProgramInput {
+input ScheduleCreateWithoutProgramInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: SchedualeCreatedaysInput
-  event: EventCreateOneWithoutSchedualesInput
+  days: ScheduleCreatedaysInput
+  event: EventCreateOneWithoutSchedulesInput
 }
 
 """An edge in a connection."""
-type SchedualeEdge {
+type ScheduleEdge {
   """The item at the end of the edge."""
-  node: Scheduale!
+  node: Schedule!
 
   """A cursor for use in pagination."""
   cursor: String!
 }
 
-enum SchedualeOrderByInput {
+enum ScheduleOrderByInput {
   id_ASC
   id_DESC
   timeDate_ASC
@@ -3268,7 +3268,7 @@ enum SchedualeOrderByInput {
   createdAt_DESC
 }
 
-type SchedualePreviousValues {
+type SchedulePreviousValues {
   id: ID!
   days: [String!]!
   timeDate: DateTime
@@ -3277,22 +3277,22 @@ type SchedualePreviousValues {
   type: String
 }
 
-type SchedualeSubscriptionPayload {
+type ScheduleSubscriptionPayload {
   mutation: MutationType!
-  node: Scheduale
+  node: Schedule
   updatedFields: [String!]
-  previousValues: SchedualePreviousValues
+  previousValues: SchedulePreviousValues
 }
 
-input SchedualeSubscriptionWhereInput {
+input ScheduleSubscriptionWhereInput {
   """Logical AND on all given filters."""
-  AND: [SchedualeSubscriptionWhereInput!]
+  AND: [ScheduleSubscriptionWhereInput!]
 
   """Logical OR on all given filters."""
-  OR: [SchedualeSubscriptionWhereInput!]
+  OR: [ScheduleSubscriptionWhereInput!]
 
   """Logical NOT on all given filters combined by AND."""
-  NOT: [SchedualeSubscriptionWhereInput!]
+  NOT: [ScheduleSubscriptionWhereInput!]
 
   """
   The subscription event gets dispatched when it's listed in mutation_in
@@ -3313,90 +3313,90 @@ input SchedualeSubscriptionWhereInput {
   The subscription event gets only dispatched when some of the field names included in this list have been updated
   """
   updatedFields_contains_some: [String!]
-  node: SchedualeWhereInput
+  node: ScheduleWhereInput
 }
 
-input SchedualeUpdatedaysInput {
+input ScheduleUpdatedaysInput {
   set: [String!]
 }
 
-input SchedualeUpdateInput {
+input ScheduleUpdateInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: SchedualeUpdatedaysInput
-  program: ProgramUpdateOneWithoutSchedualeInput
-  event: EventUpdateOneWithoutSchedualesInput
+  days: ScheduleUpdatedaysInput
+  program: ProgramUpdateOneWithoutScheduleInput
+  event: EventUpdateOneWithoutSchedulesInput
 }
 
-input SchedualeUpdateManyWithoutEventInput {
-  create: [SchedualeCreateWithoutEventInput!]
-  connect: [SchedualeWhereUniqueInput!]
-  disconnect: [SchedualeWhereUniqueInput!]
-  delete: [SchedualeWhereUniqueInput!]
-  update: [SchedualeUpdateWithWhereUniqueWithoutEventInput!]
-  upsert: [SchedualeUpsertWithWhereUniqueWithoutEventInput!]
+input ScheduleUpdateManyWithoutEventInput {
+  create: [ScheduleCreateWithoutEventInput!]
+  connect: [ScheduleWhereUniqueInput!]
+  disconnect: [ScheduleWhereUniqueInput!]
+  delete: [ScheduleWhereUniqueInput!]
+  update: [ScheduleUpdateWithWhereUniqueWithoutEventInput!]
+  upsert: [ScheduleUpsertWithWhereUniqueWithoutEventInput!]
 }
 
-input SchedualeUpdateManyWithoutProgramInput {
-  create: [SchedualeCreateWithoutProgramInput!]
-  connect: [SchedualeWhereUniqueInput!]
-  disconnect: [SchedualeWhereUniqueInput!]
-  delete: [SchedualeWhereUniqueInput!]
-  update: [SchedualeUpdateWithWhereUniqueWithoutProgramInput!]
-  upsert: [SchedualeUpsertWithWhereUniqueWithoutProgramInput!]
+input ScheduleUpdateManyWithoutProgramInput {
+  create: [ScheduleCreateWithoutProgramInput!]
+  connect: [ScheduleWhereUniqueInput!]
+  disconnect: [ScheduleWhereUniqueInput!]
+  delete: [ScheduleWhereUniqueInput!]
+  update: [ScheduleUpdateWithWhereUniqueWithoutProgramInput!]
+  upsert: [ScheduleUpsertWithWhereUniqueWithoutProgramInput!]
 }
 
-input SchedualeUpdateWithoutEventDataInput {
+input ScheduleUpdateWithoutEventDataInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: SchedualeUpdatedaysInput
-  program: ProgramUpdateOneWithoutSchedualeInput
+  days: ScheduleUpdatedaysInput
+  program: ProgramUpdateOneWithoutScheduleInput
 }
 
-input SchedualeUpdateWithoutProgramDataInput {
+input ScheduleUpdateWithoutProgramDataInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: SchedualeUpdatedaysInput
-  event: EventUpdateOneWithoutSchedualesInput
+  days: ScheduleUpdatedaysInput
+  event: EventUpdateOneWithoutSchedulesInput
 }
 
-input SchedualeUpdateWithWhereUniqueWithoutEventInput {
-  where: SchedualeWhereUniqueInput!
-  data: SchedualeUpdateWithoutEventDataInput!
+input ScheduleUpdateWithWhereUniqueWithoutEventInput {
+  where: ScheduleWhereUniqueInput!
+  data: ScheduleUpdateWithoutEventDataInput!
 }
 
-input SchedualeUpdateWithWhereUniqueWithoutProgramInput {
-  where: SchedualeWhereUniqueInput!
-  data: SchedualeUpdateWithoutProgramDataInput!
+input ScheduleUpdateWithWhereUniqueWithoutProgramInput {
+  where: ScheduleWhereUniqueInput!
+  data: ScheduleUpdateWithoutProgramDataInput!
 }
 
-input SchedualeUpsertWithWhereUniqueWithoutEventInput {
-  where: SchedualeWhereUniqueInput!
-  update: SchedualeUpdateWithoutEventDataInput!
-  create: SchedualeCreateWithoutEventInput!
+input ScheduleUpsertWithWhereUniqueWithoutEventInput {
+  where: ScheduleWhereUniqueInput!
+  update: ScheduleUpdateWithoutEventDataInput!
+  create: ScheduleCreateWithoutEventInput!
 }
 
-input SchedualeUpsertWithWhereUniqueWithoutProgramInput {
-  where: SchedualeWhereUniqueInput!
-  update: SchedualeUpdateWithoutProgramDataInput!
-  create: SchedualeCreateWithoutProgramInput!
+input ScheduleUpsertWithWhereUniqueWithoutProgramInput {
+  where: ScheduleWhereUniqueInput!
+  update: ScheduleUpdateWithoutProgramDataInput!
+  create: ScheduleCreateWithoutProgramInput!
 }
 
-input SchedualeWhereInput {
+input ScheduleWhereInput {
   """Logical AND on all given filters."""
-  AND: [SchedualeWhereInput!]
+  AND: [ScheduleWhereInput!]
 
   """Logical OR on all given filters."""
-  OR: [SchedualeWhereInput!]
+  OR: [ScheduleWhereInput!]
 
   """Logical NOT on all given filters combined by AND."""
-  NOT: [SchedualeWhereInput!]
+  NOT: [ScheduleWhereInput!]
   id: ID
 
   """All values that are not equal to given value."""
@@ -3547,7 +3547,7 @@ input SchedualeWhereInput {
   event: EventWhereInput
 }
 
-input SchedualeWhereUniqueInput {
+input ScheduleWhereUniqueInput {
   id: ID
 }
 
@@ -4472,7 +4472,7 @@ type Subscription {
   sportsArticle(where: SportsArticleSubscriptionWhereInput): SportsArticleSubscriptionPayload
   setting(where: SettingSubscriptionWhereInput): SettingSubscriptionPayload
   event(where: EventSubscriptionWhereInput): EventSubscriptionPayload
-  scheduale(where: SchedualeSubscriptionWhereInput): SchedualeSubscriptionPayload
+  schedule(where: ScheduleSubscriptionWhereInput): ScheduleSubscriptionPayload
   infoData(where: InfoDataSubscriptionWhereInput): InfoDataSubscriptionPayload
   link(where: LinkSubscriptionWhereInput): LinkSubscriptionPayload
   program(where: ProgramSubscriptionWhereInput): ProgramSubscriptionPayload

@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    sportsArticles(where: SportsArticleWhereInput, orderBy: SportsArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SportsArticle]!
+    sportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
+}
+
+type Mutation {
+    createSportsArticle(data: SportsArticleCreateInput!): SportsArticle!
+    updateSportsArticle(data: SportsArticleUpdateInput!, where: SportsArticleWhereUniqueInput!): SportsArticle
+    deleteSportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
+}

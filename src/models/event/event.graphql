@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    events(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Event]!
+    event(where: EventWhereUniqueInput!): Event
+}
+
+type Mutation {
+    createEvent(data: EventCreateInput!): Event!
+    updateEvent(data: EventUpdateInput!, where: EventWhereUniqueInput!): Event
+    deleteEvent(where: EventWhereUniqueInput!): Event
+}

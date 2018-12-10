@@ -15,7 +15,7 @@ type Program {
   webBanner: String
   mobBanner: String
   icon: String
-  scheduale: [Scheduale!]!
+  schedule: [Schedule!]!
   playlistUrl: String
   isShowen: Boolean
 }
@@ -98,11 +98,11 @@ type Event {
   duration: Int 
   banner: String 
   icon: String 
-  scheduales: [Scheduale!]!
+  schedules: [Schedule!]!
   isShowen: Boolean
 }
 
-type Scheduale {
+type Schedule {
   id: ID! @unique 
   days: [String!]!
   timeDate: DateTime 

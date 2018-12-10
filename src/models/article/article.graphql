@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    articles(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Article]!
+    article(where: ArticleWhereUniqueInput!): Article
+}
+
+type Mutation {
+    createArticle(data: ArticleCreateInput!): Article!
+    updateArticle(data: ArticleUpdateInput!, where: ArticleWhereUniqueInput!): Article
+    deleteArticle(where: ArticleWhereUniqueInput!): Article
+}
