@@ -6,7 +6,5 @@ type Query {
 }
 
 type Mutation {
-    createSetting(data: SettingCreateInput!): Setting!
     updateSetting(data: SettingUpdateInput!, where: SettingWhereUniqueInput!): Setting
-    deleteSetting(where: SettingWhereUniqueInput!): Setting
 }
