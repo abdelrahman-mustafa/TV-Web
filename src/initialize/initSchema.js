@@ -7,5 +7,4 @@ typeDefs = [];
 defs.forEach(def => {
     typeDefs.push(importSchema(def));
 });
-console.log(mergeTypes(typeDefs, { all: true }); )
 module.exports = mergeTypes(typeDefs, { all: true }); 
