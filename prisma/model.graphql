@@ -59,7 +59,7 @@ type Setting {
   programIcon: String
   teamIcon: String
   sportsArticleIcon: String
-  newsPrograms: [Program!]! @relation(name: "News")
+  newsPrograms: Program  @relation(name: "News")
   specialBanners: [Program!]! @relation(name: "Banners")
   specialPrograms: [Program!]! @relation(name: "Specials")
   liveUrl: String

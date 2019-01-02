@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Mon Dec 10 2018 13:41:55 GMT+0200 (Eastern European Standard Time)
+# timestamp: Wed Jan 02 2019 20:54:18 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -2590,6 +2590,11 @@ input ProgramCreateManyInput {
   connect: [ProgramWhereUniqueInput!]
 }
 
+input ProgramCreateOneInput {
+  create: ProgramCreateInput
+  connect: ProgramWhereUniqueInput
+}
+
 input ProgramCreateOneWithoutScheduleInput {
   create: ProgramCreateWithoutScheduleInput
   connect: ProgramWhereUniqueInput
@@ -2730,6 +2735,15 @@ input ProgramUpdateManyInput {
   upsert: [ProgramUpsertWithWhereUniqueNestedInput!]
 }
 
+input ProgramUpdateOneInput {
+  create: ProgramCreateInput
+  connect: ProgramWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: ProgramUpdateDataInput
+  upsert: ProgramUpsertNestedInput
+}
+
 input ProgramUpdateOneWithoutScheduleInput {
   create: ProgramCreateWithoutScheduleInput
   connect: ProgramWhereUniqueInput
@@ -2754,6 +2768,11 @@ input ProgramUpdateWithoutScheduleDataInput {
 input ProgramUpdateWithWhereUniqueNestedInput {
   where: ProgramWhereUniqueInput!
   data: ProgramUpdateDataInput!
+}
+
+input ProgramUpsertNestedInput {
+  update: ProgramUpdateDataInput!
+  create: ProgramCreateInput!
 }
 
 input ProgramUpsertWithoutScheduleInput {
@@ -3558,7 +3577,7 @@ type Setting implements Node {
   programIcon: String
   teamIcon: String
   sportsArticleIcon: String
-  newsPrograms(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program!]
+  newsPrograms(where: ProgramWhereInput): Program
   specialBanners(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program!]
   specialPrograms(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program!]
   liveUrl: String
@@ -3584,7 +3603,7 @@ input SettingCreateInput {
   sportsArticleIcon: String
   liveUrl: String
   videoIcon: String
-  newsPrograms: ProgramCreateManyInput
+  newsPrograms: ProgramCreateOneInput
   specialBanners: ProgramCreateManyInput
   specialPrograms: ProgramCreateManyInput
   infoDaTa: InfoDataCreateOneInput
@@ -3680,7 +3699,7 @@ input SettingUpdateInput {
   sportsArticleIcon: String
   liveUrl: String
   videoIcon: String
-  newsPrograms: ProgramUpdateManyInput
+  newsPrograms: ProgramUpdateOneInput
   specialBanners: ProgramUpdateManyInput
   specialPrograms: ProgramUpdateManyInput
   infoDaTa: InfoDataUpdateOneInput
@@ -4015,9 +4034,7 @@ input SettingWhereInput {
 
   """All values not ending with the given string."""
   videoIcon_not_ends_with: String
-  newsPrograms_every: ProgramWhereInput
-  newsPrograms_some: ProgramWhereInput
-  newsPrograms_none: ProgramWhereInput
+  newsPrograms: ProgramWhereInput
   specialBanners_every: ProgramWhereInput
   specialBanners_some: ProgramWhereInput
   specialBanners_none: ProgramWhereInput
