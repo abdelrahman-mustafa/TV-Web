@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Wed Jan 02 2019 20:54:18 GMT+0200 (Eastern European Standard Time)
+# timestamp: Sun Jan 06 2019 00:01:34 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -2553,6 +2553,7 @@ type Program implements Node {
   name: String
   programDate: String
   description: String
+  presenter: String
   duration: Int
   webBanner: String
   mobBanner: String
@@ -2576,6 +2577,7 @@ input ProgramCreateInput {
   name: String
   programDate: String
   description: String
+  presenter: String
   duration: Int
   webBanner: String
   mobBanner: String
@@ -2604,6 +2606,7 @@ input ProgramCreateWithoutScheduleInput {
   name: String
   programDate: String
   description: String
+  presenter: String
   duration: Int
   webBanner: String
   mobBanner: String
@@ -2630,6 +2633,8 @@ enum ProgramOrderByInput {
   programDate_DESC
   description_ASC
   description_DESC
+  presenter_ASC
+  presenter_DESC
   duration_ASC
   duration_DESC
   webBanner_ASC
@@ -2653,6 +2658,7 @@ type ProgramPreviousValues {
   name: String
   programDate: String
   description: String
+  presenter: String
   duration: Int
   webBanner: String
   mobBanner: String
@@ -2704,6 +2710,7 @@ input ProgramUpdateDataInput {
   name: String
   programDate: String
   description: String
+  presenter: String
   duration: Int
   webBanner: String
   mobBanner: String
@@ -2717,6 +2724,7 @@ input ProgramUpdateInput {
   name: String
   programDate: String
   description: String
+  presenter: String
   duration: Int
   webBanner: String
   mobBanner: String
@@ -2757,6 +2765,7 @@ input ProgramUpdateWithoutScheduleDataInput {
   name: String
   programDate: String
   description: String
+  presenter: String
   duration: Int
   webBanner: String
   mobBanner: String
@@ -2955,6 +2964,46 @@ input ProgramWhereInput {
 
   """All values not ending with the given string."""
   description_not_ends_with: String
+  presenter: String
+
+  """All values that are not equal to given value."""
+  presenter_not: String
+
+  """All values that are contained in given list."""
+  presenter_in: [String!]
+
+  """All values that are not contained in given list."""
+  presenter_not_in: [String!]
+
+  """All values less than the given value."""
+  presenter_lt: String
+
+  """All values less than or equal the given value."""
+  presenter_lte: String
+
+  """All values greater than the given value."""
+  presenter_gt: String
+
+  """All values greater than or equal the given value."""
+  presenter_gte: String
+
+  """All values containing the given string."""
+  presenter_contains: String
+
+  """All values not containing the given string."""
+  presenter_not_contains: String
+
+  """All values starting with the given string."""
+  presenter_starts_with: String
+
+  """All values not starting with the given string."""
+  presenter_not_starts_with: String
+
+  """All values ending with the given string."""
+  presenter_ends_with: String
+
+  """All values not ending with the given string."""
+  presenter_not_ends_with: String
   duration: Int
 
   """All values that are not equal to given value."""

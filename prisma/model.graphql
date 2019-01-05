@@ -4,13 +4,12 @@ type Admin {
     password: String!
 }
 
-
-
 type Program {
   id: ID! @unique 
   name: String
   programDate: String 
   description: String
+  presenter: String
   duration: Int 
   webBanner: String
   mobBanner: String
