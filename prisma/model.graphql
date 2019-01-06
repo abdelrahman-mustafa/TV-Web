@@ -103,7 +103,7 @@ type Event {
 
 type Schedule {
   id: ID! @unique 
-  days: [String!]!
+  days: [Day!]!
   timeDate: DateTime 
   startDate: DateTime 
   endDate: DateTime
@@ -112,3 +112,7 @@ type Schedule {
   event: Event
 }
 
+type Day {
+  id: ID! @unique
+  name: String
+}

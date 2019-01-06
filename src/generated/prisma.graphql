@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Sun Jan 06 2019 00:01:34 GMT+0200 (Eastern European Standard Time)
+# timestamp: Sun Jan 06 2019 14:29:50 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -234,6 +234,10 @@ type AggregateAdmin {
 }
 
 type AggregateArticle {
+  count: Int!
+}
+
+type AggregateDay {
   count: Int!
 }
 
@@ -709,6 +713,220 @@ type BatchPayload {
 }
 
 scalar DateTime
+
+type Day implements Node {
+  id: ID!
+  name: String
+}
+
+"""A connection to a list of items."""
+type DayConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [DayEdge]!
+  aggregate: AggregateDay!
+}
+
+input DayCreateInput {
+  name: String
+}
+
+input DayCreateManyInput {
+  create: [DayCreateInput!]
+  connect: [DayWhereUniqueInput!]
+}
+
+"""An edge in a connection."""
+type DayEdge {
+  """The item at the end of the edge."""
+  node: Day!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum DayOrderByInput {
+  id_ASC
+  id_DESC
+  name_ASC
+  name_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type DayPreviousValues {
+  id: ID!
+  name: String
+}
+
+type DaySubscriptionPayload {
+  mutation: MutationType!
+  node: Day
+  updatedFields: [String!]
+  previousValues: DayPreviousValues
+}
+
+input DaySubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [DaySubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [DaySubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [DaySubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: DayWhereInput
+}
+
+input DayUpdateDataInput {
+  name: String
+}
+
+input DayUpdateInput {
+  name: String
+}
+
+input DayUpdateManyInput {
+  create: [DayCreateInput!]
+  connect: [DayWhereUniqueInput!]
+  disconnect: [DayWhereUniqueInput!]
+  delete: [DayWhereUniqueInput!]
+  update: [DayUpdateWithWhereUniqueNestedInput!]
+  upsert: [DayUpsertWithWhereUniqueNestedInput!]
+}
+
+input DayUpdateWithWhereUniqueNestedInput {
+  where: DayWhereUniqueInput!
+  data: DayUpdateDataInput!
+}
+
+input DayUpsertWithWhereUniqueNestedInput {
+  where: DayWhereUniqueInput!
+  update: DayUpdateDataInput!
+  create: DayCreateInput!
+}
+
+input DayWhereInput {
+  """Logical AND on all given filters."""
+  AND: [DayWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [DayWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [DayWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  name: String
+
+  """All values that are not equal to given value."""
+  name_not: String
+
+  """All values that are contained in given list."""
+  name_in: [String!]
+
+  """All values that are not contained in given list."""
+  name_not_in: [String!]
+
+  """All values less than the given value."""
+  name_lt: String
+
+  """All values less than or equal the given value."""
+  name_lte: String
+
+  """All values greater than the given value."""
+  name_gt: String
+
+  """All values greater than or equal the given value."""
+  name_gte: String
+
+  """All values containing the given string."""
+  name_contains: String
+
+  """All values not containing the given string."""
+  name_not_contains: String
+
+  """All values starting with the given string."""
+  name_starts_with: String
+
+  """All values not starting with the given string."""
+  name_not_starts_with: String
+
+  """All values ending with the given string."""
+  name_ends_with: String
+
+  """All values not ending with the given string."""
+  name_not_ends_with: String
+  _MagicalBackRelation_DayToSchedule_every: ScheduleWhereInput
+  _MagicalBackRelation_DayToSchedule_some: ScheduleWhereInput
+  _MagicalBackRelation_DayToSchedule_none: ScheduleWhereInput
+}
+
+input DayWhereUniqueInput {
+  id: ID
+}
 
 type Event implements Node {
   id: ID!
@@ -2148,6 +2366,7 @@ type Mutation {
   createSchedule(data: ScheduleCreateInput!): Schedule!
   createInfoData(data: InfoDataCreateInput!): InfoData!
   createLink(data: LinkCreateInput!): Link!
+  createDay(data: DayCreateInput!): Day!
   createProgram(data: ProgramCreateInput!): Program!
   updateAdmin(data: AdminUpdateInput!, where: AdminWhereUniqueInput!): Admin
   updatePresenter(data: PresenterUpdateInput!, where: PresenterWhereUniqueInput!): Presenter
@@ -2158,6 +2377,7 @@ type Mutation {
   updateSchedule(data: ScheduleUpdateInput!, where: ScheduleWhereUniqueInput!): Schedule
   updateInfoData(data: InfoDataUpdateInput!, where: InfoDataWhereUniqueInput!): InfoData
   updateLink(data: LinkUpdateInput!, where: LinkWhereUniqueInput!): Link
+  updateDay(data: DayUpdateInput!, where: DayWhereUniqueInput!): Day
   updateProgram(data: ProgramUpdateInput!, where: ProgramWhereUniqueInput!): Program
   deleteAdmin(where: AdminWhereUniqueInput!): Admin
   deletePresenter(where: PresenterWhereUniqueInput!): Presenter
@@ -2168,6 +2388,7 @@ type Mutation {
   deleteSchedule(where: ScheduleWhereUniqueInput!): Schedule
   deleteInfoData(where: InfoDataWhereUniqueInput!): InfoData
   deleteLink(where: LinkWhereUniqueInput!): Link
+  deleteDay(where: DayWhereUniqueInput!): Day
   deleteProgram(where: ProgramWhereUniqueInput!): Program
   upsertAdmin(where: AdminWhereUniqueInput!, create: AdminCreateInput!, update: AdminUpdateInput!): Admin!
   upsertPresenter(where: PresenterWhereUniqueInput!, create: PresenterCreateInput!, update: PresenterUpdateInput!): Presenter!
@@ -2178,6 +2399,7 @@ type Mutation {
   upsertSchedule(where: ScheduleWhereUniqueInput!, create: ScheduleCreateInput!, update: ScheduleUpdateInput!): Schedule!
   upsertInfoData(where: InfoDataWhereUniqueInput!, create: InfoDataCreateInput!, update: InfoDataUpdateInput!): InfoData!
   upsertLink(where: LinkWhereUniqueInput!, create: LinkCreateInput!, update: LinkUpdateInput!): Link!
+  upsertDay(where: DayWhereUniqueInput!, create: DayCreateInput!, update: DayUpdateInput!): Day!
   upsertProgram(where: ProgramWhereUniqueInput!, create: ProgramCreateInput!, update: ProgramUpdateInput!): Program!
   updateManyAdmins(data: AdminUpdateInput!, where: AdminWhereInput): BatchPayload!
   updateManyPresenters(data: PresenterUpdateInput!, where: PresenterWhereInput): BatchPayload!
@@ -2188,6 +2410,7 @@ type Mutation {
   updateManySchedules(data: ScheduleUpdateInput!, where: ScheduleWhereInput): BatchPayload!
   updateManyInfoDatas(data: InfoDataUpdateInput!, where: InfoDataWhereInput): BatchPayload!
   updateManyLinks(data: LinkUpdateInput!, where: LinkWhereInput): BatchPayload!
+  updateManyDays(data: DayUpdateInput!, where: DayWhereInput): BatchPayload!
   updateManyPrograms(data: ProgramUpdateInput!, where: ProgramWhereInput): BatchPayload!
   deleteManyAdmins(where: AdminWhereInput): BatchPayload!
   deleteManyPresenters(where: PresenterWhereInput): BatchPayload!
@@ -2198,6 +2421,7 @@ type Mutation {
   deleteManySchedules(where: ScheduleWhereInput): BatchPayload!
   deleteManyInfoDatas(where: InfoDataWhereInput): BatchPayload!
   deleteManyLinks(where: LinkWhereInput): BatchPayload!
+  deleteManyDays(where: DayWhereInput): BatchPayload!
   deleteManyPrograms(where: ProgramWhereInput): BatchPayload!
 }
 
@@ -3218,6 +3442,7 @@ type Query {
   schedules(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule]!
   infoDatas(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [InfoData]!
   links(where: LinkWhereInput, orderBy: LinkOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Link]!
+  days(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Day]!
   programs(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program]!
   admin(where: AdminWhereUniqueInput!): Admin
   presenter(where: PresenterWhereUniqueInput!): Presenter
@@ -3228,6 +3453,7 @@ type Query {
   schedule(where: ScheduleWhereUniqueInput!): Schedule
   infoData(where: InfoDataWhereUniqueInput!): InfoData
   link(where: LinkWhereUniqueInput!): Link
+  day(where: DayWhereUniqueInput!): Day
   program(where: ProgramWhereUniqueInput!): Program
   adminsConnection(where: AdminWhereInput, orderBy: AdminOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): AdminConnection!
   presentersConnection(where: PresenterWhereInput, orderBy: PresenterOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): PresenterConnection!
@@ -3238,6 +3464,7 @@ type Query {
   schedulesConnection(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ScheduleConnection!
   infoDatasConnection(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): InfoDataConnection!
   linksConnection(where: LinkWhereInput, orderBy: LinkOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): LinkConnection!
+  daysConnection(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): DayConnection!
   programsConnection(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ProgramConnection!
 
   """Fetches an object given its ID"""
@@ -3249,7 +3476,7 @@ type Query {
 
 type Schedule implements Node {
   id: ID!
-  days: [String!]!
+  days(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Day!]
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
@@ -3268,16 +3495,12 @@ type ScheduleConnection {
   aggregate: AggregateSchedule!
 }
 
-input ScheduleCreatedaysInput {
-  set: [String!]
-}
-
 input ScheduleCreateInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: ScheduleCreatedaysInput
+  days: DayCreateManyInput
   program: ProgramCreateOneWithoutScheduleInput
   event: EventCreateOneWithoutSchedulesInput
 }
@@ -3297,7 +3520,7 @@ input ScheduleCreateWithoutEventInput {
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: ScheduleCreatedaysInput
+  days: DayCreateManyInput
   program: ProgramCreateOneWithoutScheduleInput
 }
 
@@ -3306,7 +3529,7 @@ input ScheduleCreateWithoutProgramInput {
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: ScheduleCreatedaysInput
+  days: DayCreateManyInput
   event: EventCreateOneWithoutSchedulesInput
 }
 
@@ -3338,7 +3561,6 @@ enum ScheduleOrderByInput {
 
 type SchedulePreviousValues {
   id: ID!
-  days: [String!]!
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
@@ -3384,16 +3606,12 @@ input ScheduleSubscriptionWhereInput {
   node: ScheduleWhereInput
 }
 
-input ScheduleUpdatedaysInput {
-  set: [String!]
-}
-
 input ScheduleUpdateInput {
   timeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: ScheduleUpdatedaysInput
+  days: DayUpdateManyInput
   program: ProgramUpdateOneWithoutScheduleInput
   event: EventUpdateOneWithoutSchedulesInput
 }
@@ -3421,7 +3639,7 @@ input ScheduleUpdateWithoutEventDataInput {
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: ScheduleUpdatedaysInput
+  days: DayUpdateManyInput
   program: ProgramUpdateOneWithoutScheduleInput
 }
 
@@ -3430,7 +3648,7 @@ input ScheduleUpdateWithoutProgramDataInput {
   startDate: DateTime
   endDate: DateTime
   type: String
-  days: ScheduleUpdatedaysInput
+  days: DayUpdateManyInput
   event: EventUpdateOneWithoutSchedulesInput
 }
 
@@ -3611,6 +3829,9 @@ input ScheduleWhereInput {
 
   """All values not ending with the given string."""
   type_not_ends_with: String
+  days_every: DayWhereInput
+  days_some: DayWhereInput
+  days_none: DayWhereInput
   program: ProgramWhereInput
   event: EventWhereInput
 }
@@ -4541,5 +4762,6 @@ type Subscription {
   schedule(where: ScheduleSubscriptionWhereInput): ScheduleSubscriptionPayload
   infoData(where: InfoDataSubscriptionWhereInput): InfoDataSubscriptionPayload
   link(where: LinkSubscriptionWhereInput): LinkSubscriptionPayload
+  day(where: DaySubscriptionWhereInput): DaySubscriptionPayload
   program(where: ProgramSubscriptionWhereInput): ProgramSubscriptionPayload
 }
