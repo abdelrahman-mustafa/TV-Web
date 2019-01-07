@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Sun Jan 06 2019 14:29:50 GMT+0200 (Eastern European Standard Time)
+# timestamp: Mon Jan 07 2019 10:52:12 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -283,6 +283,7 @@ type Article implements Node {
   article: String
   images: [String!]!
   videos: String
+  isShowen: Boolean
 }
 
 """A connection to a list of items."""
@@ -307,6 +308,7 @@ input ArticleCreateInput {
   publishTime: DateTime
   article: String
   videos: String
+  isShowen: Boolean
   images: ArticleCreateimagesInput
 }
 
@@ -336,6 +338,8 @@ enum ArticleOrderByInput {
   article_DESC
   videos_ASC
   videos_DESC
+  isShowen_ASC
+  isShowen_DESC
   updatedAt_ASC
   updatedAt_DESC
   createdAt_ASC
@@ -352,6 +356,7 @@ type ArticlePreviousValues {
   article: String
   images: [String!]!
   videos: String
+  isShowen: Boolean
 }
 
 type ArticleSubscriptionPayload {
@@ -405,6 +410,7 @@ input ArticleUpdateInput {
   publishTime: DateTime
   article: String
   videos: String
+  isShowen: Boolean
   images: ArticleUpdateimagesInput
 }
 
@@ -701,6 +707,10 @@ input ArticleWhereInput {
 
   """All values not ending with the given string."""
   videos_not_ends_with: String
+  isShowen: Boolean
+
+  """All values that are not equal to given value."""
+  isShowen_not: Boolean
 }
 
 input ArticleWhereUniqueInput {
@@ -4328,6 +4338,7 @@ type SportsArticle implements Node {
   article: String
   images: [String!]!
   videos: String
+  isShowen: Boolean
 }
 
 """A connection to a list of items."""
@@ -4352,6 +4363,7 @@ input SportsArticleCreateInput {
   publishTime: DateTime
   article: String
   videos: String
+  isShowen: Boolean
   images: SportsArticleCreateimagesInput
 }
 
@@ -4381,6 +4393,8 @@ enum SportsArticleOrderByInput {
   article_DESC
   videos_ASC
   videos_DESC
+  isShowen_ASC
+  isShowen_DESC
   updatedAt_ASC
   updatedAt_DESC
   createdAt_ASC
@@ -4397,6 +4411,7 @@ type SportsArticlePreviousValues {
   article: String
   images: [String!]!
   videos: String
+  isShowen: Boolean
 }
 
 type SportsArticleSubscriptionPayload {
@@ -4450,6 +4465,7 @@ input SportsArticleUpdateInput {
   publishTime: DateTime
   article: String
   videos: String
+  isShowen: Boolean
   images: SportsArticleUpdateimagesInput
 }
 
@@ -4746,6 +4762,10 @@ input SportsArticleWhereInput {
 
   """All values not ending with the given string."""
   videos_not_ends_with: String
+  isShowen: Boolean
+
+  """All values that are not equal to given value."""
+  isShowen_not: Boolean
 }
 
 input SportsArticleWhereUniqueInput {
