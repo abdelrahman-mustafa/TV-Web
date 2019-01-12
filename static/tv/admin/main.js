@@ -1273,6 +1273,9 @@ var AddOrRemoveProgramComponent = /** @class */ (function () {
                                 });
                             }, function (error) {
                                 _this.spinner.hide();
+                                _this.errorDialog.options = {
+                                    title: "تحقق من اتصالك بالانترنت"
+                                };
                                 _this.errorDialog.show();
                             });
                         }
@@ -1284,6 +1287,9 @@ var AddOrRemoveProgramComponent = /** @class */ (function () {
                                 });
                             }, function (error) {
                                 _this.spinner.hide();
+                                _this.errorDialog.options = {
+                                    title: "تحقق من اتصالك بالانترنت"
+                                };
                                 _this.errorDialog.show();
                             });
                         }
@@ -4725,7 +4731,7 @@ var ArticlesService = /** @class */ (function () {
                 console.log(article);
                 return [2 /*return*/, new Promise(function (resolve, reject) {
                         var queryKey = isSport ? "createSportsArticle" : "createArticle";
-                        var query = "mutation{\n        " + queryKey + "(data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + article.publishDate + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:false,\n          images:{\n            set:[\n              \"" + article.images[0] + "\"\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        " + queryKey + "(data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + article.publishDate + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:true,\n          images:{\n            set:[\n              \"" + article.images[0] + "\"\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.createSportsArticle) {
@@ -5418,7 +5424,7 @@ var ProgramsService = /** @class */ (function () {
             var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        var query = "mutation{\n        createProgram(data:{\n          name:\"" + program.name + "\",\n          programDate:\"" + program.name + "\",\n          description:\"" + program.description + "\",\n          presenter:\"" + program.presenter + "\",\n          duration: " + parseInt(program.duration) + ",\n          webBanner:\"" + program.webBanner + "\",\n          mobBanner:\"" + program.mobBanner + "\",\n          icon:\"" + program.icon + "\",\n          playlistUrl:\"" + program.playlistUrl + "\",\n          isShowen:false\n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        createProgram(data:{\n          name:\"" + program.name + "\",\n          programDate:\"" + program.programDate + "\",\n          description:\"" + program.description + "\",\n          presenter:\"" + program.presenter + "\",\n          duration: " + parseInt(program.duration) + ",\n          webBanner:\"" + program.webBanner + "\",\n          mobBanner:\"" + program.mobBanner + "\",\n          icon:\"" + program.icon + "\",\n          playlistUrl:\"" + program.playlistUrl + "\",\n          isShowen:true\n        }){\n          id\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.createProgram) {
@@ -5440,7 +5446,7 @@ var ProgramsService = /** @class */ (function () {
             var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        var query = "mutation{\n        updateProgram(\n          where:{id:\"" + program.id + "\"},\n          data:{\n          name:\"" + program.name + "\",\n          programDate:\"" + program.name + "\",\n          description:\"" + program.description + "\",\n          presenter:\"" + program.presenter + "\",\n          duration: " + parseInt(program.duration) + ",\n          webBanner:\"" + program.webBanner + "\",\n          mobBanner:\"" + program.mobBanner + "\",\n          icon:\"" + program.icon + "\",\n          playlistUrl:\"" + program.playlistUrl + "\",\n          isShowen: " + program.isShowen + "\n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        updateProgram(\n          where:{id:\"" + program.id + "\"},\n          data:{\n          name:\"" + program.name + "\",\n          programDate:\"" + program.programDate + "\",\n          description:\"" + program.description + "\",\n          presenter:\"" + program.presenter + "\",\n          duration: " + parseInt(program.duration) + ",\n          webBanner:\"" + program.webBanner + "\",\n          mobBanner:\"" + program.mobBanner + "\",\n          icon:\"" + program.icon + "\",\n          playlistUrl:\"" + program.playlistUrl + "\",\n          isShowen: " + program.isShowen + "\n        }){\n          id\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.updateProgram) {
@@ -5485,7 +5491,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    IP: "http://165.227.160.201:5000",
+    IP: "",
     firebase: {
         apiKey: "AIzaSyD7AVHMepyh0zHWrsT7dmFLMnlDTE9yeLs",
         authDomain: "wtvproject-f33c2.firebaseapp.com",
