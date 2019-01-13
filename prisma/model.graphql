@@ -107,6 +107,7 @@ type Schedule {
   id: ID! @unique 
   days: [Day!]!
   timeDate: DateTime 
+  finishTimeDate: DateTime
   startDate: DateTime 
   endDate: DateTime
   type: String

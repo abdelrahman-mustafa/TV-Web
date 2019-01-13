@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Mon Jan 07 2019 10:52:12 GMT+0200 (Eastern European Standard Time)
+# timestamp: Sun Jan 13 2019 21:39:16 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -3488,6 +3488,7 @@ type Schedule implements Node {
   id: ID!
   days(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Day!]
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3507,6 +3508,7 @@ type ScheduleConnection {
 
 input ScheduleCreateInput {
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3527,6 +3529,7 @@ input ScheduleCreateManyWithoutProgramInput {
 
 input ScheduleCreateWithoutEventInput {
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3536,6 +3539,7 @@ input ScheduleCreateWithoutEventInput {
 
 input ScheduleCreateWithoutProgramInput {
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3557,6 +3561,8 @@ enum ScheduleOrderByInput {
   id_DESC
   timeDate_ASC
   timeDate_DESC
+  finishTimeDate_ASC
+  finishTimeDate_DESC
   startDate_ASC
   startDate_DESC
   endDate_ASC
@@ -3572,6 +3578,7 @@ enum ScheduleOrderByInput {
 type SchedulePreviousValues {
   id: ID!
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3618,6 +3625,7 @@ input ScheduleSubscriptionWhereInput {
 
 input ScheduleUpdateInput {
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3646,6 +3654,7 @@ input ScheduleUpdateManyWithoutProgramInput {
 
 input ScheduleUpdateWithoutEventDataInput {
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3655,6 +3664,7 @@ input ScheduleUpdateWithoutEventDataInput {
 
 input ScheduleUpdateWithoutProgramDataInput {
   timeDate: DateTime
+  finishTimeDate: DateTime
   startDate: DateTime
   endDate: DateTime
   type: String
@@ -3755,6 +3765,28 @@ input ScheduleWhereInput {
 
   """All values greater than or equal the given value."""
   timeDate_gte: DateTime
+  finishTimeDate: DateTime
+
+  """All values that are not equal to given value."""
+  finishTimeDate_not: DateTime
+
+  """All values that are contained in given list."""
+  finishTimeDate_in: [DateTime!]
+
+  """All values that are not contained in given list."""
+  finishTimeDate_not_in: [DateTime!]
+
+  """All values less than the given value."""
+  finishTimeDate_lt: DateTime
+
+  """All values less than or equal the given value."""
+  finishTimeDate_lte: DateTime
+
+  """All values greater than the given value."""
+  finishTimeDate_gt: DateTime
+
+  """All values greater than or equal the given value."""
+  finishTimeDate_gte: DateTime
   startDate: DateTime
 
   """All values that are not equal to given value."""
