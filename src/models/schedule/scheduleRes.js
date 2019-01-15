@@ -17,10 +17,8 @@ const schedule = {
                     where:{ days_some:{name:args.day},endDate_gte:args.date, AND:{startDate_lte:args.date},timeDate_lt:results[0].time,finishTimeDate_gt:results[0].time} 
                  },info)
                  res.push(upComing)
-                 return results;
+                 return res;
              }
-             return results;
-
         },
     },
     Mutation: {
