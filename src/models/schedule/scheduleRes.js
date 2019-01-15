@@ -1,10 +1,18 @@
 const schedule = {
     Query: {
-        schedules: (_, args, context, info)=>{
-            return context.prisma.query.schedules({...args},info)
+        schedules: async(_, args, context, info)=>{
+            return await context.prisma.query.schedules({...args},info)
         },
-        schedule: (_, args, context, info)=>{
-            return context.prisma.query.schedule({...args},info)
+        schedule: async (_, args, context, info)=>{
+            return await context.prisma.query.schedule({...args},info)
+        },
+        currentSchedule: async (_, args, context, info)=>{
+            const results = await context.prisma.query.schedules({
+                where:{ days_some:{name:args.day},endDate_gte:args.date, AND:{startDate_lte:args.date},timeDate_lt:args.time,finishTimeDate_gt:args.time} 
+             },info)
+
+             return results[0];
+
         },
     },
     Mutation: {

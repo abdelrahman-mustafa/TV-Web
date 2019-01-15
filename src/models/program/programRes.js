@@ -1,10 +1,10 @@
 const program = {
     Query: {
-        programs: (_, args, context, info)=>{
-            return context.prisma.query.programs({...args},info)
+        programs: async (_, args, context, info)=>{
+            return await context.prisma.query.programs({...args},info)
         },
-        program: (_, args, context, info)=>{
-            return context.prisma.query.program({...args},info)
+        program: async (_, args, context, info)=>{
+            return await context.prisma.query.program({...args},info)
         },
     },
     Mutation: {

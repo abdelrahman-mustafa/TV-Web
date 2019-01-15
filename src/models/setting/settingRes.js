@@ -1,10 +1,10 @@
 const setting = {
     Query: {
-        settings: (_, args, context, info)=>{
-            return context.prisma.query.settings({...args},info)
+        settings: async (_, args, context, info)=>{
+            return await context.prisma.query.settings({...args},info)
         },
-        setting: (_, args, context, info)=>{
-            return context.prisma.query.setting({...args},info)
+        setting: async (_, args, context, info)=>{
+            return await context.prisma.query.setting({...args},info)
         },
     },
     Mutation: {

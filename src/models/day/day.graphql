@@ -1,0 +1,6 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    days(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Day]!
+    day(where: DayWhereUniqueInput!): Day
+}

@@ -1,10 +1,10 @@
 const article = {
     Query: {
-        articles: (_, args, context, info)=>{
-            return context.prisma.query.articles({...args},info)
+        articles: async (_, args, context, info)=>{
+            return await context.prisma.query.articles({...args},info)
         },
-        article: (_, args, context, info)=>{
-            return context.prisma.query.article({...args},info)
+        article: async (_, args, context, info)=>{
+            return await context.prisma.query.article({...args},info)
         },
     },
     Mutation: {

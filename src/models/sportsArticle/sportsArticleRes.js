@@ -1,10 +1,10 @@
 const sportsArticle = {
     Query: {
-        sportsArticles: (_, args, context, info)=>{
-            return context.prisma.query.sportsArticles({...args},info)
+        sportsArticles: async (_, args, context, info)=>{
+            return await context.prisma.query.sportsArticles({...args},info)
         },
-        sportsArticle: (_, args, context, info)=>{
-            return context.prisma.query.sportsArticle({...args},info)
+        sportsArticle: async (_, args, context, info)=>{
+            return await context.prisma.query.sportsArticle({...args},info)
         },
     },
     Mutation: {

@@ -1,10 +1,10 @@
 const presenter = {
     Query: {
-        presenters: (_, args, context, info)=>{
-            return context.prisma.query.presenters({...args},info)
+        presenters: async(_, args, context, info)=>{
+            return await context.prisma.query.presenters({...args},info)
         },
-        presenter: (_, args, context, info)=>{
-            return context.prisma.query.presenter({...args},info)
+        presenter: async (_, args, context, info)=>{
+            return await context.prisma.query.presenter({...args},info)
         },
     },
     Mutation: {

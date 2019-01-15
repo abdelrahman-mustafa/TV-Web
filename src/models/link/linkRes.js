@@ -1,10 +1,10 @@
 const link = {
     Query: {
-        links: (_, args, context, info)=>{
-            return context.prisma.query.links({...args},info)
+        links: async (_, args, context, info)=>{
+            return await context.prisma.query.links({...args},info)
         },
-        link: (_, args, context, info)=>{
-            return context.prisma.query.link({...args},info)
+        link: async (_, args, context, info)=>{
+            return await context.prisma.query.link({...args},info)
         },
     },
     Mutation: {

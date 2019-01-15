@@ -1,10 +1,10 @@
 const infoData = {
     Query: {
-        infoDatas: (_, args, context, info)=>{
-            return context.prisma.query.infoDatas({...args},info)
+        infoDatas: async (_, args, context, info)=>{
+            return await context.prisma.query.infoDatas({...args},info)
         },
-        infoData: (_, args, context, info)=>{
-            return context.prisma.query.infoData({...args},info)
+        infoData: async (_, args, context, info)=>{
+            return await context.prisma.query.infoData({...args},info)
         },
     },
     Mutation: {

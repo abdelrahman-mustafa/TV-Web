@@ -1,10 +1,10 @@
 const event = {
     Query: {
-        events: (_, args, context, info)=>{
-            return context.prisma.query.events({...args},info)
+        events: async (_, args, context, info)=>{
+            return await context.prisma.query.events({...args},info)
         },
-        event: (_, args, context, info)=>{
-            return context.prisma.query.event({...args},info)
+        event: async (_, args, context, info)=>{
+            return await context.prisma.query.event({...args},info)
         },
     },
     Mutation: {
