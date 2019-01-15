@@ -15,7 +15,7 @@ const schedule = {
              if(results[0]){
                 const upComing = await context.prisma.query.schedules({
                     where:{ days_some:{name:args.day},endDate_gte:args.date, AND:{startDate_lte:args.date},timeDate_gte:results[0].finishTimeDate},
-                    orderBy: timeDate_ASC 
+                    orderBy: "timeDate_ASC" 
                  },info)
                  res.push(upComing[0])
                  return res;
