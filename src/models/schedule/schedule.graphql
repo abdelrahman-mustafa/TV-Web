@@ -4,7 +4,7 @@ type Query {
     schedules(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule]!
     schedule(where: ScheduleWhereUniqueInput!): Schedule
     currentSchedule(time: DateTime, day: String, date: DateTime): [Schedule]!
-    daySchedules(day: String, data: DateTime): [Schedule]!
+    daySchedules(day: String, date: DateTime): [Schedule]!
 
 }
 
