@@ -21,6 +21,13 @@ const schedule = {
                  return res;
              }
         },
+        daySchedules: async(_, args, context, info)=>{
+            return await context.prisma.query.schedules({
+                where:{ days_some:{name: args.day }, AND:{startDate_lte: args.date, AND:{endDate_gte: args.date }}}, 
+                orderBy: "timeDate_ASC"
+            },info)
+        },
+        
     },
     Mutation: {
         createSchedule : async (_,args, context, info)=>{
