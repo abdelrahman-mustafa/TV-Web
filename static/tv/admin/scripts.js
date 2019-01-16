@@ -2790,8 +2790,8 @@ $(document).ready(function(){$(function(){$(".preloader").fadeOut(),$("#side-men
       // fontName
       fontNames: [
         'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New',
-        'Helvetica Neue', 'Helvetica', 'Impact', 'Lucida Grande',
-        'Tahoma', 'Times New Roman', 'Verdana'
+        'Helvetica Neue', 'Helvetica', 'Lucida Grande',
+        'Tahoma', 'Times New Roman', 'Verdana' , 'Tajawal'
       ],
       fontNamesIgnoreCheck: [],
 
