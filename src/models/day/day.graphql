@@ -4,3 +4,10 @@ type Query {
     days(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Day]!
     day(where: DayWhereUniqueInput!): Day
 }
+
+
+type Mutation {
+    createDay(data: DayCreateInput!): Day!
+    updateDay(data: DayUpdateInput!, where: DayWhereUniqueInput!): Day
+    deleteDay(where: DayWhereUniqueInput!): Day
+}
