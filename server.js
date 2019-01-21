@@ -20,7 +20,7 @@ const helmet = require('helmet')
 const compression = require('compression')
 server.express.use(helmet())
 server.express.use(compression())
-server.express.use(config.limiter)
+// server.express.use(config.limiter)
 server.start(config.options, ({ port }) => {
     console.log(`Server running at http://localhost:${port}`)
 })

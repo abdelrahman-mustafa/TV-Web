@@ -2687,15 +2687,3 @@ button.slick-prev:hover {
 }
 
 /* The End */
-
-.rio-promos {
-  background-color: red;
-  transition: opacity 1s ease;
-  -webkit-transition: opacity 1s ease;
-}
-
-.rio-promos .slick-initialized {
-  background-color: none;
-  visibility: visible;
-  opacity: 1;
-}
