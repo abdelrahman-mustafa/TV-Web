@@ -359,12 +359,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_our_team_our_team_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/our-team/our-team.component */ "./src/app/pages/our-team/our-team.component.ts");
 /* harmony import */ var _pages_add_or_remove_program_add_or_remove_program_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/add-or-remove-program/add-or-remove-program.component */ "./src/app/pages/add-or-remove-program/add-or-remove-program.component.ts");
 /* harmony import */ var _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/add-or-edit-article/add-or-edit-article.component */ "./src/app/pages/add-or-edit-article/add-or-edit-article.component.ts");
+/* harmony import */ var _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/add-or-edit-links/add-or-edit-links.component */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.ts");
+/* harmony import */ var _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
+/* harmony import */ var _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/program-schedule/program-schedule.component */ "./src/app/pages/program-schedule/program-schedule.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -403,7 +409,10 @@ var routes = [
     { path: 'links', component: _pages_links_links_component__WEBPACK_IMPORTED_MODULE_16__["LinksComponent"] },
     { path: 'team', component: _pages_our_team_our_team_component__WEBPACK_IMPORTED_MODULE_17__["OurTeamComponent"] },
     { path: 'editProgram/:id', component: _pages_add_or_remove_program_add_or_remove_program_component__WEBPACK_IMPORTED_MODULE_18__["AddOrRemoveProgramComponent"] },
+    { path: 'editLink/:id', component: _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_20__["AddOrEditLinksComponent"] },
     { path: 'editArticle/:type/:id', component: _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_19__["AddOrEditArticleComponent"] },
+    { path: 'programDetails/:id', component: _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_21__["ProgramDetailsComponent"] },
+    { path: 'programSchedule/:programId/:scheduleId', component: _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_22__["ProgramScheduleComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -533,12 +542,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_edit_privacy_edit_privacy_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./pages/edit-privacy/edit-privacy.component */ "./src/app/pages/edit-privacy/edit-privacy.component.ts");
 /* harmony import */ var _pages_add_or_remove_program_add_or_remove_program_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./pages/add-or-remove-program/add-or-remove-program.component */ "./src/app/pages/add-or-remove-program/add-or-remove-program.component.ts");
 /* harmony import */ var _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./pages/add-or-edit-article/add-or-edit-article.component */ "./src/app/pages/add-or-edit-article/add-or-edit-article.component.ts");
+/* harmony import */ var _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pages/add-or-edit-links/add-or-edit-links.component */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.ts");
+/* harmony import */ var _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
+/* harmony import */ var _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./pages/program-schedule/program-schedule.component */ "./src/app/pages/program-schedule/program-schedule.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -596,7 +611,10 @@ var AppModule = /** @class */ (function () {
                 _pages_edit_use_terms_edit_use_terms_component__WEBPACK_IMPORTED_MODULE_29__["EditUseTermsComponent"],
                 _pages_edit_privacy_edit_privacy_component__WEBPACK_IMPORTED_MODULE_30__["EditPrivacyComponent"],
                 _pages_add_or_remove_program_add_or_remove_program_component__WEBPACK_IMPORTED_MODULE_31__["AddOrRemoveProgramComponent"],
-                _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_32__["AddOrEditArticleComponent"]
+                _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_32__["AddOrEditArticleComponent"],
+                _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_33__["AddOrEditLinksComponent"],
+                _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_34__["ProgramDetailsComponent"],
+                _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_35__["ProgramScheduleComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -971,7 +989,7 @@ var AddOrEditArticleComponent = /** @class */ (function () {
                         console.log($('#summernote').code());
                         this.selectedArticle.article = $('#summernote').code();
                         this.selectedArticle.publishDate = moment__WEBPACK_IMPORTED_MODULE_7__(this.selectedArticle.publishDate).toISOString();
-                        this.selectedArticle.publishTime = "2015-11-22T" + this.selectedArticle.publishTime + ":00.000Z";
+                        this.selectedArticle.publishTime = "1970-01-01T" + this.selectedArticle.publishTime + ":00.000Z";
                         if (!this.selectedArticleImage) return [3 /*break*/, 4];
                         this.selectedArticle.images = [];
                         i = 0;
@@ -1059,6 +1077,69 @@ var AddOrEditArticleComponent = /** @class */ (function () {
             src_app_services_cloud_storage_provider_service__WEBPACK_IMPORTED_MODULE_5__["CloudStorageProviderService"]])
     ], AddOrEditArticleComponent);
     return AddOrEditArticleComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/app/pages/add-or-edit-links/add-or-edit-links.component.css ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/app/pages/add-or-edit-links/add-or-edit-links.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">إضافة رابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> اسم الرابط\n              </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" class=\"form-control form-control-line text_filed_ios_android\">\n\n            </div>\n\n\n\n\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> عنوان الرابط\n              </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" class=\"form-control form-control-line text_filed_ios_android\">\n\n            </div>\n\n\n\n\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> رفع الأيكون </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-6\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" name=\"...\"> </span> <a href=\"#\" class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\">حذف</a>\n              </div>\n            </div>\n\n\n\n\n          </div>\n\n          <br>\n\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n              <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n\n            </div>\n\n\n\n            <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n\n              <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">\n                <a href=\"links.html\">\n                  إلغاء\n                </a>\n              </button>\n\n            </div>\n\n\n\n\n          </div>\n\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/pages/add-or-edit-links/add-or-edit-links.component.ts ***!
+  \************************************************************************/
+/*! exports provided: AddOrEditLinksComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddOrEditLinksComponent", function() { return AddOrEditLinksComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AddOrEditLinksComponent = /** @class */ (function () {
+    function AddOrEditLinksComponent() {
+    }
+    AddOrEditLinksComponent.prototype.ngOnInit = function () {
+    };
+    AddOrEditLinksComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-add-or-edit-links',
+            template: __webpack_require__(/*! ./add-or-edit-links.component.html */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.html"),
+            styles: [__webpack_require__(/*! ./add-or-edit-links.component.css */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AddOrEditLinksComponent);
+    return AddOrEditLinksComponent;
 }());
 
 
@@ -3124,7 +3205,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الروابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a href=\"links2.html\">\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>اسم الرابط</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr>\n                <td class=\"detail\">\n                  <a href=\"links3.html\">\n                    فيس\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a href=\"links2.html\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n              <tr>\n                <td class=\"detail\"><a href=\"links3.html\">تويتر</a></td>\n                <td class=\"edit\">\n\n                  <a href=\"links2.html\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n              <tr>\n                <td class=\"detail\">\n                  <a href=\"links3.html\">\n                    إنستجرام\n                  </a>\n                </td>\n                <td class=\"edit\">\n\n                  <a href=\"links2.html\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الروابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a routerLink=\"/editLink/id\">\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>اسم الرابط</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let link of links\">\n                <td class=\"detail\">\n                  <a>\n                    {{link.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editLink/id\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
 
 /***/ }),
 
@@ -3139,6 +3220,9 @@ module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinksComponent", function() { return LinksComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
+/* harmony import */ var src_app_services_uiServices_links_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/uiServices/links.service */ "./src/app/services/uiServices/links.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3148,19 +3232,98 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 var LinksComponent = /** @class */ (function () {
-    function LinksComponent() {
+    function LinksComponent(spinner, linksService) {
+        this.spinner = spinner;
+        this.linksService = linksService;
     }
     LinksComponent.prototype.ngOnInit = function () {
+        this.successfulDialog.options = {
+            confirmButtonText: "تم"
+        };
+        this.errorDialog.options = {
+            confirmButtonText: "حسنا"
+        };
+        this.loadLinks();
     };
+    LinksComponent.prototype.loadLinks = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, errror_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        this.spinner.show();
+                        _a = this;
+                        return [4 /*yield*/, this.linksService.getLinksList()];
+                    case 1:
+                        _a.links = _b.sent();
+                        this.spinner.hide();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        errror_1 = _b.sent();
+                        this.spinner.hide();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], LinksComponent.prototype, "successfulDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], LinksComponent.prototype, "errorDialog", void 0);
     LinksComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-links',
             template: __webpack_require__(/*! ./links.component.html */ "./src/app/pages/links/links.component.html"),
             styles: [__webpack_require__(/*! ./links.component.css */ "./src/app/pages/links/links.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], src_app_services_uiServices_links_service__WEBPACK_IMPORTED_MODULE_3__["LinksService"]])
     ], LinksComponent);
     return LinksComponent;
 }());
@@ -3608,6 +3771,461 @@ var PrivacyTermsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/program-details/program-details.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/program-details/program-details.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/pages/program-details/program-details.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/program-details/program-details.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">{{selectedProgram.name}}</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.name}} </p>\n            </div>\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم المقدم</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.presenter}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> وصف التوقيت\n\n              </p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.programDate}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> مدة البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.duration}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> البانر</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <img src=\"{{selectedProgram.webBanner}}\" style=\"width: 30%;\">\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> الايكون</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <img src=\"{{selectedProgram.icon}}\" style=\"width: 30%; margin-top: 6px;margin-bottom: 6px\">\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> Playlist ID\n\n              </p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.playlistUrl}}</p>\n            </div>\n          </div>\n\n\n\n\n\n          <hr>\n\n          <button routerLink=\"/programSchedule/{{selectedProgram.id}}/0\" type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"><a>إضافة</a></button>\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th> تاريخ الانتهاء </th>\n                <th> تاريخ البدأ </th>\n                <th> التوقيت </th>\n                <th> ايام العرض </th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let schedule of selectedProgram.schedule\">\n                <td><span class=\"label label-table label-success\">{{schedule.type}}</span> </td>\n                <td>{{schedule.endDate | date:'dd-MM-yyyy'}}</td>\n                <td>{{schedule.startDate | date:'dd-MM-yyyy'}}</td>\n                <td> {{getPublishTime(schedule.timeDate)}}</td>\n                <td><span *ngFor=\"let day of schedule.days\">{{day.name}},</span></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/programSchedule/{{selectedProgram.id}}/{{schedule.id}}\" data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteSchedule(schedule.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/program-details/program-details.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/program-details/program-details.component.ts ***!
+  \********************************************************************/
+/*! exports provided: ProgramDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramDetailsComponent", function() { return ProgramDetailsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var src_app_services_uiServices_programs_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/uiServices/programs.service */ "./src/app/services/uiServices/programs.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+var ProgramDetailsComponent = /** @class */ (function () {
+    function ProgramDetailsComponent(route, location, programService, spinner) {
+        var _this = this;
+        this.route = route;
+        this.location = location;
+        this.programService = programService;
+        this.spinner = spinner;
+        this.selectedProgram = {
+            name: "",
+            description: "",
+            duration: "",
+            programDate: "",
+            icon: "",
+            mobBanner: "",
+            playlistUrl: "",
+            webBanner: "",
+            isShowen: false,
+            presenter: "",
+            schedule: []
+        };
+        this.route.params.subscribe(function (params) {
+            _this.programId = params.id;
+            console.log(_this.programId);
+        });
+    }
+    ProgramDetailsComponent.prototype.ngOnInit = function () {
+        this.successfulDialog.options = {
+            confirmButtonText: "تم"
+        };
+        this.errorDialog.options = {
+            confirmButtonText: "حسنا"
+        };
+        this.getProgramDetails();
+    };
+    ProgramDetailsComponent.prototype.getProgramDetails = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, error_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        this.spinner.show();
+                        _a = this;
+                        return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
+                    case 1:
+                        _a.selectedProgram = _b.sent();
+                        this.spinner.hide();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        error_1 = _b.sent();
+                        this.spinner.hide();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProgramDetailsComponent.prototype.getPublishTime = function (time) {
+        return time != null ? time.substr(time.indexOf("T") + 1, 5) : "";
+    };
+    ProgramDetailsComponent.prototype.deleteSchedule = function (scheduleId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var error_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.programService.deleteSchedule(scheduleId)];
+                    case 1:
+                        _a.sent();
+                        this.getProgramDetails();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        error_2 = _a.sent();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ProgramDetailsComponent.prototype, "successfulDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ProgramDetailsComponent.prototype, "errorDialog", void 0);
+    ProgramDetailsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-program-details',
+            template: __webpack_require__(/*! ./program-details.component.html */ "./src/app/pages/program-details/program-details.component.html"),
+            styles: [__webpack_require__(/*! ./program-details.component.css */ "./src/app/pages/program-details/program-details.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
+            src_app_services_uiServices_programs_service__WEBPACK_IMPORTED_MODULE_5__["ProgramsService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"]])
+    ], ProgramDetailsComponent);
+    return ProgramDetailsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/program-schedule/program-schedule.component.css":
+/*!***********************************************************************!*\
+  !*** ./src/app/pages/program-schedule/program-schedule.component.css ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/pages/program-schedule/program-schedule.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/pages/program-schedule/program-schedule.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">اضافة موعد</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #scheduleForm=\"ngForm\" (ngSubmit)=\"save(scheduleForm)\">\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> أيام البث</p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n                <div class=\"checkbox_addtime\">\n                  <div class=\"checkbox checkbox-info \">\n                    <input id=\"checkbox7\" type=\"checkbox\" [checked]=\"friId != undefined\" name=\"fri\" [(ngModel)]=\"friId\">\n                    <label for=\"checkbox7\"> الجمعة </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox6\" type=\"checkbox\" [checked]=\"thuId != undefined\" name=\"thu\" [(ngModel)]=\"thuId\">\n                    <label for=\"checkbox6\"> الخميس </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox5\" type=\"checkbox\" [checked]=\"wedId != undefined\" name=\"wed\" [(ngModel)]=\"wedId\">\n                    <label for=\"checkbox5\"> الأربعاء </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox4\" type=\"checkbox\" [checked]=\"tueId != undefined\" name=\"tue\" [(ngModel)]=\"tueId\">\n                    <label for=\"checkbox4\"> الثلاثاء </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox3\" type=\"checkbox\" [checked]=\"monId != undefined\" name=\"mon\" [(ngModel)]=\"monId\">\n                    <label for=\"checkbox3\"> الأتنين </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox2\" type=\"checkbox\" [checked]=\"sunId != undefined\" name=\"sun\" [(ngModel)]=\"sunId\">\n                    <label for=\"checkbox2\"> الأحد </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox1\" type=\"checkbox\" [checked]=\"satId != undefined\" name=\"sat\" [(ngModel)]=\"satId\">\n                    <label for=\"checkbox1\"> السبت </label>\n                  </div>\n                </div>\n\n              </div>\n            </div>\n\n            <hr>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> توقيت البث</p>\n              </div>\n\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n\n                <input type=\"time\" required atp-time-picker placeholder=\"انقر لاختيار الوقت\" name=\"timeDate\"\n                  [(ngModel)]=\"selectedSchedule.timeDate\" />\n              </div>\n            </div>\n\n            <br>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> تاريخ بداية البث</p>\n              </div>\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker required [options]=\"options\" name=\"startDate\" [(ngModel)]=\"selectedSchedule.startDate\"\n                  position=\"bottom-left\"></ng-datepicker>\n              </div>\n\n            </div>\n            <br>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> تاريخ إنتهاء البث</p>\n              </div>\n\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker required [options]=\"options\" name=\"endDate\" [(ngModel)]=\"selectedSchedule.endDate\"\n                  position=\"bottom-left\"></ng-datepicker>\n              </div>\n            </div>\n\n            <br>\n\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> جديد/ اعادة </p>\n\n              </div>\n\n\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n\n                <select class=\"form-control\" required name=\"type\" [(ngModel)]=\"selectedSchedule.type\">\n                  <option value=\"new\">جديد</option>\n                  <option value=\"repeat\">إعادة</option>\n                </select>\n              </div>\n\n            </div>\n\n            <hr>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n                <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n\n              </div>\n\n\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n\n                <button type=\"button\" (click)=\"onBackCliced()\" class=\"btn btn_submit btn-info waves-effect waves-light  \"><a>إلغاء</a></button>\n\n              </div>\n\n\n\n\n            </div>\n          </form>\n        </div>\n\n\n\n\n\n      </div>\n    </div>\n  </div>\n\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/program-schedule/program-schedule.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/program-schedule/program-schedule.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: ProgramScheduleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramScheduleComponent", function() { return ProgramScheduleComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var src_app_services_uiServices_programs_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/uiServices/programs.service */ "./src/app/services/uiServices/programs.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+var ProgramScheduleComponent = /** @class */ (function () {
+    function ProgramScheduleComponent(route, location, programService, spinner) {
+        this.route = route;
+        this.location = location;
+        this.programService = programService;
+        this.spinner = spinner;
+        this.systemDays = [];
+        this.options = {
+            minYear: 1970,
+            maxYear: 2030,
+            displayFormat: 'DD-MM-YYYY',
+            barTitleFormat: 'MMMM YYYY',
+            dayNamesFormat: 'dd',
+            firstCalendarDay: 0,
+            barTitleIfEmpty: 'انقر لاختيار التاريخ',
+            placeholder: 'انقر لاختيار التاريخ',
+            fieldId: 'my-date-picker',
+            useEmptyBarTitle: false,
+        };
+        this.selectedSchedule = {
+            days: [],
+            endDate: "",
+            finishTimeDate: "",
+            startDate: "",
+            timeDate: "",
+            type: "new"
+        };
+    }
+    ProgramScheduleComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.successfulDialog.options = {
+            confirmButtonText: "تم"
+        };
+        this.errorDialog.options = {
+            confirmButtonText: "حسنا"
+        };
+        this.route.params.subscribe(function (params) {
+            _this.programId = params.programId;
+            _this.secheduleId = params.scheduleId;
+            _this.isEdit = _this.secheduleId != "0";
+            console.log(_this.programId);
+            console.log(_this.secheduleId);
+            _this.getProgramDetails();
+        });
+    };
+    ProgramScheduleComponent.prototype.getProgramDetails = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var _a, _b, error_1;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        _c.trys.push([0, 3, , 4]);
+                        this.spinner.show();
+                        _a = this;
+                        return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
+                    case 1:
+                        _a.selectedProgram = _c.sent();
+                        _b = this;
+                        return [4 /*yield*/, this.programService.getDaysList()];
+                    case 2:
+                        _b.systemDays = _c.sent();
+                        this.spinner.hide();
+                        if (this.isEdit) {
+                            this.selectedSchedule = this.selectedProgram.schedule.find(function (item) { return item.id == _this.secheduleId; });
+                            console.log("Selected schedule");
+                            console.log(this.selectedSchedule);
+                            this.selectedSchedule.timeDate = this.selectedSchedule.timeDate.substr(this.selectedSchedule.timeDate.indexOf("T") + 1, 5);
+                            this.originalScheduleDays = this.selectedSchedule.days;
+                            this.satId = this.selectedSchedule.days.find(function (day) { return day.name == "Sat"; }) != undefined;
+                            this.sunId = this.selectedSchedule.days.find(function (day) { return day.name == "Sun"; }) != undefined;
+                            this.monId = this.selectedSchedule.days.find(function (day) { return day.name == "Mon"; }) != undefined;
+                            this.tueId = this.selectedSchedule.days.find(function (day) { return day.name == "Tue"; }) != undefined;
+                            this.wedId = this.selectedSchedule.days.find(function (day) { return day.name == "Wed"; }) != undefined;
+                            this.thuId = this.selectedSchedule.days.find(function (day) { return day.name == "Thu"; }) != undefined;
+                            this.friId = this.selectedSchedule.days.find(function (day) { return day.name == "Fri"; }) != undefined;
+                        }
+                        return [3 /*break*/, 4];
+                    case 3:
+                        error_1 = _c.sent();
+                        this.spinner.hide();
+                        this.errorDialog.options = {
+                            title: "تحقق من اتصالك بالإنترنت"
+                        };
+                        this.errorDialog.show();
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProgramScheduleComponent.prototype.onBackCliced = function () {
+        this.location.back();
+    };
+    ProgramScheduleComponent.prototype.save = function (form) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var error_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        console.log(form.value);
+                        if (!form.valid) return [3 /*break*/, 8];
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 6, , 7]);
+                        this.spinner.show();
+                        if (!this.isEdit) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.programService.updateProgramSchedule(this.selectedSchedule.id, form, this.selectedProgram, this.systemDays, this.originalScheduleDays)];
+                    case 2:
+                        _a.sent();
+                        this.spinner.hide();
+                        this.successfulDialog.show().then(function (value) {
+                            _this.onBackCliced();
+                        });
+                        return [3 /*break*/, 5];
+                    case 3: return [4 /*yield*/, this.programService.createProgramSchedule(form, this.selectedProgram, this.systemDays)];
+                    case 4:
+                        _a.sent();
+                        this.spinner.hide();
+                        this.successfulDialog.show().then(function (value) {
+                            _this.onBackCliced();
+                        });
+                        _a.label = 5;
+                    case 5: return [3 /*break*/, 7];
+                    case 6:
+                        error_2 = _a.sent();
+                        this.spinner.hide();
+                        this.errorDialog.options = {
+                            title: "تحقق من اتصالك بالإنترنت"
+                        };
+                        this.errorDialog.show();
+                        return [3 /*break*/, 7];
+                    case 7: return [3 /*break*/, 9];
+                    case 8:
+                        this.errorDialog.options = {
+                            title: "من فضلك قم بملء بيانات الجدول"
+                        };
+                        this.errorDialog.show();
+                        _a.label = 9;
+                    case 9: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ProgramScheduleComponent.prototype, "successfulDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ProgramScheduleComponent.prototype, "errorDialog", void 0);
+    ProgramScheduleComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-program-schedule',
+            template: __webpack_require__(/*! ./program-schedule.component.html */ "./src/app/pages/program-schedule/program-schedule.component.html"),
+            styles: [__webpack_require__(/*! ./program-schedule.component.css */ "./src/app/pages/program-schedule/program-schedule.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
+            src_app_services_uiServices_programs_service__WEBPACK_IMPORTED_MODULE_5__["ProgramsService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"]])
+    ], ProgramScheduleComponent);
+    return ProgramScheduleComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/programs/programs.component.css":
 /*!*******************************************************!*\
   !*** ./src/app/pages/programs/programs.component.css ***!
@@ -3626,7 +4244,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Page Content -->\n<!-- ============================================================== -->\n<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">البرامج</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"submit\" (click)=\"addNewProgram()\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"><a>إضافة</a></button>\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle  color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n                <th>تغيير الحالة</th>\n                <th>اسم البرنامج</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let program of programs\">\n                <td><span style=\"cursor:pointer;\" (click)=\"changeAppearanceStatus(program)\" class=\"label label-table\"\n                    [ngClass]=\"{'label-success': !program.isShowen, 'label-danger': program.isShowen}\">{{program.isShowen\n                    ? \"إخفاء\" : \"إظهار\"}}</span></td>\n                <td class=\"detail\"><a>{{program.name}}</a></td>\n                <td class=\"edit\">\n                  <a routerLink=\"/editProgram/{{program.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i\n                      class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteProgram(program.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<!-- ============================================================== -->\n<!-- End Page Content -->\n<!-- ============================================================== -->\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<!-- Page Content -->\n<!-- ============================================================== -->\n<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">البرامج</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"submit\" (click)=\"addNewProgram()\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"><a>إضافة</a></button>\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle  color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n                <th>تغيير الحالة</th>\n                <th>اسم البرنامج</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let program of programs\">\n                <td><span style=\"cursor:pointer;\" (click)=\"changeAppearanceStatus(program)\" class=\"label label-table\"\n                    [ngClass]=\"{'label-success': !program.isShowen, 'label-danger': program.isShowen}\">{{program.isShowen\n                    ? \"إخفاء\" : \"إظهار\"}}</span></td>\n                <td class=\"detail\"><a routerLink=\"/programDetails/{{program.id}}\">{{program.name}}</a></td>\n                <td class=\"edit\">\n                  <a routerLink=\"/editProgram/{{program.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i\n                      class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteProgram(program.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<!-- ============================================================== -->\n<!-- End Page Content -->\n<!-- ============================================================== -->\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
 
 /***/ }),
 
@@ -5315,16 +5933,16 @@ var HomePageServicesService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/services/uiServices/programs.service.ts":
-/*!*********************************************************!*\
-  !*** ./src/app/services/uiServices/programs.service.ts ***!
-  \*********************************************************/
-/*! exports provided: ProgramsService */
+/***/ "./src/app/services/uiServices/links.service.ts":
+/*!******************************************************!*\
+  !*** ./src/app/services/uiServices/links.service.ts ***!
+  \******************************************************/
+/*! exports provided: LinksService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramsService", function() { return ProgramsService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LinksService", function() { return LinksService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _service_handler_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service-handler.service */ "./src/app/services/service-handler.service.ts");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
@@ -5375,6 +5993,108 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+var LinksService = /** @class */ (function () {
+    function LinksService(serviceHadler) {
+        this.serviceHadler = serviceHadler;
+    }
+    LinksService.prototype.getLinksList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        links{\n          id,\n          name,\n          icon,\n          url\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.links) {
+                                resolve(response.data.links);
+                            }
+                            else {
+                                reject("Failed to load links");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    LinksService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_service_handler_service__WEBPACK_IMPORTED_MODULE_1__["ServiceHandlerProvider"]])
+    ], LinksService);
+    return LinksService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/uiServices/programs.service.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/services/uiServices/programs.service.ts ***!
+  \*********************************************************/
+/*! exports provided: ProgramsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgramsService", function() { return ProgramsService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_handler_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service-handler.service */ "./src/app/services/service-handler.service.ts");
+/* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
 var ProgramsService = /** @class */ (function () {
     function ProgramsService(serviceHadler) {
         this.serviceHadler = serviceHadler;
@@ -5401,12 +6121,34 @@ var ProgramsService = /** @class */ (function () {
             });
         });
     };
+    ProgramsService.prototype.getDaysList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        days{\n          id,\n          name\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.days) {
+                                resolve(response.data.days);
+                            }
+                            else {
+                                reject("Failed to load days");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
     ProgramsService.prototype.getProgramsDetails = function (programId) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        var query = "query{\n        program(where:{id:\"" + programId + "\"}){\n          id,\n          name,\n          programDate,\n          description,\n          duration,\n          webBanner,\n          mobBanner,\n          icon,\n          playlistUrl,\n          isShowen,\n          presenter\n        }\n      }";
+                        var query = "query{\n        program(where:{id:\"" + programId + "\"}){\n          id,\n          name,\n          programDate,\n          description,\n          duration,\n          webBanner,\n          mobBanner,\n          icon,\n          playlistUrl,\n          isShowen,\n          presenter,\n          schedule{\n            id,\n            days{\n              id,\n              name,\n            },\n            type,\n            timeDate,\n            startDate,\n            endDate,\n            type,\n            finishTimeDate\n          }\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.program) {
@@ -5498,6 +6240,151 @@ var ProgramsService = /** @class */ (function () {
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.updateProgram) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    ProgramsService.prototype.createProgramSchedule = function (scheduleForm, selectedProgram, days) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var timeDate = "1970-01-01T" + scheduleForm.value.timeDate + ":00.000Z";
+                        var finishTimeDate = moment__WEBPACK_IMPORTED_MODULE_3__(timeDate).add(selectedProgram.duration, 'minutes').toISOString();
+                        var connectQuery = "";
+                        if (scheduleForm.value.sat) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Sat"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.sun) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Sun"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.mon) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Mon"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.tue) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Tue"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.wed) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Wed"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.thu) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Thu"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.fri) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Fri"; }).id + "\"},");
+                        }
+                        var query = "mutation{\n        createSchedule(\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).toISOString() + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).toISOString() + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          program:{\n            connect:{id:\"" + selectedProgram.id + "\"}\n          }\n          days:{\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
+                        console.log(query.toString());
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.createSchedule) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    ProgramsService.prototype.updateProgramSchedule = function (scheduleId, scheduleForm, selectedProgram, days, originalDays) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var timeDate = "1970-01-01T" + scheduleForm.value.timeDate + ":00.000Z";
+                        var finishTimeDate = moment__WEBPACK_IMPORTED_MODULE_3__(timeDate).add(selectedProgram.duration, 'minutes').toISOString();
+                        var connectQuery = "";
+                        var disconnectQuery = "";
+                        if (scheduleForm.value.sat) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Sat"; }).id + "\"},");
+                        }
+                        else {
+                            if (originalDays.find(function (day) { return day.name == "Sat"; }))
+                                disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Sat"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.sun) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Sun"; }).id + "\"},");
+                        }
+                        else {
+                            if (originalDays.find(function (day) { return day.name == "Sun"; }))
+                                disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Sun"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.mon) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Mon"; }).id + "\"},");
+                        }
+                        else {
+                            if (originalDays.find(function (day) { return day.name == "Mon"; }))
+                                disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Mon"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.tue) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Tue"; }).id + "\"},");
+                        }
+                        else {
+                            if (originalDays.find(function (day) { return day.name == "Tue"; }))
+                                disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Tue"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.wed) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Wed"; }).id + "\"},");
+                        }
+                        else {
+                            if (originalDays.find(function (day) { return day.name == "Wed"; }))
+                                disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Wed"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.thu) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Thu"; }).id + "\"},");
+                        }
+                        else {
+                            if (originalDays.find(function (day) { return day.name == "Thu"; }))
+                                disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Thu"; }).id + "\"},");
+                        }
+                        if (scheduleForm.value.fri) {
+                            connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Fri"; }).id + "\"},");
+                        }
+                        else {
+                            if (originalDays.find(function (day) { return day.name == "Fri"; }))
+                                disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Fri"; }).id + "\"},");
+                        }
+                        var query = "mutation{\n        updateSchedule(\n          where:{id:\"" + scheduleId + "\"},\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).toISOString() + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).toISOString() + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          days:{\n            disconnect:[" + disconnectQuery + "]\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
+                        console.log(query.toString());
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.updateSchedule) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    ProgramsService.prototype.deleteSchedule = function (scheduleId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "mutation{\n        deleteSchedule(where:{id:\"" + scheduleId + "\"}){\n          id\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.deleteSchedule) {
                                 resolve(true);
                             }
                             else {
