@@ -6,7 +6,7 @@ const infoData = {
                 where:{
                     name_contains: args.keyword,
                     OR:{
-                        description_contains:args.keyword
+                        article_contains:args.keyword
                     }
                 }
             },info)
@@ -14,7 +14,7 @@ const infoData = {
                 where:{
                     name_contains: args.keyword,
                     OR:{
-                        description_contains:args.keyword
+                        article_contains:args.keyword
                     }
                 }
             },info)
