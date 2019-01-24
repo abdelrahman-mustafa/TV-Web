@@ -1,5 +1,18 @@
 # import * from "../../generated/prisma.graphql"
 
 type Query {
-    search(keyword: String!): [Article!]!
+    search(keyword: String!): [generaData!]!
+}
+
+type generaData {
+  id: ID
+  name: String
+  writer: String 
+  caption: String
+  publishDate: DateTime
+  publishTime: DateTime
+  article: String
+  images: [String!]!
+  videos: String
+  isShowen: Boolean
 }
