@@ -1,5 +1,5 @@
 # import * from "../../generated/prisma.graphql"
 
 type Query {
-    search(keyword: String!): [Articles!]!
+    search(keyword: String!): [Article!]!
 }
