@@ -18,8 +18,9 @@ const schedule = {
                     orderBy: "timeDate_ASC" 
                  },info)
                  res.push(upComing[0])
-                 return res;
              }
+             return res;
+
         },
         daySchedules: async(_, args, context, info)=>{
             return await context.prisma.query.schedules({
