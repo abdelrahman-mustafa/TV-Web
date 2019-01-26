@@ -1,7 +1,6 @@
 const search = {
     Query: {
         search: async (_, args, context, info)=>{
-            let result = []
             const articles =  await context.prisma.query.articles({
                 where:{
                     name_contains: args.keyword,
