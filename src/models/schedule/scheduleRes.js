@@ -10,8 +10,8 @@ const schedule = {
             let res = []
             const results = await context.prisma.query.schedules({
                 where:{ days_some:{name:"Sat"},AND:{startDate_lte:"2019-01-24T22:00:00.000Z", endDate_gte:"2019-01-24T22:00:00.000Z",timeDate_lte:"1970-01-01T13:00:00.000Z",finishTimeDate_gte:"1970-01-01T13:00:00.000Z"}} 
-                ,orderBy: "timeDate_ASC" 
              })
+             console.log(results)
             //  res.push(results[0])
             //  console.log(results[0].program)
             //  if(results[0]){
