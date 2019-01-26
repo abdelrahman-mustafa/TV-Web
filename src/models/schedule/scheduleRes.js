@@ -11,15 +11,15 @@ const schedule = {
             const results = await context.prisma.query.schedules({
                 where:{ days_some:{name:args.day},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte:args.time,finishTimeDate_gte:args.time}} 
              },info)
+             console.log(results)
              res.push(results[0])
-             if(results[0]){
-                const upComing = await context.prisma.query.schedules({
-                    where:{ days_some:{name:args.day},AND:{startDate_lte:args.date, endDate_gte:args.date,timeDate_gte:results[0].finishTimeDate}},
-                    orderBy: "timeDate_ASC" 
-                 },info)
-                 res.push(upComing[0])
-                 return res;
-             }
+            const upComing = await context.prisma.query.schedules({
+                where:{ days_some:{name:args.day},AND:{startDate_lte:args.date, endDate_gte:args.date,timeDate_gte:results[0].finishTimeDate}},
+                orderBy: "timeDate_ASC" 
+                },info)
+                res.push(upComing[0])
+                return res;
+
         },
         daySchedules: async(_, args, context, info)=>{
             return await context.prisma.query.schedules({
