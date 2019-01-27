@@ -24,7 +24,7 @@ const schedule = {
             weekday[6] = "Sat";
             const dayName = weekday[day.getDay()];
             const results = await context.prisma.query.schedules({
-                where:{ days_some:{name: dayName},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte: timeNow ,finishTimeDate_gte: timeNow}} 
+                where:{ days_some:{name: args.day},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte: timeNow ,finishTimeDate_gte: timeNow}} 
              },info)
              console.log(results)
              res.push(results[0])
