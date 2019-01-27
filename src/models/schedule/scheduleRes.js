@@ -12,17 +12,6 @@ const schedule = {
             if (Array.isArray(time)) time = time[1].split("Z");
             else time = time.split("Z");
             const timeNow = "1970-01-01T"+time+"Z"
-            const date = new Date(args.date);
-            let day = date.getDay();
-            const weekday = new Array(7);
-            weekday[0] =  "Sun";
-            weekday[1] = "Mon";
-            weekday[2] = "Tue";
-            weekday[3] = "Wed";
-            weekday[4] = "Thu";
-            weekday[5] = "Fri";
-            weekday[6] = "Sat";
-            const dayName = weekday[day.getDay()];
             const results = await context.prisma.query.schedules({
                 where:{ days_some:{name: args.day},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte: timeNow ,finishTimeDate_gte: timeNow}} 
              },info)
