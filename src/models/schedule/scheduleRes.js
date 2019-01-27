@@ -8,12 +8,12 @@ const schedule = {
         },
         currentSchedule: async (_, args, context, info)=>{
             let res = []
-            const time = args.time.split("T")
+            let time = args.time.split("T")
             if (Array.isArray(time)) time = time[1].split("Z");
             else time = time.split("Z");
             const timeNow = "1970-01-01T"+time+"Z"
             const date = new Date(args.date);
-            const day = date.getDay();
+            let day = date.getDay();
             day = day.substring(0,3)
             console.log(timeNow)
             console.log(day)
