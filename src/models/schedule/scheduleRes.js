@@ -15,20 +15,16 @@ const schedule = {
             const day = date.getDay();
             day = day.substring(0,3)
             const results = await context.prisma.query.schedules({
-                where:{ days_some:{name: day},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte: timeNow ,finishTimeDate_gte: timeNow}} 
+                where:{ days_some:{name: da},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte: timeNow ,finishTimeDate_gte: timeNow}} 
              },info)
              console.log(results)
              res.push(results[0])
-             if (results[0].finishTimeDate){
                 const upComing = await context.prisma.query.schedules({
                 where:{ days_some:{name:args.day},AND:{startDate_lte:args.date, endDate_gte:args.date,timeDate_gte:results[0].finishTimeDate}},
                 orderBy: "timeDate_ASC" 
                 },info)
                 res.push(upComing[0])
                 return res;
-            }else{
-                return res;
-            }
 
         },
         daySchedules: async(_, args, context, info)=>{
