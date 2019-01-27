@@ -9,9 +9,8 @@ const schedule = {
         currentSchedule: async (_, args, context, info)=>{
             let res = []
             let time = args.time.split("T")
-            if (Array.isArray(time)) time = time[1].split("Z");
-            else time = time.split("Z");
-            const timeNow = "1970-01-01T"+time+"Z"
+            if (Array.isArray(time)) time = time[1]
+            const timeNow = "1970-01-01T"+time
             const results = await context.prisma.query.schedules({
                 where:{ days_some:{name: args.day},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte: timeNow ,finishTimeDate_gte: timeNow}} 
              },info)
