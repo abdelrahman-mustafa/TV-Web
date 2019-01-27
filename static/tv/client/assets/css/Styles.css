@@ -222,6 +222,7 @@ header #demo {
   max-width: none;
   position: fixed;
   height: 80vh;
+  margin-top: 3%;
 
   /*
       top: 0%;
@@ -639,6 +640,9 @@ header #demo {
     margin-left: -16%;
   }
 
+  .mixtup_container_controls .mixitup-control-active {
+    color: red !important;
+  }
   .mixtup_container_rows {
     width: 120%;
     margin-left: -10%;
@@ -1732,6 +1736,7 @@ button.slick-prev:hover {
 }
 .mixtup_container_rows .clock {
   margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 .mix a,
@@ -1846,7 +1851,7 @@ button.slick-prev:hover {
   font-size: small;
 }
 
-.Program_Schedule2_description h5 {
+.Program_Schedule2_description h4 {
   text-decoration: underline;
   font-size: medium;
   font-weight: 600;
@@ -2024,9 +2029,13 @@ button.slick-prev:hover {
 }
 
 .Subjects_box h4 {
-  text-decoration: underline;
   font-size: medium;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.Subjects_box h4:hover {
+  text-decoration: underline;
 }
 
 .Subjects_box h6 {
@@ -2092,6 +2101,12 @@ button.slick-prev:hover {
   font-size: smaller;
 }
 
+.Subjects_description h4 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+}
+
 .Subjects_description p:nth-child(4) {
   /* height: 15em; */
   overflow: hidden;
@@ -2141,7 +2156,7 @@ button.slick-prev:hover {
   }
   .Subjects_box h4 {
     text-decoration: underline;
-    font-size: x-large;
+    /* font-size: x-large; */
     font-weight: bold;
   }
   .Subjects_box p {
@@ -2687,3 +2702,11 @@ button.slick-prev:hover {
 }
 
 /* The End */
+
+.videos_box iframe {
+  width: 100%;
+}
+
+.box_Live iframe {
+  margin-top: 3%;
+}

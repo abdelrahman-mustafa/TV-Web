@@ -362,12 +362,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/add-or-edit-links/add-or-edit-links.component */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.ts");
 /* harmony import */ var _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
 /* harmony import */ var _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/program-schedule/program-schedule.component */ "./src/app/pages/program-schedule/program-schedule.component.ts");
+/* harmony import */ var _pages_add_or_edit_team_member_add_or_edit_team_member_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/add-or-edit-team-member/add-or-edit-team-member.component */ "./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -410,6 +412,7 @@ var routes = [
     { path: 'team', component: _pages_our_team_our_team_component__WEBPACK_IMPORTED_MODULE_17__["OurTeamComponent"] },
     { path: 'editProgram/:id', component: _pages_add_or_remove_program_add_or_remove_program_component__WEBPACK_IMPORTED_MODULE_18__["AddOrRemoveProgramComponent"] },
     { path: 'editLink/:id', component: _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_20__["AddOrEditLinksComponent"] },
+    { path: 'editMember/:id', component: _pages_add_or_edit_team_member_add_or_edit_team_member_component__WEBPACK_IMPORTED_MODULE_23__["AddOrEditTeamMemberComponent"] },
     { path: 'editArticle/:type/:id', component: _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_19__["AddOrEditArticleComponent"] },
     { path: 'programDetails/:id', component: _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_21__["ProgramDetailsComponent"] },
     { path: 'programSchedule/:programId/:scheduleId', component: _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_22__["ProgramScheduleComponent"] }
@@ -545,12 +548,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./pages/add-or-edit-links/add-or-edit-links.component */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.ts");
 /* harmony import */ var _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
 /* harmony import */ var _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./pages/program-schedule/program-schedule.component */ "./src/app/pages/program-schedule/program-schedule.component.ts");
+/* harmony import */ var _pages_add_or_edit_team_member_add_or_edit_team_member_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./pages/add-or-edit-team-member/add-or-edit-team-member.component */ "./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -614,7 +619,8 @@ var AppModule = /** @class */ (function () {
                 _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_32__["AddOrEditArticleComponent"],
                 _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_33__["AddOrEditLinksComponent"],
                 _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_34__["ProgramDetailsComponent"],
-                _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_35__["ProgramScheduleComponent"]
+                _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_35__["ProgramScheduleComponent"],
+                _pages_add_or_edit_team_member_add_or_edit_team_member_component__WEBPACK_IMPORTED_MODULE_36__["AddOrEditTeamMemberComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -1101,7 +1107,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">إضافة رابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> اسم الرابط\n              </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" class=\"form-control form-control-line text_filed_ios_android\">\n\n            </div>\n\n\n\n\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> عنوان الرابط\n              </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" class=\"form-control form-control-line text_filed_ios_android\">\n\n            </div>\n\n\n\n\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> رفع الأيكون </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-6\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" name=\"...\"> </span> <a href=\"#\" class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\">حذف</a>\n              </div>\n            </div>\n\n\n\n\n          </div>\n\n          <br>\n\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n              <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n\n            </div>\n\n\n\n            <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n\n              <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">\n                <a href=\"links.html\">\n                  إلغاء\n                </a>\n              </button>\n\n            </div>\n\n\n\n\n          </div>\n\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">إضافة رابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #linksForm=\"ngForm\" (ngSubmit)=\"save(linksForm)\">\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> اسم الرابط\n                </p>\n\n              </div>\n\n              <div class=\"col-md-6 \" style=\"float: right;\">\n\n                <input type=\"text\" required name=\"name\" [(ngModel)]=\"selectedLink.name\" class=\"form-control form-control-line text_filed_ios_android\">\n\n              </div>\n\n            </div>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> عنوان الرابط\n                </p>\n\n              </div>\n\n\n\n              <div class=\"col-md-6 \" style=\"float: right;\">\n\n                <input type=\"text\" required name=\"url\" [(ngModel)]=\"selectedLink.url\" class=\"form-control form-control-line text_filed_ios_android\">\n\n              </div>\n\n            </div>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> رفع الأيكون </p>\n\n              </div>\n\n\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                  <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                    <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                    <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                    <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event)\" type=\"file\" name=\"...\">\n                  </span> <a class=\"input-group-addon btn btn-default fileinput-exists\" data-dismiss=\"fileinput\"\n                    (click)=\"deleteFile()\">حذف</a>\n                </div>\n                <div style=\"margin-top: 12px;margin-bottom: 12px\">\n                  <img src=\"{{selectedLink.icon}}\" style=\"width: 30%;\">\n                </div>\n              </div>\n\n            </div>\n\n            <br>\n\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n                <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n\n              </div>\n\n\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n\n                <button (click)=\"onBackCliced()\" type=\"button\" class=\"btn btn_submit btn-info waves-effect waves-light  \">\n                  <a>\n                    إلغاء\n                  </a>\n                </button>\n\n              </div>\n\n            </div>\n\n          </form>\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
 
 /***/ }),
 
@@ -1116,6 +1122,12 @@ module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddOrEditLinksComponent", function() { return AddOrEditLinksComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var src_app_services_cloud_storage_provider_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/cloud-storage-provider.service */ "./src/app/services/cloud-storage-provider.service.ts");
+/* harmony import */ var src_app_services_uiServices_links_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/services/uiServices/links.service */ "./src/app/services/uiServices/links.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1125,21 +1137,456 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
 
 var AddOrEditLinksComponent = /** @class */ (function () {
-    function AddOrEditLinksComponent() {
+    function AddOrEditLinksComponent(route, location, linksService, spinner, cloudStorage) {
+        var _this = this;
+        this.route = route;
+        this.location = location;
+        this.linksService = linksService;
+        this.spinner = spinner;
+        this.cloudStorage = cloudStorage;
+        this.selectedLink = {
+            name: "",
+            icon: "",
+            url: ""
+        };
+        this.route.params.subscribe(function (params) {
+            _this.linkId = params.id;
+            _this.isEdit = _this.linkId != "0";
+            console.log(_this.linkId);
+            _this.getLinkDetails();
+        });
     }
-    AddOrEditLinksComponent.prototype.ngOnInit = function () {
+    AddOrEditLinksComponent.prototype.getLinkDetails = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, error_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!this.isEdit) return [3 /*break*/, 5];
+                        _b.label = 1;
+                    case 1:
+                        _b.trys.push([1, 3, , 4]);
+                        this.spinner.show();
+                        _a = this;
+                        return [4 /*yield*/, this.linksService.getLinkDetails(this.linkId)];
+                    case 2:
+                        _a.selectedLink = _b.sent();
+                        this.iconUrl = this.selectedLink.icon;
+                        this.spinner.hide();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        error_1 = _b.sent();
+                        this.spinner.hide();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 4];
+                    case 4: return [3 /*break*/, 6];
+                    case 5:
+                        this.selectedLink = {
+                            name: "",
+                            icon: "",
+                            url: ""
+                        };
+                        _b.label = 6;
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
     };
+    AddOrEditLinksComponent.prototype.ngOnInit = function () {
+        this.successfulDialog.options = {
+            confirmButtonText: "تم"
+        };
+        this.errorDialog.options = {
+            confirmButtonText: "حسنا"
+        };
+    };
+    AddOrEditLinksComponent.prototype.onBackCliced = function () {
+        this.location.back();
+    };
+    AddOrEditLinksComponent.prototype.save = function (form) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        console.log(form);
+                        if (!(form.valid && (this.selectedIcon != null || this.iconUrl))) return [3 /*break*/, 3];
+                        this.spinner.show();
+                        if (!this.selectedIcon) return [3 /*break*/, 2];
+                        _a = this.selectedLink;
+                        return [4 /*yield*/, this.cloudStorage.uploadFile(this.selectedIcon, this.selectedIcon.target.files[0].name)];
+                    case 1:
+                        _a.icon = _b.sent();
+                        _b.label = 2;
+                    case 2:
+                        if (this.isEdit) {
+                            this.linksService.updateLink(this.selectedLink).then(function (isDone) {
+                                _this.spinner.hide();
+                                _this.successfulDialog.show().then(function (value) {
+                                    _this.onBackCliced();
+                                });
+                            }, function (error) {
+                                _this.spinner.hide();
+                                _this.errorDialog.options = {
+                                    title: "تحقق من اتصالك بالانترنت"
+                                };
+                                _this.errorDialog.show();
+                            });
+                        }
+                        else {
+                            this.linksService.createLink(this.selectedLink).then(function (isDone) {
+                                _this.spinner.hide();
+                                _this.successfulDialog.show().then(function (value) {
+                                    _this.onBackCliced();
+                                });
+                            }, function (error) {
+                                _this.spinner.hide();
+                                _this.errorDialog.options = {
+                                    title: "تحقق من اتصالك بالانترنت"
+                                };
+                                _this.errorDialog.show();
+                            });
+                        }
+                        return [3 /*break*/, 4];
+                    case 3:
+                        this.errorDialog.options = {
+                            title: "من فضلك قم بملء بيانات الرابط",
+                            confirmButtonText: "حسنا"
+                        };
+                        this.errorDialog.show();
+                        _b.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AddOrEditLinksComponent.prototype.onSelectedFile = function (event) {
+        console.log("Selected file data");
+        console.log(event.target.files[0].name);
+        console.log(event.target.files[0]);
+        this.selectedIcon = event;
+    };
+    AddOrEditLinksComponent.prototype.deleteFile = function () {
+        this.selectedIcon = null;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], AddOrEditLinksComponent.prototype, "successfulDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], AddOrEditLinksComponent.prototype, "errorDialog", void 0);
     AddOrEditLinksComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-add-or-edit-links',
             template: __webpack_require__(/*! ./add-or-edit-links.component.html */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.html"),
             styles: [__webpack_require__(/*! ./add-or-edit-links.component.css */ "./src/app/pages/add-or-edit-links/add-or-edit-links.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
+            src_app_services_uiServices_links_service__WEBPACK_IMPORTED_MODULE_6__["LinksService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"],
+            src_app_services_cloud_storage_provider_service__WEBPACK_IMPORTED_MODULE_5__["CloudStorageProviderService"]])
     ], AddOrEditLinksComponent);
     return AddOrEditLinksComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.css":
+/*!*************************************************************************************!*\
+  !*** ./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.css ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.html":
+/*!**************************************************************************************!*\
+  !*** ./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الفريق</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #linksForm=\"ngForm\" (ngSubmit)=\"save(linksForm)\">\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n\n\n                <p>إسم العضو</p>\n              </div>\n\n              <div class=\"col-md-6 \" style=\"float: right;\">\n\n                <input type=\"text\" required name=\"name\" [(ngModel)]=\"selectedMember.name\" class=\"form-control form-control-line text_filed_ios_android\">\n\n              </div>\n\n            </div>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n\n                <p>الوظيفة </p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n\n                <input type=\"text\" required name=\"position\" [(ngModel)]=\"selectedMember.position\" class=\"form-control form-control-line text_filed_ios_android\">\n\n              </div>\n            </div>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> السيرة الذاتية</p>\n\n              </div>\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <textarea required name=\"cv\" [(ngModel)]=\"selectedMember.cv\" class=\"form-control add_programme\" rows=\"5\"></textarea>\n\n              </div>\n            </div>\n            <hr>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> صورة العضو </p>\n\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                  <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                    <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                    <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                    <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event)\" type=\"file\" name=\"...\">\n                  </span> <a (click)=\"deleteFile()\" class=\"input-group-addon btn btn-default fileinput-exists\"\n                    data-dismiss=\"fileinput\">حذف</a>\n                </div>\n                <div style=\"margin-top: 12px;margin-bottom: 12px\">\n                  <img src=\"{{selectedMember.image}}\" style=\"width: 30%;\">\n                </div>\n              </div>\n\n            </div>\n\n            <br>\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n                <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n\n              </div>\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n\n                <button (click)=\"onBackCliced()\" type=\"button\" class=\"btn btn_submit btn-info waves-effect waves-light  \">\n                  <a>\n                    إلغاء\n                  </a>\n                </button>\n\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: AddOrEditTeamMemberComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddOrEditTeamMemberComponent", function() { return AddOrEditTeamMemberComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var src_app_services_cloud_storage_provider_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/cloud-storage-provider.service */ "./src/app/services/cloud-storage-provider.service.ts");
+/* harmony import */ var src_app_services_uiServices_team_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/services/uiServices/team.service */ "./src/app/services/uiServices/team.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+var AddOrEditTeamMemberComponent = /** @class */ (function () {
+    function AddOrEditTeamMemberComponent(teamService, route, location, spinner, cloudStorage) {
+        var _this = this;
+        this.teamService = teamService;
+        this.route = route;
+        this.location = location;
+        this.spinner = spinner;
+        this.cloudStorage = cloudStorage;
+        this.selectedMember = {
+            name: "",
+            image: "",
+            cv: "",
+            position: ""
+        };
+        this.route.params.subscribe(function (params) {
+            _this.memberId = params.id;
+            _this.isEdit = _this.memberId != "0";
+            console.log(_this.memberId);
+            _this.getMemberDetails();
+        });
+    }
+    AddOrEditTeamMemberComponent.prototype.ngOnInit = function () {
+        this.successfulDialog.options = {
+            confirmButtonText: "تم"
+        };
+        this.errorDialog.options = {
+            confirmButtonText: "حسنا"
+        };
+    };
+    AddOrEditTeamMemberComponent.prototype.getMemberDetails = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, error_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!this.isEdit) return [3 /*break*/, 5];
+                        _b.label = 1;
+                    case 1:
+                        _b.trys.push([1, 3, , 4]);
+                        this.spinner.show();
+                        _a = this;
+                        return [4 /*yield*/, this.teamService.getMemberDetails(this.memberId)];
+                    case 2:
+                        _a.selectedMember = _b.sent();
+                        this.iconUrl = this.selectedMember.image;
+                        this.spinner.hide();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        error_1 = _b.sent();
+                        this.spinner.hide();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 4];
+                    case 4: return [3 /*break*/, 6];
+                    case 5:
+                        this.selectedMember = {
+                            name: "",
+                            image: "",
+                            cv: "",
+                            position: ""
+                        };
+                        _b.label = 6;
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AddOrEditTeamMemberComponent.prototype.onBackCliced = function () {
+        this.location.back();
+    };
+    AddOrEditTeamMemberComponent.prototype.save = function (form) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        console.log(form);
+                        if (!(form.valid && (this.selectedIcon != null || this.iconUrl))) return [3 /*break*/, 3];
+                        this.spinner.show();
+                        if (!this.selectedIcon) return [3 /*break*/, 2];
+                        _a = this.selectedMember;
+                        return [4 /*yield*/, this.cloudStorage.uploadFile(this.selectedIcon, this.selectedIcon.target.files[0].name)];
+                    case 1:
+                        _a.image = _b.sent();
+                        _b.label = 2;
+                    case 2:
+                        if (this.isEdit) {
+                            this.teamService.updateMember(this.selectedMember).then(function (isDone) {
+                                _this.spinner.hide();
+                                _this.successfulDialog.show().then(function (value) {
+                                    _this.onBackCliced();
+                                });
+                            }, function (error) {
+                                _this.spinner.hide();
+                                _this.errorDialog.options = {
+                                    title: "تحقق من اتصالك بالانترنت"
+                                };
+                                _this.errorDialog.show();
+                            });
+                        }
+                        else {
+                            this.teamService.createMember(this.selectedMember).then(function (isDone) {
+                                _this.spinner.hide();
+                                _this.successfulDialog.show().then(function (value) {
+                                    _this.onBackCliced();
+                                });
+                            }, function (error) {
+                                _this.spinner.hide();
+                                _this.errorDialog.options = {
+                                    title: "تحقق من اتصالك بالانترنت"
+                                };
+                                _this.errorDialog.show();
+                            });
+                        }
+                        return [3 /*break*/, 4];
+                    case 3:
+                        this.errorDialog.options = {
+                            title: "من فضلك قم بملء بيانات الرابط",
+                            confirmButtonText: "حسنا"
+                        };
+                        this.errorDialog.show();
+                        _b.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AddOrEditTeamMemberComponent.prototype.onSelectedFile = function (event) {
+        console.log("Selected file data");
+        console.log(event.target.files[0].name);
+        console.log(event.target.files[0]);
+        this.selectedIcon = event;
+    };
+    AddOrEditTeamMemberComponent.prototype.deleteFile = function () {
+        this.selectedIcon = null;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], AddOrEditTeamMemberComponent.prototype, "successfulDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], AddOrEditTeamMemberComponent.prototype, "errorDialog", void 0);
+    AddOrEditTeamMemberComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-add-or-edit-team-member',
+            template: __webpack_require__(/*! ./add-or-edit-team-member.component.html */ "./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.html"),
+            styles: [__webpack_require__(/*! ./add-or-edit-team-member.component.css */ "./src/app/pages/add-or-edit-team-member/add-or-edit-team-member.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_uiServices_team_service__WEBPACK_IMPORTED_MODULE_6__["TeamService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"],
+            src_app_services_cloud_storage_provider_service__WEBPACK_IMPORTED_MODULE_5__["CloudStorageProviderService"]])
+    ], AddOrEditTeamMemberComponent);
+    return AddOrEditTeamMemberComponent;
 }());
 
 
@@ -3205,7 +3652,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الروابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a routerLink=\"/editLink/id\">\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>اسم الرابط</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let link of links\">\n                <td class=\"detail\">\n                  <a>\n                    {{link.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editLink/id\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الروابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button routerLink=\"/editLink/0\" type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>اسم الرابط</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let link of links\">\n                <td class=\"detail\">\n                  <a>\n                    {{link.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editLink/{{link.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteProgram(link.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
 
 /***/ }),
 
@@ -3284,6 +3731,27 @@ var LinksComponent = /** @class */ (function () {
             confirmButtonText: "حسنا"
         };
         this.loadLinks();
+    };
+    LinksComponent.prototype.deleteProgram = function (linkId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.linksService.deleteLink(linkId)];
+                    case 1:
+                        _a.sent();
+                        this.loadLinks();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        error_1 = _a.sent();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
     };
     LinksComponent.prototype.loadLinks = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -3597,7 +4065,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الفريق</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a href=\"team2.html\">\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th>اسم العضو</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr>\n                <td><span class=\"label label-table label-success\">إظهار</span> </td>\n                <td class=\"detail\">\n                  <a href=\"team3.html\">\n                    عضو 1\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a href=\"team2.html\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n              <tr>\n                <td><span class=\"label label-table label-danger\">إخفاء</span> </td>\n                <td class=\"detail\">\n                  <a href=\"team3.html\">\n                    عضو 2\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a href=\"team2.html\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n              <tr>\n                <td><span class=\"label label-table label-success\">إظهار</span> </td>\n                <td class=\"detail\">\n                  <a href=\"team3.html\">\n                    عضو 3\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a href=\"team2.html\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\" data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الفريق</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"button\" routerLink=\"/editMember/0\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <!-- <th>الحالة</th> -->\n                <th>اسم العضو</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let member of members\">\n                <!-- <td><span class=\"label label-table label-success\">إظهار</span> </td> -->\n                <td class=\"detail\">\n                  <a>\n                    {{member.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editMember/{{member.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteMember(member.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
 
 /***/ }),
 
@@ -3612,6 +4080,9 @@ module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OurTeamComponent", function() { return OurTeamComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
+/* harmony import */ var src_app_services_uiServices_team_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/uiServices/team.service */ "./src/app/services/uiServices/team.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3621,19 +4092,119 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 var OurTeamComponent = /** @class */ (function () {
-    function OurTeamComponent() {
+    function OurTeamComponent(spinner, teamService) {
+        this.spinner = spinner;
+        this.teamService = teamService;
     }
     OurTeamComponent.prototype.ngOnInit = function () {
+        this.successfulDialog.options = {
+            confirmButtonText: "تم"
+        };
+        this.errorDialog.options = {
+            confirmButtonText: "حسنا"
+        };
+        this.loadTeam();
     };
+    OurTeamComponent.prototype.deleteMember = function (memberId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, this.teamService.deleteMember(memberId)];
+                    case 1:
+                        _a.sent();
+                        this.loadTeam();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        error_1 = _a.sent();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    OurTeamComponent.prototype.loadTeam = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, errror_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        this.spinner.show();
+                        _a = this;
+                        return [4 /*yield*/, this.teamService.getTeam()];
+                    case 1:
+                        _a.members = _b.sent();
+                        this.spinner.hide();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        errror_1 = _b.sent();
+                        this.spinner.hide();
+                        this.errorDialog.show();
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], OurTeamComponent.prototype, "successfulDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], OurTeamComponent.prototype, "errorDialog", void 0);
     OurTeamComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-our-team',
             template: __webpack_require__(/*! ./our-team.component.html */ "./src/app/pages/our-team/our-team.component.html"),
             styles: [__webpack_require__(/*! ./our-team.component.css */ "./src/app/pages/our-team/our-team.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], src_app_services_uiServices_team_service__WEBPACK_IMPORTED_MODULE_3__["TeamService"]])
     ], OurTeamComponent);
     return OurTeamComponent;
 }());
@@ -6019,6 +6590,94 @@ var LinksService = /** @class */ (function () {
             });
         });
     };
+    LinksService.prototype.deleteLink = function (linkId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "mutation{\n        deleteLink(where:{\n          id:\"" + linkId + "\"\n        }){\n          id\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.deleteLink) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Failed to delete link");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    LinksService.prototype.getLinkDetails = function (linkId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        link(where:{id:\"" + linkId + "\"}){\n          id,\n          name,\n          url,\n          icon\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.link) {
+                                resolve(response.data.link);
+                            }
+                            else {
+                                reject("Failed to load link");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    LinksService.prototype.createLink = function (link) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "mutation{\n        createLink(\n          data:{\n            name:\"" + link.name + "\",\n            url:\"" + link.url + "\"\n            icon:\"" + link.icon + "\"\n          }\n        ){\n          id\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.createLink) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    LinksService.prototype.updateLink = function (link) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "mutation{\n        updateLink(\n          where:{id:\"" + link.id + "\"},\n          data:{\n            name:\"" + link.name + "\",\n            url:\"" + link.url + "\"\n            icon:\"" + link.icon + "\"\n          }\n        ){\n          id\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.updateLink) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
     LinksService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -6282,7 +6941,7 @@ var ProgramsService = /** @class */ (function () {
                         if (scheduleForm.value.fri) {
                             connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Fri"; }).id + "\"},");
                         }
-                        var query = "mutation{\n        createSchedule(\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).toISOString() + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).toISOString() + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          program:{\n            connect:{id:\"" + selectedProgram.id + "\"}\n          }\n          days:{\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        createSchedule(\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).add('180', 'minutes').toISOString() + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).add('180', 'minutes').toISOString() + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          program:{\n            connect:{id:\"" + selectedProgram.id + "\"}\n          }\n          days:{\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
                         console.log(query.toString());
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
                             console.log(response);
@@ -6405,6 +7064,193 @@ var ProgramsService = /** @class */ (function () {
         __metadata("design:paramtypes", [_service_handler_service__WEBPACK_IMPORTED_MODULE_1__["ServiceHandlerProvider"]])
     ], ProgramsService);
     return ProgramsService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/uiServices/team.service.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/services/uiServices/team.service.ts ***!
+  \*****************************************************/
+/*! exports provided: TeamService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeamService", function() { return TeamService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _service_handler_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service-handler.service */ "./src/app/services/service-handler.service.ts");
+/* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+var TeamService = /** @class */ (function () {
+    function TeamService(serviceHadler) {
+        this.serviceHadler = serviceHadler;
+    }
+    TeamService.prototype.getTeam = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        presenters{\n          id,\n          name,\n          position,\n          cv,\n          image\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.presenters) {
+                                resolve(response.data.presenters);
+                            }
+                            else {
+                                reject("Failed to load team members");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    TeamService.prototype.deleteMember = function (memberId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "mutation{\n        deletePresenter(where:{id:\"" + memberId + "\"}){\n          id\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.deletePresenter) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Failed to delete link");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    TeamService.prototype.getMemberDetails = function (memberId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        presenter(where:{\n          id:\"" + memberId + "\"\n        })\n        {\n          id,\n          name,\n          position,\n          cv,\n          image\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.presenter) {
+                                resolve(response.data.presenter);
+                            }
+                            else {
+                                reject("Failed to load presenter");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    TeamService.prototype.createMember = function (member) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "mutation{\n        createPresenter(\n          data:{\n            name:\"" + member.name + "\",\n            position:\"" + member.position + "\"\n            cv:\"" + member.cv + "\",\n            image:\"" + member.image + "\"\n          }\n        ){\n          id\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.createPresenter) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    TeamService.prototype.updateMember = function (member) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "mutation{\n        updatePresenter(\n          where:{id:\"" + member.id + "\"},\n          data:{\n            name:\"" + member.name + "\",\n            position:\"" + member.position + "\"\n            cv:\"" + member.cv + "\",\n            image:\"" + member.image + "\"\n          }\n        ){\n          id\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.updatePresenter) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    TeamService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_service_handler_service__WEBPACK_IMPORTED_MODULE_1__["ServiceHandlerProvider"]])
+    ], TeamService);
+    return TeamService;
 }());
 
 
