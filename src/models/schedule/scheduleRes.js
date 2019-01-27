@@ -14,6 +14,8 @@ const schedule = {
             const date = new Date(args.date);
             const day = date.getDay();
             day = day.substring(0,3)
+            console.log(timeNow)
+            console.log(day)
             const results = await context.prisma.query.schedules({
                 where:{ days_some:{name: da},AND:{startDate_lte:args.date, endDate_gte:args.date ,timeDate_lte: timeNow ,finishTimeDate_gte: timeNow}} 
              },info)
