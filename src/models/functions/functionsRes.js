@@ -12,7 +12,7 @@ const search = {
                 }
             },info)
             articles.forEach(element => {
-                element.type = 'sportsArticle'
+                element.type = 0
                 sportsArticles.push(element)
             });
 
