@@ -6,6 +6,7 @@ type Query {
 
 type generaData {
   id: ID
+  type: String
   name: String
   writer: String 
   caption: String
