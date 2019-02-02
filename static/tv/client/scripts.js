@@ -64,6 +64,7 @@ a.callFilters("promiseQueueMix",i.promise,arguments)},getDataOperation:function(
     autoplaySpeed: 2000,
     arrows: true,
     loop: false,
+
     responsive: [
       {
         breakpoint: 922,
