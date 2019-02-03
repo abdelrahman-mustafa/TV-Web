@@ -4,8 +4,6 @@ const APP_SECRET = process.env.APP_SECRET || 'Nahj-Portal-023A56'
 
 const isAuthenticated =  async (resolve, parent, args, context, info) =>{
 
-
-  
   if (info.fieldName == 'login') return resolve()
   const Authorization = context.req.request.headers.authorization
   if (Authorization) {
