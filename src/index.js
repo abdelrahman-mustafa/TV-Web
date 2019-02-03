@@ -11,10 +11,7 @@ const permissions = require('./initialize/initPerm')
 // const path = require('path')
 // const express = require('express');
 // for further work we add that permission in separate file related to each type 
-const permissions = {
-  Query: isAuthenticated,
-  Mutation:isAuthenticated
-}
+
 
 
 const server = new GraphQLServer({
