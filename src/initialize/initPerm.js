@@ -6,7 +6,6 @@ const   Mutation= []
 
 
 defs.forEach(element => {
-
     Query.push(require(path.resolve(element)).Query)
     Mutation.push(require(path.resolve(element)).Mutation)
 
@@ -15,18 +14,22 @@ defs.forEach(element => {
 const  totalQuery = {}
 const  totalMutation = {}
 
-Mutation.forEach(element => {
-    Object.keys(element).forEach(key => {
-    totalMutation[key] = element[key]
+if (Mutation)
+{Mutation.forEach(element => {
+    if (element){
+        Object.keys(element).forEach(key => {
+        totalMutation[key] = element[key]
     })
-})
+}
+})}
+if (Query)
 
-Query.forEach(element => {
+{Query.forEach(element => {
     Object.keys(element).forEach(key => {
         totalQuery[key] = element[key]
     })
 })
-
+}
 module.exports = {
     Mutation: totalMutation,
     Query: totalQuery
