@@ -23,11 +23,12 @@ if (Mutation)
 }
 })}
 if (Query)
-
 {Query.forEach(element => {
+    if (element){
     Object.keys(element).forEach(key => {
         totalQuery[key] = element[key]
     })
+}
 })
 }
 module.exports = {
