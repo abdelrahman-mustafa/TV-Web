@@ -1,8 +1,8 @@
 const glob = require('glob');
 const path = require( 'path' );
 const defs = glob.sync('./src/models/**/*Perms.js');
- const   Query = []
-  const   Mutation= []
+const   Query = []
+const   Mutation= []
 
 
 defs.forEach(element => {
