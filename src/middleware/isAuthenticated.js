@@ -9,8 +9,8 @@ const isAuthenticated =  async (resolve, parent, args, context, info) =>{
   if (Authorization) {
     const token = Authorization.replace('Bearer ', '')
     try {
-      const { userId } = await jwt.verify(token, APP_SECRET);
-      return   userId;
+      await jwt.verify(token, APP_SECRET);
+      return   resolve();
     } catch(error){
       throw  Error('this user is not found')
     }

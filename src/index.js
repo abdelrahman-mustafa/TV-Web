@@ -2,16 +2,9 @@ const { GraphQLServer } = require ('graphql-yoga')
 const { Prisma } = require('prisma-binding')
 const resolvers = require('./initialize/initResolvers')
 const { isAuthenticated } = require('./middleware/isAuthenticated')
-// const helmet = require('helmet')
 const config = require('./config/config')
-// const compression = require('compression')
 const typeDefs = require('./initialize/initSchema')
 const permissions = require('./initialize/initPerm')
-
-// const path = require('path')
-// const express = require('express');
-// for further work we add that permission in separate file related to each type 
-
 
 
 const server = new GraphQLServer({
@@ -26,7 +19,7 @@ const server = new GraphQLServer({
 
         }),
     }),
-    // middlewares: permissions
+    middlewares: permissions
 
 })
 // server.express.use(express.static(path.resolve(__dirname, 'static')))

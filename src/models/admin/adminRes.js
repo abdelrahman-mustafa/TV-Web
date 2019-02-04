@@ -4,19 +4,19 @@ const { APP_SECRET, isAuthenticated } = require('../../middleware/isAuthenticate
 
 const Admin = {
     Query: {
-        admins: (_, args, context, info)=>{
-            return context.prisma.query.admins({...args},info)
+        admins: async (_, args, context, info)=>{
+            return await context.prisma.query.admins({...args},info)
         },
-        admin: (_, args, context, info)=>{
-            return context.prisma.query.admin({...args},info)
+        admin: async(_, args, context, info)=>{
+            return await context.prisma.query.admin({...args},info)
         },
     },
     Mutation: {
         createAdmin : async (_,args, context, info)=>{
-            const password = await bcrypt.hash(args.password, 10)
+            const password =  bcrypt.hashSync(args.data.password, 10)
             const admin = await  context.prisma.mutation.createAdmin({
             data: {
-                ...args, password
+                ...args.data, password
             }
             });
           return admin;

@@ -1,7 +1,7 @@
 type Admin {
     id: ID! @unique
-    username: String!
-    password: String!
+    username: String
+    password: String
 }
 
 type Program {
