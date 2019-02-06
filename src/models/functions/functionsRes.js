@@ -20,10 +20,7 @@ const search = {
             return sportsArticles
 
         },
-        
-    },
-    Mutation:{
-        getSpecialBanners: async(_, args, context, info) => {
+        getSpecialBanners: async (_, args, context, info) => {
             const programs = await context.prisma.query.programs({
                 where:{
                     isShown: true

@@ -2,9 +2,8 @@
 
 type Query {
     search(keyword: String!): [generaData!]!  
-}
-type Mutation {
-  getSpecialBanners():[genProgram!]!
+    getSpecialBanners:[genProgram!]!
+
 }
 
 type generaData {
