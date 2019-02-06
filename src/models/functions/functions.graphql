@@ -23,5 +23,6 @@ type generaData {
 type genProgram {
   id: ID
   name: String
+  type: String
   isShowen: Boolean
 }

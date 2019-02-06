@@ -32,6 +32,7 @@ const search = {
                 }
             }, info)
             events.forEach(element => {
+                element.type = "event"
                 programs.push(element)
             });
             
