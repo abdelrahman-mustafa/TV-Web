@@ -1,0 +1,12 @@
+# import * from "../../generated/prisma.graphql"
+
+type Query {
+    specialBanners(where: SpecialBannerWhereInput, orderBy: SpecialBannerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SpecialBanner]!
+    specialBanner(where: SpecialBannerWhereUniqueInput!): SpecialBanner
+}
+
+type Mutation {
+    createSpecialBanner(data: SpecialBannerCreateInput!): SpecialBanner!
+    updateSpecialBanner(data: SpecialBannerUpdateInput!, where: SpecialBannerWhereUniqueInput!): SpecialBanner
+    deleteSpecialBanner(where: SpecialBannerWhereUniqueInput!): SpecialBanner
+}

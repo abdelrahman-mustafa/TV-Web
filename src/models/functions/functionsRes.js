@@ -22,6 +22,25 @@ const search = {
         },
         
     },
+    Mutation:{
+        getSpecialBanners: async(_, args, context, info) => {
+            const programs = await context.prisma.query.programs({
+                where:{
+                    isShown: true
+                }
+            }, info)
+            const events = await context.prisma.query.events({
+                where:{
+                    isShown: true
+                }
+            }, info)
+            events.forEach(element => {
+                programs.push(element)
+            });
+            
+            return programs
+        }
+    }
 }
 
 module.exports= search;

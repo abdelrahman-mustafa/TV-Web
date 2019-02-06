@@ -1,7 +1,10 @@
 # import * from "../../generated/prisma.graphql"
 
 type Query {
-    search(keyword: String!): [generaData!]!
+    search(keyword: String!): [generaData!]!  
+}
+type Mutation {
+  getSpecialBanners():[genProgram!]!
 }
 
 type generaData {
@@ -15,5 +18,11 @@ type generaData {
   article: String
   images: [String!]!
   videos: String
+  isShowen: Boolean
+}
+
+type genProgram {
+  id: ID
+  name: String
   isShowen: Boolean
 }

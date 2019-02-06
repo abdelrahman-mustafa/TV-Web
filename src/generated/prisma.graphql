@@ -1,10 +1,10 @@
 # source: http://localhost:4400
-# timestamp: Sun Jan 13 2019 21:39:16 GMT+0200 (Eastern European Standard Time)
+# timestamp: Wed Feb 06 2019 23:34:40 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
-  username: String!
-  password: String!
+  username: String
+  password: String
 }
 
 """A connection to a list of items."""
@@ -18,8 +18,8 @@ type AdminConnection {
 }
 
 input AdminCreateInput {
-  username: String!
-  password: String!
+  username: String
+  password: String
 }
 
 """An edge in a connection."""
@@ -46,8 +46,8 @@ enum AdminOrderByInput {
 
 type AdminPreviousValues {
   id: ID!
-  username: String!
-  password: String!
+  username: String
+  password: String
 }
 
 type AdminSubscriptionPayload {
@@ -266,6 +266,10 @@ type AggregateSchedule {
 }
 
 type AggregateSetting {
+  count: Int!
+}
+
+type AggregateSpecialBanner {
   count: Int!
 }
 
@@ -967,6 +971,11 @@ input EventCreateInput {
   schedules: ScheduleCreateManyWithoutEventInput
 }
 
+input EventCreateOneInput {
+  create: EventCreateInput
+  connect: EventWhereUniqueInput
+}
+
 input EventCreateOneWithoutSchedulesInput {
   create: EventCreateWithoutSchedulesInput
   connect: EventWhereUniqueInput
@@ -1056,6 +1065,15 @@ input EventSubscriptionWhereInput {
   node: EventWhereInput
 }
 
+input EventUpdateDataInput {
+  name: String
+  duration: Int
+  banner: String
+  icon: String
+  isShowen: Boolean
+  schedules: ScheduleUpdateManyWithoutEventInput
+}
+
 input EventUpdateInput {
   name: String
   duration: Int
@@ -1063,6 +1081,15 @@ input EventUpdateInput {
   icon: String
   isShowen: Boolean
   schedules: ScheduleUpdateManyWithoutEventInput
+}
+
+input EventUpdateOneInput {
+  create: EventCreateInput
+  connect: EventWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: EventUpdateDataInput
+  upsert: EventUpsertNestedInput
 }
 
 input EventUpdateOneWithoutSchedulesInput {
@@ -1080,6 +1107,11 @@ input EventUpdateWithoutSchedulesDataInput {
   banner: String
   icon: String
   isShowen: Boolean
+}
+
+input EventUpsertNestedInput {
+  update: EventUpdateDataInput!
+  create: EventCreateInput!
 }
 
 input EventUpsertWithoutSchedulesInput {
@@ -1285,6 +1317,9 @@ input EventWhereInput {
   schedules_every: ScheduleWhereInput
   schedules_some: ScheduleWhereInput
   schedules_none: ScheduleWhereInput
+  _MagicalBackRelation_EventToSpecialBanner_every: SpecialBannerWhereInput
+  _MagicalBackRelation_EventToSpecialBanner_some: SpecialBannerWhereInput
+  _MagicalBackRelation_EventToSpecialBanner_none: SpecialBannerWhereInput
 }
 
 input EventWhereUniqueInput {
@@ -2372,9 +2407,10 @@ type Mutation {
   createArticle(data: ArticleCreateInput!): Article!
   createSportsArticle(data: SportsArticleCreateInput!): SportsArticle!
   createSetting(data: SettingCreateInput!): Setting!
-  createEvent(data: EventCreateInput!): Event!
   createSchedule(data: ScheduleCreateInput!): Schedule!
+  createEvent(data: EventCreateInput!): Event!
   createInfoData(data: InfoDataCreateInput!): InfoData!
+  createSpecialBanner(data: SpecialBannerCreateInput!): SpecialBanner!
   createLink(data: LinkCreateInput!): Link!
   createDay(data: DayCreateInput!): Day!
   createProgram(data: ProgramCreateInput!): Program!
@@ -2383,9 +2419,10 @@ type Mutation {
   updateArticle(data: ArticleUpdateInput!, where: ArticleWhereUniqueInput!): Article
   updateSportsArticle(data: SportsArticleUpdateInput!, where: SportsArticleWhereUniqueInput!): SportsArticle
   updateSetting(data: SettingUpdateInput!, where: SettingWhereUniqueInput!): Setting
-  updateEvent(data: EventUpdateInput!, where: EventWhereUniqueInput!): Event
   updateSchedule(data: ScheduleUpdateInput!, where: ScheduleWhereUniqueInput!): Schedule
+  updateEvent(data: EventUpdateInput!, where: EventWhereUniqueInput!): Event
   updateInfoData(data: InfoDataUpdateInput!, where: InfoDataWhereUniqueInput!): InfoData
+  updateSpecialBanner(data: SpecialBannerUpdateInput!, where: SpecialBannerWhereUniqueInput!): SpecialBanner
   updateLink(data: LinkUpdateInput!, where: LinkWhereUniqueInput!): Link
   updateDay(data: DayUpdateInput!, where: DayWhereUniqueInput!): Day
   updateProgram(data: ProgramUpdateInput!, where: ProgramWhereUniqueInput!): Program
@@ -2394,9 +2431,10 @@ type Mutation {
   deleteArticle(where: ArticleWhereUniqueInput!): Article
   deleteSportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
   deleteSetting(where: SettingWhereUniqueInput!): Setting
-  deleteEvent(where: EventWhereUniqueInput!): Event
   deleteSchedule(where: ScheduleWhereUniqueInput!): Schedule
+  deleteEvent(where: EventWhereUniqueInput!): Event
   deleteInfoData(where: InfoDataWhereUniqueInput!): InfoData
+  deleteSpecialBanner(where: SpecialBannerWhereUniqueInput!): SpecialBanner
   deleteLink(where: LinkWhereUniqueInput!): Link
   deleteDay(where: DayWhereUniqueInput!): Day
   deleteProgram(where: ProgramWhereUniqueInput!): Program
@@ -2405,9 +2443,10 @@ type Mutation {
   upsertArticle(where: ArticleWhereUniqueInput!, create: ArticleCreateInput!, update: ArticleUpdateInput!): Article!
   upsertSportsArticle(where: SportsArticleWhereUniqueInput!, create: SportsArticleCreateInput!, update: SportsArticleUpdateInput!): SportsArticle!
   upsertSetting(where: SettingWhereUniqueInput!, create: SettingCreateInput!, update: SettingUpdateInput!): Setting!
-  upsertEvent(where: EventWhereUniqueInput!, create: EventCreateInput!, update: EventUpdateInput!): Event!
   upsertSchedule(where: ScheduleWhereUniqueInput!, create: ScheduleCreateInput!, update: ScheduleUpdateInput!): Schedule!
+  upsertEvent(where: EventWhereUniqueInput!, create: EventCreateInput!, update: EventUpdateInput!): Event!
   upsertInfoData(where: InfoDataWhereUniqueInput!, create: InfoDataCreateInput!, update: InfoDataUpdateInput!): InfoData!
+  upsertSpecialBanner(where: SpecialBannerWhereUniqueInput!, create: SpecialBannerCreateInput!, update: SpecialBannerUpdateInput!): SpecialBanner!
   upsertLink(where: LinkWhereUniqueInput!, create: LinkCreateInput!, update: LinkUpdateInput!): Link!
   upsertDay(where: DayWhereUniqueInput!, create: DayCreateInput!, update: DayUpdateInput!): Day!
   upsertProgram(where: ProgramWhereUniqueInput!, create: ProgramCreateInput!, update: ProgramUpdateInput!): Program!
@@ -2416,9 +2455,10 @@ type Mutation {
   updateManyArticles(data: ArticleUpdateInput!, where: ArticleWhereInput): BatchPayload!
   updateManySportsArticles(data: SportsArticleUpdateInput!, where: SportsArticleWhereInput): BatchPayload!
   updateManySettings(data: SettingUpdateInput!, where: SettingWhereInput): BatchPayload!
-  updateManyEvents(data: EventUpdateInput!, where: EventWhereInput): BatchPayload!
   updateManySchedules(data: ScheduleUpdateInput!, where: ScheduleWhereInput): BatchPayload!
+  updateManyEvents(data: EventUpdateInput!, where: EventWhereInput): BatchPayload!
   updateManyInfoDatas(data: InfoDataUpdateInput!, where: InfoDataWhereInput): BatchPayload!
+  updateManySpecialBanners(data: SpecialBannerUpdateInput!, where: SpecialBannerWhereInput): BatchPayload!
   updateManyLinks(data: LinkUpdateInput!, where: LinkWhereInput): BatchPayload!
   updateManyDays(data: DayUpdateInput!, where: DayWhereInput): BatchPayload!
   updateManyPrograms(data: ProgramUpdateInput!, where: ProgramWhereInput): BatchPayload!
@@ -2427,9 +2467,10 @@ type Mutation {
   deleteManyArticles(where: ArticleWhereInput): BatchPayload!
   deleteManySportsArticles(where: SportsArticleWhereInput): BatchPayload!
   deleteManySettings(where: SettingWhereInput): BatchPayload!
-  deleteManyEvents(where: EventWhereInput): BatchPayload!
   deleteManySchedules(where: ScheduleWhereInput): BatchPayload!
+  deleteManyEvents(where: EventWhereInput): BatchPayload!
   deleteManyInfoDatas(where: InfoDataWhereInput): BatchPayload!
+  deleteManySpecialBanners(where: SpecialBannerWhereInput): BatchPayload!
   deleteManyLinks(where: LinkWhereInput): BatchPayload!
   deleteManyDays(where: DayWhereInput): BatchPayload!
   deleteManyPrograms(where: ProgramWhereInput): BatchPayload!
@@ -3430,6 +3471,9 @@ input ProgramWhereInput {
   _MagicalBackRelation_News_every: SettingWhereInput
   _MagicalBackRelation_News_some: SettingWhereInput
   _MagicalBackRelation_News_none: SettingWhereInput
+  _MagicalBackRelation_ProgramToSpecialBanner_every: SpecialBannerWhereInput
+  _MagicalBackRelation_ProgramToSpecialBanner_some: SpecialBannerWhereInput
+  _MagicalBackRelation_ProgramToSpecialBanner_none: SpecialBannerWhereInput
   _MagicalBackRelation_Banners_every: SettingWhereInput
   _MagicalBackRelation_Banners_some: SettingWhereInput
   _MagicalBackRelation_Banners_none: SettingWhereInput
@@ -3448,9 +3492,10 @@ type Query {
   articles(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Article]!
   sportsArticles(where: SportsArticleWhereInput, orderBy: SportsArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SportsArticle]!
   settings(where: SettingWhereInput, orderBy: SettingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Setting]!
-  events(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Event]!
   schedules(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule]!
+  events(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Event]!
   infoDatas(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [InfoData]!
+  specialBanners(where: SpecialBannerWhereInput, orderBy: SpecialBannerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SpecialBanner]!
   links(where: LinkWhereInput, orderBy: LinkOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Link]!
   days(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Day]!
   programs(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program]!
@@ -3459,9 +3504,10 @@ type Query {
   article(where: ArticleWhereUniqueInput!): Article
   sportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
   setting(where: SettingWhereUniqueInput!): Setting
-  event(where: EventWhereUniqueInput!): Event
   schedule(where: ScheduleWhereUniqueInput!): Schedule
+  event(where: EventWhereUniqueInput!): Event
   infoData(where: InfoDataWhereUniqueInput!): InfoData
+  specialBanner(where: SpecialBannerWhereUniqueInput!): SpecialBanner
   link(where: LinkWhereUniqueInput!): Link
   day(where: DayWhereUniqueInput!): Day
   program(where: ProgramWhereUniqueInput!): Program
@@ -3470,9 +3516,10 @@ type Query {
   articlesConnection(where: ArticleWhereInput, orderBy: ArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ArticleConnection!
   sportsArticlesConnection(where: SportsArticleWhereInput, orderBy: SportsArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SportsArticleConnection!
   settingsConnection(where: SettingWhereInput, orderBy: SettingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SettingConnection!
-  eventsConnection(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): EventConnection!
   schedulesConnection(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ScheduleConnection!
+  eventsConnection(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): EventConnection!
   infoDatasConnection(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): InfoDataConnection!
+  specialBannersConnection(where: SpecialBannerWhereInput, orderBy: SpecialBannerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SpecialBannerConnection!
   linksConnection(where: LinkWhereInput, orderBy: LinkOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): LinkConnection!
   daysConnection(where: DayWhereInput, orderBy: DayOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): DayConnection!
   programsConnection(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ProgramConnection!
@@ -3890,6 +3937,7 @@ type Setting implements Node {
   teamIcon: String
   sportsArticleIcon: String
   newsPrograms(where: ProgramWhereInput): Program
+  specialBannersNew(where: SpecialBannerWhereInput, orderBy: SpecialBannerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SpecialBanner!]
   specialBanners(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program!]
   specialPrograms(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program!]
   liveUrl: String
@@ -3916,6 +3964,7 @@ input SettingCreateInput {
   liveUrl: String
   videoIcon: String
   newsPrograms: ProgramCreateOneInput
+  specialBannersNew: SpecialBannerCreateManyInput
   specialBanners: ProgramCreateManyInput
   specialPrograms: ProgramCreateManyInput
   infoDaTa: InfoDataCreateOneInput
@@ -4012,6 +4061,7 @@ input SettingUpdateInput {
   liveUrl: String
   videoIcon: String
   newsPrograms: ProgramUpdateOneInput
+  specialBannersNew: SpecialBannerUpdateManyInput
   specialBanners: ProgramUpdateManyInput
   specialPrograms: ProgramUpdateManyInput
   infoDaTa: InfoDataUpdateOneInput
@@ -4347,6 +4397,9 @@ input SettingWhereInput {
   """All values not ending with the given string."""
   videoIcon_not_ends_with: String
   newsPrograms: ProgramWhereInput
+  specialBannersNew_every: SpecialBannerWhereInput
+  specialBannersNew_some: SpecialBannerWhereInput
+  specialBannersNew_none: SpecialBannerWhereInput
   specialBanners_every: ProgramWhereInput
   specialBanners_some: ProgramWhereInput
   specialBanners_none: ProgramWhereInput
@@ -4357,6 +4410,212 @@ input SettingWhereInput {
 }
 
 input SettingWhereUniqueInput {
+  id: ID
+}
+
+type SpecialBanner implements Node {
+  id: ID!
+  orderd: Int
+  event(where: EventWhereInput): Event
+  program(where: ProgramWhereInput): Program
+}
+
+"""A connection to a list of items."""
+type SpecialBannerConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [SpecialBannerEdge]!
+  aggregate: AggregateSpecialBanner!
+}
+
+input SpecialBannerCreateInput {
+  orderd: Int
+  event: EventCreateOneInput
+  program: ProgramCreateOneInput
+}
+
+input SpecialBannerCreateManyInput {
+  create: [SpecialBannerCreateInput!]
+  connect: [SpecialBannerWhereUniqueInput!]
+}
+
+"""An edge in a connection."""
+type SpecialBannerEdge {
+  """The item at the end of the edge."""
+  node: SpecialBanner!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum SpecialBannerOrderByInput {
+  id_ASC
+  id_DESC
+  orderd_ASC
+  orderd_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type SpecialBannerPreviousValues {
+  id: ID!
+  orderd: Int
+}
+
+type SpecialBannerSubscriptionPayload {
+  mutation: MutationType!
+  node: SpecialBanner
+  updatedFields: [String!]
+  previousValues: SpecialBannerPreviousValues
+}
+
+input SpecialBannerSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [SpecialBannerSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [SpecialBannerSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [SpecialBannerSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: SpecialBannerWhereInput
+}
+
+input SpecialBannerUpdateDataInput {
+  orderd: Int
+  event: EventUpdateOneInput
+  program: ProgramUpdateOneInput
+}
+
+input SpecialBannerUpdateInput {
+  orderd: Int
+  event: EventUpdateOneInput
+  program: ProgramUpdateOneInput
+}
+
+input SpecialBannerUpdateManyInput {
+  create: [SpecialBannerCreateInput!]
+  connect: [SpecialBannerWhereUniqueInput!]
+  disconnect: [SpecialBannerWhereUniqueInput!]
+  delete: [SpecialBannerWhereUniqueInput!]
+  update: [SpecialBannerUpdateWithWhereUniqueNestedInput!]
+  upsert: [SpecialBannerUpsertWithWhereUniqueNestedInput!]
+}
+
+input SpecialBannerUpdateWithWhereUniqueNestedInput {
+  where: SpecialBannerWhereUniqueInput!
+  data: SpecialBannerUpdateDataInput!
+}
+
+input SpecialBannerUpsertWithWhereUniqueNestedInput {
+  where: SpecialBannerWhereUniqueInput!
+  update: SpecialBannerUpdateDataInput!
+  create: SpecialBannerCreateInput!
+}
+
+input SpecialBannerWhereInput {
+  """Logical AND on all given filters."""
+  AND: [SpecialBannerWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [SpecialBannerWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [SpecialBannerWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  orderd: Int
+
+  """All values that are not equal to given value."""
+  orderd_not: Int
+
+  """All values that are contained in given list."""
+  orderd_in: [Int!]
+
+  """All values that are not contained in given list."""
+  orderd_not_in: [Int!]
+
+  """All values less than the given value."""
+  orderd_lt: Int
+
+  """All values less than or equal the given value."""
+  orderd_lte: Int
+
+  """All values greater than the given value."""
+  orderd_gt: Int
+
+  """All values greater than or equal the given value."""
+  orderd_gte: Int
+  event: EventWhereInput
+  program: ProgramWhereInput
+  _MagicalBackRelation_SettingToSpecialBanner_every: SettingWhereInput
+  _MagicalBackRelation_SettingToSpecialBanner_some: SettingWhereInput
+  _MagicalBackRelation_SettingToSpecialBanner_none: SettingWhereInput
+}
+
+input SpecialBannerWhereUniqueInput {
   id: ID
 }
 
@@ -4810,9 +5069,10 @@ type Subscription {
   article(where: ArticleSubscriptionWhereInput): ArticleSubscriptionPayload
   sportsArticle(where: SportsArticleSubscriptionWhereInput): SportsArticleSubscriptionPayload
   setting(where: SettingSubscriptionWhereInput): SettingSubscriptionPayload
-  event(where: EventSubscriptionWhereInput): EventSubscriptionPayload
   schedule(where: ScheduleSubscriptionWhereInput): ScheduleSubscriptionPayload
+  event(where: EventSubscriptionWhereInput): EventSubscriptionPayload
   infoData(where: InfoDataSubscriptionWhereInput): InfoDataSubscriptionPayload
+  specialBanner(where: SpecialBannerSubscriptionWhereInput): SpecialBannerSubscriptionPayload
   link(where: LinkSubscriptionWhereInput): LinkSubscriptionPayload
   day(where: DaySubscriptionWhereInput): DaySubscriptionPayload
   program(where: ProgramSubscriptionWhereInput): ProgramSubscriptionPayload

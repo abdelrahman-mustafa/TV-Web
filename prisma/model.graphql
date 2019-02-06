@@ -53,8 +53,6 @@ type SportsArticle {
   isShowen: Boolean
 }
 
-
-
 type Setting {
   id: ID! @unique 
   logo: String
@@ -63,6 +61,7 @@ type Setting {
   teamIcon: String
   sportsArticleIcon: String
   newsPrograms: Program  @relation(name: "News")
+  specialBannersNew : [SpecialBanner!]! 
   specialBanners: [Program!]! @relation(name: "Banners")
   specialPrograms: [Program!]! @relation(name: "Specials")
   liveUrl: String
@@ -117,7 +116,18 @@ type Schedule {
   event: Event
 }
 
+
 type Day {
   id: ID! @unique
   name: String
 }
+
+
+
+type SpecialBanner{
+  id: ID! @unique
+  orderd: Int 
+  event : Event
+  program: Program
+}
+
