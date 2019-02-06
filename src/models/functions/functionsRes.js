@@ -23,12 +23,12 @@ const search = {
         getSpecialBanners: async (_, args, context, info) => {
             const programs = await context.prisma.query.programs({
                 where:{
-                    isShown: true
+                    isShowen: true
                 }
             }, info)
             const events = await context.prisma.query.events({
                 where:{
-                    isShown: true
+                    isShowen: true
                 }
             }, info)
             events.forEach(element => {
