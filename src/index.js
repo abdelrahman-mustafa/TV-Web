@@ -19,7 +19,7 @@ const server = new GraphQLServer({
 
         }),
     }),
-    middlewares: permissions
+    // middlewares: permissions
 
 })
 // server.express.use(express.static(path.resolve(__dirname, 'static')))
