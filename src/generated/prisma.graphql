@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Wed Feb 06 2019 23:34:40 GMT+0200 (Eastern European Standard Time)
+# timestamp: Sun Feb 10 2019 20:59:40 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -270,6 +270,10 @@ type AggregateSetting {
 }
 
 type AggregateSpecialBanner {
+  count: Int!
+}
+
+type AggregateSpecialProgram {
   count: Int!
 }
 
@@ -2408,6 +2412,7 @@ type Mutation {
   createSportsArticle(data: SportsArticleCreateInput!): SportsArticle!
   createSetting(data: SettingCreateInput!): Setting!
   createSchedule(data: ScheduleCreateInput!): Schedule!
+  createSpecialProgram(data: SpecialProgramCreateInput!): SpecialProgram!
   createEvent(data: EventCreateInput!): Event!
   createInfoData(data: InfoDataCreateInput!): InfoData!
   createSpecialBanner(data: SpecialBannerCreateInput!): SpecialBanner!
@@ -2420,6 +2425,7 @@ type Mutation {
   updateSportsArticle(data: SportsArticleUpdateInput!, where: SportsArticleWhereUniqueInput!): SportsArticle
   updateSetting(data: SettingUpdateInput!, where: SettingWhereUniqueInput!): Setting
   updateSchedule(data: ScheduleUpdateInput!, where: ScheduleWhereUniqueInput!): Schedule
+  updateSpecialProgram(data: SpecialProgramUpdateInput!, where: SpecialProgramWhereUniqueInput!): SpecialProgram
   updateEvent(data: EventUpdateInput!, where: EventWhereUniqueInput!): Event
   updateInfoData(data: InfoDataUpdateInput!, where: InfoDataWhereUniqueInput!): InfoData
   updateSpecialBanner(data: SpecialBannerUpdateInput!, where: SpecialBannerWhereUniqueInput!): SpecialBanner
@@ -2432,6 +2438,7 @@ type Mutation {
   deleteSportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
   deleteSetting(where: SettingWhereUniqueInput!): Setting
   deleteSchedule(where: ScheduleWhereUniqueInput!): Schedule
+  deleteSpecialProgram(where: SpecialProgramWhereUniqueInput!): SpecialProgram
   deleteEvent(where: EventWhereUniqueInput!): Event
   deleteInfoData(where: InfoDataWhereUniqueInput!): InfoData
   deleteSpecialBanner(where: SpecialBannerWhereUniqueInput!): SpecialBanner
@@ -2444,6 +2451,7 @@ type Mutation {
   upsertSportsArticle(where: SportsArticleWhereUniqueInput!, create: SportsArticleCreateInput!, update: SportsArticleUpdateInput!): SportsArticle!
   upsertSetting(where: SettingWhereUniqueInput!, create: SettingCreateInput!, update: SettingUpdateInput!): Setting!
   upsertSchedule(where: ScheduleWhereUniqueInput!, create: ScheduleCreateInput!, update: ScheduleUpdateInput!): Schedule!
+  upsertSpecialProgram(where: SpecialProgramWhereUniqueInput!, create: SpecialProgramCreateInput!, update: SpecialProgramUpdateInput!): SpecialProgram!
   upsertEvent(where: EventWhereUniqueInput!, create: EventCreateInput!, update: EventUpdateInput!): Event!
   upsertInfoData(where: InfoDataWhereUniqueInput!, create: InfoDataCreateInput!, update: InfoDataUpdateInput!): InfoData!
   upsertSpecialBanner(where: SpecialBannerWhereUniqueInput!, create: SpecialBannerCreateInput!, update: SpecialBannerUpdateInput!): SpecialBanner!
@@ -2456,6 +2464,7 @@ type Mutation {
   updateManySportsArticles(data: SportsArticleUpdateInput!, where: SportsArticleWhereInput): BatchPayload!
   updateManySettings(data: SettingUpdateInput!, where: SettingWhereInput): BatchPayload!
   updateManySchedules(data: ScheduleUpdateInput!, where: ScheduleWhereInput): BatchPayload!
+  updateManySpecialPrograms(data: SpecialProgramUpdateInput!, where: SpecialProgramWhereInput): BatchPayload!
   updateManyEvents(data: EventUpdateInput!, where: EventWhereInput): BatchPayload!
   updateManyInfoDatas(data: InfoDataUpdateInput!, where: InfoDataWhereInput): BatchPayload!
   updateManySpecialBanners(data: SpecialBannerUpdateInput!, where: SpecialBannerWhereInput): BatchPayload!
@@ -2468,6 +2477,7 @@ type Mutation {
   deleteManySportsArticles(where: SportsArticleWhereInput): BatchPayload!
   deleteManySettings(where: SettingWhereInput): BatchPayload!
   deleteManySchedules(where: ScheduleWhereInput): BatchPayload!
+  deleteManySpecialPrograms(where: SpecialProgramWhereInput): BatchPayload!
   deleteManyEvents(where: EventWhereInput): BatchPayload!
   deleteManyInfoDatas(where: InfoDataWhereInput): BatchPayload!
   deleteManySpecialBanners(where: SpecialBannerWhereInput): BatchPayload!
@@ -3471,6 +3481,9 @@ input ProgramWhereInput {
   _MagicalBackRelation_News_every: SettingWhereInput
   _MagicalBackRelation_News_some: SettingWhereInput
   _MagicalBackRelation_News_none: SettingWhereInput
+  _MagicalBackRelation_ProgramToSpecialProgram_every: SpecialProgramWhereInput
+  _MagicalBackRelation_ProgramToSpecialProgram_some: SpecialProgramWhereInput
+  _MagicalBackRelation_ProgramToSpecialProgram_none: SpecialProgramWhereInput
   _MagicalBackRelation_ProgramToSpecialBanner_every: SpecialBannerWhereInput
   _MagicalBackRelation_ProgramToSpecialBanner_some: SpecialBannerWhereInput
   _MagicalBackRelation_ProgramToSpecialBanner_none: SpecialBannerWhereInput
@@ -3493,6 +3506,7 @@ type Query {
   sportsArticles(where: SportsArticleWhereInput, orderBy: SportsArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SportsArticle]!
   settings(where: SettingWhereInput, orderBy: SettingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Setting]!
   schedules(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Schedule]!
+  specialPrograms(where: SpecialProgramWhereInput, orderBy: SpecialProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SpecialProgram]!
   events(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Event]!
   infoDatas(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [InfoData]!
   specialBanners(where: SpecialBannerWhereInput, orderBy: SpecialBannerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [SpecialBanner]!
@@ -3505,6 +3519,7 @@ type Query {
   sportsArticle(where: SportsArticleWhereUniqueInput!): SportsArticle
   setting(where: SettingWhereUniqueInput!): Setting
   schedule(where: ScheduleWhereUniqueInput!): Schedule
+  specialProgram(where: SpecialProgramWhereUniqueInput!): SpecialProgram
   event(where: EventWhereUniqueInput!): Event
   infoData(where: InfoDataWhereUniqueInput!): InfoData
   specialBanner(where: SpecialBannerWhereUniqueInput!): SpecialBanner
@@ -3517,6 +3532,7 @@ type Query {
   sportsArticlesConnection(where: SportsArticleWhereInput, orderBy: SportsArticleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SportsArticleConnection!
   settingsConnection(where: SettingWhereInput, orderBy: SettingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SettingConnection!
   schedulesConnection(where: ScheduleWhereInput, orderBy: ScheduleOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): ScheduleConnection!
+  specialProgramsConnection(where: SpecialProgramWhereInput, orderBy: SpecialProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SpecialProgramConnection!
   eventsConnection(where: EventWhereInput, orderBy: EventOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): EventConnection!
   infoDatasConnection(where: InfoDataWhereInput, orderBy: InfoDataOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): InfoDataConnection!
   specialBannersConnection(where: SpecialBannerWhereInput, orderBy: SpecialBannerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): SpecialBannerConnection!
@@ -4619,6 +4635,174 @@ input SpecialBannerWhereUniqueInput {
   id: ID
 }
 
+type SpecialProgram implements Node {
+  id: ID!
+  orderd: Int
+  program(where: ProgramWhereInput): Program
+}
+
+"""A connection to a list of items."""
+type SpecialProgramConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [SpecialProgramEdge]!
+  aggregate: AggregateSpecialProgram!
+}
+
+input SpecialProgramCreateInput {
+  orderd: Int
+  program: ProgramCreateOneInput
+}
+
+"""An edge in a connection."""
+type SpecialProgramEdge {
+  """The item at the end of the edge."""
+  node: SpecialProgram!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum SpecialProgramOrderByInput {
+  id_ASC
+  id_DESC
+  orderd_ASC
+  orderd_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type SpecialProgramPreviousValues {
+  id: ID!
+  orderd: Int
+}
+
+type SpecialProgramSubscriptionPayload {
+  mutation: MutationType!
+  node: SpecialProgram
+  updatedFields: [String!]
+  previousValues: SpecialProgramPreviousValues
+}
+
+input SpecialProgramSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [SpecialProgramSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [SpecialProgramSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [SpecialProgramSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: SpecialProgramWhereInput
+}
+
+input SpecialProgramUpdateInput {
+  orderd: Int
+  program: ProgramUpdateOneInput
+}
+
+input SpecialProgramWhereInput {
+  """Logical AND on all given filters."""
+  AND: [SpecialProgramWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [SpecialProgramWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [SpecialProgramWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
+  orderd: Int
+
+  """All values that are not equal to given value."""
+  orderd_not: Int
+
+  """All values that are contained in given list."""
+  orderd_in: [Int!]
+
+  """All values that are not contained in given list."""
+  orderd_not_in: [Int!]
+
+  """All values less than the given value."""
+  orderd_lt: Int
+
+  """All values less than or equal the given value."""
+  orderd_lte: Int
+
+  """All values greater than the given value."""
+  orderd_gt: Int
+
+  """All values greater than or equal the given value."""
+  orderd_gte: Int
+  program: ProgramWhereInput
+}
+
+input SpecialProgramWhereUniqueInput {
+  id: ID
+}
+
 type SportsArticle implements Node {
   id: ID!
   name: String
@@ -5070,6 +5254,7 @@ type Subscription {
   sportsArticle(where: SportsArticleSubscriptionWhereInput): SportsArticleSubscriptionPayload
   setting(where: SettingSubscriptionWhereInput): SettingSubscriptionPayload
   schedule(where: ScheduleSubscriptionWhereInput): ScheduleSubscriptionPayload
+  specialProgram(where: SpecialProgramSubscriptionWhereInput): SpecialProgramSubscriptionPayload
   event(where: EventSubscriptionWhereInput): EventSubscriptionPayload
   infoData(where: InfoDataSubscriptionWhereInput): InfoDataSubscriptionPayload
   specialBanner(where: SpecialBannerSubscriptionWhereInput): SpecialBannerSubscriptionPayload

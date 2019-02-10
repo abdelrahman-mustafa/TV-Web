@@ -131,3 +131,8 @@ type SpecialBanner{
   program: Program
 }
 
+type SpecialProgram{
+  id: ID! @unique
+  orderd: Int 
+  program: Program
+}
