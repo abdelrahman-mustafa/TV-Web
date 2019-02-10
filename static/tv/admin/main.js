@@ -369,12 +369,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pages/edit-event/edit-event.component */ "./src/app/pages/edit-event/edit-event.component.ts");
 /* harmony import */ var _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/event-details/event-details.component */ "./src/app/pages/event-details/event-details.component.ts");
 /* harmony import */ var _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/edit-event-schedule/edit-event-schedule.component */ "./src/app/pages/edit-event-schedule/edit-event-schedule.component.ts");
+/* harmony import */ var _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/notification/notification.component */ "./src/app/pages/notification/notification.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -432,6 +434,7 @@ var routes = [
     { path: 'editEvent/:id', component: _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_26__["EditEventComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
     { path: 'eventDetails/:id', component: _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_27__["EventDetailsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
     { path: 'eventSchedule/:eventId/:scheduleId', component: _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_28__["EditEventScheduleComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
+    { path: 'Notification', component: _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_29__["NotificationComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -467,7 +470,7 @@ module.exports = ".inActive{\n    background: transparent !important;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"preloader\">\n  <svg class=\"circular\" viewBox=\"25 25 50 50\">\n    <circle class=\"path\" cx=\"50\" cy=\"50\" r=\"20\" fill=\"none\" stroke-width=\"2\" stroke-miterlimit=\"10\" />\n  </svg>\n</div>\n<!-- ============================================================== -->\n<!-- Wrapper -->\n<!-- ============================================================== -->\n<div id=\"wrapper\">\n  <!-- ============================================================== -->\n  <!-- Topbar header - style you can find in pages.scss -->\n  <!-- ============================================================== -->\n  <nav class=\"navbar navbar-default navbar-static-top m-b-0\">\n    <div class=\"navbar-header\">\n      <div class=\"top-left-part\">\n        <!-- Logo -->\n        <a class=\"logo\" routerLink=\"\"> <img src=\"assets/imgs/logo.png\" alt=\"home\" class=\"light-logo\" /> </a>\n      </div>\n      <!-- /Logo -->\n      <!-- Search input and Toggle icon -->\n      <ul class=\"nav navbar-top-links navbar-left\">\n        <li>\n          <a routerLink=\"javascript:void(0)\" class=\"open-close waves-effect waves-light\"><i class=\"ti-menu\"></i></a>\n        </li>\n\n      </ul>\n\n    </div>\n    <!-- /.navbar-header -->\n    <!-- /.navbar-top-links -->\n    <!-- /.navbar-static-side -->\n  </nav>\n  <!-- End Top Navigation -->\n  <!-- ============================================================== -->\n  <!-- Left Sidebar - style you can find in sidebar.scss  -->\n  <!-- ============================================================== -->\n  <div class=\"navbar-default sidebar\" role=\"navigation\">\n    <div class=\"sidebar-nav slimscrollsidebar\">\n\n\n      <ul class=\"nav\" id=\"side-menu\">\n\n        <li>\n          <a routerLink=\"/\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'home', 'inActive': _selectedSideMenuItem != 'home'}\"\n            (click)=\"onMenuItemClicked('home')\">\n            <span class=\"hide-menu\"> اعدادات عامة</span></a>\n\n        </li>\n\n        <li>\n          <a routerLink=\"/live\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'live', 'inActive': _selectedSideMenuItem != 'live' }\"\n            (click)=\"onMenuItemClicked('live')\">\n            <span class=\"hide-menu\"> البث المباشر</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/programs\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'programs', 'inActive': _selectedSideMenuItem != 'programs' }\"\n            (click)=\"onMenuItemClicked('programs')\"> <span class=\"hide-menu\"> البرامج</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/events\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'events', 'inActive': _selectedSideMenuItem != 'events' }\"\n            (click)=\"onMenuItemClicked('events')\"> <span class=\"hide-menu\"> الأحداث</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/articles\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'articles', 'inActive': _selectedSideMenuItem != 'articles' }\"\n            (click)=\"onMenuItemClicked('articles')\"> <span class=\"hide-menu\"> المواضيع</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/sports\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'sports', 'inActive': _selectedSideMenuItem != 'sports' }\"\n            (click)=\"onMenuItemClicked('sports')\"> <span class=\"hide-menu\"> الرياضة</span></a>\n\n        </li>\n\n        <li>\n          <a routerLink=\"/links\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'links', 'inActive': _selectedSideMenuItem != 'links' }\"\n            (click)=\"onMenuItemClicked('links')\"> <span class=\"hide-menu\"> الروابط</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/aboutUs\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'aboutUs', 'inActive': _selectedSideMenuItem != 'aboutUs' }\"\n            (click)=\"onMenuItemClicked('aboutUs')\"> <span class=\"hide-menu\"> عنا</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/terms\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'terms', 'inActive': _selectedSideMenuItem != 'terms' }\"\n            (click)=\"onMenuItemClicked('terms')\"> <span class=\"hide-menu\"> شروط الأستخدام</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/privacy\" class=\"waves-effect \" [ngClass]=\"{'active': _selectedSideMenuItem == 'privacy', 'inActive': _selectedSideMenuItem != 'privacy' }\"\n            (click)=\"onMenuItemClicked('privacy')\"> <span class=\"hide-menu\"> الخصوصية</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/contacts\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'contacts', 'inActive': _selectedSideMenuItem != 'contacts' }\"\n            (click)=\"onMenuItemClicked('contacts')\"> <span class=\"hide-menu\"> الاتصال</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/team\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'team', 'inActive': _selectedSideMenuItem != 'team' }\"\n            (click)=\"onMenuItemClicked('team')\"> <span class=\"hide-menu\"> الفريق</span></a>\n\n        </li>\n        <li>\n          <a routerLink=\"/video\" class=\"waves-effect\" [ngClass]=\"{'active': _selectedSideMenuItem == 'video', 'inActive': _selectedSideMenuItem != 'video' }\"\n            (click)=\"onMenuItemClicked('video')\"> <span class=\"hide-menu\"> فيديو</span></a>\n\n        </li>\n      </ul>\n\n\n    </div>\n  </div>\n  <router-outlet></router-outlet>\n\n</div>\n"
+module.exports = "<div class=\"preloader\">\n  <svg class=\"circular\" viewBox=\"25 25 50 50\">\n    <circle\n      class=\"path\"\n      cx=\"50\"\n      cy=\"50\"\n      r=\"20\"\n      fill=\"none\"\n      stroke-width=\"2\"\n      stroke-miterlimit=\"10\"\n    />\n  </svg>\n</div>\n<!-- ============================================================== -->\n<!-- Wrapper -->\n<!-- ============================================================== -->\n<div id=\"wrapper\">\n  <!-- ============================================================== -->\n  <!-- Topbar header - style you can find in pages.scss -->\n  <!-- ============================================================== -->\n  <nav class=\"navbar navbar-default navbar-static-top m-b-0\">\n    <div class=\"navbar-header\">\n      <div class=\"top-left-part\">\n        <!-- Logo -->\n        <a class=\"logo\" routerLink=\"\">\n          <img src=\"assets/imgs/logo.png\" alt=\"home\" class=\"light-logo\" />\n        </a>\n      </div>\n      <!-- /Logo -->\n      <!-- Search input and Toggle icon -->\n      <ul class=\"nav navbar-top-links navbar-left\">\n        <li>\n          <a\n            routerLink=\"javascript:void(0)\"\n            class=\"open-close waves-effect waves-light\"\n            ><i class=\"ti-menu\"></i\n          ></a>\n        </li>\n      </ul>\n    </div>\n    <!-- /.navbar-header -->\n    <!-- /.navbar-top-links -->\n    <!-- /.navbar-static-side -->\n  </nav>\n  <!-- End Top Navigation -->\n  <!-- ============================================================== -->\n  <!-- Left Sidebar - style you can find in sidebar.scss  -->\n  <!-- ============================================================== -->\n  <div class=\"navbar-default sidebar\" role=\"navigation\">\n    <div class=\"sidebar-nav slimscrollsidebar\">\n      <ul class=\"nav\" id=\"side-menu\">\n        <li>\n          <a\n            routerLink=\"/\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'home',\n              inActive: _selectedSideMenuItem != 'home'\n            }\"\n            (click)=\"onMenuItemClicked('home')\"\n          >\n            <span class=\"hide-menu\"> اعدادات عامة</span></a\n          >\n        </li>\n\n        <li>\n          <a\n            routerLink=\"/live\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'live',\n              inActive: _selectedSideMenuItem != 'live'\n            }\"\n            (click)=\"onMenuItemClicked('live')\"\n          >\n            <span class=\"hide-menu\"> البث المباشر</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/programs\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'programs',\n              inActive: _selectedSideMenuItem != 'programs'\n            }\"\n            (click)=\"onMenuItemClicked('programs')\"\n          >\n            <span class=\"hide-menu\"> البرامج</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/events\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'events',\n              inActive: _selectedSideMenuItem != 'events'\n            }\"\n            (click)=\"onMenuItemClicked('events')\"\n          >\n            <span class=\"hide-menu\"> الأحداث</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/articles\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'articles',\n              inActive: _selectedSideMenuItem != 'articles'\n            }\"\n            (click)=\"onMenuItemClicked('articles')\"\n          >\n            <span class=\"hide-menu\"> المواضيع</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/sports\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'sports',\n              inActive: _selectedSideMenuItem != 'sports'\n            }\"\n            (click)=\"onMenuItemClicked('sports')\"\n          >\n            <span class=\"hide-menu\"> الرياضة</span></a\n          >\n        </li>\n\n        <li>\n          <a\n            routerLink=\"/links\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'links',\n              inActive: _selectedSideMenuItem != 'links'\n            }\"\n            (click)=\"onMenuItemClicked('links')\"\n          >\n            <span class=\"hide-menu\"> الروابط</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/aboutUs\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'aboutUs',\n              inActive: _selectedSideMenuItem != 'aboutUs'\n            }\"\n            (click)=\"onMenuItemClicked('aboutUs')\"\n          >\n            <span class=\"hide-menu\"> عنا</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/terms\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'terms',\n              inActive: _selectedSideMenuItem != 'terms'\n            }\"\n            (click)=\"onMenuItemClicked('terms')\"\n          >\n            <span class=\"hide-menu\"> شروط الأستخدام</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/privacy\"\n            class=\"waves-effect \"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'privacy',\n              inActive: _selectedSideMenuItem != 'privacy'\n            }\"\n            (click)=\"onMenuItemClicked('privacy')\"\n          >\n            <span class=\"hide-menu\"> الخصوصية</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/contacts\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'contacts',\n              inActive: _selectedSideMenuItem != 'contacts'\n            }\"\n            (click)=\"onMenuItemClicked('contacts')\"\n          >\n            <span class=\"hide-menu\"> الاتصال</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/team\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'team',\n              inActive: _selectedSideMenuItem != 'team'\n            }\"\n            (click)=\"onMenuItemClicked('team')\"\n          >\n            <span class=\"hide-menu\"> الفريق</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/video\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'video',\n              inActive: _selectedSideMenuItem != 'video'\n            }\"\n            (click)=\"onMenuItemClicked('video')\"\n          >\n            <span class=\"hide-menu\"> فيديو</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/Notification\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'Notification',\n              inActive: _selectedSideMenuItem != 'Notification'\n            }\"\n            (click)=\"onMenuItemClicked('Notification')\"\n          >\n            <span class=\"hide-menu\"> الإشعارات</span></a\n          >\n        </li>\n      </ul>\n    </div>\n  </div>\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -571,12 +574,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./pages/event-details/event-details.component */ "./src/app/pages/event-details/event-details.component.ts");
 /* harmony import */ var _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/edit-event/edit-event.component */ "./src/app/pages/edit-event/edit-event.component.ts");
 /* harmony import */ var _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./pages/edit-event-schedule/edit-event-schedule.component */ "./src/app/pages/edit-event-schedule/edit-event-schedule.component.ts");
+/* harmony import */ var _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./pages/notification/notification.component */ "./src/app/pages/notification/notification.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -652,7 +657,8 @@ var AppModule = /** @class */ (function () {
                 _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_39__["LoginPageComponent"],
                 _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_40__["EventDetailsComponent"],
                 _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_41__["EditEventComponent"],
-                _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_42__["EditEventScheduleComponent"]
+                _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_42__["EditEventScheduleComponent"],
+                _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_43__["NotificationComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -818,7 +824,7 @@ var AboutUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".article-image {\n\tposition: relative;\n\tdisplay: inline-block;\n}\n\n.article-image .edit {\n\tdisplay: block;\n}\n\n.edit {\n\tpadding-top: 10px;\t\n\tpadding-right: 10px;\n\tposition: absolute;\n\tright: 0;\n\ttop: 0;\n\tdisplay: none;\n}\n\n.edit a {\n    color: white;\n    \n}\n"
 
 /***/ }),
 
@@ -829,7 +835,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">اضافة موضوع</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #articleForm=\"ngForm\" (ngSubmit)=\"save(articleForm)\">\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>اسم الموضوع</p>\n              </div>\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input\n                  required\n                  type=\"text\"\n                  name=\"name\"\n                  [(ngModel)]=\"selectedArticle.name\"\n                  class=\"form-control form-control-line add_programme text_filed_ios_android\"\n                />\n              </div>\n            </div>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>تعليق اسفل الصورة</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input\n                  required\n                  type=\"text\"\n                  name=\"caption\"\n                  [(ngModel)]=\"selectedArticle.caption\"\n                  class=\"form-control form-control-line add_programme text_filed_ios_android\"\n                />\n              </div>\n            </div>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>اسم المحرر</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input\n                  required\n                  type=\"text\"\n                  name=\"writer\"\n                  [(ngModel)]=\"selectedArticle.writer\"\n                  class=\"form-control form-control-line add_programme text_filed_ios_android\"\n                />\n              </div>\n            </div>\n            <hr />\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>تاريخ النشر</p>\n              </div>\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker\n                  required\n                  [options]=\"options\"\n                  name=\"publishDate\"\n                  [(ngModel)]=\"selectedArticle.publishDate\"\n                  position=\"bottom-left\"\n                ></ng-datepicker>\n              </div>\n            </div>\n            <br />\n\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>توقيت النشر</p>\n              </div>\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <input\n                  type=\"time\"\n                  required\n                  atp-time-picker\n                  placeholder=\"انقر لاختيار الوقت\"\n                  name=\"publishTime\"\n                  [(ngModel)]=\"selectedArticle.publishTime\"\n                />\n              </div>\n            </div>\n\n            <hr />\n            <div class=\"row choose_logo1\">\n              <p class=\"logo_channel_text\">الموضوع</p>\n              <br />\n\n              <div id=\"summernote\"></div>\n            </div>\n\n            <hr />\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>رفع الصورة</p>\n              </div>\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <div\n                  class=\"fileinput fileinput-new input-group\"\n                  data-provides=\"fileinput\"\n                >\n                  <div class=\"form-control\" data-trigger=\"fileinput\">\n                    <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                    <span class=\"fileinput-filename\"></span>\n                  </div>\n                  <span class=\"input-group-addon btn btn-default btn-file\">\n                    <span class=\"fileinput-new\">أختار ملف</span>\n                    <span class=\"fileinput-exists\">تغيير</span>\n                    <input\n                      type=\"file\"\n                      multiple=\"multiple\"\n                      accept=\"image/*\"\n                      (change)=\"onSelectedFile($event)\"\n                    />\n                  </span>\n                  <a\n                    class=\"input-group-addon btn btn-default fileinput-exists\"\n                    data-dismiss=\"fileinput\"\n                    (click)=\"deleteFile()\"\n                    >حذف</a\n                  >\n                </div>\n                <div style=\"margin-top: -2%;\">\n                  <p class=\"hints\">* يجب أن يكون حجم الصورة 620 * 370</p>\n                </div>\n                <div style=\"margin-top: 12px;margin-bottom: 12px\">\n                  <img\n                    *ngFor=\"let image of selectedArticle.images\"\n                    src=\"{{ image }}\"\n                    style=\"width: 30%; margin: 1%\"\n                  />\n                </div>\n              </div>\n            </div>\n\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>Video ID</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input\n                  type=\"text\"\n                  name=\"videos\"\n                  [(ngModel)]=\"selectedArticle.videos\"\n                  class=\"form-control form-control-line add_programme text_filed_ios_android\"\n                />\n                <br />\n                <p class=\"hints\" style=\"    margin-top: -3%;\">\n                  * يجب أن يكون ID مثل \"Iyja9Pk8dzs\"\n                </p>\n              </div>\n            </div>\n            <br />\n            <div class=\"row choose_logo1\">\n              <div\n                class=\"col-md-6 logo_channel_text\"\n                style=\"float: right;text-align: left\"\n              >\n                <button\n                  type=\"submit\"\n                  class=\"btn btn_submit btn-info waves-effect waves-light  \"\n                >\n                  حفظ\n                </button>\n              </div>\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n                <button\n                  (click)=\"onBackCliced()\"\n                  type=\"button\"\n                  class=\"btn btn_submit btn-info waves-effect waves-light  \"\n                >\n                  <a>\n                    إلغاء\n                  </a>\n                </button>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">اضافة موضوع</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #articleForm=\"ngForm\" (ngSubmit)=\"save(articleForm)\">\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>اسم الموضوع</p>\n              </div>\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input required type=\"text\" name=\"name\" [(ngModel)]=\"selectedArticle.name\" class=\"form-control form-control-line add_programme text_filed_ios_android\" />\n              </div>\n            </div>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>تعليق اسفل الصورة</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input required type=\"text\" name=\"caption\" [(ngModel)]=\"selectedArticle.caption\" class=\"form-control form-control-line add_programme text_filed_ios_android\" />\n              </div>\n            </div>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>اسم المحرر</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input required type=\"text\" name=\"writer\" [(ngModel)]=\"selectedArticle.writer\" class=\"form-control form-control-line add_programme text_filed_ios_android\" />\n              </div>\n            </div>\n            <hr />\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>تاريخ النشر</p>\n              </div>\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker required [options]=\"options\" name=\"publishDate\" [(ngModel)]=\"selectedArticle.publishDate\"\n                  position=\"bottom-left\"></ng-datepicker>\n              </div>\n            </div>\n            <br />\n\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>توقيت النشر</p>\n              </div>\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <input type=\"time\" required atp-time-picker placeholder=\"انقر لاختيار الوقت\" name=\"publishTime\"\n                  [(ngModel)]=\"selectedArticle.publishTime\" />\n              </div>\n            </div>\n\n            <hr />\n            <div class=\"row choose_logo1\">\n              <p class=\"logo_channel_text\">الموضوع</p>\n              <br />\n\n              <div id=\"summernote\"></div>\n            </div>\n\n            <hr />\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>رفع الصورة</p>\n              </div>\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                  <div class=\"form-control\" data-trigger=\"fileinput\">\n                    <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                    <span class=\"fileinput-filename\"></span>\n                  </div>\n                  <span class=\"input-group-addon btn btn-default btn-file\">\n                    <span class=\"fileinput-new\">أختار ملف</span>\n                    <span class=\"fileinput-exists\">تغيير</span>\n                    <input type=\"file\" multiple=\"multiple\" accept=\"image/*\" (change)=\"onSelectedFile($event)\" />\n                  </span>\n                  <a class=\"input-group-addon btn btn-default fileinput-exists\" data-dismiss=\"fileinput\" (click)=\"deleteFile()\">حذف</a>\n                </div>\n                <div style=\"margin-top: -2%;\">\n                  <p class=\"hints\">* يجب أن يكون حجم الصورة 620 * 370</p>\n                </div>\n                <div style=\"margin-top: 12px;margin-bottom: 12px\">\n                  <div class=\"article-image\" *ngFor=\"let image of selectedArticle.images; let i = index\">\n                    <img src=\"{{ image }}\" style=\"width: 30%; margin: 1%\" />\n                    <div class=\"edit\"><a (click)=\"deleteArticleImage(i)\"><i class=\"ti-close\" aria-hidden=\"true\"></i></a></div>\n\n                  </div>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"\n                          row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>Video ID</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input type=\"text\" name=\"videos\" [(ngModel)]=\"selectedArticle.videos\" class=\"form-control form-control-line add_programme text_filed_ios_android\" />\n                <br />\n                <p class=\"hints\" style=\"    margin-top: -3%;\">\n                  * يجب أن يكون ID مثل \"Iyja9Pk8dzs\"\n                </p>\n              </div>\n            </div>\n            <br />\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n                <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">\n                  حفظ\n                </button>\n              </div>\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n                <button (click)=\"onBackCliced()\" type=\"button\" class=\"btn btn_submit btn-info waves-effect waves-light  \">\n                  <a>\n                    إلغاء\n                  </a>\n                </button>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -1014,6 +1020,22 @@ var AddOrEditArticleComponent = /** @class */ (function () {
     AddOrEditArticleComponent.prototype.deleteFile = function () {
         this.selectedArticleImage = null;
     };
+    AddOrEditArticleComponent.prototype.deleteArticleImage = function (imageIndex) {
+        var _this = this;
+        this.deleteSwal.options = {
+            title: "تأكيد حذف الصورة؟",
+            type: "warning",
+            showCancelButton: true,
+            cancelButtonText: "إلغاء",
+            confirmButtonText: "حذف"
+        };
+        this.deleteSwal.show().then(function (value) {
+            console.log(value);
+            if (value.value === true) {
+                _this.selectedArticle.images.splice(imageIndex, 1);
+            }
+        });
+    };
     AddOrEditArticleComponent.prototype.save = function (form) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
@@ -1023,7 +1045,7 @@ var AddOrEditArticleComponent = /** @class */ (function () {
                     case 0:
                         console.log(form);
                         if (!(form.valid && this.selectedArticle.publishDate != "" && this.selectedArticle.publishTime != "")) return [3 /*break*/, 7];
-                        if (!(this.selectedArticle.images[0] != "" || this.selectedArticleImage)) return [3 /*break*/, 5];
+                        if (!((this.selectedArticle.images.length > 0 && this.selectedArticle.images[0] != "") || this.selectedArticleImage)) return [3 /*break*/, 5];
                         this.spinner.show();
                         $('#summernote').destroy();
                         console.log($('#summernote').code());
@@ -1031,7 +1053,6 @@ var AddOrEditArticleComponent = /** @class */ (function () {
                         this.selectedArticle.publishDate = moment__WEBPACK_IMPORTED_MODULE_7__(this.selectedArticle.publishDate).toISOString();
                         this.selectedArticle.publishTime = "1970-01-01T" + this.selectedArticle.publishTime + ":00.000Z";
                         if (!this.selectedArticleImage) return [3 /*break*/, 4];
-                        this.selectedArticle.images = [];
                         i = 0;
                         _a.label = 1;
                     case 1:
@@ -1104,6 +1125,10 @@ var AddOrEditArticleComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], AddOrEditArticleComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], AddOrEditArticleComponent.prototype, "deleteSwal", void 0);
     AddOrEditArticleComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-add-or-edit-article',
@@ -1973,7 +1998,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">المواضيع</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button (click)=\"addNewArticle()\" type=\"button\" style=\"margin-bottom:12px\" class=\"btn btn-info waves-effect waves-light btn_submit articleme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n          <br>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th>تاريخ النشر</th>\n\n                <th>اسم موضوع</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let article of articles\">\n                <td><span style=\"cursor:pointer;\" (click)=\"changeAppearanceStatus(article)\" class=\"label label-table\"\n                    [ngClass]=\"{'label-success': !article.isShowen, 'label-danger': article.isShowen}\" class=\"label label-table\">{{article.isShowen\n                    ? \"إخفاء\" : \"إظهار\"}}</span>\n                </td>\n                <td>{{article.publishDate | date:'dd-MM-yyyy'}}</td>\n                <td class=\"detail\"><a> {{article.name}} </a></td>\n                <td class=\"edit\">\n                  <a routerLink=\"/editArticle/article/{{article.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\">\n                    <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteArticle(article.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">المواضيع</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button\n            (click)=\"addNewArticle()\"\n            type=\"button\"\n            style=\"margin-bottom:12px\"\n            class=\"btn btn-info waves-effect waves-light btn_submit articleme_button \"\n          >\n            <a>\n              إضافة\n            </a>\n          </button>\n          <br />\n\n          <table\n            id=\"demo-foo-addrow\"\n            class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\"\n          >\n            <thead>\n              <tr>\n                <th>الحالة</th>\n                <th>ID</th>\n                <th>تاريخ النشر</th>\n\n                <th>اسم موضوع</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let article of articles\">\n                <td>\n                  <span\n                    style=\"cursor:pointer;\"\n                    (click)=\"changeAppearanceStatus(article)\"\n                    class=\"label label-table\"\n                    [ngClass]=\"{\n                      'label-success': !article.isShowen,\n                      'label-danger': article.isShowen\n                    }\"\n                    class=\"label label-table\"\n                    >{{ article.isShowen ? \"إخفاء\" : \"إظهار\" }}</span\n                  >\n                </td>\n                <td class=\"ID\">Iyja9Pk8dzs</td>\n                <td>{{ article.publishDate | date: \"dd-MM-yyyy\" }}</td>\n                <td class=\"detail\">\n                  <a> {{ article.name }} </a>\n                </td>\n                <td class=\"edit\">\n                  <a\n                    routerLink=\"/editArticle/article/{{ article.id }}\"\n                    data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"\n                  >\n                    <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n                </td>\n                <td>\n                  <button\n                    (click)=\"deleteArticle(article.id)\"\n                    type=\"button\"\n                    class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"\n                  >\n                    <i class=\"ti-close\" aria-hidden=\"true\"></i>\n                  </button>\n                </td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -2154,22 +2179,32 @@ var ArticlesComponent = /** @class */ (function () {
     };
     ArticlesComponent.prototype.deleteArticle = function (articleId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_2;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.articlesService.deleteArticle(articleId)];
-                    case 1:
-                        _a.sent();
-                        this.loadArticles();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_2 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف المقال؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.articlesService.deleteArticle(articleId).then(function (success) {
+                                _this.loadArticles();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -2184,6 +2219,10 @@ var ArticlesComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], ArticlesComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ArticlesComponent.prototype, "deleteSwal", void 0);
     ArticlesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-articles',
@@ -3584,7 +3623,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">{{selectedEvent.name}}</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم الحدث</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p>{{selectedEvent.name}}</p>\n            </div>\n          </div>\n\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> مدة البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedEvent.duration}}</p>\n            </div>\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> الايكون</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <img src=\"{{selectedEvent.icon}}\" style=\"width: 30%; margin-top: 6px;margin-bottom: 6px\">\n            </div>\n          </div>\n\n\n          <hr>\n\n          <button routerLink=\"/eventSchedule/{{selectedEvent.id}}/0\" type=\"button\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">إضافة</button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th> تاريخ الانتهاء </th>\n                <th> تاريخ البدأ </th>\n                <th> التوقيت </th>\n                <th> ايام العرض </th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let schedule of selectedEvent.schedules\">\n                <td><span class=\"label label-table label-success\">{{schedule.type}}</span> </td>\n                <td>{{schedule.endDate | date:'dd-MM-yyyy'}}</td>\n                <td>{{schedule.startDate | date:'dd-MM-yyyy'}}</td>\n                <td> {{getPublishTime(schedule.timeDate)}}</td>\n                <td><span *ngFor=\"let day of schedule.days\">{{day.name}},</span></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/eventSchedule/{{selectedEvent.id}}/{{schedule.id}}\" data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteSchedule(schedule.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    2017 © 365Scores\n  </footer>\n</div>\n\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">{{selectedEvent.name}}</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم الحدث</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p>{{selectedEvent.name}}</p>\n            </div>\n          </div>\n\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> مدة البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedEvent.duration}}</p>\n            </div>\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> الايكون</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <img src=\"{{selectedEvent.icon}}\" style=\"width: 30%; margin-top: 6px;margin-bottom: 6px\">\n            </div>\n          </div>\n\n\n          <hr>\n\n          <button routerLink=\"/eventSchedule/{{selectedEvent.id}}/0\" type=\"button\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">إضافة</button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th> تاريخ الانتهاء </th>\n                <th> تاريخ البدأ </th>\n                <th> التوقيت </th>\n                <th> ايام العرض </th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let schedule of selectedEvent.schedules\">\n                <td><span class=\"label label-table label-success\">{{schedule.type}}</span> </td>\n                <td>{{schedule.endDate | date:'dd-MM-yyyy'}}</td>\n                <td>{{schedule.startDate | date:'dd-MM-yyyy'}}</td>\n                <td> {{getPublishTime(schedule.timeDate)}}</td>\n                <td><span *ngFor=\"let day of schedule.days\">{{day.name}},</span></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/eventSchedule/{{selectedEvent.id}}/{{schedule.id}}\" data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteSchedule(schedule.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    2017 © 365Scores\n  </footer>\n</div>\n\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -3712,22 +3751,32 @@ var EventDetailsComponent = /** @class */ (function () {
     };
     EventDetailsComponent.prototype.deleteSchedule = function (scheduleId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_2;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.programService.deleteSchedule(scheduleId)];
-                    case 1:
-                        _a.sent();
-                        this.getEventDetails();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_2 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف الموعد؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.programService.deleteSchedule(scheduleId).then(function (success) {
+                                _this.getEventDetails();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -3739,6 +3788,10 @@ var EventDetailsComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], EventDetailsComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], EventDetailsComponent.prototype, "deleteSwal", void 0);
     EventDetailsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-event-details',
@@ -3775,7 +3828,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">اعدادات عامة</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو القناة </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'channel')\"> </span>\n                <a class=\"input-group-addon btn btn-default fileinput-exists\" data-dismiss=\"fileinput\" (click)=\"deleteFile('channel')\">حذف</a>\n              </div>\n              <br>\n              <div style=\"margin-top: -7%;\">\n                <p class=\"hints\">* يجب أن يكون حجم الصورة 72 * 40</p>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: -4%;\">\n                <img src=\"{{settings.logo}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" class=\"btn btn-info waves-effect waves-light  btn_submit\" (click)=\"saveChannelLogo()\">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو المواضيع </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'articles')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('articles')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.articlesIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button id=\"sa-success\" type=\"submit\" (click)=\"saveArticlesLogo()\" class=\"btn btn-info waves-effect waves-light  btn_submit\">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو الرياضة </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'sports')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('sports')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.sportsArticleIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveSportsLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو البرامج </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'programs')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('programs')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.programIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveProgramsLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو الفريق </p>\n\n            </div>\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'team')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('team')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.teamIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveTeamLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو الفيديو </p>\n\n            </div>\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'video')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('video')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.videoIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveVideolLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج الاخبار</p>\n            </div>\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"selectedNewsProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"updateNewsProgram()\" class=\"btn btn-info waves-effect waves-light  btn_submit\">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n\n          <h3>بانر الصفحة الرئيسية</h3>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 1</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"firstBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 2</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"secondBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 3</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"thirdBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 4</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fourthBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 5</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fivethBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 6</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"sixthBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <span class=\"clearfix\"></span>\n          <br>\n          <div class=\"col-xs-12\" style=\"text-align: center\">\n            <button type=\"submit\" (click)=\"updateSpecialBanners()\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n          <hr>\n          <span class=\"clearfix\"></span>\n          <h3>برامج مميزة في الصفحة الرئيسيسة</h3>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 1</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"firstProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 2</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"secondProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 3</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"thirdProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 4</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fourthProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 5</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fivethProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 6</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"sixthProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n\n          <span class=\"clearfix\"></span>\n          <br>\n          <div class=\"col-xs-12\" style=\"text-align: center\">\n            <button type=\"submit\" (click)=\"updateSpecialPrograms()\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n          <hr>\n          <br>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> رابط التطبيق IOS\n              </p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" style=\"padding-left:5px\" [(ngModel)]=\"iosUrl\" class=\"form-control form-control-line text_filed_ios_android\">\n              <br>\n              <div style=\"margin-top: -3%;\">\n                <p class=\"hints\">* يجب أن يكون رابط مثل\n                  <br>\n                  \"https://itunes.apple.com/us/app/libyanahits-fm/id1393840773?l=es&mt=8\" </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> رابط التطبيق Android\n              </p>\n            </div>\n\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" style=\"padding-left:5px\" [(ngModel)]=\"androidUrl\" class=\"form-control form-control-line text_filed_ios_android\">\n              <br>\n              <div style=\"margin-top: -3%;\">\n                <p class=\"hints\">* يجب أن يكون رابط مثل\n                  <br>\n                  \"https://play.google.com/store/apps/details?id=com.apple.movetoios&hl=en\" </p>\n              </div>\n            </div>\n\n          </div>\n\n          <br>\n          <div class=\"col-xs-12\" style=\"text-align: center\">\n            <button type=\"submit\" (click)=\"updateAppsUrl()\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n          </div>\n          <br><br>\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n\n  </footer>\n</div>\n<!-- ============================================================== -->\n<!-- End Page Content -->\n<!-- ============================================================== -->\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #imageValidation title=\"من فضلك قم باختيار صورة\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">اعدادات عامة</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو القناة </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'channel')\"> </span>\n                <a class=\"input-group-addon btn btn-default fileinput-exists\" data-dismiss=\"fileinput\" (click)=\"deleteFile('channel')\">حذف</a>\n              </div>\n              <br>\n              <div style=\"margin-top: -7%;\">\n                <p class=\"hints\">* يجب أن يكون حجم الصورة 72 * 40</p>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: -4%;\">\n                <img src=\"{{settings.logo}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" class=\"btn btn-info waves-effect waves-light  btn_submit\" (click)=\"saveChannelLogo()\">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو المواضيع </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'articles')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('articles')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.articlesIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button id=\"sa-success\" type=\"submit\" (click)=\"saveArticlesLogo()\" class=\"btn btn-info waves-effect waves-light  btn_submit\">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو الرياضة </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'sports')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('sports')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.sportsArticleIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveSportsLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو البرامج </p>\n\n            </div>\n\n\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'programs')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('programs')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.programIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveProgramsLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو الفريق </p>\n\n            </div>\n\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'team')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('team')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.teamIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveTeamLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> لوجو الفيديو </p>\n\n            </div>\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <div class=\"fileinput fileinput-new input-group\" data-provides=\"fileinput\">\n                <div class=\"form-control\" data-trigger=\"fileinput\"> <i class=\"glyphicon glyphicon-file fileinput-exists\"></i>\n                  <span class=\"fileinput-filename\"></span></div> <span class=\"input-group-addon btn btn-default btn-file\">\n                  <span class=\"fileinput-new\">أختار ملف</span> <span class=\"fileinput-exists\">تغيير</span>\n                  <input type=\"file\" accept=\"image/*\" (change)=\"onSelectedFile($event,'video')\"> </span> <a class=\"input-group-addon btn btn-default fileinput-exists\"\n                  data-dismiss=\"fileinput\" (click)=\"deleteFile('video')\">حذف</a>\n              </div>\n              <div *ngIf=\"settings != undefined\" style=\"margin-top: 4%;\">\n                <img src=\"{{settings.videoIcon}}\" style=\"width: 30%;    margin: 1%;\">\n              </div>\n            </div>\n\n\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"saveVideolLogo()\" class=\"btn btn-info waves-effect waves-light btn_submit \">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج الاخبار</p>\n            </div>\n            <div class=\"col-md-4\" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"selectedNewsProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n            <div class=\"col-md-4 submit_button\" style=\"float: left;\">\n              <button type=\"submit\" (click)=\"updateNewsProgram()\" class=\"btn btn-info waves-effect waves-light  btn_submit\">حفظ</button>\n            </div>\n\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n\n\n          <h3>بانر الصفحة الرئيسية</h3>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 1</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"firstBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of specialEntities\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 2</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"secondBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of specialEntities\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 3</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"thirdBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of specialEntities\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 4</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fourthBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of specialEntities\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 5</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fivethBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of specialEntities\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> بانر مميز 6</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"sixthBannerId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of specialEntities\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <span class=\"clearfix\"></span>\n          <br>\n          <div class=\"col-xs-12\" style=\"text-align: center\">\n            <button type=\"submit\" (click)=\"updateSpecialBanners()\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n          <hr>\n          <span class=\"clearfix\"></span>\n          <h3>برامج مميزة في الصفحة الرئيسية</h3>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 1</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"firstProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 2</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"secondProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 3</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"thirdProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 4</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fourthProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 5</p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"fivethProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> برنامج مميز 6</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n              <select class=\"form-control\" [(ngModel)]=\"sixthProgramId\">\n                <option value=\"\" disabled>اختر برنامج</option>\n                <option *ngFor=\"let program of programs\" [value]=\"program.id\">{{program.name}}</option>\n              </select>\n            </div>\n          </div>\n\n          <span class=\"clearfix\"></span>\n          <br>\n          <div class=\"col-xs-12\" style=\"text-align: center\">\n            <button type=\"submit\" (click)=\"updateSpecialPrograms()\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n          </div>\n          <hr>\n          <span class=\"clearfix\"></span>\n          <hr>\n          <br>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> رابط التطبيق IOS\n              </p>\n\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" style=\"padding-left:5px\" [(ngModel)]=\"iosUrl\" class=\"form-control form-control-line text_filed_ios_android\">\n              <br>\n              <div style=\"margin-top: -3%;\">\n                <p class=\"hints\">* يجب أن يكون رابط مثل\n                  <br>\n                  \"https://itunes.apple.com/us/app/libyanahits-fm/id1393840773?l=es&mt=8\" </p>\n              </div>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> رابط التطبيق Android\n              </p>\n            </div>\n\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <input type=\"text\" style=\"padding-left:5px\" [(ngModel)]=\"androidUrl\" class=\"form-control form-control-line text_filed_ios_android\">\n              <br>\n              <div style=\"margin-top: -3%;\">\n                <p class=\"hints\">* يجب أن يكون رابط مثل\n                  <br>\n                  \"https://play.google.com/store/apps/details?id=com.apple.movetoios&hl=en\" </p>\n              </div>\n            </div>\n\n          </div>\n\n          <br>\n          <div class=\"col-xs-12\" style=\"text-align: center\">\n            <button type=\"submit\" (click)=\"updateAppsUrl()\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n          </div>\n          <br><br>\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n\n  </footer>\n</div>\n<!-- ============================================================== -->\n<!-- End Page Content -->\n<!-- ============================================================== -->\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #imageValidation title=\"من فضلك قم باختيار صورة\" type=\"error\"></swal>\n"
 
 /***/ }),
 
@@ -3794,14 +3847,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
 /* harmony import */ var src_app_services_cloud_storage_provider_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/cloud-storage-provider.service */ "./src/app/services/cloud-storage-provider.service.ts");
 /* harmony import */ var src_app_services_uiServices_home_page_services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/uiServices/home-page-services.service */ "./src/app/services/uiServices/home-page-services.service.ts");
-var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3881,6 +3926,8 @@ var HomePageComponent = /** @class */ (function () {
         this.sixthProgramId = "";
         this.loadSettings();
         this.loadPrograms();
+        this.loadSpecialBanners();
+        this.loadSpecialPrograms();
     }
     HomePageComponent.prototype.loadSettings = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -3896,29 +3943,9 @@ var HomePageComponent = /** @class */ (function () {
                         console.log(this.settings);
                         this.androidUrl = this.settings.infoDaTa.andUrl;
                         this.iosUrl = this.settings.infoDaTa.iosUrl;
-                        this.specialBanners = this.settings.specialBanners.map(function (obj) { return (__assign({}, obj)); });
-                        this.privousSpecialBanners = this.settings.specialBanners;
-                        console.log("Special banners copy");
-                        console.log(this.specialBanners);
-                        this.firstBannerId = this.specialBanners[0] ? this.specialBanners[0].id : "";
-                        this.secondBannerId = this.specialBanners[1] ? this.specialBanners[1].id : "";
-                        this.thirdBannerId = this.specialBanners[2] ? this.specialBanners[2].id : "";
-                        this.fourthBannerId = this.specialBanners[3] ? this.specialBanners[3].id : "";
-                        this.fivethBannerId = this.specialBanners[4] ? this.specialBanners[4].id : "";
-                        this.sixthBannerId = this.specialBanners[5] ? this.specialBanners[5].id : "";
                         if (this.settings.newsPrograms) {
                             this.selectedNewsProgramId = this.settings.newsPrograms.id;
                         }
-                        this.specialPrograms = this.settings.specialPrograms.map(function (obj) { return (__assign({}, obj)); });
-                        this.privousSpecialPrograms = this.settings.specialPrograms;
-                        console.log("Special programs copy");
-                        console.log(this.specialPrograms);
-                        this.firstProgramId = this.specialPrograms[0] ? this.specialPrograms[0].id : "";
-                        this.secondProgramId = this.specialPrograms[1] ? this.specialPrograms[1].id : "";
-                        this.thirdProgramId = this.specialPrograms[2] ? this.specialPrograms[2].id : "";
-                        this.fourthProgramId = this.specialPrograms[3] ? this.specialPrograms[3].id : "";
-                        this.fivethProgramId = this.specialPrograms[4] ? this.specialPrograms[4].id : "";
-                        this.sixthProgramId = this.specialPrograms[5] ? this.specialPrograms[5].id : "";
                         return [2 /*return*/];
                 }
             });
@@ -3926,14 +3953,65 @@ var HomePageComponent = /** @class */ (function () {
     };
     HomePageComponent.prototype.loadPrograms = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.uiServicesProvider.getPrograms()];
+                    case 1:
+                        _a.programs = _c.sent();
+                        _b = this;
+                        return [4 /*yield*/, this.uiServicesProvider.getSpecialEntities()];
+                    case 2:
+                        _b.specialEntities = _c.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HomePageComponent.prototype.loadSpecialBanners = function () {
+        return __awaiter(this, void 0, void 0, function () {
             var _a;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         _a = this;
-                        return [4 /*yield*/, this.uiServicesProvider.getPrograms()];
+                        return [4 /*yield*/, this.uiServicesProvider.getSpecialBanners()];
                     case 1:
-                        _a.programs = _b.sent();
+                        _a.specialBanners = _b.sent();
+                        // this.privousSpecialBanners = this.settings.specialBanners;
+                        console.log("Special banners copy");
+                        console.log(this.specialBanners);
+                        this.firstBannerId = this.specialBanners[0].program ? this.specialBanners[0].program.id : this.specialBanners[0].event.id;
+                        this.secondBannerId = this.specialBanners[1].program ? this.specialBanners[1].program.id : this.specialBanners[1].event.id;
+                        this.thirdBannerId = this.specialBanners[2].program ? this.specialBanners[2].program.id : this.specialBanners[2].event.id;
+                        this.fourthBannerId = this.specialBanners[3].program ? this.specialBanners[3].program.id : this.specialBanners[3].event.id;
+                        this.fivethBannerId = this.specialBanners[4].program ? this.specialBanners[4].program.id : this.specialBanners[4].event.id;
+                        this.sixthBannerId = this.specialBanners[5].program ? this.specialBanners[5].program.id : this.specialBanners[5].event.id;
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    HomePageComponent.prototype.loadSpecialPrograms = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.uiServicesProvider.getSpecialPrograms()];
+                    case 1:
+                        _a.specialPrograms = _b.sent();
+                        console.log("Special programs copy");
+                        console.log(this.specialPrograms);
+                        this.firstProgramId = this.specialPrograms[0] && this.specialPrograms[0].program ? this.specialPrograms[0].program.id : "";
+                        this.secondProgramId = this.specialPrograms[1] && this.specialPrograms[1].program ? this.specialPrograms[1].program.id : "";
+                        this.thirdProgramId = this.specialPrograms[2] && this.specialPrograms[2].program ? this.specialPrograms[2].program.id : "";
+                        this.fourthProgramId = this.specialPrograms[3] && this.specialPrograms[3].program ? this.specialPrograms[3].program.id : "";
+                        this.fivethProgramId = this.specialPrograms[4] && this.specialPrograms[4].program ? this.specialPrograms[4].program.id : "";
+                        this.sixthProgramId = this.specialPrograms[5] && this.specialPrograms[5].program ? this.specialPrograms[5].program.id : "";
                         return [2 /*return*/];
                 }
             });
@@ -4311,78 +4389,101 @@ var HomePageComponent = /** @class */ (function () {
     };
     HomePageComponent.prototype.updateSpecialBanners = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var done, error_9;
+            var _this = this;
+            var error_9;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (!(this.firstBannerId != "" && this.secondBannerId != "" && this.thirdBannerId != "" && this.fourthBannerId != "" && this.fivethBannerId != "" && this.sixthBannerId != "")) return [3 /*break*/, 5];
+                        if (!(this.firstBannerId != "" && this.secondBannerId != "" && this.thirdBannerId != "" && this.fourthBannerId != "" && this.fivethBannerId != "" && this.sixthBannerId != "")) return [3 /*break*/, 10];
                         this.spinner.show();
                         _a.label = 1;
                     case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialBanners(this.settings.id, this.firstBannerId, this.secondBannerId, this.thirdBannerId, this.fourthBannerId, this.fivethBannerId, this.sixthBannerId, this.privousSpecialBanners)];
+                        _a.trys.push([1, 8, , 9]);
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialBanner(this.specialBanners[0], this.specialEntities.find(function (entity) { return entity.id == _this.firstBannerId; }).type != null, this.firstBannerId)];
                     case 2:
-                        done = _a.sent();
-                        this.spinner.hide();
-                        if (done) {
-                            this.successfulDialog.show();
-                        }
-                        else {
-                            this.errorDialog.show();
-                        }
-                        return [3 /*break*/, 4];
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialBanner(this.specialBanners[1], this.specialEntities.find(function (entity) { return entity.id == _this.secondBannerId; }).type != null, this.secondBannerId)];
                     case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialBanner(this.specialBanners[2], this.specialEntities.find(function (entity) { return entity.id == _this.thirdBannerId; }).type != null, this.thirdBannerId)];
+                    case 4:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialBanner(this.specialBanners[3], this.specialEntities.find(function (entity) { return entity.id == _this.fourthBannerId; }).type != null, this.fourthBannerId)];
+                    case 5:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialBanner(this.specialBanners[4], this.specialEntities.find(function (entity) { return entity.id == _this.fivethBannerId; }).type != null, this.fivethBannerId)];
+                    case 6:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialBanner(this.specialBanners[5], this.specialEntities.find(function (entity) { return entity.id == _this.sixthBannerId; }).type != null, this.sixthBannerId)];
+                    case 7:
+                        _a.sent();
+                        this.spinner.hide();
+                        this.successfulDialog.show();
+                        return [3 /*break*/, 9];
+                    case 8:
                         error_9 = _a.sent();
+                        console.log(error_9);
                         this.spinner.hide();
                         this.errorDialog.show();
-                        return [3 /*break*/, 4];
-                    case 4: return [3 /*break*/, 6];
-                    case 5:
+                        return [3 /*break*/, 9];
+                    case 9: return [3 /*break*/, 11];
+                    case 10:
                         this.imageValidation.options = {
                             title: "من فضلك قم باختيار برامج البانر المميز"
                         };
                         this.imageValidation.show();
-                        _a.label = 6;
-                    case 6: return [2 /*return*/];
+                        _a.label = 11;
+                    case 11: return [2 /*return*/];
                 }
             });
         });
     };
     HomePageComponent.prototype.updateSpecialPrograms = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var done, error_10;
+            var error_10;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        if (!(this.firstProgramId != "" && this.secondProgramId != "" && this.thirdProgramId != "" && this.fourthProgramId != "" && this.fivethProgramId != "" && this.sixthProgramId != "")) return [3 /*break*/, 5];
+                        if (!(this.firstProgramId != "" && this.secondProgramId != "" && this.thirdProgramId != "" && this.fourthProgramId != "" && this.fivethProgramId != "" && this.sixthProgramId != "")) return [3 /*break*/, 10];
                         this.spinner.show();
                         _a.label = 1;
                     case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialPrograms(this.settings.id, this.firstProgramId, this.secondProgramId, this.thirdProgramId, this.fourthProgramId, this.fivethProgramId, this.sixthProgramId, this.privousSpecialPrograms)];
+                        _a.trys.push([1, 8, , 9]);
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialProgram(this.specialPrograms[0], this.firstProgramId)];
                     case 2:
-                        done = _a.sent();
-                        this.spinner.hide();
-                        if (done) {
-                            this.successfulDialog.show();
-                        }
-                        else {
-                            this.errorDialog.show();
-                        }
-                        return [3 /*break*/, 4];
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialProgram(this.specialPrograms[1], this.secondProgramId)];
                     case 3:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialProgram(this.specialPrograms[2], this.thirdProgramId)];
+                    case 4:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialProgram(this.specialPrograms[3], this.fourthProgramId)];
+                    case 5:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialProgram(this.specialPrograms[4], this.fivethProgramId)];
+                    case 6:
+                        _a.sent();
+                        return [4 /*yield*/, this.uiServicesProvider.updateSpecialProgram(this.specialPrograms[5], this.sixthProgramId)];
+                    case 7:
+                        _a.sent();
+                        this.spinner.hide();
+                        this.successfulDialog.show();
+                        return [3 /*break*/, 9];
+                    case 8:
                         error_10 = _a.sent();
+                        console.log(error_10);
                         this.spinner.hide();
                         this.errorDialog.show();
-                        return [3 /*break*/, 4];
-                    case 4: return [3 /*break*/, 6];
-                    case 5:
+                        return [3 /*break*/, 9];
+                    case 9: return [3 /*break*/, 11];
+                    case 10:
                         this.imageValidation.options = {
                             title: "من فضلك قم باختيار ستة برامج مميزة"
                         };
                         this.imageValidation.show();
-                        _a.label = 6;
-                    case 6: return [2 /*return*/];
+                        _a.label = 11;
+                    case 11: return [2 /*return*/];
                 }
             });
         });
@@ -4432,7 +4533,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الروابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button routerLink=\"/editLink/0\" type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>اسم الرابط</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let link of links\">\n                <td class=\"detail\">\n                  <a>\n                    {{link.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editLink/{{link.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteProgram(link.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الروابط</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button routerLink=\"/editLink/0\" type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>اسم الرابط</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let link of links\">\n                <td class=\"detail\">\n                  <a>\n                    {{link.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editLink/{{link.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteLink(link.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -4512,24 +4613,34 @@ var LinksComponent = /** @class */ (function () {
         };
         this.loadLinks();
     };
-    LinksComponent.prototype.deleteProgram = function (linkId) {
+    LinksComponent.prototype.deleteLink = function (linkId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_1;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.linksService.deleteLink(linkId)];
-                    case 1:
-                        _a.sent();
-                        this.loadLinks();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_1 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف الرابط؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.linksService.deleteLink(linkId).then(function (success) {
+                                _this.loadLinks();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -4565,6 +4676,10 @@ var LinksComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], LinksComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], LinksComponent.prototype, "deleteSwal", void 0);
     LinksComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-links',
@@ -4901,7 +5016,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الاحداث </h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"button\" routerLink=\"/editEvent/0\" style=\"margin-bottom: 10px\" class=\"btn btn-info waves-effect waves-light btn_submit eventme_button \"><a>إضافة</a></button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n\n                <th>اسم الحدث</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let event of events\">\n                <td><span style=\"cursor:pointer;\" (click)=\"changeAppearanceStatus(event)\" class=\"label label-table\"\n                    [ngClass]=\"{'label-success': !event.isShowen, 'label-danger': event.isShowen}\">{{event.isShowen\n                    ? \"إخفاء\" : \"إظهار\"}}</span></td>\n                <td class=\"detail\">\n                  <a routerLink=\"/eventDetails/{{event.id}}\">\n                    {{event.name}}\n                  </a>\n                </td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editEvent/{{event.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteEvent(event.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الاحداث </h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"button\" routerLink=\"/editEvent/0\" style=\"margin-bottom: 10px\" class=\"btn btn-info waves-effect waves-light btn_submit eventme_button \"><a>إضافة</a></button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n\n                <th>اسم الحدث</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let event of events\">\n                <td><span style=\"cursor:pointer;\" (click)=\"changeAppearanceStatus(event)\" class=\"label label-table\"\n                    [ngClass]=\"{'label-success': !event.isShowen, 'label-danger': event.isShowen}\">{{event.isShowen\n                    ? \"إخفاء\" : \"إظهار\"}}</span></td>\n                <td class=\"detail\">\n                  <a routerLink=\"/eventDetails/{{event.id}}\">\n                    {{event.name}}\n                  </a>\n                </td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editEvent/{{event.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteEvent(event.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -5031,27 +5146,38 @@ var NewsComponent = /** @class */ (function () {
     };
     NewsComponent.prototype.deleteEvent = function (eventId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_2;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.programsService.deleteEvent(eventId)];
-                    case 1:
-                        _a.sent();
-                        this.loadEvents();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_2 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    console.log("Event id to delete: " + eventId);
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف الحدث؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.programsService.deleteEvent(eventId).then(function (success) {
+                                _this.loadEvents();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
     NewsComponent.prototype.addNewEvent = function () {
-        this.router.navigateByUrl("/editProgram/0");
+        this.router.navigateByUrl("/editEvent/0");
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
@@ -5061,6 +5187,10 @@ var NewsComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], NewsComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], NewsComponent.prototype, "deleteSwal", void 0);
     NewsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-news',
@@ -5070,6 +5200,69 @@ var NewsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [src_app_services_uiServices_programs_service__WEBPACK_IMPORTED_MODULE_3__["ProgramsService"], ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
     ], NewsComponent);
     return NewsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/notification/notification.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/notification/notification.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/pages/notification/notification.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/pages/notification/notification.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الإشعارات</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #articleForm=\"ngForm\" (ngSubmit)=\"save(articleForm)\">\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>العنوان</p>\n              </div>\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input\n                  required\n                  type=\"text\"\n                  name=\"name\"\n                  class=\"form-control form-control-line add_programme text_filed_ios_android\"\n                />\n              </div>\n            </div>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>المحتوى</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <textarea\n                  _ngcontent-c1=\"\"\n                  class=\"form-control add_programme ng-untouched ng-pristine ng-invalid\"\n                  name=\"cv\"\n                  required=\"\"\n                  rows=\"5\"\n                ></textarea>\n              </div>\n            </div>\n            <br />\n            <div _ngcontent-c15=\"\" class=\"row choose_logo1\">\n              <div\n                _ngcontent-c15=\"\"\n                class=\"col-md-4 logo_channel_text\"\n                style=\"float: right;\"\n              >\n                <p _ngcontent-c15=\"\">اختر النوع</p>\n              </div>\n              <div _ngcontent-c15=\"\" class=\"col-md-4\" style=\"float: right;\">\n                <select\n                  _ngcontent-c15=\"\"\n                  class=\"form-control ng-untouched ng-pristine ng-valid\"\n                  ng-reflect-model=\"cjqpb23gb000i0847h28804ht\"\n                  ><!--bindings={\n              \"ng-reflect-ng-for-of\": \"[object Object],[object Object\"\n            }--><option>برنامج</option\n                  ><option>موضوع</option\n                  ><option>حدث</option\n                  ><option>رياضة</option>\n                  <option>فيديو</option>\n                </select>\n              </div>\n            </div>\n\n            <hr />\n\n            <div\n              class=\"\n                          row choose_logo1\"\n            >\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>ID or URL(video)</p>\n              </div>\n              <div class=\"col-md-6\" style=\"float: right;\">\n                <input\n                  type=\"text\"\n                  name=\"videos\"\n                  [(ngModel)]=\"selectedArticle.videos\"\n                  class=\"form-control form-control-line add_programme text_filed_ios_android\"\n                />\n              </div>\n            </div>\n            <br />\n            <div class=\"row choose_logo1\">\n              <div\n                class=\"col-md-6 logo_channel_text\"\n                style=\"float: right;text-align: left\"\n              >\n                <button\n                  type=\"submit\"\n                  class=\"btn btn_submit btn-info waves-effect waves-light  \"\n                >\n                  حفظ\n                </button>\n              </div>\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n                <button\n                  (click)=\"onBackCliced()\"\n                  type=\"button\"\n                  class=\"btn btn_submit btn-info waves-effect waves-light  \"\n                >\n                  <a>\n                    إلغاء\n                  </a>\n                </button>\n              </div>\n            </div>\n          </form>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/notification/notification.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/notification/notification.component.ts ***!
+  \**************************************************************/
+/*! exports provided: NotificationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationComponent", function() { return NotificationComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NotificationComponent = /** @class */ (function () {
+    function NotificationComponent() {
+    }
+    NotificationComponent.prototype.ngOnInit = function () {
+    };
+    NotificationComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-notification',
+            template: __webpack_require__(/*! ./notification.component.html */ "./src/app/pages/notification/notification.component.html"),
+            styles: [__webpack_require__(/*! ./notification.component.css */ "./src/app/pages/notification/notification.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], NotificationComponent);
+    return NotificationComponent;
 }());
 
 
@@ -5094,7 +5287,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الفريق</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"button\" routerLink=\"/editMember/0\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <!-- <th>الحالة</th> -->\n                <th>اسم العضو</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let member of members\">\n                <!-- <td><span class=\"label label-table label-success\">إظهار</span> </td> -->\n                <td class=\"detail\">\n                  <a>\n                    {{member.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editMember/{{member.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteMember(member.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الفريق</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"button\" routerLink=\"/editMember/0\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <!-- <th>الحالة</th> -->\n                <th>اسم العضو</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let member of members\">\n                <!-- <td><span class=\"label label-table label-success\">إظهار</span> </td> -->\n                <td class=\"detail\">\n                  <a>\n                    {{member.name}}\n                  </a></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/editMember/{{member.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteMember(member.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -5176,22 +5369,32 @@ var OurTeamComponent = /** @class */ (function () {
     };
     OurTeamComponent.prototype.deleteMember = function (memberId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_1;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.teamService.deleteMember(memberId)];
-                    case 1:
-                        _a.sent();
-                        this.loadTeam();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_1 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف عضو الفريق؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.teamService.deleteMember(memberId).then(function (success) {
+                                _this.loadTeam();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -5228,6 +5431,10 @@ var OurTeamComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], OurTeamComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], OurTeamComponent.prototype, "deleteSwal", void 0);
     OurTeamComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-our-team',
@@ -5390,7 +5597,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">{{selectedProgram.name}}</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.name}} </p>\n            </div>\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم المقدم</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.presenter}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> وصف التوقيت\n\n              </p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.programDate}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> مدة البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.duration}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> البانر</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <img src=\"{{selectedProgram.webBanner}}\" style=\"width: 30%;\">\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> الايكون</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <img src=\"{{selectedProgram.icon}}\" style=\"width: 30%; margin-top: 6px;margin-bottom: 6px\">\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> Playlist ID\n\n              </p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.playlistUrl}}</p>\n            </div>\n          </div>\n\n\n\n\n\n          <hr>\n\n          <button routerLink=\"/programSchedule/{{selectedProgram.id}}/0\" type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"><a>إضافة</a></button>\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th> تاريخ الانتهاء </th>\n                <th> تاريخ البدأ </th>\n                <th> التوقيت </th>\n                <th> ايام العرض </th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let schedule of selectedProgram.schedule\">\n                <td><span class=\"label label-table label-success\">{{schedule.type}}</span> </td>\n                <td>{{schedule.endDate | date:'dd-MM-yyyy'}}</td>\n                <td>{{schedule.startDate | date:'dd-MM-yyyy'}}</td>\n                <td> {{getPublishTime(schedule.timeDate)}}</td>\n                <td><span *ngFor=\"let day of schedule.days\">{{day.name}},</span></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/programSchedule/{{selectedProgram.id}}/{{schedule.id}}\" data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteSchedule(schedule.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">{{selectedProgram.name}}</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.name}} </p>\n            </div>\n          </div>\n\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> إسم المقدم</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.presenter}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> وصف التوقيت\n\n              </p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.programDate}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> مدة البرنامج</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.duration}}</p>\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> البانر</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <img src=\"{{selectedProgram.webBanner}}\" style=\"width: 30%;\">\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> الايكون</p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <img src=\"{{selectedProgram.icon}}\" style=\"width: 30%; margin-top: 6px;margin-bottom: 6px\">\n            </div>\n          </div>\n          <div class=\"row choose_logo1\">\n\n            <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n              <p> Playlist ID\n\n              </p>\n            </div>\n            <div class=\"col-md-6 \" style=\"float: right;\">\n\n              <p> {{selectedProgram.playlistUrl}}</p>\n            </div>\n          </div>\n\n\n\n\n\n          <hr>\n\n          <button routerLink=\"/programSchedule/{{selectedProgram.id}}/0\" type=\"submit\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"><a>إضافة</a></button>\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th> تاريخ الانتهاء </th>\n                <th> تاريخ البدأ </th>\n                <th> التوقيت </th>\n                <th> ايام العرض </th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let schedule of selectedProgram.schedule\">\n                <td><span class=\"label label-table label-success\">{{schedule.type}}</span> </td>\n                <td>{{schedule.endDate | date:'dd-MM-yyyy'}}</td>\n                <td>{{schedule.startDate | date:'dd-MM-yyyy'}}</td>\n                <td> {{getPublishTime(schedule.timeDate)}}</td>\n                <td><span *ngFor=\"let day of schedule.days\">{{day.name}},</span></td>\n                <td class=\"edit\">\n\n                  <a routerLink=\"/programSchedule/{{selectedProgram.id}}/{{schedule.id}}\" data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"> <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteSchedule(schedule.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -5523,22 +5730,32 @@ var ProgramDetailsComponent = /** @class */ (function () {
     };
     ProgramDetailsComponent.prototype.deleteSchedule = function (scheduleId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_2;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.programService.deleteSchedule(scheduleId)];
-                    case 1:
-                        _a.sent();
-                        this.getProgramDetails();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_2 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف الموعد؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.programService.deleteSchedule(scheduleId).then(function (success) {
+                                _this.getProgramDetails();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -5550,6 +5767,10 @@ var ProgramDetailsComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], ProgramDetailsComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ProgramDetailsComponent.prototype, "deleteSwal", void 0);
     ProgramDetailsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-program-details',
@@ -5586,7 +5807,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">اضافة موعد</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #scheduleForm=\"ngForm\" (ngSubmit)=\"save(scheduleForm)\">\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> أيام البث</p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n                <div class=\"checkbox_addtime\">\n                  <div class=\"checkbox checkbox-info \">\n                    <input id=\"checkbox7\" type=\"checkbox\" [checked]=\"friId != undefined\" name=\"fri\" [(ngModel)]=\"friId\">\n                    <label for=\"checkbox7\"> الجمعة </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox6\" type=\"checkbox\" [checked]=\"thuId != undefined\" name=\"thu\" [(ngModel)]=\"thuId\">\n                    <label for=\"checkbox6\"> الخميس </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox5\" type=\"checkbox\" [checked]=\"wedId != undefined\" name=\"wed\" [(ngModel)]=\"wedId\">\n                    <label for=\"checkbox5\"> الأربعاء </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox4\" type=\"checkbox\" [checked]=\"tueId != undefined\" name=\"tue\" [(ngModel)]=\"tueId\">\n                    <label for=\"checkbox4\"> الثلاثاء </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox3\" type=\"checkbox\" [checked]=\"monId != undefined\" name=\"mon\" [(ngModel)]=\"monId\">\n                    <label for=\"checkbox3\"> الأتنين </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox2\" type=\"checkbox\" [checked]=\"sunId != undefined\" name=\"sun\" [(ngModel)]=\"sunId\">\n                    <label for=\"checkbox2\"> الأحد </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox1\" type=\"checkbox\" [checked]=\"satId != undefined\" name=\"sat\" [(ngModel)]=\"satId\">\n                    <label for=\"checkbox1\"> السبت </label>\n                  </div>\n                </div>\n\n              </div>\n            </div>\n\n            <hr>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> توقيت البث</p>\n              </div>\n\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n\n                <input type=\"time\" required atp-time-picker placeholder=\"انقر لاختيار الوقت\" name=\"timeDate\"\n                  [(ngModel)]=\"selectedSchedule.timeDate\" />\n              </div>\n            </div>\n\n            <br>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> تاريخ بداية البث</p>\n              </div>\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker required [options]=\"options\" name=\"startDate\" [(ngModel)]=\"selectedSchedule.startDate\"\n                  position=\"bottom-left\"></ng-datepicker>\n              </div>\n\n            </div>\n            <br>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> تاريخ إنتهاء البث</p>\n              </div>\n\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker required [options]=\"options\" name=\"endDate\" [(ngModel)]=\"selectedSchedule.endDate\"\n                  position=\"bottom-left\"></ng-datepicker>\n              </div>\n            </div>\n\n            <br>\n\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> جديد/ اعادة </p>\n\n              </div>\n\n\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n\n                <select class=\"form-control\" required name=\"type\" [(ngModel)]=\"selectedSchedule.type\">\n                  <option value=\"new\">جديد</option>\n                  <option value=\"repeat\">إعادة</option>\n                </select>\n              </div>\n\n            </div>\n\n            <hr>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n                <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n\n              </div>\n\n\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n\n                <button type=\"button\" (click)=\"onBackCliced()\" class=\"btn btn_submit btn-info waves-effect waves-light  \"><a>إلغاء</a></button>\n\n              </div>\n\n\n\n\n            </div>\n          </form>\n        </div>\n\n\n\n\n\n      </div>\n    </div>\n  </div>\n\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">اضافة موعد</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <form #scheduleForm=\"ngForm\" (ngSubmit)=\"save(scheduleForm)\">\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> أيام البث</p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n                <div class=\"checkbox_addtime\">\n                  <div class=\"checkbox checkbox-info \">\n                    <input id=\"checkbox7\" type=\"checkbox\" [checked]=\"friId != undefined\" name=\"fri\" [(ngModel)]=\"friId\">\n                    <label for=\"checkbox7\"> الجمعة </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox6\" type=\"checkbox\" [checked]=\"thuId != undefined\" name=\"thu\" [(ngModel)]=\"thuId\">\n                    <label for=\"checkbox6\"> الخميس </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox5\" type=\"checkbox\" [checked]=\"wedId != undefined\" name=\"wed\" [(ngModel)]=\"wedId\">\n                    <label for=\"checkbox5\"> الأربعاء </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox4\" type=\"checkbox\" [checked]=\"tueId != undefined\" name=\"tue\" [(ngModel)]=\"tueId\">\n                    <label for=\"checkbox4\"> الثلاثاء </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox3\" type=\"checkbox\" [checked]=\"monId != undefined\" name=\"mon\" [(ngModel)]=\"monId\">\n                    <label for=\"checkbox3\"> الأتنين </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox2\" type=\"checkbox\" [checked]=\"sunId != undefined\" name=\"sun\" [(ngModel)]=\"sunId\">\n                    <label for=\"checkbox2\"> الأحد </label>\n                  </div>\n                  <div class=\"checkbox checkbox-info\">\n                    <input id=\"checkbox1\" type=\"checkbox\" [checked]=\"satId != undefined\" name=\"sat\" [(ngModel)]=\"satId\">\n                    <label for=\"checkbox1\"> السبت </label>\n                  </div>\n                </div>\n\n              </div>\n            </div>\n\n            <hr>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> توقيت البث</p>\n              </div>\n\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n\n                <input type=\"time\" required atp-time-picker placeholder=\"انقر لاختيار الوقت\" name=\"timeDate\"\n                  [(ngModel)]=\"selectedSchedule.timeDate\" />\n              </div>\n            </div>\n\n            <br>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> تاريخ بداية البث</p>\n              </div>\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker required [options]=\"options\" name=\"startDate\" [(ngModel)]=\"selectedSchedule.startDate\"\n                  position=\"bottom-left\"></ng-datepicker>\n              </div>\n\n            </div>\n            <br>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> تاريخ إنتهاء البث</p>\n              </div>\n\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <ng-datepicker required [options]=\"options\" name=\"endDate\" [(ngModel)]=\"selectedSchedule.endDate\"\n                  position=\"bottom-left\"></ng-datepicker>\n              </div>\n            </div>\n\n            <br>\n\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p> جديد/ اعادة </p>\n\n              </div>\n\n\n\n              <div class=\"col-md-6\" style=\"float: right;\">\n\n                <select class=\"form-control\" required name=\"type\" [(ngModel)]=\"selectedSchedule.type\">\n                  <option value=\"new\">جديد</option>\n                  <option value=\"repeat\">إعادة</option>\n                </select>\n              </div>\n\n            </div>\n\n            <hr>\n\n            <div class=\"row choose_logo1\">\n\n              <div class=\"col-md-6 logo_channel_text\" style=\"float: right;text-align: left\">\n                <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light  \">حفظ</button>\n\n              </div>\n\n\n\n              <div class=\"col-md-6 \" style=\"float: right;text-align: right\">\n\n                <button type=\"button\" (click)=\"onBackCliced()\" class=\"btn btn_submit btn-info waves-effect waves-light  \"><a>إلغاء</a></button>\n\n              </div>\n\n\n\n\n            </div>\n          </form>\n        </div>\n\n\n\n\n\n      </div>\n    </div>\n  </div>\n\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -5845,7 +6066,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Page Content -->\n<!-- ============================================================== -->\n<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">البرامج</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"button\" style=\"margin-bottom: 10px;\" (click)=\"addNewProgram()\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"><a>إضافة</a></button>\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle  color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n                <th>تغيير الحالة</th>\n                <th>اسم البرنامج</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let program of programs\">\n                <td><span style=\"cursor:pointer;\" (click)=\"changeAppearanceStatus(program)\" class=\"label label-table\"\n                    [ngClass]=\"{'label-success': !program.isShowen, 'label-danger': program.isShowen}\">{{program.isShowen\n                    ? \"إخفاء\" : \"إظهار\"}}</span></td>\n                <td class=\"detail\"><a routerLink=\"/programDetails/{{program.id}}\">{{program.name}}</a></td>\n                <td class=\"edit\">\n                  <a routerLink=\"/editProgram/{{program.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\"> <i\n                      class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteProgram(program.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n\n            </tbody>\n\n          </table>\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<!-- ============================================================== -->\n<!-- End Page Content -->\n<!-- ============================================================== -->\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<!-- Page Content -->\n<!-- ============================================================== -->\n<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">البرامج</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button\n            type=\"button\"\n            style=\"margin-bottom: 10px;\"\n            (click)=\"addNewProgram()\"\n            class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"\n          >\n            <a>إضافة</a>\n          </button>\n\n          <table\n            id=\"demo-foo-addrow\"\n            class=\"table table-bordered table-hover toggle-circle  color-bordered-table  purple-bordered-table\"\n          >\n            <thead>\n              <tr>\n                <th>تغيير الحالة</th>\n                <th>ID</th>\n                <th>اسم البرنامج</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let program of programs\">\n                <td>\n                  <span\n                    style=\"cursor:pointer;\"\n                    (click)=\"changeAppearanceStatus(program)\"\n                    class=\"label label-table\"\n                    [ngClass]=\"{\n                      'label-success': !program.isShowen,\n                      'label-danger': program.isShowen\n                    }\"\n                    >{{ program.isShowen ? \"إخفاء\" : \"إظهار\" }}</span\n                  >\n                </td>\n                <td class=\"ID\">Iyja9Pk8dzs</td>\n                <td class=\"detail\">\n                  <a routerLink=\"/programDetails/{{ program.id }}\">{{\n                    program.name\n                  }}</a>\n                </td>\n                <td class=\"edit\">\n                  <a\n                    routerLink=\"/editProgram/{{ program.id }}\"\n                    data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"\n                  >\n                    <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n                </td>\n                <td>\n                  <button\n                    (click)=\"deleteProgram(program.id)\"\n                    type=\"button\"\n                    class=\"btn btn-sm btn-icon btn-pure btn-outline\"\n                    data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"\n                  >\n                    <i class=\"ti-close\" aria-hidden=\"true\"></i>\n                  </button>\n                </td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n<!-- ============================================================== -->\n<!-- End Page Content -->\n<!-- ============================================================== -->\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -6026,22 +6247,33 @@ var ProgramsComponent = /** @class */ (function () {
     };
     ProgramsComponent.prototype.deleteProgram = function (programId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_2;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.programsService.deleteProgram(programId)];
-                    case 1:
-                        _a.sent();
-                        this.loadPrograms();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_2 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    console.log("Program id to delete: " + programId);
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف البرنامج؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.programsService.deleteProgram(programId).then(function (success) {
+                                _this.loadPrograms();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -6056,6 +6288,10 @@ var ProgramsComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], ProgramsComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ProgramsComponent.prototype, "deleteSwal", void 0);
     ProgramsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-programs',
@@ -6089,7 +6325,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الرياضة</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button type=\"button\" (click)=\"addNewArticle()\" class=\"btn btn-info waves-effect waves-light btn_submit programme_button \">\n            <a>\n              إضافة\n            </a>\n          </button>\n\n\n\n\n          <table id=\"demo-foo-addrow\" class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\">\n            <thead>\n              <tr>\n\n                <th>الحالة</th>\n                <th>تاريخ النشر</th>\n\n                <th>اسم موضوع</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let article of articles\">\n                <td><span style=\"cursor:pointer;\" (click)=\"changeAppearanceStatus(article)\" class=\"label label-table\"\n                    [ngClass]=\"{'label-success': !article.isShowen, 'label-danger': article.isShowen}\" class=\"label label-table\">{{article.isShowen\n                    ? \"إخفاء\" : \"إظهار\"}}</span>\n                </td>\n                <td>{{article.publishDate | date:'dd-MM-yyyy'}}</td>\n                <td class=\"detail\"><a> {{article.name}} </a></td>\n                <td class=\"edit\">\n                  <a routerLink=\"/editArticle/sports/{{article.id}}\" data-toggle=\"tooltip\" data-original-title=\"Edit\">\n                    <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n\n                </td>\n                <td>\n                  <button (click)=\"deleteArticle(article.id)\" type=\"button\" class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\" data-original-title=\"Delete\"><i class=\"ti-close\" aria-hidden=\"true\"></i></button>\n                </td>\n              </tr>\n            </tbody>\n\n          </table>\n\n\n\n        </div>\n      </div>\n    </div>\n\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n"
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">الرياضة</h1>\n      </div>\n\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box\">\n          <button\n            type=\"button\"\n            (click)=\"addNewArticle()\"\n            class=\"btn btn-info waves-effect waves-light btn_submit programme_button \"\n          >\n            <a>\n              إضافة\n            </a>\n          </button>\n\n          <table\n            id=\"demo-foo-addrow\"\n            class=\"table table-bordered table-hover toggle-circle color-bordered-table  purple-bordered-table\"\n          >\n            <thead>\n              <tr>\n                <th>الحالة</th>\n                <th>ID</th>\n                <th>تاريخ النشر</th>\n\n                <th>اسم موضوع</th>\n                <th data-sort-ignore=\"true\">تعديل</th>\n                <th data-sort-ignore=\"true\" class=\"min-width\">حذف</th>\n              </tr>\n            </thead>\n\n            <tbody>\n              <tr *ngFor=\"let article of articles\">\n                <td>\n                  <span\n                    style=\"cursor:pointer;\"\n                    (click)=\"changeAppearanceStatus(article)\"\n                    class=\"label label-table\"\n                    [ngClass]=\"{\n                      'label-success': !article.isShowen,\n                      'label-danger': article.isShowen\n                    }\"\n                    class=\"label label-table\"\n                    >{{ article.isShowen ? \"إخفاء\" : \"إظهار\" }}</span\n                  >\n                </td>\n                <td class=\"ID\">Iyja9Pk8dzs</td>\n                <td>{{ article.publishDate | date: \"dd-MM-yyyy\" }}</td>\n                <td class=\"detail\">\n                  <a> {{ article.name }} </a>\n                </td>\n                <td class=\"edit\">\n                  <a\n                    routerLink=\"/editArticle/sports/{{ article.id }}\"\n                    data-toggle=\"tooltip\"\n                    data-original-title=\"Edit\"\n                  >\n                    <i class=\"fa fa-pencil text-inverse m-r-10\"></i>\n                  </a>\n                </td>\n                <td>\n                  <button\n                    (click)=\"deleteArticle(article.id)\"\n                    type=\"button\"\n                    class=\"btn btn-sm btn-icon btn-pure btn-outline delete-row-btn\"\n                    data-toggle=\"tooltip\"\n                    data-original-title=\"Delete\"\n                  >\n                    <i class=\"ti-close\" aria-hidden=\"true\"></i>\n                  </button>\n                </td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"تحقق من اتصالك بالانترنت\" type=\"error\"></swal>\n<swal #deleteSwal></swal>\n"
 
 /***/ }),
 
@@ -6270,22 +6506,32 @@ var SportsComponent = /** @class */ (function () {
     };
     SportsComponent.prototype.deleteArticle = function (articleId) {
         return __awaiter(this, void 0, void 0, function () {
-            var error_2;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.articlesService.deleteArticle(articleId, true)];
-                    case 1:
-                        _a.sent();
-                        this.loadArticles();
-                        return [3 /*break*/, 3];
-                    case 2:
-                        error_2 = _a.sent();
-                        this.errorDialog.show();
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
+                try {
+                    this.deleteSwal.options = {
+                        title: "تأكيد حذف المقال؟",
+                        type: "warning",
+                        showCancelButton: true,
+                        cancelButtonText: "إلغاء",
+                        confirmButtonText: "حذف"
+                    };
+                    this.deleteSwal.show().then(function (value) {
+                        console.log(value);
+                        if (value.value === true) {
+                            _this.articlesService.deleteArticle(articleId, true).then(function (success) {
+                                _this.loadArticles();
+                            }, function (error) {
+                                console.log(error);
+                                _this.errorDialog.show();
+                            });
+                        }
+                    });
                 }
+                catch (error) {
+                    this.errorDialog.show();
+                }
+                return [2 /*return*/];
             });
         });
     };
@@ -6300,6 +6546,10 @@ var SportsComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
         __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
     ], SportsComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('deleteSwal'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], SportsComponent.prototype, "deleteSwal", void 0);
     SportsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-sports',
@@ -6858,6 +7108,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _service_handler_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../service-handler.service */ "./src/app/services/service-handler.service.ts");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
 /* harmony import */ var ngx_webstorage_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-webstorage-service */ "./node_modules/ngx-webstorage-service/esm5/ngx-webstorage-service.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6905,6 +7157,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+
 
 
 
@@ -7001,7 +7254,7 @@ var ArticlesService = /** @class */ (function () {
                         for (var i = 0; i < article.images.length; i++) {
                             images = images + ("\"" + article.images[i] + "\",");
                         }
-                        var query = "mutation{\n        " + queryKey + "(data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + article.publishDate + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:true,\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        " + queryKey + "(data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).toISOString(true) + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:true,\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.createSportsArticle) {
@@ -7032,7 +7285,7 @@ var ArticlesService = /** @class */ (function () {
                         for (var i = 0; i < article.images.length; i++) {
                             images = images + ("\"" + article.images[i] + "\",");
                         }
-                        var query = "mutation{\n        " + queryKey + "(\n          where:{id:\"" + article.id + "\"},\n          data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + article.publishDate + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:" + article.isShowen + ",\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        " + queryKey + "(\n          where:{id:\"" + article.id + "\"},\n          data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).toISOString(true) + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:" + article.isShowen + ",\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.updateSportsArticle) {
@@ -7211,6 +7464,76 @@ var HomePageServicesService = /** @class */ (function () {
             });
         });
     };
+    HomePageServicesService.prototype.getSpecialPrograms = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.userData = this.storage.get(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].USER_DATA);
+                //K.A: all is needed in home view is program name and id
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        specialPrograms(orderBy: orderd_ASC){\n          id,\n          orderd,\n          program{\n            id,\n            name\n          }\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.specialPrograms) {
+                                resolve(response.data.specialPrograms);
+                            }
+                            else {
+                                reject("Failed to specialPrograms");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    HomePageServicesService.prototype.getSpecialEntities = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.userData = this.storage.get(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].USER_DATA);
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        getSpecialBanners{\n          id,\n          name,\n          type,\n          isShowen  \n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.getSpecialBanners) {
+                                resolve(response.data.getSpecialBanners);
+                            }
+                            else {
+                                reject("Failed to getSpecialBanners");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    HomePageServicesService.prototype.getSpecialBanners = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.userData = this.storage.get(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].USER_DATA);
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        var query = "query{\n        specialBanners(orderBy: orderd_ASC){\n          id,\n          orderd,\n          program{\n            id,\n            name\n          }\n          event{\n            id,\n            name\n          }\n        }\n      }";
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.specialBanners) {
+                                resolve(response.data.specialBanners);
+                            }
+                            else {
+                                reject("Failed to specialBanners");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
     HomePageServicesService.prototype.updateLogo = function (settingsId, logoKey, logoUrl) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
@@ -7307,53 +7630,46 @@ var HomePageServicesService = /** @class */ (function () {
             });
         });
     };
-    HomePageServicesService.prototype.updateSpecialBanners = function (settingsId, firstBannerId, secondBannerId, thirdBannerId, fourthBannerId, fivethBannerId, sixthBannerId, priviousBanners) {
+    HomePageServicesService.prototype.updateSpecialBanner = function (banner, isEvent, enitityId) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            var disconnectQuery, query;
+            var programDisconnectQuery, eventDisconnectQuery, query;
             return __generator(this, function (_a) {
                 this.userData = this.storage.get(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].USER_DATA);
-                disconnectQuery = "[]";
-                switch (priviousBanners.length) {
-                    case 0:
-                        break;
-                    case 1:
-                        disconnectQuery = "[{id:\"" + priviousBanners[0].id + "\"}]";
-                        break;
-                    case 2:
-                        disconnectQuery = "[{id:\"" + priviousBanners[0].id + "\"}, {id:\"" + priviousBanners[1].id + "\"}]";
-                        break;
-                    case 3:
-                        disconnectQuery = "[{id:\"" + priviousBanners[0].id + "\"}, {id:\"" + priviousBanners[1].id + "\"}, {id:\"" + priviousBanners[2].id + "\"}]";
-                        break;
-                    case 4:
-                        disconnectQuery = "[{id:\"" + priviousBanners[0].id + "\"}, {id:\"" + priviousBanners[1].id + "\"}, {id:\"" + priviousBanners[2].id + "\"}, {id:\"" + priviousBanners[3].id + "\"}]";
-                        break;
-                    case 5:
-                        disconnectQuery = "[{id:\"" + priviousBanners[0].id + "\"}, {id:\"" + priviousBanners[1].id + "\"}, {id:\"" + priviousBanners[2].id + "\"}, {id:\"" + priviousBanners[3].id + "\"}, {id:\"" + priviousBanners[4].id + "\"}]";
-                        break;
-                    case 6:
-                        disconnectQuery = "[{id:\"" + priviousBanners[0].id + "\"}, {id:\"" + priviousBanners[1].id + "\"}, {id:\"" + priviousBanners[2].id + "\"}, {id:\"" + priviousBanners[3].id + "\"}, {id:\"" + priviousBanners[4].id + "\"},{id:\"" + priviousBanners[5].id + "\"}]";
-                        break;
-                }
-                query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        specialBanners:{\n          disconnect:" + disconnectQuery + "\n        }\n      }){\n        specialBanners{\n          id,name\n        }\n      }\n    }";
+                programDisconnectQuery = banner.program != null ? " program:{\n      disconnect:true\n    }" : "";
+                eventDisconnectQuery = banner.event != null ? "event:{disconnect:true}" : "";
+                query = isEvent ? "mutation{\n      updateSpecialBanner(\n        where:{id:\"" + banner.id + "\"},\n        data:{\n         " + programDisconnectQuery + "\n          event:{connect:{id:\"" + enitityId + "\"}}\n          \n        }\n      ){\n       id  \n      }\n    }" : "\n    mutation{\n      updateSpecialBanner(\n        where:{id:\"" + banner.id + "\"},\n        data:{\n          program:{\n            connect:{id:\"" + enitityId + "\"}\n          }\n          " + eventDisconnectQuery + "\n        }\n      ){\n       id  \n      }\n    }";
+                console.log(query);
                 return [2 /*return*/, new Promise(function (resolve, reject) {
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
                             console.log(response);
-                            if (response.data && response.data.updateSetting) {
-                                var query2 = "mutation{\n            updateSetting(where:{id:\"" + settingsId + "\"},data:{\n              specialBanners:{\n                connect:[{id:\"" + firstBannerId + "\"},{id:\"" + secondBannerId + "\"},{id:\"" + thirdBannerId + "\"},{id:\"" + fourthBannerId + "\"},{id:\"" + fivethBannerId + "\"},{id:\"" + sixthBannerId + "\"}]\n              }\n            }){\n              specialBanners{\n                id,name\n              }\n            }\n          }";
-                                _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query2 }).subscribe(function (response) {
-                                    console.log(response);
-                                    if (response.data && response.data.updateSetting) {
-                                        resolve(true);
-                                    }
-                                    else {
-                                        reject("Please check your internet connection");
-                                    }
-                                }, function (error) {
-                                    console.log(error);
-                                    reject("Please check your internet connection");
-                                });
+                            if (response.data && response.data.updateSpecialBanner) {
+                                resolve(true);
+                            }
+                            else {
+                                reject("Please check your internet connection");
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    HomePageServicesService.prototype.updateSpecialProgram = function (specialProgram, programId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var query;
+            return __generator(this, function (_a) {
+                this.userData = this.storage.get(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].USER_DATA);
+                query = "mutation{\n      updateSpecialProgram(data:{\n        program:{connect:{id:\"" + programId + "\"}}\n      },where:{id:\"" + specialProgram.id + "\"}){\n        id\n      }\n    }";
+                console.log(query);
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.updateSpecialProgram) {
+                                resolve(true);
                             }
                             else {
                                 reject("Please check your internet connection");
@@ -8225,7 +8541,7 @@ var ProgramsService = /** @class */ (function () {
                         if (scheduleForm.value.fri) {
                             connectQuery = connectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Fri"; }).id + "\"},");
                         }
-                        var query = isEvent ? "mutation{\n        createSchedule(\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).add('180', 'minutes').toISOString() + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).add('180', 'minutes').toISOString() + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          event:{\n            connect:{id:\"" + selectedProgram.id + "\"}\n          }\n          days:{\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }" : "mutation{\n        createSchedule(\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).add('180', 'minutes').toISOString() + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).add('180', 'minutes').toISOString() + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          program:{\n            connect:{id:\"" + selectedProgram.id + "\"}\n          }\n          days:{\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
+                        var query = isEvent ? "mutation{\n        createSchedule(\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).toISOString(true) + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).toISOString(true) + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          event:{\n            connect:{id:\"" + selectedProgram.id + "\"}\n          }\n          days:{\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }" : "mutation{\n        createSchedule(\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).toISOString(true) + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).toISOString(true) + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          program:{\n            connect:{id:\"" + selectedProgram.id + "\"}\n          }\n          days:{\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
                         console.log(query.toString());
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
                             console.log(response);
@@ -8301,7 +8617,7 @@ var ProgramsService = /** @class */ (function () {
                             if (originalDays.find(function (day) { return day.name == "Fri"; }))
                                 disconnectQuery = disconnectQuery + ("{id:\"" + days.find(function (day) { return day.name == "Fri"; }).id + "\"},");
                         }
-                        var query = "mutation{\n        updateSchedule(\n          where:{id:\"" + scheduleId + "\"},\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).toISOString() + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).toISOString() + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          days:{\n            disconnect:[" + disconnectQuery + "]\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        updateSchedule(\n          where:{id:\"" + scheduleId + "\"},\n          data:{\n          timeDate:\"" + timeDate + "\",\n          finishTimeDate:\"" + finishTimeDate + "\",\n          startDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.startDate).toISOString(true) + "\",\n          endDate:\"" + moment__WEBPACK_IMPORTED_MODULE_3__(scheduleForm.value.endDate).toISOString(true) + "\",\n          type:\"" + scheduleForm.value.type + "\",\n          days:{\n            disconnect:[" + disconnectQuery + "]\n            connect:[" + connectQuery + "],\n          }\n        }){\n          id\n        }\n      }";
                         console.log(query.toString());
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
                             console.log(response);

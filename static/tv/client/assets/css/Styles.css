@@ -20,6 +20,7 @@ body {
   background-color: #070707;
   overflow-x: hidden;
   font-family: "Tajawal" !important;
+  cursor: default;
 }
 /*  Custome  Nav*/
 
@@ -50,6 +51,11 @@ body {
   font-weight: bold;
 
   padding-bottom: 12px;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  font-size: 9px;
+  transition: 0.4s ease-in-out;
+  color: red;
 }
 
 .navbar-nav .active a {
@@ -114,10 +120,10 @@ button:focus {
   .li_icons img {
     width: auto !important;
   }
-  .svg-inline--fa.fa-w-14,
+  /* .svg-inline--fa.fa-w-14,
   .svg-inline--fa.fa-w-16 {
     width: 20%;
-  }
+  } */
 
   .ul_icons {
     display: inline-block;
@@ -993,8 +999,7 @@ header #demo {
 .slick-list {
   margin: 0px -5px 0px -5px;
 }
-button.slick-next,
-button.slick-next:hover {
+button.slick-next {
   position: absolute;
   top: 42%;
   right: -6%;
@@ -1003,8 +1008,16 @@ button.slick-next:hover {
   background-image: url(../imgs/arrow_right.png);
   background-size: 30px;
 }
-button.slick-prev,
-button.slick-prev:hover {
+
+button.slick-next:hover {
+  background-size: 24px;
+  width: 24px;
+  height: 47px;
+  top: 47%;
+  transition: 0.8 ease;
+}
+
+button.slick-prev {
   position: absolute;
   top: 26%;
   left: -6%;
@@ -1014,7 +1027,17 @@ button.slick-prev:hover {
   background-image: url(../imgs/arrow_right.png);
   background-size: 30px;
   transform: rotate(180deg);
+  transition: 0.8 ease;
 }
+
+button.slick-prev:hover {
+  background-size: 24px;
+  width: 24px;
+  height: 47px;
+  top: 31%;
+  transition: 0.8 ease;
+}
+
 .slick-prev:before,
 .slick-next:before {
   font-size: 70px;
@@ -1107,6 +1130,7 @@ button.slick-prev:hover {
 }
 .slick-slide img {
   display: block;
+  border-radius: 10px;
 }
 .slick-slide.slick-loading img {
   display: none;
@@ -1116,6 +1140,7 @@ button.slick-prev:hover {
 }
 .slick-initialized .slick-slide {
   display: block;
+  cursor: pointer;
 }
 .slick-loading .slick-slide {
   visibility: hidden;
@@ -1345,8 +1370,7 @@ button.slick-prev:hover {
 }
 
 @media only screen and (min-width: 100px) and (max-width: 480px) {
-  button.slick-prev,
-  button.slick-prev:hover {
+  button.slick-prev {
     position: absolute;
     top: 33%;
     left: -20%;
@@ -1357,9 +1381,15 @@ button.slick-prev:hover {
     background-size: 30px;
     transform: rotate(180deg);
   }
+  button.slick-prev:hover {
+    width: 23px;
+    height: 45px;
+    background-size: 23px;
+    top: 31%;
+    transition: 0.6 ease;
+  }
 
-  button.slick-next,
-  button.slick-next:hover {
+  button.slick-next {
     position: absolute;
     top: 46%;
     right: -20%;
@@ -1367,6 +1397,14 @@ button.slick-prev:hover {
     height: 58px;
     background-image: url(../imgs/arrow_right.png);
     background-size: 30px;
+  }
+
+  button.slick-next:hover {
+    width: 23px;
+    height: 45px;
+    background-size: 23px;
+    top: 44%;
+    transition: 0.6 ease;
   }
   .btn .special_btn {
     margin-bottom: -6%;
@@ -1539,7 +1577,9 @@ button.slick-prev:hover {
 .footer_map p:nth-child(2) a:hover {
   color: red;
   text-decoration: underline;
-  transition: 0.3s ease;
+  transition: 0.5s ease-in-out;
+  font-size: unset;
+  margin-left: 3%;
 }
 
 .footer_apps {
@@ -1556,8 +1596,13 @@ button.slick-prev:hover {
   width: 76px;
   cursor: pointer;
   height: 24px;
+  margin-left: 7px;
 }
-
+.footer_apps img:hover {
+  width: 65px;
+  height: 20px;
+  transition: 0.4s ease-in-out;
+}
 .footer hr {
   height: 0px;
   width: 100%;
@@ -1580,7 +1625,7 @@ button.slick-prev:hover {
   font-size: x-small;
   text-align: center;
   font-weight: 100;
-
+  cursor: default;
   color: #d0cdcd;
 }
 
@@ -1588,6 +1633,7 @@ button.slick-prev:hover {
   color: #d0cdcd;
   font-size: x-small;
   text-align: left;
+  cursor: default;
 }
 
 .footer_row_p2 {
@@ -1640,7 +1686,7 @@ button.slick-prev:hover {
   overflow: hidden;
   font-size: small;
   color: #000 !important;
-  margin-bottom: 0;
+  margin-bottom: -1px;
   padding: 5px;
   float: right;
   font-weight: bold;
@@ -1700,6 +1746,7 @@ button.slick-prev:hover {
   margin-top: 7px;
   font-weight: bold;
   font-size: smaller;
+  border-radius: 8px;
 }
 
 .Program_Schedule .container {
@@ -1715,13 +1762,20 @@ button.slick-prev:hover {
 .Program_Schedule_row .mix {
   padding: 10px;
   margin-bottom: 13px;
+  background-color: #202020;
+}
+
+.Program_Schedule_row .videos_box_serach,
+.Program_Schedule_row .Subjects_box_search {
+  background-color: unset;
 }
 
 .Program_Schedule_row .videos_box_serach {
   display: inline-block;
+  padding: inherit;
 }
 
-Program_Schedule_row_special .mix {
+.Program_Schedule_row_special .mix {
   background-color: #202020;
 }
 
@@ -1737,6 +1791,15 @@ Program_Schedule_row_special .mix {
   text-decoration: underline;
 }
 
+.mix_programme_name h5:hover {
+  font-size: larger;
+  color: red;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+}
+.mixtup_container_rows .new2 {
+  cursor: pointer;
+}
 .mix_programme_name p {
   color: #b35959;
 }
@@ -1746,6 +1809,7 @@ Program_Schedule_row_special .mix {
   color: #ccc;
   font-size: large;
   margin-left: 5%;
+  cursor: default;
 }
 .mixtup_container_rows .clock {
   margin-bottom: 5px;
@@ -1994,6 +2058,13 @@ Program_Schedule_row_special .mix {
   .Subjects_box_search_row {
     width: 107%;
   }
+
+  .videos_box iframe {
+    width: 108% !important;
+  }
+  .videos {
+    width: 108%;
+  }
 }
 
 @media only screen and (max-width: 922px) {
@@ -2050,6 +2121,7 @@ Program_Schedule_row_special .mix {
   overflow: hidden;
   font-size: small;
   color: #ccc;
+  cursor: default;
 }
 
 .Subjects_row .ads_col {
@@ -2061,14 +2133,20 @@ Program_Schedule_row_special .mix {
   font-weight: bold;
   cursor: pointer;
 }
-
+.Subjects_box h4:focus {
+  outline: none;
+}
 .Subjects_box h4:hover {
   text-decoration: underline;
+  font-size: small;
+  color: red;
+  transition: 0.8s ease-in-out;
 }
 
 .Subjects_box h6 {
   font-size: x-small;
   color: #ccc;
+  cursor: default;
 }
 
 @media only screen and (min-width: 922px) {
@@ -2106,7 +2184,7 @@ Program_Schedule_row_special .mix {
   float: left;
   background-color: #fff;
 }
-.share_icons img {
+.share_icons share-button {
   border-radius: 5px;
   margin-left: 5px;
   margin-top: 3px;
@@ -2189,6 +2267,7 @@ Program_Schedule_row_special .mix {
   }
   .Subjects_box p {
     font-size: medium;
+    cursor: default;
   }
 
   .Subjects_description {
@@ -2247,7 +2326,7 @@ Program_Schedule_row_special .mix {
   }
 
   .videos .special {
-    width: 123%;
+    width: 121%;
     margin-left: -12%;
     text-align: end;
   }
@@ -2258,7 +2337,7 @@ Program_Schedule_row_special .mix {
   }
 
   .Program_Schedule2 .special {
-    width: 123%;
+    width: 121%;
     margin-left: -12%;
     text-align: end;
   }
@@ -2439,6 +2518,19 @@ Program_Schedule_row_special .mix {
   .about .special {
     width: 115%;
     margin-left: -7.5%;
+  }
+  .team_detail .member_img_col {
+    margin: auto;
+    order: 2;
+    text-align: center;
+  }
+
+  .ul_icons .li_icons a img:hover {
+    width: 80% !important;
+
+    cursor: pointer !important;
+
+    transition: 0.5s ease !important;
   }
 }
 
@@ -2733,6 +2825,8 @@ Program_Schedule_row_special .mix {
 
 .videos_box iframe {
   width: 100%;
+  border: 2px solid #000;
+  border-radius: 5px;
 }
 
 .box_Live iframe {
@@ -2748,7 +2842,7 @@ Program_Schedule_row_special .mix {
 
 .overlay {
   background-color: rgba(251, 251, 251, 0.29);
-  background-image: url(../imgs/play.png);
+  background-image: url(../imgs/youtubelogo.png);
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -2761,8 +2855,99 @@ Program_Schedule_row_special .mix {
   color: #fff;
   line-height: 140px;
   font-size: 1.8em;
+  border-radius: 10px;
 }
 
 .hide_arrow {
   display: none !important;
+}
+
+.footer_icons img:hover {
+  width: 6%;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.ul_icons .search_icon_ a img:hover {
+  width: 52% !important;
+}
+
+.ul_icons .instgram_icon_ a img:hover {
+  width: 109% !important;
+}
+
+.box_Live_row:hover {
+  background-color: #10101047;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.content_second_section_2 .box_Live_row:hover p {
+  font-size: 11px !important;
+  transition: 0.6s ease;
+}
+
+.Subjects_box:focus {
+  outline: none !important;
+}
+
+.sb-facebook,
+.sb-twitter {
+  width: 25px;
+  height: 20px;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.svg-inline--fa {
+  width: auto;
+}
+
+.team_detail .member_img_col {
+  text-align: center;
+}
+.team_detail_row {
+  padding-bottom: 4%;
+}
+.team_detail .special {
+  margin-top: 12%;
+  margin-left: -7%;
+}
+
+.member_img {
+  width: 58%;
+  border-radius: 50%;
+  height: 200px;
+  border: 2px solid #fff;
+  margin: auto;
+}
+.member_detail_col {
+  margin-top: auto;
+  cursor: default;
+}
+
+@media only screen and (min-width: 660px) and (max-width: 922px) {
+  .member_img {
+    width: 30%;
+  }
+
+  .member_detail_col {
+    cursor: default;
+    text-align: center;
+    margin-top: 3%;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .member_img {
+    width: 75%;
+    margin-top: 5%;
+  }
+
+  .member_detail_col {
+    cursor: default;
+    text-align: center;
+    margin-top: 3%;
+  }
 }
