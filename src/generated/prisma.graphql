@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Sun Feb 10 2019 20:59:40 GMT+0200 (Eastern European Standard Time)
+# timestamp: Sun Feb 10 2019 21:11:01 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -4633,6 +4633,7 @@ input SpecialBannerWhereInput {
 
 input SpecialBannerWhereUniqueInput {
   id: ID
+  orderd: Int
 }
 
 type SpecialProgram implements Node {
@@ -4801,6 +4802,7 @@ input SpecialProgramWhereInput {
 
 input SpecialProgramWhereUniqueInput {
   id: ID
+  orderd: Int
 }
 
 type SportsArticle implements Node {

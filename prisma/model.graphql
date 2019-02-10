@@ -126,13 +126,13 @@ type Day {
 
 type SpecialBanner{
   id: ID! @unique
-  orderd: Int 
+  orderd: Int @unique
   event : Event
   program: Program
 }
 
 type SpecialProgram{
   id: ID! @unique
-  orderd: Int 
+  orderd: Int  @unique
   program: Program
 }
