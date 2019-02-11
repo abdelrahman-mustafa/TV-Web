@@ -24,18 +24,16 @@ const schedule = {
                 where: { days_some: { name: args.day }, AND: { startDate_lte: args.date, endDate_gte: args.date, timeDate_lte: args.time, finishTimeDate_gte: args.time } }
             }, info)
             console.log(results)
-            // if (results[0].finishTimeDate) throw new Error('there is no current program')
+            if (results[0].finishTimeDate) throw new Error('there is no current program')
             res.push(results[0])
 
             // if (results[0].finishTimeDate.getDay() - results[0].timeDate.getDay() )
-
-
-
             const upComing = await context.prisma.query.schedules({
                 where: { days_some: { name: args.day }, AND: { startDate_lte: args.date, endDate_gte: args.date, timeDate_gte: results[0].finishTimeDate } },
                 orderBy: "timeDate_ASC"
             }, info)
-            res.push(upComing[0])
+
+            if (upComing[0]) res.push(upComing[0])
             return res;
 
         },
