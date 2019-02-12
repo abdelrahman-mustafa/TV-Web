@@ -14,7 +14,7 @@ type Program {
   webBanner: String
   mobBanner: String
   icon: String
-  schedule: [Schedule!]!
+  schedule: [Schedule!]!  @relation(name: "SCHEDULE", cascadeDelete: true)
   playlistUrl: String
   isShowen: Boolean
 }
@@ -112,7 +112,7 @@ type Schedule {
   startDate: DateTime 
   endDate: DateTime
   type: String
-  program: Program
+  program: Program @relation(name: "SCHEDULE", cascadeDelete: false)
   event: Event
 }
 
