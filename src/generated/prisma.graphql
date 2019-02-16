@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Sun Feb 10 2019 21:11:01 GMT+0200 (Eastern European Standard Time)
+# timestamp: Sat Feb 16 2019 12:11:24 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -3957,6 +3957,7 @@ type Setting implements Node {
   specialBanners(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program!]
   specialPrograms(where: ProgramWhereInput, orderBy: ProgramOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Program!]
   liveUrl: String
+  channelId: String
   videoIcon: String
   infoDaTa(where: InfoDataWhereInput): InfoData
 }
@@ -3978,6 +3979,7 @@ input SettingCreateInput {
   teamIcon: String
   sportsArticleIcon: String
   liveUrl: String
+  channelId: String
   videoIcon: String
   newsPrograms: ProgramCreateOneInput
   specialBannersNew: SpecialBannerCreateManyInput
@@ -4010,6 +4012,8 @@ enum SettingOrderByInput {
   sportsArticleIcon_DESC
   liveUrl_ASC
   liveUrl_DESC
+  channelId_ASC
+  channelId_DESC
   videoIcon_ASC
   videoIcon_DESC
   updatedAt_ASC
@@ -4026,6 +4030,7 @@ type SettingPreviousValues {
   teamIcon: String
   sportsArticleIcon: String
   liveUrl: String
+  channelId: String
   videoIcon: String
 }
 
@@ -4075,6 +4080,7 @@ input SettingUpdateInput {
   teamIcon: String
   sportsArticleIcon: String
   liveUrl: String
+  channelId: String
   videoIcon: String
   newsPrograms: ProgramUpdateOneInput
   specialBannersNew: SpecialBannerUpdateManyInput
@@ -4372,6 +4378,46 @@ input SettingWhereInput {
 
   """All values not ending with the given string."""
   liveUrl_not_ends_with: String
+  channelId: String
+
+  """All values that are not equal to given value."""
+  channelId_not: String
+
+  """All values that are contained in given list."""
+  channelId_in: [String!]
+
+  """All values that are not contained in given list."""
+  channelId_not_in: [String!]
+
+  """All values less than the given value."""
+  channelId_lt: String
+
+  """All values less than or equal the given value."""
+  channelId_lte: String
+
+  """All values greater than the given value."""
+  channelId_gt: String
+
+  """All values greater than or equal the given value."""
+  channelId_gte: String
+
+  """All values containing the given string."""
+  channelId_contains: String
+
+  """All values not containing the given string."""
+  channelId_not_contains: String
+
+  """All values starting with the given string."""
+  channelId_starts_with: String
+
+  """All values not starting with the given string."""
+  channelId_not_starts_with: String
+
+  """All values ending with the given string."""
+  channelId_ends_with: String
+
+  """All values not ending with the given string."""
+  channelId_not_ends_with: String
   videoIcon: String
 
   """All values that are not equal to given value."""

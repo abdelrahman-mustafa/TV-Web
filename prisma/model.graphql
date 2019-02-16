@@ -65,6 +65,7 @@ type Setting {
   specialBanners: [Program!]! @relation(name: "Banners")
   specialPrograms: [Program!]! @relation(name: "Specials")
   liveUrl: String
+  channelId: String
   videoIcon: String
   infoDaTa: InfoData
 }
