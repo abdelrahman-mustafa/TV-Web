@@ -324,7 +324,7 @@ var Constants = /** @class */ (function () {
     Constants.SHARING_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].IP + "/tv/client";
     Constants.YOUTUBE_API_KEY = "AIzaSyB4eQ-1at4gTWuQXpCcCrGOeE_utW3HOBc";
     Constants.YOUTUBE_CHANNEL_ID = "UCeTTToFL9qZIybv69LX20Lg";
-    Constants.SETTINGS_QUERY = "query{\n        settings{\n          id,\n          logo,\n          articlesIcon,\n          programIcon,\n          teamIcon,\n          sportsArticleIcon,\n          infoDaTa{\n            id,\n            address,\n            phone,\n            email,\n            aboutUs,\n            policy,\n            termsOfUse,\n            fbUrl,\n            twUrl,\n            ytUrl,\n            instUrl,\n            iosUrl,\n            andUrl,\n            videosUrl,\n            links{\n              id,\n              name,\n              url,\n              icon\n            }\n          },\n          newsPrograms{\n            id,\n            name,\n            icon,\n            mobBanner \n          },\n          specialBanners{\n              id,\n            name,\n            icon,\n            webBanner\n          },\n          specialPrograms{\n              id,\n            name,\n            icon,\n            playlistUrl\n          },\n          liveUrl,\n          videoIcon,\n        }\n      }";
+    Constants.SETTINGS_QUERY = "query{\n        settings{\n          id,\n          logo,\n          articlesIcon,\n          programIcon,\n          teamIcon,\n          sportsArticleIcon,\n          channelId,\n          infoDaTa{\n            id,\n            address,\n            phone,\n            email,\n            aboutUs,\n            policy,\n            termsOfUse,\n            fbUrl,\n            twUrl,\n            ytUrl,\n            instUrl,\n            iosUrl,\n            andUrl,\n            videosUrl,\n            links{\n              id,\n              name,\n              url,\n              icon\n            }\n          },\n          newsPrograms{\n            id,\n            name,\n            icon,\n            mobBanner \n          },\n          specialBanners{\n              id,\n            name,\n            icon,\n            webBanner\n          },\n          specialPrograms{\n              id,\n            name,\n            icon,\n            playlistUrl\n          },\n          liveUrl,\n          videoIcon,\n        }\n      }";
     return Constants;
 }());
 
@@ -2740,8 +2740,18 @@ var SearchComponent = /** @class */ (function () {
     }
     SearchComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/];
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, this.homeService.getSettings()];
+                    case 1:
+                        _a.setttings = _b.sent();
+                        this.channelId = this.setttings.channelId;
+                        console.log("Youtube channel id: " + this.channelId);
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2775,7 +2785,7 @@ var SearchComponent = /** @class */ (function () {
                 params = {
                     part: "snippet",
                     maxResults: "50",
-                    channelId: src_app_Constants__WEBPACK_IMPORTED_MODULE_4__["Constants"].YOUTUBE_CHANNEL_ID,
+                    channelId: this.channelId,
                     type: "video",
                     q: this.searchKeyword,
                     key: src_app_Constants__WEBPACK_IMPORTED_MODULE_4__["Constants"].YOUTUBE_API_KEY
