@@ -53,8 +53,7 @@ body {
   padding-bottom: 12px;
 }
 .navbar-expand-lg .navbar-nav .nav-link:hover {
-  font-size: 9px;
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
   color: red;
 }
 
@@ -364,6 +363,9 @@ header #demo {
   background-color: #ccc;
 }
 
+.carousel-indicators {
+  bottom: 23px !important;
+}
 .carousel-indicators .active {
   background-color: #fff;
 }
@@ -1031,10 +1033,15 @@ button.slick-prev {
 }
 
 button.slick-prev:hover {
-  background-size: 24px;
+  /* background-size: 24px;
   width: 24px;
   height: 47px;
   top: 31%;
+  transition: 0.8 ease; */
+  top: 22%;
+  width: 39px;
+  height: 77px;
+  background-size: 40px;
   transition: 0.8 ease;
 }
 
@@ -1578,8 +1585,8 @@ button.slick-prev:hover {
   color: red;
   text-decoration: underline;
   transition: 0.5s ease-in-out;
-  font-size: unset;
-  margin-left: 3%;
+  font-size: small;
+  margin-left: 2%;
 }
 
 .footer_apps {
@@ -1792,9 +1799,8 @@ button.slick-prev:hover {
 }
 
 .mix_programme_name h5:hover {
-  font-size: larger;
   color: red;
-  transition: 0.7s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 .mixtup_container_rows .new2 {
@@ -2138,7 +2144,6 @@ button.slick-prev:hover {
 }
 .Subjects_box h4:hover {
   text-decoration: underline;
-  font-size: small;
   color: red;
   transition: 0.8s ease-in-out;
 }
@@ -2856,6 +2861,8 @@ button.slick-prev:hover {
   line-height: 140px;
   font-size: 1.8em;
   border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hide_arrow {
@@ -2912,11 +2919,11 @@ button.slick-prev:hover {
 }
 .team_detail .special {
   margin-top: 12%;
-  margin-left: -7%;
+  margin-left: -10%;
 }
 
 .member_img {
-  width: 58%;
+  width: 30%;
   border-radius: 50%;
   height: 200px;
   border: 2px solid #fff;
@@ -2950,4 +2957,8 @@ button.slick-prev:hover {
     text-align: center;
     margin-top: 3%;
   }
+}
+
+.box_Live_row_selected {
+  background-color: #262626;
 }
