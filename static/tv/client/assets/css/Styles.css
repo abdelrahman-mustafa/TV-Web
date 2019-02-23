@@ -147,7 +147,6 @@ button:focus {
     margin-left: 20%;
   }
 }
-
 @media only screen and (min-width: 1060px) and (max-width: 1100px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 10px;
@@ -342,6 +341,26 @@ header #demo {
     max-width: none;
     position: fixed;
     height: 53vh;
+  }
+
+  .overlay_special {
+    background-color: rgba(251, 251, 251, 0.29);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAACCCAYAAAAt3qYGAAAACXBIW…NJSMGJJKTgRBJScCIJKTiRhBScSEIKTiQhBSeSkIITSej/AVYt3KIQpl8LAAAAAElFTkSuQmCC);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 15px;
+    width: 82%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    color: #fff;
+    line-height: 140px;
+    /* font-size: 1.8em; */
+    /* border-radius: 10px; */
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -1012,10 +1031,7 @@ button.slick-next {
 }
 
 button.slick-next:hover {
-  background-size: 24px;
-  width: 24px;
-  height: 47px;
-  top: 47%;
+  background-image: url(../imgs/arrow_right_red.png);
   transition: 0.8 ease;
 }
 
@@ -1038,10 +1054,9 @@ button.slick-prev:hover {
   height: 47px;
   top: 31%;
   transition: 0.8 ease; */
-  top: 22%;
-  width: 39px;
-  height: 77px;
-  background-size: 40px;
+  transform: rotate(180deg);
+  background-image: url(../imgs/arrow_right_red.png);
+
   transition: 0.8 ease;
 }
 
@@ -1389,10 +1404,9 @@ button.slick-prev:hover {
     transform: rotate(180deg);
   }
   button.slick-prev:hover {
-    width: 23px;
-    height: 45px;
-    background-size: 23px;
-    top: 31%;
+    transform: rotate(180deg);
+    background-image: url(../imgs/arrow_right_red.png);
+
     transition: 0.6 ease;
   }
 
@@ -1407,10 +1421,7 @@ button.slick-prev:hover {
   }
 
   button.slick-next:hover {
-    width: 23px;
-    height: 45px;
-    background-size: 23px;
-    top: 44%;
+    background-image: url(../imgs/arrow_right_red.png);
     transition: 0.6 ease;
   }
   .btn .special_btn {
@@ -1585,8 +1596,6 @@ button.slick-prev:hover {
   color: red;
   text-decoration: underline;
   transition: 0.5s ease-in-out;
-  font-size: small;
-  margin-left: 2%;
 }
 
 .footer_apps {
@@ -1609,6 +1618,7 @@ button.slick-prev:hover {
   width: 65px;
   height: 20px;
   transition: 0.4s ease-in-out;
+  margin-left: 18px;
 }
 .footer hr {
   height: 0px;
@@ -1618,7 +1628,7 @@ button.slick-prev:hover {
 
 .footer_icons img {
   border-radius: 3px;
-  margin-left: 6px;
+  margin-left: 13px;
   width: 17px;
   margin-top: -5px;
 }
@@ -2531,7 +2541,7 @@ button.slick-prev:hover {
   }
 
   .ul_icons .li_icons a img:hover {
-    width: 80% !important;
+    width: 65% !important;
 
     cursor: pointer !important;
 
@@ -2865,18 +2875,36 @@ button.slick-prev:hover {
   background-repeat: no-repeat;
 }
 
+.overlay_special {
+  background-color: rgba(251, 251, 251, 0.29);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAACCCAYAAAAt3qYGAAAACXBIW…NJSMGJJKTgRBJScCIJKTiRhBScSEIKTiQhBSeSkIITSej/AVYt3KIQpl8LAAAAAElFTkSuQmCC);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 15px;
+  width: 90%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  line-height: 140px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .hide_arrow {
   display: none !important;
 }
 
 .footer_icons img:hover {
-  width: 6%;
+  width: 5%;
   cursor: pointer;
   transition: 0.5s ease;
 }
 
 .ul_icons .search_icon_ a img:hover {
-  width: 52% !important;
+  width: 42% !important;
 }
 
 .ul_icons .instgram_icon_ a img:hover {
@@ -2944,6 +2972,25 @@ button.slick-prev:hover {
     text-align: center;
     margin-top: 3%;
   }
+  .overlay_special {
+    background-color: rgba(251, 251, 251, 0.29);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAACCCAYAAAAt3qYGAAAACXBIW…NJSMGJJKTgRBJScCIJKTiRhBScSEIKTiQhBSeSkIITSej/AVYt3KIQpl8LAAAAAElFTkSuQmCC);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 15px;
+    width: 88%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    color: #fff;
+    line-height: 140px;
+    /* font-size: 1.8em; */
+    /* border-radius: 10px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
@@ -2957,8 +3004,116 @@ button.slick-prev:hover {
     text-align: center;
     margin-top: 3%;
   }
+  .overlay_special {
+    background-color: rgba(251, 251, 251, 0.29);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAACCCAYAAAAt3qYGAAAACXBIW…NJSMGJJKTgRBJScCIJKTiRhBScSEIKTiQhBSeSkIITSej/AVYt3KIQpl8LAAAAAElFTkSuQmCC);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 15px;
+    width: 93%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    color: #fff;
+    line-height: 140px;
+    /* font-size: 1.8em; */
+    /* border-radius: 10px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .box_Live_row_selected {
-  background-color: #262626;
+  background-color: #262626 !important;
+}
+
+.search_page {
+  background-image: url(../imgs/earth.jpg);
+}
+
+.latestnews_tag {
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.Live_tag {
+  width: max-content;
+  margin-left: 50%;
+  text-decoration: none;
+}
+
+.latestnews_tag:hover {
+  cursor: pointer;
+  color: #d23b3b;
+  transition: 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.latestnews_tag:focus {
+  outline: none !important;
+}
+.Live_tag:focus {
+  outline: none !important;
+}
+
+.Live_tag:hover {
+  cursor: pointer;
+  color: #d23b3b;
+  transition: 0.2s ease-in-out;
+  font-weight: bold;
+}
+.overlay_special {
+  background-color: rgba(251, 251, 251, 0.29);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAACCCAYAAAAt3qYGAAAACXBIW…NJSMGJJKTgRBJScCIJKTiRhBScSEIKTiQhBSeSkIITSej/AVYt3KIQpl8LAAAAAElFTkSuQmCC);
+  position: absolute;
+  top: 4.4%;
+  bottom: 0px;
+  left: 0px;
+  right: 0.9%;
+  width: 107.1%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  color: #fff;
+  line-height: 140px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 100px) and (max-width: 992px) {
+  .latestnews_tag {
+    text-align: none;
+    margin-right: 25%;
+  }
+
+  .Live_tag {
+    text-align: center;
+    margin-right: 20%;
+    margin-left: 0;
+    width: auto;
+  }
+
+  .overlay_special {
+    background-color: rgba(251, 251, 251, 0.29);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAACCCAYAAAAt3qYGAAAACXBIW…NJSMGJJKTgRBJScCIJKTiRhBScSEIKTiQhBSeSkIITSej/AVYt3KIQpl8LAAAAAElFTkSuQmCC);
+    position: absolute;
+    top: 2.4%;
+    bottom: 0px;
+    left: 0px;
+    right: -0.1%;
+    width: 107.1%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    color: #fff;
+    line-height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.box .new3 {
+  position: relative;
 }
