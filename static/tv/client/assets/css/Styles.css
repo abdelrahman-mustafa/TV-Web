@@ -2856,7 +2856,7 @@ button.slick-prev:hover {
 }
 
 .overlay {
-  background-color: rgba(251, 251, 251, 0.29);
+  background-color: rgba(251, 251, 251, 0.17);
   background-image: url(../imgs/youtubelogo.png);
   position: absolute;
   top: 0px;
@@ -3043,6 +3043,11 @@ button.slick-prev:hover {
   width: max-content;
   margin-left: 50%;
   text-decoration: none;
+  margin-bottom: 0px;
+  display: inline;
+  font-size: 1.1rem;
+  border-right: 6px solid #fff;
+  padding-right: 10px;
 }
 
 .latestnews_tag:hover {
@@ -3116,4 +3121,12 @@ button.slick-prev:hover {
 
 .box .new3 {
   position: relative;
+}
+
+.Live_tag_col {
+  width: 171% !important;
+}
+
+.last_tag_col {
+  width: 140% !important;
 }
