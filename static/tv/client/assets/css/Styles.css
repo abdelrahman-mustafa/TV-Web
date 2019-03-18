@@ -3130,3 +3130,60 @@ button.slick-prev:hover {
 .last_tag_col {
   width: 140% !important;
 }
+
+@media only screen and (min-width: 1900px) and (max-width: 2000px) {
+  .videos .special {
+    width: 115%;
+    margin-left: -9%;
+    text-align: end;
+  }
+  .team_detail .special {
+    margin-top: 12%;
+    margin-left: -8%;
+  }
+  .team_row .special {
+    width: 116%;
+  }
+
+  .live_broadcast {
+    margin-left: -8%;
+    margin-right: 10.5%;
+  }
+
+  .carousel_sports {
+    width: 119% !important;
+  }
+
+  .OurProgram .new_img2 {
+    width: 90%;
+    height: 318px;
+  }
+  .navbar {
+    padding-right: 13.5%;
+  }
+
+  .box_Live_row .new_img2 {
+    width: 100%;
+    height: inherit;
+    float: right;
+  }
+
+  .overlay {
+    background-color: #fff0;
+    left: 33px;
+    width: 80%;
+  }
+
+  .Program_Schedule2 .special {
+    width: 115%;
+    margin-left: -9%;
+  }
+
+  .search_bar {
+    margin-top: 1.5%;
+  }
+  .mixtup_container_rows {
+    width: 116%;
+    margin-left: -9%;
+}
+}
