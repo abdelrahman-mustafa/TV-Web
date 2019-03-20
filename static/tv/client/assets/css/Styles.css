@@ -3144,6 +3144,13 @@ button.slick-prev:hover {
   .team_row .special {
     width: 116%;
   }
+  .Program_Schedule .controls {
+    direction: rtl;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: right;
+    padding-right: 13.9%;
+  }
 
   .live_broadcast {
     margin-left: -8%;
@@ -3185,5 +3192,5 @@ button.slick-prev:hover {
   .mixtup_container_rows {
     width: 116%;
     margin-left: -9%;
-}
+  }
 }
