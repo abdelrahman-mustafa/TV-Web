@@ -73,7 +73,7 @@ type Setting {
 type InfoData {
   id: ID! @unique 
   address: String
-  phone: Int
+  phone: String
   email: String
   aboutUs: String
   policy: String
