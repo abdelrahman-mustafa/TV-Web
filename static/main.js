@@ -4821,7 +4821,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    IP: "http://http://wasat.tv/",
+    IP: "http://127.0.0.1",
 };
 /*
  * In development mode, to ignore zone related error stack frames such as

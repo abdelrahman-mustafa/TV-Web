@@ -9012,7 +9012,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    IP: "http://http://wasat.tv/",
+    IP: "http://127.0.0.1",
     firebase: {
         apiKey: "AIzaSyD7AVHMepyh0zHWrsT7dmFLMnlDTE9yeLs",
         authDomain: "wtvproject-f33c2.firebaseapp.com",
