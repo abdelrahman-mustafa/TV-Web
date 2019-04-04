@@ -10,11 +10,11 @@ server.express.use(function(req, res, next) {
   next();
 });
 
-server.express.get('/', (req, res) => res.redirect('/'));
+server.express.get('/', (req, res) => res.redirect('/home'));
 server.express.get('/tv', (req, res) => res.redirect('/'));
 
 server.express.use(express.static(path.resolve(__dirname, 'static')))
-server.express.use('/', (req, res) => res.sendFile(path.resolve(__dirname, './static/index.html')));
+server.express.use('/home', (req, res) => res.sendFile(path.resolve(__dirname, './static/index.html')));
 server.express.use('/admin', (req, res) => res.sendFile(path.resolve(__dirname, './static/admin/index.html')));
 const helmet = require('helmet')
 const compression = require('compression')
