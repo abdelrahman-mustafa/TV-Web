@@ -4821,7 +4821,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    IP: "http:// 165.227.160.201:5000/api ",
+    IP: "http://165.227.160.201:5000/api ",
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
