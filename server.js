@@ -10,12 +10,11 @@ server.express.use(function(req, res, next) {
   next();
 });
 
-server.express.get('/', (req, res) => res.redirect('/tv/client'));
-server.express.get('/tv', (req, res) => res.redirect('/tv/client'));
+server.express.get('/', (req, res) => res.redirect('/tv'));
 
 server.express.use(express.static(path.resolve(__dirname, 'static')))
-server.express.use('/tv/client', (req, res) => res.sendFile(path.resolve(__dirname, './static/tv/client/index.html')));
-server.express.use('/tv/admin', (req, res) => res.sendFile(path.resolve(__dirname, './static/tv/admin/index.html')));
+server.express.use('/tv', (req, res) => res.sendFile(path.resolve(__dirname, './static/index.html')));
+server.express.use('/admin', (req, res) => res.sendFile(path.resolve(__dirname, './static/admin/index.html')));
 const helmet = require('helmet')
 const compression = require('compression')
 server.express.use(helmet())
