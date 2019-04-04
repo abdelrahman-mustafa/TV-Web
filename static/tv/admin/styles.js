@@ -826,14 +826,14 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /data/gen/WTV/TvAdmin/src/styles.css */"./src/styles.css");
-__webpack_require__(/*! /data/gen/WTV/TvAdmin/src/assets/bootstrap/dist/css/bootstrap.min.css */"./src/assets/bootstrap/dist/css/bootstrap.min.css");
-__webpack_require__(/*! /data/gen/WTV/TvAdmin/src/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css */"./src/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css");
-__webpack_require__(/*! /data/gen/WTV/TvAdmin/src/assets/css/style.css */"./src/assets/css/style.css");
-__webpack_require__(/*! /data/gen/WTV/TvAdmin/src/assets/css/colors/megna-dark.css */"./src/assets/css/colors/megna-dark.css");
-__webpack_require__(/*! /data/gen/WTV/TvAdmin/src/assets/css/Custome.css */"./src/assets/css/Custome.css");
-__webpack_require__(/*! /data/gen/WTV/TvAdmin/src/assets/plugins/bower_components/summernote/dist/summernote.css */"./src/assets/plugins/bower_components/summernote/dist/summernote.css");
-module.exports = __webpack_require__(/*! /data/gen/WTV/TvAdmin/src/assets/plugins/bower_components/footable/css/footable.core.css */"./src/assets/plugins/bower_components/footable/css/footable.core.css");
+__webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/assets/bootstrap/dist/css/bootstrap.min.css */"./src/assets/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css */"./src/assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css");
+__webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/assets/css/style.css */"./src/assets/css/style.css");
+__webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/assets/css/colors/megna-dark.css */"./src/assets/css/colors/megna-dark.css");
+__webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/assets/css/Custome.css */"./src/assets/css/Custome.css");
+__webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/assets/plugins/bower_components/summernote/dist/summernote.css */"./src/assets/plugins/bower_components/summernote/dist/summernote.css");
+module.exports = __webpack_require__(/*! /Users/a/Work/WTV/tvadmin/src/assets/plugins/bower_components/footable/css/footable.core.css */"./src/assets/plugins/bower_components/footable/css/footable.core.css");
 
 
 /***/ })
