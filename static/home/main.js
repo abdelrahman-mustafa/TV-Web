@@ -1812,6 +1812,19 @@ var HomePageComponent = /** @class */ (function () {
                     case 1:
                         // console.log(today);
                         _a.currentPrograms = _b.sent();
+                        // console.log("Current schedule");
+                        // console.log(this.currentPrograms);
+                        this.currentPrograms = this.currentPrograms.filter(function (item) {
+                            if (item.program) {
+                                return item.program.isShowen;
+                            }
+                            else if (item.event) {
+                                return item.event.isShowen;
+                            }
+                            else {
+                                return false;
+                            }
+                        });
                         return [2 /*return*/];
                 }
             });
@@ -2490,6 +2503,17 @@ var ProgramsScheduleComponent = /** @class */ (function () {
                     case 2:
                         // console.log(today);
                         _b.currentPrograms = _c.sent();
+                        this.currentPrograms = this.currentPrograms.filter(function (item) {
+                            if (item.program) {
+                                return item.program.isShowen;
+                            }
+                            else if (item.event) {
+                                return item.event.isShowen;
+                            }
+                            else {
+                                return false;
+                            }
+                        });
                         return [2 /*return*/];
                 }
             });
@@ -4765,7 +4789,7 @@ var ScheduleService = /** @class */ (function () {
             var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        var query = "query{\n        currentSchedule(day:\"" + dayName + "\", time:\"1970-01-01T" + time + ":00.000Z\",date:\"" + dayDate + "\"){\n           id\n           timeDate\n           finishTimeDate\n           startDate\n           endDate\n           event{\n             id\n             name,\n             icon,\n           }\n           program{\n             id\n             name,\n             icon,\n             mobBanner\n           }\n         }\n       }";
+                        var query = "query{\n        currentSchedule(day:\"" + dayName + "\", time:\"1970-01-01T" + time + ":00.000Z\",date:\"" + dayDate + "\"){\n           id\n           timeDate\n           finishTimeDate\n           startDate\n           endDate\n           event{\n             id\n             name,\n             icon,\n             isShowen\n           }\n           program{\n             id\n             name,\n             icon,\n             mobBanner,\n             isShowen\n           }\n         }\n       }";
                         // console.log(query);
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
                             // console.log(response);
