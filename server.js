@@ -12,6 +12,8 @@ server.express.use(function(req, res, next) {
 
 server.express.get('/', (req, res) => res.redirect('/home'));
 server.express.get('/tv', (req, res) => res.redirect('/'));
+server.express.use('/policy', (req, res) => res.sendFile(path.resolve(__dirname, './static/privacy_policy.html')));
+
 
 server.express.use(express.static(path.resolve(__dirname, 'static')))
 server.express.use('/home', (req, res) => res.sendFile(path.resolve(__dirname, './static/home/index.html')));
