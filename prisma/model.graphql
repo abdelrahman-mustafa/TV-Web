@@ -37,6 +37,7 @@ type Article {
   article: String
   images: [String!]!
   videos: String
+  pubDate: Int
   isShowen: Boolean
 }
 
@@ -50,6 +51,7 @@ type SportsArticle {
   article: String
   images: [String!]!
   videos: String
+  pubDate: Int
   isShowen: Boolean
 }
 
