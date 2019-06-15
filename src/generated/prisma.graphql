@@ -1,5 +1,5 @@
 # source: http://localhost:4400
-# timestamp: Sat Feb 16 2019 12:11:24 GMT+0200 (Eastern European Standard Time)
+# timestamp: Sat Jun 15 2019 14:52:42 GMT+0200 (Eastern European Standard Time)
 
 type Admin implements Node {
   id: ID!
@@ -291,6 +291,7 @@ type Article implements Node {
   article: String
   images: [String!]!
   videos: String
+  pubDate: Int
   isShowen: Boolean
 }
 
@@ -316,6 +317,7 @@ input ArticleCreateInput {
   publishTime: DateTime
   article: String
   videos: String
+  pubDate: Int
   isShowen: Boolean
   images: ArticleCreateimagesInput
 }
@@ -346,6 +348,8 @@ enum ArticleOrderByInput {
   article_DESC
   videos_ASC
   videos_DESC
+  pubDate_ASC
+  pubDate_DESC
   isShowen_ASC
   isShowen_DESC
   updatedAt_ASC
@@ -364,6 +368,7 @@ type ArticlePreviousValues {
   article: String
   images: [String!]!
   videos: String
+  pubDate: Int
   isShowen: Boolean
 }
 
@@ -418,6 +423,7 @@ input ArticleUpdateInput {
   publishTime: DateTime
   article: String
   videos: String
+  pubDate: Int
   isShowen: Boolean
   images: ArticleUpdateimagesInput
 }
@@ -715,6 +721,28 @@ input ArticleWhereInput {
 
   """All values not ending with the given string."""
   videos_not_ends_with: String
+  pubDate: Int
+
+  """All values that are not equal to given value."""
+  pubDate_not: Int
+
+  """All values that are contained in given list."""
+  pubDate_in: [Int!]
+
+  """All values that are not contained in given list."""
+  pubDate_not_in: [Int!]
+
+  """All values less than the given value."""
+  pubDate_lt: Int
+
+  """All values less than or equal the given value."""
+  pubDate_lte: Int
+
+  """All values greater than the given value."""
+  pubDate_gt: Int
+
+  """All values greater than or equal the given value."""
+  pubDate_gte: Int
   isShowen: Boolean
 
   """All values that are not equal to given value."""
@@ -1333,7 +1361,7 @@ input EventWhereUniqueInput {
 type InfoData implements Node {
   id: ID!
   address: String
-  phone: Int
+  phone: String
   email: String
   aboutUs: String
   policy: String
@@ -1360,7 +1388,7 @@ type InfoDataConnection {
 
 input InfoDataCreateInput {
   address: String
-  phone: Int
+  phone: String
   email: String
   aboutUs: String
   policy: String
@@ -1427,7 +1455,7 @@ enum InfoDataOrderByInput {
 type InfoDataPreviousValues {
   id: ID!
   address: String
-  phone: Int
+  phone: String
   email: String
   aboutUs: String
   policy: String
@@ -1482,7 +1510,7 @@ input InfoDataSubscriptionWhereInput {
 
 input InfoDataUpdateDataInput {
   address: String
-  phone: Int
+  phone: String
   email: String
   aboutUs: String
   policy: String
@@ -1499,7 +1527,7 @@ input InfoDataUpdateDataInput {
 
 input InfoDataUpdateInput {
   address: String
-  phone: Int
+  phone: String
   email: String
   aboutUs: String
   policy: String
@@ -1617,28 +1645,46 @@ input InfoDataWhereInput {
 
   """All values not ending with the given string."""
   address_not_ends_with: String
-  phone: Int
+  phone: String
 
   """All values that are not equal to given value."""
-  phone_not: Int
+  phone_not: String
 
   """All values that are contained in given list."""
-  phone_in: [Int!]
+  phone_in: [String!]
 
   """All values that are not contained in given list."""
-  phone_not_in: [Int!]
+  phone_not_in: [String!]
 
   """All values less than the given value."""
-  phone_lt: Int
+  phone_lt: String
 
   """All values less than or equal the given value."""
-  phone_lte: Int
+  phone_lte: String
 
   """All values greater than the given value."""
-  phone_gt: Int
+  phone_gt: String
 
   """All values greater than or equal the given value."""
-  phone_gte: Int
+  phone_gte: String
+
+  """All values containing the given string."""
+  phone_contains: String
+
+  """All values not containing the given string."""
+  phone_not_contains: String
+
+  """All values starting with the given string."""
+  phone_starts_with: String
+
+  """All values not starting with the given string."""
+  phone_not_starts_with: String
+
+  """All values ending with the given string."""
+  phone_ends_with: String
+
+  """All values not ending with the given string."""
+  phone_not_ends_with: String
   email: String
 
   """All values that are not equal to given value."""
@@ -4861,6 +4907,7 @@ type SportsArticle implements Node {
   article: String
   images: [String!]!
   videos: String
+  pubDate: Int
   isShowen: Boolean
 }
 
@@ -4886,6 +4933,7 @@ input SportsArticleCreateInput {
   publishTime: DateTime
   article: String
   videos: String
+  pubDate: Int
   isShowen: Boolean
   images: SportsArticleCreateimagesInput
 }
@@ -4916,6 +4964,8 @@ enum SportsArticleOrderByInput {
   article_DESC
   videos_ASC
   videos_DESC
+  pubDate_ASC
+  pubDate_DESC
   isShowen_ASC
   isShowen_DESC
   updatedAt_ASC
@@ -4934,6 +4984,7 @@ type SportsArticlePreviousValues {
   article: String
   images: [String!]!
   videos: String
+  pubDate: Int
   isShowen: Boolean
 }
 
@@ -4988,6 +5039,7 @@ input SportsArticleUpdateInput {
   publishTime: DateTime
   article: String
   videos: String
+  pubDate: Int
   isShowen: Boolean
   images: SportsArticleUpdateimagesInput
 }
@@ -5285,6 +5337,28 @@ input SportsArticleWhereInput {
 
   """All values not ending with the given string."""
   videos_not_ends_with: String
+  pubDate: Int
+
+  """All values that are not equal to given value."""
+  pubDate_not: Int
+
+  """All values that are contained in given list."""
+  pubDate_in: [Int!]
+
+  """All values that are not contained in given list."""
+  pubDate_not_in: [Int!]
+
+  """All values less than the given value."""
+  pubDate_lt: Int
+
+  """All values less than or equal the given value."""
+  pubDate_lte: Int
+
+  """All values greater than the given value."""
+  pubDate_gt: Int
+
+  """All values greater than or equal the given value."""
+  pubDate_gte: Int
   isShowen: Boolean
 
   """All values that are not equal to given value."""
