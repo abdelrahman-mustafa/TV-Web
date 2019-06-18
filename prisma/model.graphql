@@ -31,13 +31,11 @@ type Article {
   id: ID! @unique 
   name: String
   writer: String 
-  caption: String
   publishDate: DateTime
   publishTime: DateTime
   article: String
   images: [String!]!
   videos: String
-  pubDate: Int
   isShowen: Boolean
 }
 
@@ -51,7 +49,6 @@ type SportsArticle {
   article: String
   images: [String!]!
   videos: String
-  pubDate: Int
   isShowen: Boolean
 }
 

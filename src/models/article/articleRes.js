@@ -2,9 +2,7 @@ const article = {
     Query: {
         articles: async (_, args, context, info)=>{
             let articles = await context.prisma.query.articles({...args},info)
-            articles.sort(function(a,b){
-                return new Date(b.publishTime) - new Date(a.publishTime);
-            });
+            
             return articles
             
         },
