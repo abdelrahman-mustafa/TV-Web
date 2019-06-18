@@ -3270,6 +3270,9 @@ max-width: 1440px !important;
   .navbar {
     max-width: 1440px;
 }
+.navbar {
+  padding-right: 7.5%;
+}
 
 .parallax-zoom-blur {
   max-width: 1440px;
@@ -3317,7 +3320,7 @@ max-width: 1680px !important;
 
   .navbar {
     max-width: 1680px;
-    padding-right: 9.5%;
+    padding-right: 12.5%;
 }
 
 .parallax-zoom-blur {
@@ -3398,7 +3401,7 @@ max-width: 1920px !important;
 
   .navbar {
     max-width: 1920px;
-    padding-right: 11.5%;
+    padding-right: 15%;
 }
 
 .parallax-zoom-blur {
@@ -3446,11 +3449,15 @@ main {
   height: 172px;
 }
 
+.Program_Schedule .controls {
+  padding-right: 4.9%;
+}
+
 .mixtup_container_rows .new2 {
   height: 182px;
 }
 .Program_Schedule .controls button {
-  font-size: large;
+  font-size: x-large;
 
 }
 
@@ -3484,4 +3491,8 @@ main {
 .share_word{
   line-height: initial !important;
 }
+}
+
+span, p, h1, h2, h3 ,h4 ,h5 ,h6{
+  direction: rtl !important;
 }
