@@ -1051,7 +1051,9 @@ var AddOrEditArticleComponent = /** @class */ (function () {
                         console.log($('#summernote').code());
                         this.selectedArticle.article = $('#summernote').code();
                         this.selectedArticle.publishDate = moment__WEBPACK_IMPORTED_MODULE_7__(this.selectedArticle.publishDate).toISOString();
-                        this.selectedArticle.publishTime = "1970-01-01T" + this.selectedArticle.publishTime + ":00.000Z";
+                        if (!this.selectedArticle.publishTime.startsWith("1970-01-01T")) {
+                            this.selectedArticle.publishTime = "1970-01-01T" + this.selectedArticle.publishTime + ":00.000Z";
+                        }
                         if (!this.selectedArticleImage) return [3 /*break*/, 4];
                         i = 0;
                         _a.label = 1;
@@ -7387,7 +7389,7 @@ var ArticlesService = /** @class */ (function () {
                         for (var i = 0; i < article.images.length; i++) {
                             images = images + ("\"" + article.images[i] + "\",");
                         }
-                        var query = "mutation{\n        " + queryKey + "(data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).toISOString(true) + "\",\n          // pubDate:" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).unix() + "\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:true,\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        " + queryKey + "(data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).toISOString(true) + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:true,\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.createSportsArticle) {
@@ -7418,7 +7420,7 @@ var ArticlesService = /** @class */ (function () {
                         for (var i = 0; i < article.images.length; i++) {
                             images = images + ("\"" + article.images[i] + "\",");
                         }
-                        var query = "mutation{\n        " + queryKey + "(\n          where:{id:\"" + article.id + "\"},\n          data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).toISOString(true) + "\",\n          // pubDate:" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).unix() + "\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:" + article.isShowen + ",\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
+                        var query = "mutation{\n        " + queryKey + "(\n          where:{id:\"" + article.id + "\"},\n          data:{\n          name:\"" + article.name + "\",\n          writer:\"" + article.writer + "\",\n          caption:\"" + article.caption + "\",\n          publishDate:\"" + moment__WEBPACK_IMPORTED_MODULE_4__(article.publishDate).toISOString(true) + "\",\n          publishTime:\"" + article.publishTime + "\",\n          article:\"" + _this.escapeDoubleQuotes(article.article) + "\",\n          videos:\"" + article.videos + "\",\n          isShowen:" + article.isShowen + ",\n          images:{\n            set:[\n              " + images + "\n            ]\n          },\n          \n        }){\n          id\n        }\n      }";
                         _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", _this.userData.token, { "query": query }).subscribe(function (response) {
                             console.log(response);
                             if (response.data && response.data.updateSportsArticle) {
