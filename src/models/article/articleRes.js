@@ -1,7 +1,12 @@
 const article = {
     Query: {
         articles: async (_, args, context, info)=>{
+            let newFirst = args.first;
+            if (newFirst < 100) args.first = 100;
+            else  args.first = newFirst * 2 
             let articles = await context.prisma.query.articles({...args},info)
+            console.log('Articles args: ' + args)
+
             articles.forEach((article, index) => {
                 let time = article.publishTime.substring(
                     article.publishTime.lastIndexOf("T") + 1, 
@@ -13,7 +18,7 @@ const article = {
             articles.sort(function(a,b){
                 return new Date(b.date) - new Date(a.date);
             });
-            return articles
+            return articles.slice(0, newFirst)
             
         },
         article: async (_, args, context, info)=>{
