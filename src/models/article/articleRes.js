@@ -2,7 +2,17 @@ const article = {
     Query: {
         articles: async (_, args, context, info)=>{
             let articles = await context.prisma.query.articles({...args},info)
-            
+            articles.forEach((article, index) => {
+                let time = article.publishTime.substring(
+                    article.publishTime.lastIndexOf("T") + 1, 
+                    article.publishTime.lastIndexOf("Z")
+                );
+                let date = article.publishDate.split('T')[0];
+                articles[index].date = date + 'T'+time +'Z'
+            });
+            articles.sort(function(a,b){
+                return new Date(b.date) - new Date(a.date);
+            });
             return articles
             
         },
