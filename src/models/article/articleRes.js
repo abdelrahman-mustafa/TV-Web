@@ -5,7 +5,7 @@ const article = {
             if (newFirst < 100) args.first = 100;
             else  args.first = newFirst * 2 
             let articles = await context.prisma.query.articles({...args},info)
-            console.log('Articles args: ' + args)
+            console.log('Articles args: ' + JSON.stringify(args))
 
             articles.forEach((article, index) => {
                 let time = article.publishTime.substring(

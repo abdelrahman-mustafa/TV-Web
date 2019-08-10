@@ -1,7 +1,12 @@
 const sportsArticle = {
     Query: {
         sportsArticles: async (_, args, context, info)=>{
+            let newFirst = args.first;
+            if (newFirst < 100) args.first = 100;
+            else  args.first = newFirst * 2 
             let sportsArticles = await context.prisma.query.sportsArticles({...args},info)
+            console.log('Articles args: ' + JSON.stringify(args))
+
             sportsArticles.forEach((article, index) => {
                 let time = article.publishTime.substring(
                     article.publishTime.lastIndexOf("T") + 1, 
@@ -13,7 +18,7 @@ const sportsArticle = {
             sportsArticles.sort(function(a,b){
                 return new Date(b.date) - new Date(a.date);
             });
-            return sportsArticles
+            return sportsArticles.slice(0, newFirst)
         },
         sportsArticle: async (_, args, context, info)=>{
             return await context.prisma.query.sportsArticle({...args},info)
