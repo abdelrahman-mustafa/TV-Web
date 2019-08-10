@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Wasat TV Live</title>
+</head>
+<div id='player'></div>
+<div id="dvMessage" style="display: none; height: 50px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; text-align: center; color: white; font-size: 20px; max-width: 500px; width: 100%; font-family: Myriad Pro, Arial">
+<span id="lblMessage">an error has occured or your browser is out of date please update</span>
+<script type="text/javascript" src="https://player.kwikmotion.com/ClientsTemplates/wasatvod/KwikLink_135_6C37C3GQA4.js"></script>
+<script>
+        kwikMotion("player", {
+            aspectratio: "16:9",
+   mediaid: "WasatTV",
+                       
+ 
+      sources: [
+      {file: "https://svs.itworkscdn.net/wtvlive/wtv/playlist.m3u8"},
+      {file: "https://svs.itworkscdn.net/wtvlive/wtv/manifest.mpd"},
+      {file: "https://svs.itworkscdn.net/wtvlive/wtv/Manifest"}],
+ 
+            });    
+           
+    </script>
+</div>
+</body>
+</html>
