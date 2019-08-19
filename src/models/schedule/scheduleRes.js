@@ -29,8 +29,8 @@ const schedule = {
                     where: { days_some: { name: args.day }, AND: { startDate_gte: args.date, endDate_gte: args.date, timeDate_gte: args.time } },
                     orderBy: "timeDate_ASC"
                 }, info)
-                if (comResults[0]) res.push(comResults[0])
-                if (comResults[1]) res.push(comResults[1])
+                 res.push({})
+                if (comResults[0]) res.push(comResults[1])
                 return res
             }
             res.push(results[0])
