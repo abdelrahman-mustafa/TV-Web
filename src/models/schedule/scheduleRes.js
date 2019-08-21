@@ -38,22 +38,11 @@ const schedule = {
                 }
             }, info)
             console.log(results)
-            results.filter(sch=>{
-                return ( sch.program && sch.program.isShown )||(sch.event || sch.event.isShown)
-            })
-            // if (!results[0]) {
-            //     // const comResults = await context.prisma.query.schedules({
-            //     //     where: { days_some: { name: args.day }, AND: { startDate_gte: args.date, endDate_gte: args.date, timeDate_gte: args.time } },
-            //     //     orderBy: "timeDate_ASC"
-            //     // }, info)
-            //     //  res.push({})
-            //     // if (comResults[0]) res.push(comResults[1])
-            //     return res
-            // }
-            // res.push(results[0])
 
-            // if (results[0].finishTimeDate.getDay() - results[0].timeDate.getDay() )
             if (results[0]) {
+                results.filter(sch=>{
+                    return ( sch.program && sch.program.isShowen )||(sch.event || sch.event.isShowen)
+                })
                 res.push(results[0])
                 const upComing = await context.prisma.query.schedules({
                     where: {
@@ -69,7 +58,7 @@ const schedule = {
                     orderBy: "timeDate_ASC"
                 }, info)
                 upComing.filter(sch=>{
-                    return ( sch.program && sch.program.isShown )||(sch.event || sch.event.isShown)
+                    return ( sch.program && sch.program.isShowen )||(sch.event || sch.event.isShowen)
                 })
                 if (upComing[0]) res.push(upComing[0])
                 return res;
@@ -90,7 +79,7 @@ const schedule = {
                 }, info)
                 res.push(null)
                 upComing.filter(sch=>{
-                    return ( sch.program && sch.program.isShown )||(sch.event || sch.event.isShown)
+                    return ( sch.program && sch.program.isShowen )||(sch.event || sch.event.isShowen)
                 })
                 if (upComing[0]) res.push(upComing[0])
                 return res;
