@@ -77,7 +77,7 @@ const schedule = {
                     },
                     orderBy: "timeDate_ASC"
                 }, info)
-                res.push(null)
+                res.push({})
                 upComing.filter(sch=>{
                     return ( sch.program && sch.program.isShowen )||(sch.event || sch.event.isShowen)
                 })
