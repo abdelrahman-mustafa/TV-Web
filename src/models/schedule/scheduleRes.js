@@ -32,8 +32,8 @@ const schedule = {
                     AND: {
                         startDate_lte: args.date,
                         endDate_gte: args.date,
-                        timeDate_lte: timeNow,
-                        finishTimeDate_gte: timeNow
+                        timeDate_lte: args.time,
+                        finishTimeDate_gte: args.time
                     }
                 }
             }, info)
@@ -58,7 +58,7 @@ const schedule = {
                     orderBy: "timeDate_ASC"
                 }, info)
                 upComing.filter(sch=>{
-                    return ( sch.program && sch.program.isShowen )||(sch.event || sch.event.isShowen)
+                    return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
                 })
                 if (upComing[0]) res.push(upComing[0])
                 return res;
@@ -72,7 +72,7 @@ const schedule = {
                         AND: {
                             startDate_lte: args.date,
                             endDate_gte: args.date,
-                            timeDate_gte: timeNow
+                            timeDate_gte: args.time
                         }
                     },
                     orderBy: "timeDate_ASC"
