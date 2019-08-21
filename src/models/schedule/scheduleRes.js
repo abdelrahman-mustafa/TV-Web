@@ -1,3 +1,4 @@
+const moment = require('moment');
 const schedule = {
     Query: {
         schedules: async (_, args, context, info) => {
@@ -37,12 +38,13 @@ const schedule = {
                     }
                 }
             }, info)
-            console.log(results)
-
+            console.log('current schedules are '+ results)
+            if (results){results.filter(sch=>{
+                return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
+            })}
             if (results[0]) {
-                results.filter(sch=>{
-                    return ( sch.program && sch.program.isShowen )||(sch.event || sch.event.isShowen)
-                })
+                console.log('there is an exist ')
+
                 res.push(results[0])
                 const upComing = await context.prisma.query.schedules({
                     where: {
@@ -60,6 +62,7 @@ const schedule = {
                 upComing.filter(sch=>{
                     return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
                 })
+                console.log('upcomming is '+ upComing)
                 if (upComing[0]) res.push(upComing[0])
                 return res;
             }else{
@@ -79,7 +82,7 @@ const schedule = {
                 }, info)
                 res.push({})
                 upComing.filter(sch=>{
-                    return ( sch.program && sch.program.isShowen )||(sch.event || sch.event.isShowen)
+                    return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
                 })
                 if (upComing[0]) res.push(upComing[0])
                 return res;
