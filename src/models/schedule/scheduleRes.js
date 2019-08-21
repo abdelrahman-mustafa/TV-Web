@@ -38,7 +38,7 @@ const schedule = {
                     }
                 }
             }, info)
-            console.log('current schedules are '+ results)
+            console.log( results)
             if (results){results.filter(sch=>{
                 return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
             })}
@@ -57,13 +57,14 @@ const schedule = {
                             timeDate_gte: results[0].finishTimeDate
                         }
                     },
-                    orderBy: "timeDate_ASC"
                 }, info)
+		console.log( upComing)
+
                 upComing.filter(sch=>{
                     return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
                 })
-                console.log('upcomming is '+ upComing)
-                if (upComing[0]) res.push(upComing[0])
+                console.log( upComing)
+                 res.push(upComing[0])
                 return res;
             }else{
                 
@@ -84,7 +85,7 @@ const schedule = {
                 upComing.filter(sch=>{
                     return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
                 })
-                if (upComing[0]) res.push(upComing[0])
+                res.push(upComing[0])
                 return res;
             }
 
