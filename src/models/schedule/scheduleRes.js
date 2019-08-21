@@ -32,8 +32,8 @@ const schedule = {
                     AND: {
                         startDate_lte: args.date,
                         endDate_gte: args.date,
-                        timeDate_lte: args.time,
-                        finishTimeDate_gte: args.time
+                        timeDate_lte: timeNow,
+                        finishTimeDate_gte: timeNow
                     }
                 }
             }, info)
@@ -83,7 +83,7 @@ const schedule = {
                         AND: {
                             startDate_lte: args.date,
                             endDate_gte: args.date,
-                            timeDate_gte: args.time
+                            timeDate_gte: timeNow
                         }
                     },
                     orderBy: "timeDate_ASC"
