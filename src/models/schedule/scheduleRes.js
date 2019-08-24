@@ -22,8 +22,10 @@ const schedule = {
                 "Thu": 5,
                 "Fri": 6,
             }
+            args.time = moment(args.time).toISOString();
             let time = args.time.split("T")
             if (Array.isArray(time)) time = time[1]
+
             const timeNow = "1970-01-01T" + time
             const results = await context.prisma.query.schedules({
                 where: {
