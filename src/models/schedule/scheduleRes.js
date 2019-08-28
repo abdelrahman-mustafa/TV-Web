@@ -38,12 +38,15 @@ const schedule = {
                         timeDate_lte: args.time,
                         finishTimeDate_gte: args.time
                     }
-                }
+                },
+                orderBy: "timeDate_ASC"
             }, info)
-            console.log( results)
-            if (results){results.filter(sch=>{
-                return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
-            })}
+            console.log(results)
+            if (results) {
+                results.filter(sch => {
+                    return (sch.program && sch.program.isShowen) || (sch.event && sch.event.isShowen)
+                })
+            }
             if (results[0]) {
                 console.log('there is an exist ')
 
@@ -59,17 +62,18 @@ const schedule = {
                             timeDate_gte: results[0].finishTimeDate
                         }
                     },
+                    orderBy: "timeDate_ASC"
                 }, info)
-		console.log( upComing)
+                console.log(upComing)
 
-                upComing.filter(sch=>{
-                    return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
+                upComing.filter(sch => {
+                    return (sch.program && sch.program.isShowen) || (sch.event && sch.event.isShowen)
                 })
-                console.log( upComing)
-                 res.push(upComing[0])
+                console.log(upComing)
+                res.push(upComing[0])
                 return res;
-            }else{
-                
+            } else {
+
                 const upComing = await context.prisma.query.schedules({
                     where: {
                         days_some: {
@@ -84,8 +88,8 @@ const schedule = {
                     orderBy: "timeDate_ASC"
                 }, info)
                 res.push({})
-                upComing.filter(sch=>{
-                    return ( sch.program && sch.program.isShowen )||(sch.event && sch.event.isShowen)
+                upComing.filter(sch => {
+                    return (sch.program && sch.program.isShowen) || (sch.event && sch.event.isShowen)
                 })
                 res.push(upComing[0])
                 return res;
