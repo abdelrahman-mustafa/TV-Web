@@ -1,6 +1,5 @@
 .DS_Store
 node_modules/
-dist/
 .vs
 mongo-data/
 yarn-error.log
