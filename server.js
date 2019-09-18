@@ -1,5 +1,5 @@
 const server = require('./src')
-
+const client_ser = require('./dist/server');
 const path = require('path')
 const express = require('express');
 const config = require('./src/config/config')
@@ -10,7 +10,10 @@ server.express.use(function(req, res, next) {
   next();
 });
 
-server.express.get('/', (req, res) => res.redirect('/home'));
+// server.express.get('/', (req, res) => res.redirect('/home'));
+
+server.express.get('/', client_ser());
+
 server.express.get('/tv', (req, res) => res.redirect('/'));
 server.express.use('/policy', (req, res) => res.sendFile(path.resolve(__dirname, './static/privacy_policy.html')));
 server.express.use('/live', (req, res) => res.sendFile(path.resolve(__dirname, './static/index_kwik.html')));
