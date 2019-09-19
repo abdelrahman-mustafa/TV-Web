@@ -12,7 +12,8 @@ const schedule = {
             }, info)
         },
         currentSchedule: async (_, args, context, info) => {
-            let res = []
+console.log(info)            
+let res = []
             let days = {
                 "Sat": 0,
                 "Mon": 1,
@@ -40,13 +41,36 @@ const schedule = {
                     }
                 },
                 orderBy: "timeDate_ASC"
-            }, info)
-            console.log(results)
+            }, `{ 
+id
+finishTimeDate
+    timeDate
+    type
+    startDate
+    endDate
+    event(where: { isShowen: true }) {
+      id
+      name
+      icon
+    }
+    program(where: { isShowen: true }) {
+      id
+      name
+      programDate
+      presenter
+      description
+      duration
+      mobBanner
+      icon
+      playlistUrl
+      isShowen
+    } }`)
             if (results) {
                 results.filter(sch => {
                     return (sch.program && sch.program.isShowen) || (sch.event && sch.event.isShowen)
                 })
             }
+		console.log(results[0]);
             if (results[0]) {
                 console.log('there is an exist ')
 
@@ -64,12 +88,11 @@ const schedule = {
                     },
                     orderBy: "timeDate_ASC"
                 }, info)
-                console.log(upComing)
+                console.log(upComing[0]);
 
                 upComing.filter(sch => {
                     return (sch.program && sch.program.isShowen) || (sch.event && sch.event.isShowen)
                 })
-                console.log(upComing)
                 res.push(upComing[0])
                 return res;
             } else {
