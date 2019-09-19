@@ -12,7 +12,7 @@ const CONFIG = {
     delayMs: 0 // disable delaying - full speed until the max limit is reached
   }),
   options: {
-    port: PORT || 5000,
+    port: PORT || 4000,
     endpoint: '/api',
     // disable playground in production
     playground: NODE_ENV === 'development' ? '/playground' : false
