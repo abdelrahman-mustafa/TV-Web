@@ -9084,7 +9084,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    IP: "http://localhost:5000",
+    IP: "http://localhost",
     firebase: {
         apiKey: "AIzaSyD7AVHMepyh0zHWrsT7dmFLMnlDTE9yeLs",
         authDomain: "wtvproject-f33c2.firebaseapp.com",

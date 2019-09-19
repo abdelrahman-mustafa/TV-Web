@@ -6322,7 +6322,7 @@ exports.ScheduleService = ScheduleService;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.environment = {
     production: false,
-    IP: "http://localhost:5000",
+    IP: "http://localhost",
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
