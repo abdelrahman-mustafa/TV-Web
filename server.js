@@ -56,7 +56,7 @@ server.express.use(function(req, res, next) {
   next();
 });
 
-// server.express.get('/', (req, res) => res.redirect('/home'));
+ server.express.get('/', (req, res) => res.redirect('/home'));
 
 // server.express.get('/', client_ser());
 
