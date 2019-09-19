@@ -1,7 +1,5 @@
-const Zone = require('zone.js/dist/zone-node')
-require('reflect-metadata')
+
 const server = require('./src')
-// const client_ser = require('./dist/server.js');
 const path = require('path')
 const join  = path.join
 const express = require('express');
@@ -9,45 +7,36 @@ const config = require('./src/config/config')
 const fs = require('fs')
 
 
-const { ngExpressEngine } = require('@nguniversal/express-engine');
-const { renderModuleFactory } =  require('@angular/platform-server');
-const  { enableProdMode } =  require('@angular/core');
+// const { ngExpressEngine } = require('@nguniversal/express-engine');
+// const { renderModuleFactory } =  require('@angular/platform-server');
+// const  { enableProdMode } =  require('@angular/core');
 
-const  { provideModuleMap } = require('@nguniversal/module-map-ngfactory-loader');
+// const  { provideModuleMap } = require('@nguniversal/module-map-ngfactory-loader');
 
-// Faster server renders w/ Prod mode (dev mode never needed)
-enableProdMode();
+// // Faster server renders w/ Prod mode (dev mode never needed)
+// enableProdMode();
 
-const DIST_FOLDER = join(process.cwd(), 'dist');
+// const DIST_FOLDER = join(process.cwd(), 'dist');
 
-// Our index.html we'll use as our template
-const template = fs.readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
+// // Our index.html we'll use as our template
+// const template = fs.readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
+// const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('./dist/server/main');
 
-server.express.engine('html', (_, options, callback) => {
-  renderModuleFactory(AppServerModuleNgFactory, {
-    // Our index.html
-    document: template,
-    url: options.req.url,
-    // DI so that we can get lazy-loading to work differently (since we need it to just instantly render it)
-    extraProviders: [
-      provideModuleMap(LAZY_MODULE_MAP)
-    ]
-  }).then(html => {
-    callback(null, html);
-  });
-});
+// server.express.engine('html', (_, options, callback) => {
+//   renderModuleFactory(AppServerModuleNgFactory, {
+//     // Our index.html
+//     document: template,
+//     url: options.req.url,
+//     // DI so that we can get lazy-loading to work differently (since we need it to just instantly render it)
+//     extraProviders: [
+//       provideModuleMap(LAZY_MODULE_MAP)
+//     ]
+//   }).then(html => {
+//     callback(null, html);
+//   });
+// });
 
 server.express.set('view engine', 'html');
-server.express.set('views', join(DIST_FOLDER, 'browser'));
-
-// Server static files from /browser
-server.express.get('*.*', express.static(join(DIST_FOLDER, 'browser')));
-
-// All regular routes use the Universal engine
-server.express.get('*', (req, res) => {
-  res.render(join(DIST_FOLDER, 'browser', 'index.html'), { req });
-});
 
 
 server.express.use(function(req, res, next) {
