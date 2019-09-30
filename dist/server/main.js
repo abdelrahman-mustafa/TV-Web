@@ -307,9 +307,12 @@ var privacy_component_1 = __webpack_require__(/*! ./pages/privacy/privacy.compon
 var terms_component_1 = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
 var search_component_1 = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
 var team_detail_component_1 = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
+var core_1 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
 var routes = [
-    { path: '', component: home_page_component_1.HomePageComponent },
-    { path: 'live', component: live_stream_component_1.LiveStreamComponent },
+    {
+        path: '', canActivateChild: [core_1.MetaGuard], component: home_page_component_1.HomePageComponent
+    },
+    { path: 'live', component: live_stream_component_1.LiveStreamComponent, },
     { path: 'schedule', component: programs_schedule_component_1.ProgramsScheduleComponent },
     { path: 'programs', component: programs_component_1.ProgramsComponent },
     { path: 'articles', component: articles_component_1.ArticlesComponent },
@@ -489,30 +492,31 @@ var i28 = __webpack_require__(/*! @angular/animations */ "@angular/animations");
 var i29 = __webpack_require__(/*! ngx-youtube-player */ "ngx-youtube-player");
 var i30 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
 var i31 = __webpack_require__(/*! @angular/http */ "@angular/http");
-var i32 = __webpack_require__(/*! @ngx-share/core */ "@ngx-share/core");
-var i33 = __webpack_require__(/*! @ngx-share/button */ "@ngx-share/button");
-var i34 = __webpack_require__(/*! ./services/service-handler.service */ "./src/app/services/service-handler.service.ts");
-var i35 = __webpack_require__(/*! @nguniversal/module-map-ngfactory-loader */ "@nguniversal/module-map-ngfactory-loader");
-var i36 = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
-var i37 = __webpack_require__(/*! ./pages/live-stream/live-stream.component */ "./src/app/pages/live-stream/live-stream.component.ts");
-var i38 = __webpack_require__(/*! ./pages/programs-schedule/programs-schedule.component */ "./src/app/pages/programs-schedule/programs-schedule.component.ts");
-var i39 = __webpack_require__(/*! ./pages/programs/programs.component */ "./src/app/pages/programs/programs.component.ts");
-var i40 = __webpack_require__(/*! ./pages/articles/articles.component */ "./src/app/pages/articles/articles.component.ts");
-var i41 = __webpack_require__(/*! ./pages/sports/sports.component */ "./src/app/pages/sports/sports.component.ts");
-var i42 = __webpack_require__(/*! ./pages/video/video.component */ "./src/app/pages/video/video.component.ts");
-var i43 = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
-var i44 = __webpack_require__(/*! ./pages/privacy/privacy.component */ "./src/app/pages/privacy/privacy.component.ts");
-var i45 = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
-var i46 = __webpack_require__(/*! ./pages/contact-us/contact-us.component */ "./src/app/pages/contact-us/contact-us.component.ts");
-var i47 = __webpack_require__(/*! ./pages/team/team.component */ "./src/app/pages/team/team.component.ts");
-var i48 = __webpack_require__(/*! ./pages/article-details/article-details.component */ "./src/app/pages/article-details/article-details.component.ts");
-var i49 = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
-var i50 = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
-var i51 = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
-var i52 = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-var i53 = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "@fortawesome/angular-fontawesome");
-var i54 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
-var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.HomePageComponentNgFactory, i5.LiveStreamComponentNgFactory, i6.ProgramsScheduleComponentNgFactory, i7.ProgramsComponentNgFactory, i8.ArticlesComponentNgFactory, i9.SportsComponentNgFactory, i10.VideoComponentNgFactory, i11.AboutUsComponentNgFactory, i12.PrivacyComponentNgFactory, i13.TermsComponentNgFactory, i14.ContactUsComponentNgFactory, i15.TeamComponentNgFactory, i16.ArticleDetailsComponentNgFactory, i17.ProgramDetailsComponentNgFactory, i18.SearchComponentNgFactory, i19.TeamDetailComponentNgFactory, i20.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_k, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i21.NgLocalization, i21.NgLocaleLocalization, [i0.LOCALE_ID, [2, i21.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_i, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_j, []), i0.ɵmpd(4608, i22.DomSanitizer, i22.ɵDomSanitizerImpl, [i21.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i22.DomSanitizer]), i0.ɵmpd(4608, i22.HAMMER_GESTURE_CONFIG, i22.HammerGestureConfig, []), i0.ɵmpd(5120, i22.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i22.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i22.ɵKeyEventsPlugin(p1_0), new i22.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i23.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i21.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i21.DOCUMENT, i21.DOCUMENT, i22.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i22.HAMMER_LOADER], i21.DOCUMENT]), i0.ɵmpd(4608, i22.EventManager, i22.EventManager, [i22.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i22.ɵDomSharedStylesHost, i22.ɵDomSharedStylesHost, [i21.DOCUMENT]), i0.ɵmpd(4608, i22.ɵDomRendererFactory2, i22.ɵDomRendererFactory2, [i22.EventManager, i22.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i23.ɵangular_packages_platform_server_platform_server_c, i23.ɵangular_packages_platform_server_platform_server_c, [i21.DOCUMENT, [2, i22.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i22.ɵSharedStylesHost, null, [i23.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i23.ɵServerRendererFactory2, i23.ɵServerRendererFactory2, [i22.EventManager, i0.NgZone, i21.DOCUMENT, i22.ɵSharedStylesHost]), i0.ɵmpd(4608, i24.AnimationDriver, i24.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i24.ɵAnimationStyleNormalizer, i25.ɵangular_packages_platform_browser_animations_animations_c, []), i0.ɵmpd(4608, i24.ɵAnimationEngine, i25.ɵangular_packages_platform_browser_animations_animations_a, [i21.DOCUMENT, i24.AnimationDriver, i24.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i23.ɵangular_packages_platform_server_platform_server_a, [i23.ɵServerRendererFactory2, i24.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(5120, i26.ActivatedRoute, i26.ɵangular_packages_router_router_g, [i26.Router]), i0.ɵmpd(4608, i26.NoPreloading, i26.NoPreloading, []), i0.ɵmpd(6144, i26.PreloadingStrategy, null, [i26.NoPreloading]), i0.ɵmpd(135680, i26.RouterPreloader, i26.RouterPreloader, [i26.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i26.PreloadingStrategy]), i0.ɵmpd(4608, i26.PreloadAllModules, i26.PreloadAllModules, []), i0.ɵmpd(4608, i21.ViewportScroller, i21.ɵNullViewportScroller, []), i0.ɵmpd(5120, i26.ɵangular_packages_router_router_n, i26.ɵangular_packages_router_router_c, [i26.Router, i21.ViewportScroller, i26.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i26.ROUTER_INITIALIZER, i26.ɵangular_packages_router_router_j, [i26.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i26.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i27.HttpXsrfTokenExtractor, i27.ɵangular_packages_common_http_http_g, [i21.DOCUMENT, i0.PLATFORM_ID, i27.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i27.ɵangular_packages_common_http_http_h, i27.ɵangular_packages_common_http_http_h, [i27.HttpXsrfTokenExtractor, i27.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i27.HTTP_INTERCEPTORS, function (p0_0) { return [p0_0]; }, [i27.ɵangular_packages_common_http_http_h]), i0.ɵmpd(4608, i27.XhrFactory, i23.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i27.HttpXhrBackend, i27.HttpXhrBackend, [i27.XhrFactory]), i0.ɵmpd(6144, i27.HttpBackend, null, [i27.HttpXhrBackend]), i0.ɵmpd(5120, i27.HttpHandler, i23.ɵangular_packages_platform_server_platform_server_f, [i27.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i27.HttpClient, i27.HttpClient, [i27.HttpHandler]), i0.ɵmpd(4608, i27.ɵangular_packages_common_http_http_d, i27.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i28.AnimationBuilder, i25.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i22.DOCUMENT]), i0.ɵmpd(4608, i29.ɵb, i29.ɵb, [i0.NgZone]), i0.ɵmpd(4608, i30.ɵangular_packages_forms_forms_i, i30.ɵangular_packages_forms_forms_i, []), i0.ɵmpd(4608, i31.BrowserXhr, i31.BrowserXhr, []), i0.ɵmpd(4608, i31.ResponseOptions, i31.BaseResponseOptions, []), i0.ɵmpd(5120, i31.XSRFStrategy, i31.ɵangular_packages_http_http_a, []), i0.ɵmpd(4608, i31.XHRBackend, i31.XHRBackend, [i31.BrowserXhr, i31.ResponseOptions, i31.XSRFStrategy]), i0.ɵmpd(4608, i31.RequestOptions, i31.BaseRequestOptions, []), i0.ɵmpd(5120, i31.Http, i31.ɵangular_packages_http_http_b, [i31.XHRBackend, i31.RequestOptions]), i0.ɵmpd(5120, i32.ShareButtons, i33.ShareButtonsFactory, [i32.CONFIG]), i0.ɵmpd(4608, i34.ServiceHandlerProvider, i34.ServiceHandlerProvider, [i27.HttpClient]), i0.ɵmpd(1073742336, i21.CommonModule, i21.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i22.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i26.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(512, i26.ɵangular_packages_router_router_h, i26.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(256, i0.APP_ID, "WTV", []), i0.ɵmpd(2048, i22.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p2_0, p2_1, p2_2) { return [i22.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i26.ɵangular_packages_router_router_i(p1_0), i22.ɵangular_packages_platform_browser_platform_browser_h(p2_0, p2_1, p2_2)]; }, [[2, i0.NgProbeToken], i26.ɵangular_packages_router_router_h, i22.ɵTRANSITION_ID, i21.DOCUMENT, i0.Injector]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i22.BrowserModule, i22.BrowserModule, [[3, i22.BrowserModule]]), i0.ɵmpd(1024, i26.ɵangular_packages_router_router_a, i26.ɵangular_packages_router_router_e, [[3, i26.Router]]), i0.ɵmpd(512, i26.UrlSerializer, i26.DefaultUrlSerializer, []), i0.ɵmpd(512, i26.ChildrenOutletContexts, i26.ChildrenOutletContexts, []), i0.ɵmpd(256, i26.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i21.LocationStrategy, i26.ɵangular_packages_router_router_d, [i21.PlatformLocation, [2, i21.APP_BASE_HREF], i26.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i21.Location, i21.Location, [i21.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i35.ModuleMapNgFactoryLoader, [i0.Compiler, i35.MODULE_MAP]), i0.ɵmpd(1024, i26.ROUTES, function () { return [[{ path: "", component: i36.HomePageComponent }, { path: "live", component: i37.LiveStreamComponent }, { path: "schedule", component: i38.ProgramsScheduleComponent }, { path: "programs", component: i39.ProgramsComponent }, { path: "articles", component: i40.ArticlesComponent }, { path: "sports", component: i41.SportsComponent }, { path: "video", component: i42.VideoComponent }, { path: "aboutUs", component: i43.AboutUsComponent }, { path: "privacy", component: i44.PrivacyComponent }, { path: "terms", component: i45.TermsComponent }, { path: "contactUs", component: i46.ContactUsComponent }, { path: "team", component: i47.TeamComponent }, { path: "articleDetails/:type/:id", component: i48.ArticleDetailsComponent }, { path: "program/:id", component: i49.ProgramDetailsComponent }, { path: "search", component: i50.SearchComponent }, { path: "team-detail/:id", component: i51.TeamDetailComponent }]]; }, []), i0.ɵmpd(1024, i26.Router, i26.ɵangular_packages_router_router_f, [i0.ApplicationRef, i26.UrlSerializer, i26.ChildrenOutletContexts, i21.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i26.ROUTES, i26.ROUTER_CONFIGURATION, [2, i26.UrlHandlingStrategy], [2, i26.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i26.RouterModule, i26.RouterModule, [[2, i26.ɵangular_packages_router_router_a], [2, i26.Router]]), i0.ɵmpd(1073742336, i52.AppRoutingModule, i52.AppRoutingModule, []), i0.ɵmpd(1073742336, i27.HttpClientXsrfModule, i27.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i27.HttpClientModule, i27.HttpClientModule, []), i0.ɵmpd(1073742336, i25.BrowserAnimationsModule, i25.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i29.YoutubePlayerModule, i29.YoutubePlayerModule, []), i0.ɵmpd(1073742336, i30.ɵangular_packages_forms_forms_bb, i30.ɵangular_packages_forms_forms_bb, []), i0.ɵmpd(1073742336, i30.FormsModule, i30.FormsModule, []), i0.ɵmpd(1073742336, i31.HttpModule, i31.HttpModule, []), i0.ɵmpd(1073742336, i32.ShareModule, i32.ShareModule, []), i0.ɵmpd(1073742336, i53.FontAwesomeModule, i53.FontAwesomeModule, []), i0.ɵmpd(1073742336, i33.ShareButtonModule, i33.ShareButtonModule, []), i0.ɵmpd(1073742336, i54.AppModule, i54.AppModule, []), i0.ɵmpd(1073742336, i25.NoopAnimationsModule, i25.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i23.ServerModule, i23.ServerModule, []), i0.ɵmpd(1073742336, i35.ModuleMapLoaderModule, i35.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i27.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i27.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i25.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i32.CONFIG, undefined, [])]); });
+var i32 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
+var i33 = __webpack_require__(/*! @ngx-share/core */ "@ngx-share/core");
+var i34 = __webpack_require__(/*! @ngx-share/button */ "@ngx-share/button");
+var i35 = __webpack_require__(/*! ./services/service-handler.service */ "./src/app/services/service-handler.service.ts");
+var i36 = __webpack_require__(/*! @nguniversal/module-map-ngfactory-loader */ "@nguniversal/module-map-ngfactory-loader");
+var i37 = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
+var i38 = __webpack_require__(/*! ./pages/live-stream/live-stream.component */ "./src/app/pages/live-stream/live-stream.component.ts");
+var i39 = __webpack_require__(/*! ./pages/programs-schedule/programs-schedule.component */ "./src/app/pages/programs-schedule/programs-schedule.component.ts");
+var i40 = __webpack_require__(/*! ./pages/programs/programs.component */ "./src/app/pages/programs/programs.component.ts");
+var i41 = __webpack_require__(/*! ./pages/articles/articles.component */ "./src/app/pages/articles/articles.component.ts");
+var i42 = __webpack_require__(/*! ./pages/sports/sports.component */ "./src/app/pages/sports/sports.component.ts");
+var i43 = __webpack_require__(/*! ./pages/video/video.component */ "./src/app/pages/video/video.component.ts");
+var i44 = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
+var i45 = __webpack_require__(/*! ./pages/privacy/privacy.component */ "./src/app/pages/privacy/privacy.component.ts");
+var i46 = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
+var i47 = __webpack_require__(/*! ./pages/contact-us/contact-us.component */ "./src/app/pages/contact-us/contact-us.component.ts");
+var i48 = __webpack_require__(/*! ./pages/team/team.component */ "./src/app/pages/team/team.component.ts");
+var i49 = __webpack_require__(/*! ./pages/article-details/article-details.component */ "./src/app/pages/article-details/article-details.component.ts");
+var i50 = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
+var i51 = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
+var i52 = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
+var i53 = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+var i54 = __webpack_require__(/*! @fortawesome/angular-fontawesome */ "@fortawesome/angular-fontawesome");
+var i55 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
+var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.HomePageComponentNgFactory, i5.LiveStreamComponentNgFactory, i6.ProgramsScheduleComponentNgFactory, i7.ProgramsComponentNgFactory, i8.ArticlesComponentNgFactory, i9.SportsComponentNgFactory, i10.VideoComponentNgFactory, i11.AboutUsComponentNgFactory, i12.PrivacyComponentNgFactory, i13.TermsComponentNgFactory, i14.ContactUsComponentNgFactory, i15.TeamComponentNgFactory, i16.ArticleDetailsComponentNgFactory, i17.ProgramDetailsComponentNgFactory, i18.SearchComponentNgFactory, i19.TeamDetailComponentNgFactory, i20.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_k, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i21.NgLocalization, i21.NgLocaleLocalization, [i0.LOCALE_ID, [2, i21.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_i, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_j, []), i0.ɵmpd(4608, i22.DomSanitizer, i22.ɵDomSanitizerImpl, [i21.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i22.DomSanitizer]), i0.ɵmpd(4608, i22.HAMMER_GESTURE_CONFIG, i22.HammerGestureConfig, []), i0.ɵmpd(5120, i22.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i22.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i22.ɵKeyEventsPlugin(p1_0), new i22.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i23.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i21.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i21.DOCUMENT, i21.DOCUMENT, i22.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i22.HAMMER_LOADER], i21.DOCUMENT]), i0.ɵmpd(4608, i22.EventManager, i22.EventManager, [i22.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i22.ɵDomSharedStylesHost, i22.ɵDomSharedStylesHost, [i21.DOCUMENT]), i0.ɵmpd(4608, i22.ɵDomRendererFactory2, i22.ɵDomRendererFactory2, [i22.EventManager, i22.ɵDomSharedStylesHost]), i0.ɵmpd(4608, i23.ɵangular_packages_platform_server_platform_server_c, i23.ɵangular_packages_platform_server_platform_server_c, [i21.DOCUMENT, [2, i22.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i22.ɵSharedStylesHost, null, [i23.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i23.ɵServerRendererFactory2, i23.ɵServerRendererFactory2, [i22.EventManager, i0.NgZone, i21.DOCUMENT, i22.ɵSharedStylesHost]), i0.ɵmpd(4608, i24.AnimationDriver, i24.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i24.ɵAnimationStyleNormalizer, i25.ɵangular_packages_platform_browser_animations_animations_c, []), i0.ɵmpd(4608, i24.ɵAnimationEngine, i25.ɵangular_packages_platform_browser_animations_animations_a, [i21.DOCUMENT, i24.AnimationDriver, i24.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i23.ɵangular_packages_platform_server_platform_server_a, [i23.ɵServerRendererFactory2, i24.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(5120, i26.ActivatedRoute, i26.ɵangular_packages_router_router_g, [i26.Router]), i0.ɵmpd(4608, i26.NoPreloading, i26.NoPreloading, []), i0.ɵmpd(6144, i26.PreloadingStrategy, null, [i26.NoPreloading]), i0.ɵmpd(135680, i26.RouterPreloader, i26.RouterPreloader, [i26.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i26.PreloadingStrategy]), i0.ɵmpd(4608, i26.PreloadAllModules, i26.PreloadAllModules, []), i0.ɵmpd(4608, i21.ViewportScroller, i21.ɵNullViewportScroller, []), i0.ɵmpd(5120, i26.ɵangular_packages_router_router_n, i26.ɵangular_packages_router_router_c, [i26.Router, i21.ViewportScroller, i26.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i26.ROUTER_INITIALIZER, i26.ɵangular_packages_router_router_j, [i26.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i26.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i27.HttpXsrfTokenExtractor, i27.ɵangular_packages_common_http_http_g, [i21.DOCUMENT, i0.PLATFORM_ID, i27.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i27.ɵangular_packages_common_http_http_h, i27.ɵangular_packages_common_http_http_h, [i27.HttpXsrfTokenExtractor, i27.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i27.HTTP_INTERCEPTORS, function (p0_0) { return [p0_0]; }, [i27.ɵangular_packages_common_http_http_h]), i0.ɵmpd(4608, i27.XhrFactory, i23.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i27.HttpXhrBackend, i27.HttpXhrBackend, [i27.XhrFactory]), i0.ɵmpd(6144, i27.HttpBackend, null, [i27.HttpXhrBackend]), i0.ɵmpd(5120, i27.HttpHandler, i23.ɵangular_packages_platform_server_platform_server_f, [i27.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i27.HttpClient, i27.HttpClient, [i27.HttpHandler]), i0.ɵmpd(4608, i27.ɵangular_packages_common_http_http_d, i27.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i28.AnimationBuilder, i25.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i22.DOCUMENT]), i0.ɵmpd(4608, i29.ɵb, i29.ɵb, [i0.NgZone]), i0.ɵmpd(4608, i30.ɵangular_packages_forms_forms_i, i30.ɵangular_packages_forms_forms_i, []), i0.ɵmpd(4608, i31.BrowserXhr, i31.BrowserXhr, []), i0.ɵmpd(4608, i31.ResponseOptions, i31.BaseResponseOptions, []), i0.ɵmpd(5120, i31.XSRFStrategy, i31.ɵangular_packages_http_http_a, []), i0.ɵmpd(4608, i31.XHRBackend, i31.XHRBackend, [i31.BrowserXhr, i31.ResponseOptions, i31.XSRFStrategy]), i0.ɵmpd(4608, i31.RequestOptions, i31.BaseRequestOptions, []), i0.ɵmpd(5120, i31.Http, i31.ɵangular_packages_http_http_b, [i31.XHRBackend, i31.RequestOptions]), i0.ɵmpd(5120, i32.MetaLoader, i32.metaFactory, []), i0.ɵmpd(4608, i32.MetaService, i32.MetaService, [i32.MetaLoader, i22.Title, i22.Meta]), i0.ɵmpd(4608, i32.MetaGuard, i32.MetaGuard, [i32.MetaService]), i0.ɵmpd(5120, i33.ShareButtons, i34.ShareButtonsFactory, [i33.CONFIG]), i0.ɵmpd(4608, i35.ServiceHandlerProvider, i35.ServiceHandlerProvider, [i27.HttpClient]), i0.ɵmpd(1073742336, i21.CommonModule, i21.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i22.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i26.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(512, i26.ɵangular_packages_router_router_h, i26.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(256, i0.APP_ID, "WTV", []), i0.ɵmpd(2048, i22.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p2_0, p2_1, p2_2) { return [i22.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i26.ɵangular_packages_router_router_i(p1_0), i22.ɵangular_packages_platform_browser_platform_browser_h(p2_0, p2_1, p2_2)]; }, [[2, i0.NgProbeToken], i26.ɵangular_packages_router_router_h, i22.ɵTRANSITION_ID, i21.DOCUMENT, i0.Injector]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i22.BrowserModule, i22.BrowserModule, [[3, i22.BrowserModule]]), i0.ɵmpd(1073742336, i32.MetaModule, i32.MetaModule, [[3, i32.MetaModule]]), i0.ɵmpd(1024, i26.ɵangular_packages_router_router_a, i26.ɵangular_packages_router_router_e, [[3, i26.Router]]), i0.ɵmpd(512, i26.UrlSerializer, i26.DefaultUrlSerializer, []), i0.ɵmpd(512, i26.ChildrenOutletContexts, i26.ChildrenOutletContexts, []), i0.ɵmpd(256, i26.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i21.LocationStrategy, i26.ɵangular_packages_router_router_d, [i21.PlatformLocation, [2, i21.APP_BASE_HREF], i26.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i21.Location, i21.Location, [i21.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i36.ModuleMapNgFactoryLoader, [i0.Compiler, i36.MODULE_MAP]), i0.ɵmpd(1024, i26.ROUTES, function () { return [[{ path: "", canActivateChild: [i32.MetaGuard], component: i37.HomePageComponent }, { path: "live", component: i38.LiveStreamComponent }, { path: "schedule", component: i39.ProgramsScheduleComponent }, { path: "programs", component: i40.ProgramsComponent }, { path: "articles", component: i41.ArticlesComponent }, { path: "sports", component: i42.SportsComponent }, { path: "video", component: i43.VideoComponent }, { path: "aboutUs", component: i44.AboutUsComponent }, { path: "privacy", component: i45.PrivacyComponent }, { path: "terms", component: i46.TermsComponent }, { path: "contactUs", component: i47.ContactUsComponent }, { path: "team", component: i48.TeamComponent }, { path: "articleDetails/:type/:id", component: i49.ArticleDetailsComponent }, { path: "program/:id", component: i50.ProgramDetailsComponent }, { path: "search", component: i51.SearchComponent }, { path: "team-detail/:id", component: i52.TeamDetailComponent }]]; }, []), i0.ɵmpd(1024, i26.Router, i26.ɵangular_packages_router_router_f, [i0.ApplicationRef, i26.UrlSerializer, i26.ChildrenOutletContexts, i21.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i26.ROUTES, i26.ROUTER_CONFIGURATION, [2, i26.UrlHandlingStrategy], [2, i26.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i26.RouterModule, i26.RouterModule, [[2, i26.ɵangular_packages_router_router_a], [2, i26.Router]]), i0.ɵmpd(1073742336, i53.AppRoutingModule, i53.AppRoutingModule, []), i0.ɵmpd(1073742336, i27.HttpClientXsrfModule, i27.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i27.HttpClientModule, i27.HttpClientModule, []), i0.ɵmpd(1073742336, i25.BrowserAnimationsModule, i25.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i29.YoutubePlayerModule, i29.YoutubePlayerModule, []), i0.ɵmpd(1073742336, i30.ɵangular_packages_forms_forms_bb, i30.ɵangular_packages_forms_forms_bb, []), i0.ɵmpd(1073742336, i30.FormsModule, i30.FormsModule, []), i0.ɵmpd(1073742336, i31.HttpModule, i31.HttpModule, []), i0.ɵmpd(1073742336, i33.ShareModule, i33.ShareModule, []), i0.ɵmpd(1073742336, i54.FontAwesomeModule, i54.FontAwesomeModule, []), i0.ɵmpd(1073742336, i34.ShareButtonModule, i34.ShareButtonModule, []), i0.ɵmpd(1073742336, i55.AppModule, i55.AppModule, []), i0.ɵmpd(1073742336, i25.NoopAnimationsModule, i25.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i23.ServerModule, i23.ServerModule, []), i0.ɵmpd(1073742336, i36.ModuleMapLoaderModule, i36.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i27.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i27.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i25.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i33.CONFIG, undefined, [])]); });
 exports.AppServerModuleNgFactory = AppServerModuleNgFactory;
 
 
@@ -626,8 +630,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -818,8 +822,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1025,8 +1029,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1135,6 +1139,7 @@ var i13 = __webpack_require__(/*! ../../components/mobile-apps-icons/mobile-apps
 var i14 = __webpack_require__(/*! ./article-details.component */ "./src/app/pages/article-details/article-details.component.ts");
 var i15 = __webpack_require__(/*! ../../services/uiServices/articles.service */ "./src/app/services/uiServices/articles.service.ts");
 var i16 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i17 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
 var styles_ArticleDetailsComponent = [i0.styles];
 var RenderType_ArticleDetailsComponent = i1.ɵcrt({ encapsulation: 2, styles: styles_ArticleDetailsComponent, data: {} });
 exports.RenderType_ArticleDetailsComponent = RenderType_ArticleDetailsComponent;
@@ -1214,7 +1219,7 @@ function View_ArticleDetailsComponent_0(_l) { return i1.ɵvid(0, [i1.ɵpid(0, i4
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(134, 671744, null, 0, i8.RouterLinkWithHref, [i8.Router, i8.ActivatedRoute, i4.LocationStrategy], { routerLink: [0, "routerLink"] }, null), (_l()(), i1.ɵted(-1, null, ["\u0634\u0631\u0648\u0637 \u0627\u0644\u0627\u0633\u062A\u062E\u062F\u0627\u0645"])), (_l()(), i1.ɵeld(136, 0, null, null, 0, "hr", [], null, null, null, null, null)), (_l()(), i1.ɵeld(137, 0, null, null, 8, "div", [["class", "row footer_row_p2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(138, 0, null, null, 2, "div", [["class", "col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_icons"]], null, null, null, null, null)), (_l()(), i1.ɵeld(139, 0, null, null, 1, "app-social-media-icons", [["type", "footer"]], null, null, null, i9.View_SocialMediaIconsComponent_0, i9.RenderType_SocialMediaIconsComponent)), i1.ɵdid(140, 114688, null, 0, i10.SocialMediaIconsComponent, [i11.HomePageServicesService], { type: [0, "type"] }, null), (_l()(), i1.ɵeld(141, 0, null, null, 1, "div", [["class", "col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_dev"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" DEVELOPED BY: LIBYANA MEDIA PRODUCTION "])), (_l()(), i1.ɵeld(143, 0, null, null, 2, "div", [["class", "col-lg-4   col-md-4  col-sm-4 col-xs-12  footer_copy"]], null, null, null, null, null)), (_l()(), i1.ɵeld(144, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["\u062C\u0645\u064A\u0639 \u0627\u0644\u062D\u0642\u0648\u0642 \u0627\u0644\u0645\u0644\u0643\u064A\u0629 \u062A\u0627\u0628\u0639\u0629 \u0644\u0634\u0628\u0643\u0629 \u0627\u0644\u0648\u0633\u0637"])), (_l()(), i1.ɵeld(146, 0, null, null, 0, "span", [["class", "clearfix"]], null, null, null, null, null)), (_l()(), i1.ɵeld(147, 0, null, null, 0, "div", [["class", "col-lg-12  col-md-12  col-xs-12  "], ["style", "text-align: center"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_2 = "/"; _ck(_v, 4, 0, currVal_2); var currVal_5 = "/"; _ck(_v, 13, 0, currVal_5); var currVal_8 = "/live"; _ck(_v, 19, 0, currVal_8); var currVal_11 = "/schedule"; _ck(_v, 23, 0, currVal_11); var currVal_14 = "/programs"; _ck(_v, 27, 0, currVal_14); var currVal_15 = "nav-item"; var currVal_16 = _ck(_v, 31, 0, (_co.articleType == "article"), (_co.articleType != "article")); _ck(_v, 30, 0, currVal_15, currVal_16); var currVal_19 = "/articles"; _ck(_v, 33, 0, currVal_19); var currVal_20 = "nav-item"; var currVal_21 = _ck(_v, 37, 0, (_co.articleType == "sports"), (_co.articleType != "sports")); _ck(_v, 36, 0, currVal_20, currVal_21); var currVal_24 = "/sports"; _ck(_v, 39, 0, currVal_24); var currVal_27 = "/video"; _ck(_v, 43, 0, currVal_27); var currVal_28 = "header"; _ck(_v, 46, 0, currVal_28); var currVal_29 = ((_co.showCarousel && (_co.selectedArticle.videos != null)) && (_co.selectedArticle.videos != "")); _ck(_v, 55, 0, currVal_29); var currVal_30 = (_co.showCarousel && ((_co.selectedArticle.videos == null) || (_co.selectedArticle.videos == ""))); _ck(_v, 57, 0, currVal_30); var currVal_32 = "facebook"; var currVal_33 = _co.sharingLink; _ck(_v, 62, 0, currVal_32, currVal_33); var currVal_35 = "twitter"; var currVal_36 = _co.sharingLink; _ck(_v, 64, 0, currVal_35, currVal_36); var currVal_43 = _co.articles; _ck(_v, 81, 0, currVal_43); _ck(_v, 90, 0); var currVal_46 = "/"; _ck(_v, 97, 0, currVal_46); var currVal_49 = "/live"; _ck(_v, 100, 0, currVal_49); var currVal_52 = "/schedule"; _ck(_v, 103, 0, currVal_52); var currVal_55 = "/programs"; _ck(_v, 106, 0, currVal_55); var currVal_58 = _ck(_v, 110, 0, (_co.articleType == "article"), (_co.articleType != "article")); _ck(_v, 109, 0, currVal_58); var currVal_59 = "/articles"; _ck(_v, 111, 0, currVal_59); var currVal_62 = _ck(_v, 115, 0, (_co.articleType == "sports"), (_co.articleType != "sports")); _ck(_v, 114, 0, currVal_62); var currVal_63 = "/sports"; _ck(_v, 116, 0, currVal_63); var currVal_66 = "/video"; _ck(_v, 119, 0, currVal_66); var currVal_69 = "/aboutUs"; _ck(_v, 122, 0, currVal_69); var currVal_72 = "/contactUs"; _ck(_v, 125, 0, currVal_72); var currVal_75 = "/team"; _ck(_v, 128, 0, currVal_75); var currVal_78 = "/privacy"; _ck(_v, 131, 0, currVal_78); var currVal_81 = "/terms"; _ck(_v, 134, 0, currVal_81); var currVal_82 = "footer"; _ck(_v, 140, 0, currVal_82); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 4).target; var currVal_1 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_3 = i1.ɵnov(_v, 13).target; var currVal_4 = i1.ɵnov(_v, 13).href; _ck(_v, 12, 0, currVal_3, currVal_4); var currVal_6 = i1.ɵnov(_v, 19).target; var currVal_7 = i1.ɵnov(_v, 19).href; _ck(_v, 18, 0, currVal_6, currVal_7); var currVal_9 = i1.ɵnov(_v, 23).target; var currVal_10 = i1.ɵnov(_v, 23).href; _ck(_v, 22, 0, currVal_9, currVal_10); var currVal_12 = i1.ɵnov(_v, 27).target; var currVal_13 = i1.ɵnov(_v, 27).href; _ck(_v, 26, 0, currVal_12, currVal_13); var currVal_17 = i1.ɵnov(_v, 33).target; var currVal_18 = i1.ɵnov(_v, 33).href; _ck(_v, 32, 0, currVal_17, currVal_18); var currVal_22 = i1.ɵnov(_v, 39).target; var currVal_23 = i1.ɵnov(_v, 39).href; _ck(_v, 38, 0, currVal_22, currVal_23); var currVal_25 = i1.ɵnov(_v, 43).target; var currVal_26 = i1.ɵnov(_v, 43).href; _ck(_v, 42, 0, currVal_25, currVal_26); var currVal_31 = i1.ɵnov(_v, 62).buttonClass; _ck(_v, 61, 0, currVal_31); var currVal_34 = i1.ɵnov(_v, 64).buttonClass; _ck(_v, 63, 0, currVal_34); var currVal_37 = _co.selectedArticle.caption; _ck(_v, 68, 0, currVal_37); var currVal_38 = i1.ɵunv(_v, 70, 0, _ck(_v, 71, 0, i1.ɵnov(_v, 0), _co.selectedArticle.publishDate)); var currVal_39 = _co.selectedArticle.publishTime; _ck(_v, 70, 0, currVal_38, currVal_39); var currVal_40 = _co.selectedArticle.writer; _ck(_v, 73, 0, currVal_40); var currVal_41 = _co.selectedArticle.name; _ck(_v, 75, 0, currVal_41); var currVal_42 = _co.articleBody; _ck(_v, 76, 0, currVal_42); var currVal_44 = i1.ɵnov(_v, 97).target; var currVal_45 = i1.ɵnov(_v, 97).href; _ck(_v, 96, 0, currVal_44, currVal_45); var currVal_47 = i1.ɵnov(_v, 100).target; var currVal_48 = i1.ɵnov(_v, 100).href; _ck(_v, 99, 0, currVal_47, currVal_48); var currVal_50 = i1.ɵnov(_v, 103).target; var currVal_51 = i1.ɵnov(_v, 103).href; _ck(_v, 102, 0, currVal_50, currVal_51); var currVal_53 = i1.ɵnov(_v, 106).target; var currVal_54 = i1.ɵnov(_v, 106).href; _ck(_v, 105, 0, currVal_53, currVal_54); var currVal_56 = i1.ɵnov(_v, 111).target; var currVal_57 = i1.ɵnov(_v, 111).href; _ck(_v, 108, 0, currVal_56, currVal_57); var currVal_60 = i1.ɵnov(_v, 116).target; var currVal_61 = i1.ɵnov(_v, 116).href; _ck(_v, 113, 0, currVal_60, currVal_61); var currVal_64 = i1.ɵnov(_v, 119).target; var currVal_65 = i1.ɵnov(_v, 119).href; _ck(_v, 118, 0, currVal_64, currVal_65); var currVal_67 = i1.ɵnov(_v, 122).target; var currVal_68 = i1.ɵnov(_v, 122).href; _ck(_v, 121, 0, currVal_67, currVal_68); var currVal_70 = i1.ɵnov(_v, 125).target; var currVal_71 = i1.ɵnov(_v, 125).href; _ck(_v, 124, 0, currVal_70, currVal_71); var currVal_73 = i1.ɵnov(_v, 128).target; var currVal_74 = i1.ɵnov(_v, 128).href; _ck(_v, 127, 0, currVal_73, currVal_74); var currVal_76 = i1.ɵnov(_v, 131).target; var currVal_77 = i1.ɵnov(_v, 131).href; _ck(_v, 130, 0, currVal_76, currVal_77); var currVal_79 = i1.ɵnov(_v, 134).target; var currVal_80 = i1.ɵnov(_v, 134).href; _ck(_v, 133, 0, currVal_79, currVal_80); }); }
 exports.View_ArticleDetailsComponent_0 = View_ArticleDetailsComponent_0;
-function View_ArticleDetailsComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-article-details", [], null, null, null, View_ArticleDetailsComponent_0, RenderType_ArticleDetailsComponent)), i1.ɵdid(1, 114688, null, 0, i14.ArticleDetailsComponent, [i8.ActivatedRoute, i15.ArticlesService, i16.DomSanitizer, i4.Location, i8.Router, i16.Meta], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_ArticleDetailsComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-article-details", [], null, null, null, View_ArticleDetailsComponent_0, RenderType_ArticleDetailsComponent)), i1.ɵdid(1, 114688, null, 0, i14.ArticleDetailsComponent, [i8.ActivatedRoute, i15.ArticlesService, i16.DomSanitizer, i4.Location, i8.Router, i17.MetaService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_ArticleDetailsComponent_Host_0 = View_ArticleDetailsComponent_Host_0;
 var ArticleDetailsComponentNgFactory = i1.ɵccf("app-article-details", i14.ArticleDetailsComponent, View_ArticleDetailsComponent_Host_0, {}, {}, []);
 exports.ArticleDetailsComponentNgFactory = ArticleDetailsComponentNgFactory;
@@ -1246,8 +1251,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1274,15 +1279,15 @@ var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@
 var common_1 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var router_2 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var Constants_1 = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
-var platform_browser_2 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var core_2 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, Meta) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, meta) {
         this.route = route;
         this.articlesServices = articlesServices;
         this.sanitizer = sanitizer;
         this.location = location;
         this.router = router;
-        this.Meta = Meta;
+        this.meta = meta;
         this.selectedArticle = {
             article: "",
             caption: "",
@@ -1323,24 +1328,36 @@ var ArticleDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedArticle = _b.sent();
                         console.log(this.selectedArticle);
-                        this.Meta.updateTag({
-                            property: "og:title", content: this.selectedArticle.caption
-                        });
-                        this.Meta.updateTag({
-                            property: "og:description", content: this.selectedArticle.name
-                        });
-                        this.Meta.updateTag({
-                            property: "og:image", content: this.selectedArticle.images[0]
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:title", content: this.selectedArticle.caption
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:description", content: this.selectedArticle.name
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:image", content: this.selectedArticle.images[0]
-                        });
+                        // this.meta.setTag({
+                        //   property:"og:title", content: this.selectedArticle.caption
+                        // });
+                        // this.Meta.updateTag({
+                        //   property:"og:description", content: this.selectedArticle.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   property:"og:image", content: this.selectedArticle.images[0]
+                        // });
+                        // this.Meta.updateTag({
+                        //   name:"twitter:title",  content: this.selectedArticle.caption
+                        // });
+                        // this.Meta.updateTag({
+                        //   name:"twitter:description",  content: this.selectedArticle.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   name:"twitter:image",  content: this.selectedArticle.images[0]
+                        // });
+                        this.meta.removeTag('property="og:title"');
+                        this.meta.removeTag('property="og:description"');
+                        this.meta.removeTag('property="og:image"');
+                        this.meta.removeTag('property="twitter:title"');
+                        this.meta.removeTag('property="twitter:description"');
+                        this.meta.removeTag('property="twitter:image"');
+                        this.meta.setTag('og:title', this.selectedArticle.caption);
+                        this.meta.setTag('og:description', this.selectedArticle.name);
+                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
+                        this.meta.setTag('twitter:title', this.selectedArticle.caption);
+                        this.meta.setTag('twitter:description', this.selectedArticle.name);
+                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
                         this.showCarousel = true;
@@ -1351,8 +1368,8 @@ var ArticleDetailsComponent = /** @class */ (function () {
     };
     ArticleDetailsComponent.prototype.loadArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -1553,8 +1570,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1593,8 +1610,8 @@ var ArticlesComponent = /** @class */ (function () {
     };
     ArticlesComponent.prototype.loadArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -1779,8 +1796,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2114,8 +2131,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2243,8 +2260,8 @@ var HomePageComponent = /** @class */ (function () {
     };
     HomePageComponent.prototype.getContactDetails = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a, _b, _c, params, params2;
+            var _this = this;
             return __generator(this, function (_d) {
                 switch (_d.label) {
                     case 0:
@@ -2359,8 +2376,8 @@ var HomePageComponent = /** @class */ (function () {
     };
     HomePageComponent.prototype.getProgramsVideos = function (programPlayListId, programNum) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var params;
+            var _this = this;
             return __generator(this, function (_a) {
                 params = { "part": "snippet,contentDetails", "maxResults": "10", "playlistId": programPlayListId, "key": Constants_1.Constants.YOUTUBE_API_KEY, "h1": "ar" };
                 this.serviceHandeler.runService("https://www.googleapis.com/youtube/v3/playlistItems", "GET", null, null, null, params).subscribe(function (response) {
@@ -2612,8 +2629,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2649,8 +2666,8 @@ var LiveStreamComponent = /** @class */ (function () {
     };
     LiveStreamComponent.prototype.getContactDetails = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a, params;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -2823,8 +2840,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2933,7 +2950,7 @@ var i13 = __webpack_require__(/*! ../../components/mobile-apps-icons/mobile-apps
 var i14 = __webpack_require__(/*! ./program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
 var i15 = __webpack_require__(/*! ../../services/uiServices/programs.service */ "./src/app/services/uiServices/programs.service.ts");
 var i16 = __webpack_require__(/*! ../../services/service-handler.service */ "./src/app/services/service-handler.service.ts");
-var i17 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i17 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
 var styles_ProgramDetailsComponent = [i0.styles];
 var RenderType_ProgramDetailsComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_ProgramDetailsComponent, data: {} });
 exports.RenderType_ProgramDetailsComponent = RenderType_ProgramDetailsComponent;
@@ -3003,7 +3020,7 @@ function View_ProgramDetailsComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵ
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(123, 671744, null, 0, i4.RouterLinkWithHref, [i4.Router, i4.ActivatedRoute, i5.LocationStrategy], { routerLink: [0, "routerLink"] }, null), (_l()(), i1.ɵted(-1, null, ["\u0634\u0631\u0648\u0637 \u0627\u0644\u0627\u0633\u062A\u062E\u062F\u0627\u0645"])), (_l()(), i1.ɵeld(125, 0, null, null, 0, "hr", [], null, null, null, null, null)), (_l()(), i1.ɵeld(126, 0, null, null, 8, "div", [["class", "row footer_row_p2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(127, 0, null, null, 2, "div", [["class", "col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_icons"]], null, null, null, null, null)), (_l()(), i1.ɵeld(128, 0, null, null, 1, "app-social-media-icons", [["type", "footer"]], null, null, null, i6.View_SocialMediaIconsComponent_0, i6.RenderType_SocialMediaIconsComponent)), i1.ɵdid(129, 114688, null, 0, i7.SocialMediaIconsComponent, [i8.HomePageServicesService], { type: [0, "type"] }, null), (_l()(), i1.ɵeld(130, 0, null, null, 1, "div", [["class", "col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_dev"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" DEVELOPED BY: LIBYANA MEDIA PRODUCTION "])), (_l()(), i1.ɵeld(132, 0, null, null, 2, "div", [["class", "col-lg-4   col-md-4  col-sm-4 col-xs-12  footer_copy"]], null, null, null, null, null)), (_l()(), i1.ɵeld(133, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["\u062C\u0645\u064A\u0639 \u0627\u0644\u062D\u0642\u0648\u0642 \u0627\u0644\u0645\u0644\u0643\u064A\u0629 \u062A\u0627\u0628\u0639\u0629 \u0644\u0634\u0628\u0643\u0629 \u0627\u0644\u0648\u0633\u0637"])), (_l()(), i1.ɵeld(135, 0, null, null, 0, "span", [["class", "clearfix"]], null, null, null, null, null)), (_l()(), i1.ɵeld(136, 0, null, null, 0, "div", [["class", "col-lg-12  col-md-12  col-xs-12  "], ["style", "text-align: center"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_2 = "/"; _ck(_v, 3, 0, currVal_2); var currVal_5 = "/"; _ck(_v, 12, 0, currVal_5); var currVal_8 = "/live"; _ck(_v, 18, 0, currVal_8); var currVal_11 = "/schedule"; _ck(_v, 22, 0, currVal_11); var currVal_14 = "/programs"; _ck(_v, 26, 0, currVal_14); var currVal_17 = "/articles"; _ck(_v, 30, 0, currVal_17); var currVal_20 = "/sports"; _ck(_v, 34, 0, currVal_20); var currVal_23 = "/video"; _ck(_v, 38, 0, currVal_23); var currVal_24 = "header"; _ck(_v, 41, 0, currVal_24); var currVal_27 = "facebook"; var currVal_28 = _co.sharingLink; var currVal_29 = "Title for shared link"; var currVal_30 = "Title for shared link"; var currVal_31 = _co.selectedProgram.webBanner; _ck(_v, 56, 0, currVal_27, currVal_28, currVal_29, currVal_30, currVal_31); var currVal_33 = "twitter"; var currVal_34 = _co.sharingLink; var currVal_35 = "Title for shared link"; var currVal_36 = "Title for shared link"; var currVal_37 = _co.selectedProgram.webBanner; _ck(_v, 58, 0, currVal_33, currVal_34, currVal_35, currVal_36, currVal_37); var currVal_42 = _co.programYoutubeVideos; _ck(_v, 74, 0, currVal_42); _ck(_v, 83, 0); var currVal_45 = "/"; _ck(_v, 90, 0, currVal_45); var currVal_48 = "/live"; _ck(_v, 93, 0, currVal_48); var currVal_51 = "/schedule"; _ck(_v, 96, 0, currVal_51); var currVal_54 = "/programs"; _ck(_v, 99, 0, currVal_54); var currVal_57 = "/articles"; _ck(_v, 102, 0, currVal_57); var currVal_60 = "/sports"; _ck(_v, 105, 0, currVal_60); var currVal_63 = "/video"; _ck(_v, 108, 0, currVal_63); var currVal_66 = "/aboutUs"; _ck(_v, 111, 0, currVal_66); var currVal_69 = "/contactUs"; _ck(_v, 114, 0, currVal_69); var currVal_72 = "/team"; _ck(_v, 117, 0, currVal_72); var currVal_75 = "/privacy"; _ck(_v, 120, 0, currVal_75); var currVal_78 = "/terms"; _ck(_v, 123, 0, currVal_78); var currVal_79 = "footer"; _ck(_v, 129, 0, currVal_79); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 3).target; var currVal_1 = i1.ɵnov(_v, 3).href; _ck(_v, 2, 0, currVal_0, currVal_1); var currVal_3 = i1.ɵnov(_v, 12).target; var currVal_4 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_3, currVal_4); var currVal_6 = i1.ɵnov(_v, 18).target; var currVal_7 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_6, currVal_7); var currVal_9 = i1.ɵnov(_v, 22).target; var currVal_10 = i1.ɵnov(_v, 22).href; _ck(_v, 21, 0, currVal_9, currVal_10); var currVal_12 = i1.ɵnov(_v, 26).target; var currVal_13 = i1.ɵnov(_v, 26).href; _ck(_v, 25, 0, currVal_12, currVal_13); var currVal_15 = i1.ɵnov(_v, 30).target; var currVal_16 = i1.ɵnov(_v, 30).href; _ck(_v, 29, 0, currVal_15, currVal_16); var currVal_18 = i1.ɵnov(_v, 34).target; var currVal_19 = i1.ɵnov(_v, 34).href; _ck(_v, 33, 0, currVal_18, currVal_19); var currVal_21 = i1.ɵnov(_v, 38).target; var currVal_22 = i1.ɵnov(_v, 38).href; _ck(_v, 37, 0, currVal_21, currVal_22); var currVal_25 = i1.ɵinlineInterpolate(1, "", _co.selectedProgram.webBanner, ""); _ck(_v, 46, 0, currVal_25); var currVal_26 = i1.ɵnov(_v, 56).buttonClass; _ck(_v, 55, 0, currVal_26); var currVal_32 = i1.ɵnov(_v, 58).buttonClass; _ck(_v, 57, 0, currVal_32); var currVal_38 = _co.selectedProgram.programDate; _ck(_v, 62, 0, currVal_38); var currVal_39 = _co.selectedProgram.name; _ck(_v, 64, 0, currVal_39); var currVal_40 = _co.selectedProgram.presenter; _ck(_v, 66, 0, currVal_40); var currVal_41 = _co.selectedProgram.description; _ck(_v, 68, 0, currVal_41); var currVal_43 = i1.ɵnov(_v, 90).target; var currVal_44 = i1.ɵnov(_v, 90).href; _ck(_v, 89, 0, currVal_43, currVal_44); var currVal_46 = i1.ɵnov(_v, 93).target; var currVal_47 = i1.ɵnov(_v, 93).href; _ck(_v, 92, 0, currVal_46, currVal_47); var currVal_49 = i1.ɵnov(_v, 96).target; var currVal_50 = i1.ɵnov(_v, 96).href; _ck(_v, 95, 0, currVal_49, currVal_50); var currVal_52 = i1.ɵnov(_v, 99).target; var currVal_53 = i1.ɵnov(_v, 99).href; _ck(_v, 98, 0, currVal_52, currVal_53); var currVal_55 = i1.ɵnov(_v, 102).target; var currVal_56 = i1.ɵnov(_v, 102).href; _ck(_v, 101, 0, currVal_55, currVal_56); var currVal_58 = i1.ɵnov(_v, 105).target; var currVal_59 = i1.ɵnov(_v, 105).href; _ck(_v, 104, 0, currVal_58, currVal_59); var currVal_61 = i1.ɵnov(_v, 108).target; var currVal_62 = i1.ɵnov(_v, 108).href; _ck(_v, 107, 0, currVal_61, currVal_62); var currVal_64 = i1.ɵnov(_v, 111).target; var currVal_65 = i1.ɵnov(_v, 111).href; _ck(_v, 110, 0, currVal_64, currVal_65); var currVal_67 = i1.ɵnov(_v, 114).target; var currVal_68 = i1.ɵnov(_v, 114).href; _ck(_v, 113, 0, currVal_67, currVal_68); var currVal_70 = i1.ɵnov(_v, 117).target; var currVal_71 = i1.ɵnov(_v, 117).href; _ck(_v, 116, 0, currVal_70, currVal_71); var currVal_73 = i1.ɵnov(_v, 120).target; var currVal_74 = i1.ɵnov(_v, 120).href; _ck(_v, 119, 0, currVal_73, currVal_74); var currVal_76 = i1.ɵnov(_v, 123).target; var currVal_77 = i1.ɵnov(_v, 123).href; _ck(_v, 122, 0, currVal_76, currVal_77); }); }
 exports.View_ProgramDetailsComponent_0 = View_ProgramDetailsComponent_0;
-function View_ProgramDetailsComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-program-details", [], null, null, null, View_ProgramDetailsComponent_0, RenderType_ProgramDetailsComponent)), i1.ɵdid(1, 114688, null, 0, i14.ProgramDetailsComponent, [i15.ProgramsService, i4.ActivatedRoute, i16.ServiceHandlerProvider, i4.Router, i17.Meta], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_ProgramDetailsComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-program-details", [], null, null, null, View_ProgramDetailsComponent_0, RenderType_ProgramDetailsComponent)), i1.ɵdid(1, 114688, null, 0, i14.ProgramDetailsComponent, [i15.ProgramsService, i4.ActivatedRoute, i16.ServiceHandlerProvider, i4.Router, i17.MetaService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_ProgramDetailsComponent_Host_0 = View_ProgramDetailsComponent_Host_0;
 var ProgramDetailsComponentNgFactory = i1.ɵccf("app-program-details", i14.ProgramDetailsComponent, View_ProgramDetailsComponent_Host_0, {}, {}, []);
 exports.ProgramDetailsComponentNgFactory = ProgramDetailsComponentNgFactory;
@@ -3035,8 +3052,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3063,14 +3080,14 @@ var service_handler_service_1 = __webpack_require__(/*! src/app/services/service
 var Constants_1 = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
 var router_2 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var moment = __webpack_require__(/*! moment */ "moment");
-var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var core_2 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
 var ProgramDetailsComponent = /** @class */ (function () {
-    function ProgramDetailsComponent(programService, route, serviceHandeler, router, Meta) {
+    function ProgramDetailsComponent(programService, route, serviceHandeler, router, meta) {
         this.programService = programService;
         this.route = route;
         this.serviceHandeler = serviceHandeler;
         this.router = router;
-        this.Meta = Meta;
+        this.meta = meta;
         this.selectedProgram = {
             name: "",
             description: "",
@@ -3106,24 +3123,36 @@ var ProgramDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedProgram = _b.sent();
                         console.log(this.selectedProgram);
-                        this.Meta.updateTag({
-                            property: "og:title", content: this.selectedProgram.name
-                        });
-                        this.Meta.updateTag({
-                            property: "og:description", content: this.selectedProgram.description
-                        });
-                        this.Meta.updateTag({
-                            property: "og:image", content: this.selectedProgram.mobBanner
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:title", content: this.selectedProgram.name
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:description", content: this.selectedProgram.description
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:image", content: this.selectedProgram.mobBanner
-                        });
+                        // this.Meta.updateTag({
+                        //   property: "og:title", content: this.selectedProgram.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   property: "og:description", content: this.selectedProgram.description
+                        // });
+                        // this.Meta.updateTag({
+                        //   property: "og:image", content: this.selectedProgram.mobBanner
+                        // });
+                        // this.Meta.updateTag({
+                        //   name: "twitter:title", content: this.selectedProgram.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   name: "twitter:description", content: this.selectedProgram.description
+                        // });
+                        // this.Meta.updateTag({
+                        //   name: "twitter:image", content: this.selectedProgram.mobBanner
+                        // });
+                        this.meta.removeTag('property="og:title"');
+                        this.meta.removeTag('property="og:description"');
+                        this.meta.removeTag('property="og:image"');
+                        this.meta.removeTag('property="twitter:title"');
+                        this.meta.removeTag('property="twitter:description"');
+                        this.meta.removeTag('property="twitter:image"');
+                        this.meta.setTag('og:title', this.selectedProgram.name);
+                        this.meta.setTag('og:description', this.selectedProgram.description);
+                        this.meta.setTag('og:image', this.selectedProgram.mobBanner);
+                        this.meta.setTag('twitter:title', this.selectedProgram.name);
+                        this.meta.setTag('twitter:description', this.selectedProgram.description);
+                        this.meta.setTag('og:image', this.selectedProgram.mobBanner);
                         this.getVideos();
                         return [2 /*return*/];
                 }
@@ -3346,8 +3375,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3666,8 +3695,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3914,8 +3943,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3967,8 +3996,8 @@ var SearchComponent = /** @class */ (function () {
     };
     SearchComponent.prototype.searchArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -3988,8 +4017,8 @@ var SearchComponent = /** @class */ (function () {
     };
     SearchComponent.prototype.searchVidoes = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var params;
+            var _this = this;
             return __generator(this, function (_a) {
                 params = {
                     part: "snippet",
@@ -4219,8 +4248,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -4255,8 +4284,8 @@ var SportsComponent = /** @class */ (function () {
     };
     SportsComponent.prototype.loadArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -4440,8 +4469,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -4483,8 +4512,8 @@ var TeamDetailComponent = /** @class */ (function () {
     };
     TeamDetailComponent.prototype.getTeam = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -4654,8 +4683,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -4849,8 +4878,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -5056,8 +5085,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -5258,8 +5287,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -5477,8 +5506,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -5597,8 +5626,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateLogo = function (settingsId, logoKey, logoUrl) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        " + logoKey + ":\"" + logoUrl + "\"\n      }){\n        " + logoKey + "\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5620,8 +5649,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateSetting = function (settingsId, settingKey, settingValue) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        " + settingKey + ":\"" + settingValue + "\"\n      }){\n        " + settingKey + "\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5643,8 +5672,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateNewsProgram = function (settingsId, newsProgramId) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        newsPrograms:{\n          connect:{\n            id:\"" + newsProgramId + "\"\n          }\n        }\n      }){\n        newsPrograms{\n          id,\n          name\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5666,8 +5695,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateAppsUrl = function (settingsId, androidUrl, iosUrl) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        infoDaTa:{\n          update:{\n            iosUrl:\"" + iosUrl + "\",\n            andUrl:\"" + androidUrl + "\"\n          }\n        }\n      }){\n        infoDaTa{\n          andUrl,\n          iosUrl\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5689,8 +5718,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateSpecialBanners = function (settingsId, firstBannerId, secondBannerId, thirdBannerId, fourthBannerId, fivethBannerId, sixthBannerId, priviousBanners) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var disconnectQuery, query;
+            var _this = this;
             return __generator(this, function (_a) {
                 disconnectQuery = "[]";
                 switch (priviousBanners.length) {
@@ -5747,8 +5776,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateSpecialPrograms = function (settingsId, firstProgramId, secondProgramId, thirdProgramId, fourthProgramId, fivethProgramId, sixthProgramId, priviousPrograms) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var disconnectQuery, query;
+            var _this = this;
             return __generator(this, function (_a) {
                 disconnectQuery = "[]";
                 switch (priviousPrograms.length) {
@@ -5805,8 +5834,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateVideos = function (settingsId, videosUrl) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(\n        where:{id:\"" + settingsId + "\"},\n        data:{\n          infoDaTa:{\n            update:{\n              videosUrl:\"" + videosUrl + "\"\n            }\n          }\n        }\n      ){\n        infoDaTa{\n          videosUrl\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5828,8 +5857,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateContactInfo = function (settingsId, phone, email, address) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(\n        where:{id:\"" + settingsId + "\"},\n        data:{\n          infoDaTa:{\n            update:{\n              phone: " + parseInt(phone) + ",\n              address:\"" + address + "\",\n              email:\"" + email + "\"\n            }\n          }\n        }\n      ){\n        infoDaTa{\n          phone,\n          address,\n          email\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5851,8 +5880,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateAboutUs = function (settingsId, aboutUsText) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{updateSetting(where:{id:\"" + settingsId + "\"},data:{infoDaTa:{update:{aboutUs:\"" + this.escapeDoubleQuotes(aboutUsText) + "\"}}}){infoDaTa{aboutUs}}}";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5874,8 +5903,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateTerms = function (settingsId, terms) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{updateSetting(where:{id:\"" + settingsId + "\"},data:{infoDaTa:{update:{termsOfUse:\"" + this.escapeDoubleQuotes(terms) + "\"}}}){infoDaTa{termsOfUse}}}";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -5897,8 +5926,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updatePolicy = function (settingsId, policy) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{updateSetting(where:{id:\"" + settingsId + "\"},data:{infoDaTa:{update:{policy:\"" + this.escapeDoubleQuotes(policy) + "\"}}}){infoDaTa{policy}}}";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -6019,8 +6048,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -6212,8 +6241,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -6506,6 +6535,17 @@ module.exports = require("@fortawesome/angular-fontawesome");
 /***/ (function(module, exports) {
 
 module.exports = require("@nguniversal/module-map-ngfactory-loader");
+
+/***/ }),
+
+/***/ "@ngx-meta/core":
+/*!*********************************!*\
+  !*** external "@ngx-meta/core" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@ngx-meta/core");
 
 /***/ }),
 

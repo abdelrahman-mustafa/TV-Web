@@ -144,6 +144,10 @@ trademarks does not indicate endorsement of the trademark holder by Font
 Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
+@ngx-meta/core@7.0.0
+MIT
+MIT
+
 @ngx-share/button@6.0.1
 MIT
 MIT

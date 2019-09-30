@@ -360,6 +360,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
 /* harmony import */ var _pages_search_search_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
 /* harmony import */ var _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
+/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -384,9 +385,12 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
-    { path: '', component: _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"] },
-    { path: 'live', component: _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_3__["LiveStreamComponent"] },
+    {
+        path: '', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"]
+    },
+    { path: 'live', component: _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_3__["LiveStreamComponent"], },
     { path: 'schedule', component: _pages_programs_schedule_programs_schedule_component__WEBPACK_IMPORTED_MODULE_4__["ProgramsScheduleComponent"] },
     { path: 'programs', component: _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_5__["ProgramsComponent"] },
     { path: 'articles', component: _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_6__["ArticlesComponent"] },
@@ -530,12 +534,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_mobile_apps_icons_mobile_apps_icons_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/mobile-apps-icons/mobile-apps-icons.component */ "./src/app/components/mobile-apps-icons/mobile-apps-icons.component.ts");
 /* harmony import */ var _pages_search_search_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
 /* harmony import */ var _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
+/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -593,13 +599,14 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'WTV' }),
+                _ngx_meta_core__WEBPACK_IMPORTED_MODULE_29__["MetaModule"].forRoot(),
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
                 ngx_youtube_player__WEBPACK_IMPORTED_MODULE_2__["YoutubePlayerModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_7__["HttpModule"],
-                _ngx_share_button__WEBPACK_IMPORTED_MODULE_6__["ShareButtonModule"].forRoot()
+                _ngx_share_button__WEBPACK_IMPORTED_MODULE_6__["ShareButtonModule"].forRoot(),
             ],
             providers: [
                 _services_service_handler_service__WEBPACK_IMPORTED_MODULE_20__["ServiceHandlerProvider"]
@@ -672,8 +679,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -791,8 +798,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -922,8 +929,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1022,6 +1029,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
+/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1046,8 +1054,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1075,13 +1083,13 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, Meta) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, meta) {
         this.route = route;
         this.articlesServices = articlesServices;
         this.sanitizer = sanitizer;
         this.location = location;
         this.router = router;
-        this.Meta = Meta;
+        this.meta = meta;
         this.selectedArticle = {
             article: "",
             caption: "",
@@ -1122,24 +1130,36 @@ var ArticleDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedArticle = _b.sent();
                         console.log(this.selectedArticle);
-                        this.Meta.updateTag({
-                            property: "og:title", content: this.selectedArticle.caption
-                        });
-                        this.Meta.updateTag({
-                            property: "og:description", content: this.selectedArticle.name
-                        });
-                        this.Meta.updateTag({
-                            property: "og:image", content: this.selectedArticle.images[0]
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:title", content: this.selectedArticle.caption
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:description", content: this.selectedArticle.name
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:image", content: this.selectedArticle.images[0]
-                        });
+                        // this.meta.setTag({
+                        //   property:"og:title", content: this.selectedArticle.caption
+                        // });
+                        // this.Meta.updateTag({
+                        //   property:"og:description", content: this.selectedArticle.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   property:"og:image", content: this.selectedArticle.images[0]
+                        // });
+                        // this.Meta.updateTag({
+                        //   name:"twitter:title",  content: this.selectedArticle.caption
+                        // });
+                        // this.Meta.updateTag({
+                        //   name:"twitter:description",  content: this.selectedArticle.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   name:"twitter:image",  content: this.selectedArticle.images[0]
+                        // });
+                        this.meta.removeTag('property="og:title"');
+                        this.meta.removeTag('property="og:description"');
+                        this.meta.removeTag('property="og:image"');
+                        this.meta.removeTag('property="twitter:title"');
+                        this.meta.removeTag('property="twitter:description"');
+                        this.meta.removeTag('property="twitter:image"');
+                        this.meta.setTag('og:title', this.selectedArticle.caption);
+                        this.meta.setTag('og:description', this.selectedArticle.name);
+                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
+                        this.meta.setTag('twitter:title', this.selectedArticle.caption);
+                        this.meta.setTag('twitter:description', this.selectedArticle.name);
+                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
                         this.showCarousel = true;
@@ -1150,8 +1170,8 @@ var ArticleDetailsComponent = /** @class */ (function () {
     };
     ArticleDetailsComponent.prototype.loadArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -1193,7 +1213,7 @@ var ArticleDetailsComponent = /** @class */ (function () {
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["Meta"]])
+            _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
 }());
@@ -1263,8 +1283,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1302,8 +1322,8 @@ var ArticlesComponent = /** @class */ (function () {
     };
     ArticlesComponent.prototype.loadArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -1409,8 +1429,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1543,8 +1563,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1671,8 +1691,8 @@ var HomePageComponent = /** @class */ (function () {
     };
     HomePageComponent.prototype.getContactDetails = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a, _b, _c, params, params2;
+            var _this = this;
             return __generator(this, function (_d) {
                 switch (_d.label) {
                     case 0:
@@ -1787,8 +1807,8 @@ var HomePageComponent = /** @class */ (function () {
     };
     HomePageComponent.prototype.getProgramsVideos = function (programPlayListId, programNum) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var params;
+            var _this = this;
             return __generator(this, function (_a) {
                 params = { "part": "snippet,contentDetails", "maxResults": "10", "playlistId": programPlayListId, "key": src_app_Constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].YOUTUBE_API_KEY, "h1": "ar" };
                 this.serviceHandeler.runService("https://www.googleapis.com/youtube/v3/playlistItems", "GET", null, null, null, params).subscribe(function (response) {
@@ -1966,8 +1986,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2002,8 +2022,8 @@ var LiveStreamComponent = /** @class */ (function () {
     };
     LiveStreamComponent.prototype.getContactDetails = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a, params;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -2097,8 +2117,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2198,7 +2218,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2223,8 +2243,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2252,12 +2272,12 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 var ProgramDetailsComponent = /** @class */ (function () {
-    function ProgramDetailsComponent(programService, route, serviceHandeler, router, Meta) {
+    function ProgramDetailsComponent(programService, route, serviceHandeler, router, meta) {
         this.programService = programService;
         this.route = route;
         this.serviceHandeler = serviceHandeler;
         this.router = router;
-        this.Meta = Meta;
+        this.meta = meta;
         this.selectedProgram = {
             name: "",
             description: "",
@@ -2293,24 +2313,36 @@ var ProgramDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedProgram = _b.sent();
                         console.log(this.selectedProgram);
-                        this.Meta.updateTag({
-                            property: "og:title", content: this.selectedProgram.name
-                        });
-                        this.Meta.updateTag({
-                            property: "og:description", content: this.selectedProgram.description
-                        });
-                        this.Meta.updateTag({
-                            property: "og:image", content: this.selectedProgram.mobBanner
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:title", content: this.selectedProgram.name
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:description", content: this.selectedProgram.description
-                        });
-                        this.Meta.updateTag({
-                            name: "twitter:image", content: this.selectedProgram.mobBanner
-                        });
+                        // this.Meta.updateTag({
+                        //   property: "og:title", content: this.selectedProgram.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   property: "og:description", content: this.selectedProgram.description
+                        // });
+                        // this.Meta.updateTag({
+                        //   property: "og:image", content: this.selectedProgram.mobBanner
+                        // });
+                        // this.Meta.updateTag({
+                        //   name: "twitter:title", content: this.selectedProgram.name
+                        // });
+                        // this.Meta.updateTag({
+                        //   name: "twitter:description", content: this.selectedProgram.description
+                        // });
+                        // this.Meta.updateTag({
+                        //   name: "twitter:image", content: this.selectedProgram.mobBanner
+                        // });
+                        this.meta.removeTag('property="og:title"');
+                        this.meta.removeTag('property="og:description"');
+                        this.meta.removeTag('property="og:image"');
+                        this.meta.removeTag('property="twitter:title"');
+                        this.meta.removeTag('property="twitter:description"');
+                        this.meta.removeTag('property="twitter:image"');
+                        this.meta.setTag('og:title', this.selectedProgram.name);
+                        this.meta.setTag('og:description', this.selectedProgram.description);
+                        this.meta.setTag('og:image', this.selectedProgram.mobBanner);
+                        this.meta.setTag('twitter:title', this.selectedProgram.name);
+                        this.meta.setTag('twitter:description', this.selectedProgram.description);
+                        this.meta.setTag('og:image', this.selectedProgram.mobBanner);
                         this.getVideos();
                         return [2 /*return*/];
                 }
@@ -2350,7 +2382,7 @@ var ProgramDetailsComponent = /** @class */ (function () {
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
             src_app_services_service_handler_service__WEBPACK_IMPORTED_MODULE_3__["ServiceHandlerProvider"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["Meta"]])
+            _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
     ], ProgramDetailsComponent);
     return ProgramDetailsComponent;
 }());
@@ -2421,8 +2453,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2655,8 +2687,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2793,8 +2825,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -2845,8 +2877,8 @@ var SearchComponent = /** @class */ (function () {
     };
     SearchComponent.prototype.searchArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -2866,8 +2898,8 @@ var SearchComponent = /** @class */ (function () {
     };
     SearchComponent.prototype.searchVidoes = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var params;
+            var _this = this;
             return __generator(this, function (_a) {
                 params = {
                     part: "snippet",
@@ -3006,8 +3038,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3041,8 +3073,8 @@ var SportsComponent = /** @class */ (function () {
     };
     SportsComponent.prototype.loadArticles = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -3147,8 +3179,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3189,8 +3221,8 @@ var TeamDetailComponent = /** @class */ (function () {
     };
     TeamDetailComponent.prototype.getTeam = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var _a;
+            var _this = this;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -3277,8 +3309,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3392,8 +3424,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3516,8 +3548,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -3770,8 +3802,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -4005,8 +4037,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -4123,8 +4155,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateLogo = function (settingsId, logoKey, logoUrl) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        " + logoKey + ":\"" + logoUrl + "\"\n      }){\n        " + logoKey + "\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4146,8 +4178,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateSetting = function (settingsId, settingKey, settingValue) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        " + settingKey + ":\"" + settingValue + "\"\n      }){\n        " + settingKey + "\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4169,8 +4201,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateNewsProgram = function (settingsId, newsProgramId) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        newsPrograms:{\n          connect:{\n            id:\"" + newsProgramId + "\"\n          }\n        }\n      }){\n        newsPrograms{\n          id,\n          name\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4192,8 +4224,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateAppsUrl = function (settingsId, androidUrl, iosUrl) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(where:{id:\"" + settingsId + "\"},data:{\n        infoDaTa:{\n          update:{\n            iosUrl:\"" + iosUrl + "\",\n            andUrl:\"" + androidUrl + "\"\n          }\n        }\n      }){\n        infoDaTa{\n          andUrl,\n          iosUrl\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4215,8 +4247,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateSpecialBanners = function (settingsId, firstBannerId, secondBannerId, thirdBannerId, fourthBannerId, fivethBannerId, sixthBannerId, priviousBanners) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var disconnectQuery, query;
+            var _this = this;
             return __generator(this, function (_a) {
                 disconnectQuery = "[]";
                 switch (priviousBanners.length) {
@@ -4273,8 +4305,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateSpecialPrograms = function (settingsId, firstProgramId, secondProgramId, thirdProgramId, fourthProgramId, fivethProgramId, sixthProgramId, priviousPrograms) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var disconnectQuery, query;
+            var _this = this;
             return __generator(this, function (_a) {
                 disconnectQuery = "[]";
                 switch (priviousPrograms.length) {
@@ -4331,8 +4363,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateVideos = function (settingsId, videosUrl) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(\n        where:{id:\"" + settingsId + "\"},\n        data:{\n          infoDaTa:{\n            update:{\n              videosUrl:\"" + videosUrl + "\"\n            }\n          }\n        }\n      ){\n        infoDaTa{\n          videosUrl\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4354,8 +4386,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateContactInfo = function (settingsId, phone, email, address) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{\n      updateSetting(\n        where:{id:\"" + settingsId + "\"},\n        data:{\n          infoDaTa:{\n            update:{\n              phone: " + parseInt(phone) + ",\n              address:\"" + address + "\",\n              email:\"" + email + "\"\n            }\n          }\n        }\n      ){\n        infoDaTa{\n          phone,\n          address,\n          email\n        }\n      }\n    }";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4377,8 +4409,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateAboutUs = function (settingsId, aboutUsText) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{updateSetting(where:{id:\"" + settingsId + "\"},data:{infoDaTa:{update:{aboutUs:\"" + this.escapeDoubleQuotes(aboutUsText) + "\"}}}){infoDaTa{aboutUs}}}";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4400,8 +4432,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updateTerms = function (settingsId, terms) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{updateSetting(where:{id:\"" + settingsId + "\"},data:{infoDaTa:{update:{termsOfUse:\"" + this.escapeDoubleQuotes(terms) + "\"}}}){infoDaTa{termsOfUse}}}";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4423,8 +4455,8 @@ var HomePageServicesService = /** @class */ (function () {
     };
     HomePageServicesService.prototype.updatePolicy = function (settingsId, policy) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var query;
+            var _this = this;
             return __generator(this, function (_a) {
                 query = "mutation{updateSetting(where:{id:\"" + settingsId + "\"},data:{infoDaTa:{update:{policy:\"" + this.escapeDoubleQuotes(policy) + "\"}}}){infoDaTa{policy}}}";
                 return [2 /*return*/, new Promise(function (resolve, reject) {
@@ -4563,8 +4595,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -4772,8 +4804,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
