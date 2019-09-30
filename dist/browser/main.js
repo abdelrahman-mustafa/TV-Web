@@ -321,7 +321,7 @@ var Constants = /** @class */ (function () {
     function Constants() {
     }
     Constants.BASE_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].IP + "/api";
-    Constants.SHARING_URL = "http://wasat.tv/home";
+    Constants.SHARING_URL = "http://159.100.130.43:4000";
     Constants.YOUTUBE_API_KEY = "AIzaSyB4eQ-1at4gTWuQXpCcCrGOeE_utW3HOBc";
     Constants.YOUTUBE_CHANNEL_ID = "UCeTTToFL9qZIybv69LX20Lg";
     Constants.SETTINGS_QUERY = "query{\n        settings{\n          id,\n          logo,\n          articlesIcon,\n          programIcon,\n          teamIcon,\n          sportsArticleIcon,\n          channelId,\n          infoDaTa{\n            id,\n            address,\n            phone,\n            email,\n            aboutUs,\n            policy,\n            termsOfUse,\n            fbUrl,\n            twUrl,\n            ytUrl,\n            instUrl,\n            iosUrl,\n            andUrl,\n            videosUrl,\n            links{\n              id,\n              name,\n              url,\n              icon\n            }\n          },\n          newsPrograms{\n            id,\n            name,\n            icon,\n            mobBanner,\n            playlistUrl\n          },\n          specialBanners{\n              id,\n            name,\n            icon,\n            webBanner\n          },\n          specialPrograms{\n              id,\n            name,\n            icon,\n            playlistUrl\n          },\n          liveUrl,\n          videoIcon,\n        }\n      }";
