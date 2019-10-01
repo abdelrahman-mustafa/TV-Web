@@ -1328,35 +1328,17 @@ var ArticleDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedArticle = _b.sent();
                         console.log(this.selectedArticle);
-                        // this.meta.setTag({
-                        //   property:"og:title", content: this.selectedArticle.caption
-                        // });
-                        // this.Meta.updateTag({
-                        //   property:"og:description", content: this.selectedArticle.name
-                        // });
-                        // this.Meta.updateTag({
-                        //   property:"og:image", content: this.selectedArticle.images[0]
-                        // });
-                        // this.Meta.updateTag({
-                        //   name:"twitter:title",  content: this.selectedArticle.caption
-                        // });
-                        // this.Meta.updateTag({
-                        //   name:"twitter:description",  content: this.selectedArticle.name
-                        // });
-                        // this.Meta.updateTag({
-                        //   name:"twitter:image",  content: this.selectedArticle.images[0]
-                        // });
                         this.meta.removeTag('property="og:title"');
                         this.meta.removeTag('property="og:description"');
                         this.meta.removeTag('property="og:image"');
                         this.meta.removeTag('property="twitter:title"');
                         this.meta.removeTag('property="twitter:description"');
                         this.meta.removeTag('property="twitter:image"');
-                        this.meta.setTag('og:title', this.selectedArticle.caption);
-                        this.meta.setTag('og:description', this.selectedArticle.name);
+                        this.meta.setTag('og:title', this.selectedArticle.name);
+                        this.meta.setTag('og:description', "");
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                        this.meta.setTag('twitter:title', this.selectedArticle.caption);
-                        this.meta.setTag('twitter:description', this.selectedArticle.name);
+                        this.meta.setTag('twitter:title', this.selectedArticle.name);
+                        this.meta.setTag('twitter:description', "");
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
@@ -3123,24 +3105,6 @@ var ProgramDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedProgram = _b.sent();
                         console.log(this.selectedProgram);
-                        // this.Meta.updateTag({
-                        //   property: "og:title", content: this.selectedProgram.name
-                        // });
-                        // this.Meta.updateTag({
-                        //   property: "og:description", content: this.selectedProgram.description
-                        // });
-                        // this.Meta.updateTag({
-                        //   property: "og:image", content: this.selectedProgram.mobBanner
-                        // });
-                        // this.Meta.updateTag({
-                        //   name: "twitter:title", content: this.selectedProgram.name
-                        // });
-                        // this.Meta.updateTag({
-                        //   name: "twitter:description", content: this.selectedProgram.description
-                        // });
-                        // this.Meta.updateTag({
-                        //   name: "twitter:image", content: this.selectedProgram.mobBanner
-                        // });
                         this.meta.removeTag('property="og:title"');
                         this.meta.removeTag('property="og:description"');
                         this.meta.removeTag('property="og:image"');
