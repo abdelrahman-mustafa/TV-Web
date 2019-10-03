@@ -1334,6 +1334,7 @@ var ArticleDetailsComponent = /** @class */ (function () {
                         this.meta.removeTag('property="twitter:title"');
                         this.meta.removeTag('property="twitter:description"');
                         this.meta.removeTag('property="twitter:image"');
+                        this.meta.setTitle("قناة الوسط الاخبارية");
                         this.meta.setTag('og:title', "قناة الوسط الاخبارية");
                         this.meta.setTag('og:description', this.selectedArticle.name);
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
@@ -3111,6 +3112,7 @@ var ProgramDetailsComponent = /** @class */ (function () {
                         this.meta.removeTag('property="twitter:title"');
                         this.meta.removeTag('property="twitter:description"');
                         this.meta.removeTag('property="twitter:image"');
+                        this.meta.setTitle("قناة الوسط الاخبارية");
                         this.meta.setTag('og:title', this.selectedProgram.name);
                         this.meta.setTag('og:description', this.selectedProgram.description);
                         this.meta.setTag('og:image', this.selectedProgram.mobBanner);
