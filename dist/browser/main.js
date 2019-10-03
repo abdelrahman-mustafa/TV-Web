@@ -1136,11 +1136,11 @@ var ArticleDetailsComponent = /** @class */ (function () {
                         this.meta.removeTag('property="twitter:title"');
                         this.meta.removeTag('property="twitter:description"');
                         this.meta.removeTag('property="twitter:image"');
-                        this.meta.setTag('og:title', this.selectedArticle.name);
-                        this.meta.setTag('og:description', "قناة الوسط الاخبارية");
+                        this.meta.setTag('og:title', "قناة الوسط الاخبارية");
+                        this.meta.setTag('og:description', this.selectedArticle.name);
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                        this.meta.setTag('twitter:title', this.selectedArticle.name);
-                        this.meta.setTag('twitter:description', "قناة الوسط الاخبارية");
+                        this.meta.setTag('twitter:title', "قناة الوسط الاخبارية");
+                        this.meta.setTag('twitter:description', this.selectedArticle.name);
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
