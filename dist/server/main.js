@@ -1328,10 +1328,10 @@ var ArticleDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedArticle = _b.sent();
                         console.log(this.selectedArticle);
-                        this.meta.setTag('og:title', "قناة الوسط الاخبارية");
+                        this.meta.setTag('og:title', "test");
                         this.meta.setTag('og:description', this.selectedArticle.name);
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                        this.meta.setTag('twitter:title', "قناة الوسط الاخبارية");
+                        this.meta.setTag('twitter:title', "test");
                         this.meta.setTag('twitter:description', this.selectedArticle.name);
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
