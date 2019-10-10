@@ -1130,13 +1130,6 @@ var ArticleDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedArticle = _b.sent();
                         console.log(this.selectedArticle);
-                        this.meta.removeTag('property="og:title"');
-                        this.meta.removeTag('property="og:description"');
-                        this.meta.removeTag('property="og:image"');
-                        this.meta.removeTag('property="twitter:title"');
-                        this.meta.removeTag('property="twitter:description"');
-                        this.meta.removeTag('property="twitter:image"');
-                        this.meta.setTitle("قناة الوسط الاخبارية");
                         this.meta.setTag('og:title', "قناة الوسط الاخبارية");
                         this.meta.setTag('og:description', this.selectedArticle.name);
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
@@ -2295,14 +2288,6 @@ var ProgramDetailsComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
                     case 1:
                         _a.selectedProgram = _b.sent();
-                        console.log(this.selectedProgram);
-                        this.meta.removeTag('property="og:title"');
-                        this.meta.removeTag('property="og:description"');
-                        this.meta.removeTag('property="og:image"');
-                        this.meta.removeTag('property="twitter:title"');
-                        this.meta.removeTag('property="twitter:description"');
-                        this.meta.removeTag('property="twitter:image"');
-                        this.meta.setTitle("قناة الوسط الاخبارية");
                         this.meta.setTag('og:title', this.selectedProgram.name);
                         this.meta.setTag('og:description', this.selectedProgram.description);
                         this.meta.setTag('og:image', this.selectedProgram.mobBanner);
