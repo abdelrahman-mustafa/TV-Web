@@ -1039,9 +1039,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -1085,16 +1082,13 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
-
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId, meta) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, meta) {
         this.route = route;
         this.articlesServices = articlesServices;
         this.sanitizer = sanitizer;
         this.location = location;
         this.router = router;
-        this.platformId = platformId;
         this.meta = meta;
         this.selectedArticle = {
             article: "",
@@ -1117,8 +1111,8 @@ var ArticleDetailsComponent = /** @class */ (function () {
             _this.articleId = params.id;
             _this.articleType = params.type;
             // console.log(this.articleId + " " + this.articleType);
-            _this.showCarousel = false;
             _this.getArticleDetails();
+            _this.showCarousel = false;
             _this.loadArticles();
         });
         // console.log(this.router.url);
@@ -1135,15 +1129,13 @@ var ArticleDetailsComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.articlesServices.getArticleDetails(this.articleId, this.articleType == "sports")];
                     case 1:
                         _a.selectedArticle = _b.sent();
-                        if (Object(_angular_common__WEBPACK_IMPORTED_MODULE_4__["isPlatformServer"])(this.platformId)) {
-                            console.log(this.selectedArticle);
-                            this.meta.setTag('og:title', "test");
-                            this.meta.setTag('og:description', this.selectedArticle.name);
-                            this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                            this.meta.setTag('twitter:title', "test");
-                            this.meta.setTag('twitter:description', this.selectedArticle.name);
-                            this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                        }
+                        console.log(this.selectedArticle);
+                        // this.meta.setTag('og:title', "test");
+                        // this.meta.setTag('og:description', this.selectedArticle.name);
+                        // this.meta.setTag('og:image', this.selectedArticle.images[0]);
+                        // this.meta.setTag('twitter:title', "test");
+                        // this.meta.setTag('twitter:description', this.selectedArticle.name);
+                        // this.meta.setTag('og:image', this.selectedArticle.images[0]);
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
                         this.showCarousel = true;
@@ -1200,13 +1192,11 @@ var ArticleDetailsComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./article-details.component.css */ "./src/app/pages/article-details/article-details.component.css")],
             encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
         }),
-        __param(5, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"])),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             src_app_services_uiServices_articles_service__WEBPACK_IMPORTED_MODULE_2__["ArticlesService"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            Object,
             _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
