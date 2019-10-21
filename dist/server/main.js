@@ -1280,7 +1280,6 @@ var common_1 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var router_2 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var Constants_1 = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
 var core_2 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
-var common_2 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var ArticleDetailsComponent = /** @class */ (function () {
     function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId, meta) {
         this.route = route;
@@ -1329,15 +1328,14 @@ var ArticleDetailsComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.articlesServices.getArticleDetails(this.articleId, this.articleType == "sports")];
                     case 1:
                         _a.selectedArticle = _b.sent();
+                        // if (isPlatformServer(this.platformId)) {
+                        this.meta.setTag('og:title', this.selectedArticle.writer);
+                        this.meta.setTag('og:description', this.selectedArticle.name);
+                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
+                        this.meta.setTag('twitter:title', this.selectedArticle.writer);
+                        this.meta.setTag('twitter:description', this.selectedArticle.name);
+                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
                         console.log(this.selectedArticle);
-                        if (common_2.isPlatformServer(this.platformId)) {
-                            this.meta.setTag('og:title', this.selectedArticle.writer);
-                            this.meta.setTag('og:description', this.selectedArticle.name);
-                            this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                            this.meta.setTag('twitter:title', this.selectedArticle.writer);
-                            this.meta.setTag('twitter:description', this.selectedArticle.name);
-                            this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                        }
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
                         this.showCarousel = true;
