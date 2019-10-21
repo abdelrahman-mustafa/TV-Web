@@ -1039,6 +1039,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -1082,13 +1085,16 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
+
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, meta) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId, meta) {
         this.route = route;
         this.articlesServices = articlesServices;
         this.sanitizer = sanitizer;
         this.location = location;
         this.router = router;
+        this.platformId = platformId;
         this.meta = meta;
         this.selectedArticle = {
             article: "",
@@ -1125,6 +1131,7 @@ var ArticleDetailsComponent = /** @class */ (function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
+                        if (!Object(_angular_common__WEBPACK_IMPORTED_MODULE_4__["isPlatformServer"])(this.platformId)) return [3 /*break*/, 2];
                         _a = this;
                         return [4 /*yield*/, this.articlesServices.getArticleDetails(this.articleId, this.articleType == "sports")];
                     case 1:
@@ -1136,6 +1143,8 @@ var ArticleDetailsComponent = /** @class */ (function () {
                         this.meta.setTag('twitter:title', "test");
                         this.meta.setTag('twitter:description', this.selectedArticle.name);
                         this.meta.setTag('og:image', this.selectedArticle.images[0]);
+                        _b.label = 2;
+                    case 2:
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
                         this.showCarousel = true;
@@ -1174,6 +1183,14 @@ var ArticleDetailsComponent = /** @class */ (function () {
             });
         });
     };
+    ArticleDetailsComponent.prototype.ngOnDestroy = function () {
+        this.meta.setTag('og:title', "قناة الوسط الليبية");
+        this.meta.setTag('og:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
+        this.meta.setTag('twitter:title', "قناة الوسط الليبية");
+        this.meta.setTag('twitter:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
+    };
     ArticleDetailsComponent.prototype.getSharingLink = function (articleId) {
         return src_app_Constants__WEBPACK_IMPORTED_MODULE_5__["Constants"].SHARING_URL + "/articleDetails/" + this.articleType + "/" + articleId;
     };
@@ -1184,11 +1201,13 @@ var ArticleDetailsComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./article-details.component.css */ "./src/app/pages/article-details/article-details.component.css")],
             encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
         }),
+        __param(5, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"])),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             src_app_services_uiServices_articles_service__WEBPACK_IMPORTED_MODULE_2__["ArticlesService"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            Object,
             _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
@@ -2195,6 +2214,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2203,6 +2223,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
 };
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -2247,12 +2270,15 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
+
 var ProgramDetailsComponent = /** @class */ (function () {
-    function ProgramDetailsComponent(programService, route, serviceHandeler, router, meta) {
+    function ProgramDetailsComponent(programService, route, serviceHandeler, router, platformId, meta) {
         this.programService = programService;
         this.route = route;
         this.serviceHandeler = serviceHandeler;
         this.router = router;
+        this.platformId = platformId;
         this.meta = meta;
         this.selectedProgram = {
             name: "",
@@ -2284,6 +2310,7 @@ var ProgramDetailsComponent = /** @class */ (function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
+                        if (!Object(_angular_common__WEBPACK_IMPORTED_MODULE_7__["isPlatformServer"])(this.platformId)) return [3 /*break*/, 2];
                         _a = this;
                         return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
                     case 1:
@@ -2294,6 +2321,8 @@ var ProgramDetailsComponent = /** @class */ (function () {
                         this.meta.setTag('twitter:title', this.selectedProgram.name);
                         this.meta.setTag('twitter:description', this.selectedProgram.description);
                         this.meta.setTag('og:image', this.selectedProgram.mobBanner);
+                        _b.label = 2;
+                    case 2:
                         this.getVideos();
                         return [2 /*return*/];
                 }
@@ -2309,6 +2338,14 @@ var ProgramDetailsComponent = /** @class */ (function () {
         }, function (error) {
             // console.log(error);
         });
+    };
+    ProgramDetailsComponent.prototype.ngOnDestroy = function () {
+        this.meta.setTag('og:title', "قناة الوسط الليبية");
+        this.meta.setTag('og:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
+        this.meta.setTag('twitter:title', "قناة الوسط الليبية");
+        this.meta.setTag('twitter:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
     };
     ProgramDetailsComponent.prototype.loadMore = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -2329,10 +2366,12 @@ var ProgramDetailsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./program-details.component.html */ "./src/app/pages/program-details/program-details.component.html"),
             styles: [__webpack_require__(/*! ./program-details.component.css */ "./src/app/pages/program-details/program-details.component.css")]
         }),
+        __param(4, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"])),
         __metadata("design:paramtypes", [src_app_services_uiServices_programs_service__WEBPACK_IMPORTED_MODULE_1__["ProgramsService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
             src_app_services_service_handler_service__WEBPACK_IMPORTED_MODULE_3__["ServiceHandlerProvider"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
+            Object,
             _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
     ], ProgramDetailsComponent);
     return ProgramDetailsComponent;
