@@ -1325,20 +1325,19 @@ var ArticleDetailsComponent = /** @class */ (function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        if (!common_2.isPlatformServer(this.platformId)) return [3 /*break*/, 2];
                         _a = this;
                         return [4 /*yield*/, this.articlesServices.getArticleDetails(this.articleId, this.articleType == "sports")];
                     case 1:
                         _a.selectedArticle = _b.sent();
-                        console.log(this.selectedArticle);
-                        this.meta.setTag('og:title', "test");
-                        this.meta.setTag('og:description', this.selectedArticle.name);
-                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                        this.meta.setTag('twitter:title', "test");
-                        this.meta.setTag('twitter:description', this.selectedArticle.name);
-                        this.meta.setTag('og:image', this.selectedArticle.images[0]);
-                        _b.label = 2;
-                    case 2:
+                        if (common_2.isPlatformServer(this.platformId)) {
+                            console.log(this.selectedArticle);
+                            this.meta.setTag('og:title', "test");
+                            this.meta.setTag('og:description', this.selectedArticle.name);
+                            this.meta.setTag('og:image', this.selectedArticle.images[0]);
+                            this.meta.setTag('twitter:title', "test");
+                            this.meta.setTag('twitter:description', this.selectedArticle.name);
+                            this.meta.setTag('og:image', this.selectedArticle.images[0]);
+                        }
                         this.selectedArticle.publishTime = this.selectedArticle.publishTime.substr(this.selectedArticle.publishTime.indexOf("T") + 1, 5);
                         this.articleBody = this.sanitizer.bypassSecurityTrustHtml(this.selectedArticle.article);
                         this.showCarousel = true;
@@ -3109,19 +3108,18 @@ var ProgramDetailsComponent = /** @class */ (function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        if (!common_1.isPlatformServer(this.platformId)) return [3 /*break*/, 2];
                         _a = this;
                         return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
                     case 1:
                         _a.selectedProgram = _b.sent();
-                        this.meta.setTag('og:title', this.selectedProgram.name);
-                        this.meta.setTag('og:description', this.selectedProgram.description);
-                        this.meta.setTag('og:image', this.selectedProgram.mobBanner);
-                        this.meta.setTag('twitter:title', this.selectedProgram.name);
-                        this.meta.setTag('twitter:description', this.selectedProgram.description);
-                        this.meta.setTag('og:image', this.selectedProgram.mobBanner);
-                        _b.label = 2;
-                    case 2:
+                        if (common_1.isPlatformServer(this.platformId)) {
+                            this.meta.setTag('og:title', this.selectedProgram.name);
+                            this.meta.setTag('og:description', this.selectedProgram.description);
+                            this.meta.setTag('og:image', this.selectedProgram.mobBanner);
+                            this.meta.setTag('twitter:title', this.selectedProgram.name);
+                            this.meta.setTag('twitter:description', this.selectedProgram.description);
+                            this.meta.setTag('og:image', this.selectedProgram.mobBanner);
+                        }
                         this.getVideos();
                         return [2 /*return*/];
                 }
