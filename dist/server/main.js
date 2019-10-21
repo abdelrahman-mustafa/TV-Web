@@ -1309,7 +1309,6 @@ var ArticleDetailsComponent = /** @class */ (function () {
         this.route.params.subscribe(function (params) {
             _this.articleId = params.id;
             _this.articleType = params.type;
-            // console.log(this.articleId + " " + this.articleType);
             _this.getArticleDetails();
             _this.showCarousel = false;
             _this.loadArticles();
