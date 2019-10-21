@@ -1196,7 +1196,6 @@ var ArticleDetailsComponent = /** @class */ (function () {
             selector: 'app-article-details',
             template: __webpack_require__(/*! ./article-details.component.html */ "./src/app/pages/article-details/article-details.component.html"),
             styles: [__webpack_require__(/*! ./article-details.component.css */ "./src/app/pages/article-details/article-details.component.css")],
-            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
         }),
         __param(5, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"])),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
@@ -2296,7 +2295,6 @@ var ProgramDetailsComponent = /** @class */ (function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
             _this.programId = params.id;
-            // console.log(this.programId);
             _this.getProgramDetails();
         });
         this.sharingLink = src_app_Constants__WEBPACK_IMPORTED_MODULE_4__["Constants"].SHARING_URL + this.router.url;

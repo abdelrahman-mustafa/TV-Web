@@ -1084,10 +1084,10 @@ exports.AboutUsComponent = AboutUsComponent;
 
 /***/ }),
 
-/***/ "./src/app/pages/article-details/article-details.component.css.ngstyle.js":
-/*!********************************************************************************!*\
-  !*** ./src/app/pages/article-details/article-details.component.css.ngstyle.js ***!
-  \********************************************************************************/
+/***/ "./src/app/pages/article-details/article-details.component.css.shim.ngstyle.js":
+/*!*************************************************************************************!*\
+  !*** ./src/app/pages/article-details/article-details.component.css.shim.ngstyle.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1122,7 +1122,7 @@ exports.styles = styles;
  * tslint:disable
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var i0 = __webpack_require__(/*! ./article-details.component.css.ngstyle */ "./src/app/pages/article-details/article-details.component.css.ngstyle.js");
+var i0 = __webpack_require__(/*! ./article-details.component.css.shim.ngstyle */ "./src/app/pages/article-details/article-details.component.css.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i2 = __webpack_require__(/*! ../../../../node_modules/ngx-youtube-player/ngx-youtube-player.ngfactory */ "./node_modules/ngx-youtube-player/ngx-youtube-player.ngfactory.js");
 var i3 = __webpack_require__(/*! ngx-youtube-player */ "ngx-youtube-player");
@@ -1141,7 +1141,7 @@ var i15 = __webpack_require__(/*! ../../services/uiServices/articles.service */ 
 var i16 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var i17 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
 var styles_ArticleDetailsComponent = [i0.styles];
-var RenderType_ArticleDetailsComponent = i1.ɵcrt({ encapsulation: 2, styles: styles_ArticleDetailsComponent, data: {} });
+var RenderType_ArticleDetailsComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_ArticleDetailsComponent, data: {} });
 exports.RenderType_ArticleDetailsComponent = RenderType_ArticleDetailsComponent;
 function View_ArticleDetailsComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "div", [["class", "carousel-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 0, "img", [["class", "new_img2 img-responsive"], ["style", "width: 100% !important"]], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var currVal_0 = i1.ɵinlineInterpolate(1, "", _v.context.$implicit, ""); _ck(_v, 1, 0, currVal_0); }); }
 function View_ArticleDetailsComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 14, "div", [["class", "carousel carousel_sports slide"], ["data-interval", "false"], ["data-ride", "carousel"], ["id", "carouselExampleControls"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 5, "div", [["class", "carousel-inner"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 2, "div", [["class", "carousel-item active"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 1, "youtube-player", [["class", "new_img2 img-responsive"], ["height", "460"], ["width", "100%"]], null, null, null, i2.View_ɵa_0, i2.RenderType_ɵa)), i1.ɵdid(4, 1097728, null, 0, i3.ɵa, [i3.ɵb, i1.ElementRef, i1.Renderer2], { videoId: [0, "videoId"], height: [1, "height"], width: [2, "width"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_ArticleDetailsComponent_2)), i1.ɵdid(6, 278528, null, 0, i4.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(7, 0, null, null, 3, "a", [["class", "carousel-control-prev"], ["data-slide", "prev"], ["href", "#carouselExampleControls"], ["role", "button"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 0, "span", [["aria-hidden", "true"], ["class", "carousel-control-prev-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Previous"])), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [["class", "carousel-control-next"], ["data-slide", "next"], ["href", "#carouselExampleControls"], ["role", "button"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 0, "span", [["aria-hidden", "true"], ["class", "carousel-control-next-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Next"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.selectedArticle.videos; var currVal_1 = "460"; var currVal_2 = "100%"; _ck(_v, 4, 0, currVal_0, currVal_1, currVal_2); var currVal_3 = _co.selectedArticle.images; _ck(_v, 6, 0, currVal_3); }, null); }
@@ -3095,7 +3095,6 @@ var ProgramDetailsComponent = /** @class */ (function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
             _this.programId = params.id;
-            // console.log(this.programId);
             _this.getProgramDetails();
         });
         this.sharingLink = Constants_1.Constants.SHARING_URL + this.router.url;
