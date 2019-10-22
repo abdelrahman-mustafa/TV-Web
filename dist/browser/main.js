@@ -534,14 +534,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_mobile_apps_icons_mobile_apps_icons_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/mobile-apps-icons/mobile-apps-icons.component */ "./src/app/components/mobile-apps-icons/mobile-apps-icons.component.ts");
 /* harmony import */ var _pages_search_search_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
 /* harmony import */ var _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
-/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -599,7 +597,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'WTV' }),
-                _ngx_meta_core__WEBPACK_IMPORTED_MODULE_29__["MetaModule"],
+                // MetaModule.forRoot(),
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
@@ -1029,7 +1027,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
-/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1084,10 +1081,10 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
+// import { MetaService } from '@ngx-meta/core';
 
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId, meta) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId) {
         var _this = this;
         this.route = route;
         this.articlesServices = articlesServices;
@@ -1095,7 +1092,6 @@ var ArticleDetailsComponent = /** @class */ (function () {
         this.location = location;
         this.router = router;
         this.platformId = platformId;
-        this.meta = meta;
         this.selectedArticle = {
             article: "",
             caption: "",
@@ -1203,8 +1199,7 @@ var ArticleDetailsComponent = /** @class */ (function () {
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            Object,
-            _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
+            Object])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
 }());
@@ -2209,7 +2204,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2264,16 +2258,15 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
+// import { MetaService } from '@ngx-meta/core';
 
 var ProgramDetailsComponent = /** @class */ (function () {
-    function ProgramDetailsComponent(programService, route, serviceHandeler, router, platformId, meta) {
+    function ProgramDetailsComponent(programService, route, serviceHandeler, router, platformId) {
         this.programService = programService;
         this.route = route;
         this.serviceHandeler = serviceHandeler;
         this.router = router;
         this.platformId = platformId;
-        this.meta = meta;
         this.selectedProgram = {
             name: "",
             description: "",
@@ -2291,12 +2284,12 @@ var ProgramDetailsComponent = /** @class */ (function () {
     }
     ProgramDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.meta.setTag('og:title', "test");
-        this.meta.setTag('og:description', "test");
-        this.meta.setTag('og:image', "test");
-        this.meta.setTag('twitter:title', "test");
-        this.meta.setTag('twitter:description', "test");
-        this.meta.setTag('og:image', "test");
+        // this.meta.setTag('og:title', "test");
+        // this.meta.setTag('og:description', "test");
+        // this.meta.setTag('og:image', "test");
+        // this.meta.setTag('twitter:title', "test");
+        // this.meta.setTag('twitter:description', "test");
+        // this.meta.setTag('og:image', "test");
         this.route.params.subscribe(function (params) {
             _this.programId = params.id;
             _this.getProgramDetails();
@@ -2332,12 +2325,12 @@ var ProgramDetailsComponent = /** @class */ (function () {
         });
     };
     ProgramDetailsComponent.prototype.ngOnDestroy = function () {
-        this.meta.setTag('og:title', "قناة الوسط الليبية");
-        this.meta.setTag('og:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
-        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
-        this.meta.setTag('twitter:title', "قناة الوسط الليبية");
-        this.meta.setTag('twitter:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
-        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
+        // this.meta.setTag('og:title', "قناة الوسط الليبية");
+        // this.meta.setTag('og:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        // this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
+        // this.meta.setTag('twitter:title', "قناة الوسط الليبية");
+        // this.meta.setTag('twitter:description',  "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        // this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
     };
     ProgramDetailsComponent.prototype.loadMore = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -2363,8 +2356,7 @@ var ProgramDetailsComponent = /** @class */ (function () {
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
             src_app_services_service_handler_service__WEBPACK_IMPORTED_MODULE_3__["ServiceHandlerProvider"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            Object,
-            _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
+            Object])
     ], ProgramDetailsComponent);
     return ProgramDetailsComponent;
 }());
