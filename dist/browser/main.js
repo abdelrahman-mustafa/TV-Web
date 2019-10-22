@@ -2308,12 +2308,12 @@ var ProgramDetailsComponent = /** @class */ (function () {
                     case 1:
                         _a.selectedProgram = _b.sent();
                         // if (isPlatformServer(this.platformId)) {
-                        // this.meta.setTag('og:title', this.selectedProgram.name);
-                        // this.meta.setTag('og:description', this.selectedProgram.description);
-                        // this.meta.setTag('og:image', this.selectedProgram.mobBanner);
-                        // this.meta.setTag('twitter:title', this.selectedProgram.name);
-                        // this.meta.setTag('twitter:description', this.selectedProgram.description);
-                        // this.meta.setTag('og:image', this.selectedProgram.mobBanner);
+                        this.meta.setTag('og:title', "test");
+                        this.meta.setTag('og:description', "test");
+                        this.meta.setTag('og:image', "test");
+                        this.meta.setTag('twitter:title', "test");
+                        this.meta.setTag('twitter:description', "test");
+                        this.meta.setTag('og:image', "test");
                         // }
                         this.getVideos();
                         return [2 /*return*/];
@@ -2332,12 +2332,12 @@ var ProgramDetailsComponent = /** @class */ (function () {
         });
     };
     ProgramDetailsComponent.prototype.ngOnDestroy = function () {
-        // this.meta.setTag('og:title', "قناة الوسط الليبية");
-        // this.meta.setTag('og:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
-        // this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
-        // this.meta.setTag('twitter:title', "قناة الوسط الليبية");
-        // this.meta.setTag('twitter:description',  "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
-        // this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
+        this.meta.setTag('og:title', "قناة الوسط الليبية");
+        this.meta.setTag('og:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
+        this.meta.setTag('twitter:title', "قناة الوسط الليبية");
+        this.meta.setTag('twitter:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
+        this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
     };
     ProgramDetailsComponent.prototype.loadMore = function () {
         return __awaiter(this, void 0, void 0, function () {
