@@ -513,27 +513,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _ngx_share_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-share/button */ "./node_modules/@ngx-share/button/fesm5/ngx-share-button.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
-/* harmony import */ var _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/live-stream/live-stream.component */ "./src/app/pages/live-stream/live-stream.component.ts");
-/* harmony import */ var _pages_programs_schedule_programs_schedule_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/programs-schedule/programs-schedule.component */ "./src/app/pages/programs-schedule/programs-schedule.component.ts");
-/* harmony import */ var _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/programs/programs.component */ "./src/app/pages/programs/programs.component.ts");
-/* harmony import */ var _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/articles/articles.component */ "./src/app/pages/articles/articles.component.ts");
-/* harmony import */ var _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/sports/sports.component */ "./src/app/pages/sports/sports.component.ts");
-/* harmony import */ var _pages_video_video_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/video/video.component */ "./src/app/pages/video/video.component.ts");
-/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
-/* harmony import */ var _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/contact-us/contact-us.component */ "./src/app/pages/contact-us/contact-us.component.ts");
-/* harmony import */ var _pages_team_team_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/team/team.component */ "./src/app/pages/team/team.component.ts");
-/* harmony import */ var _services_service_handler_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/service-handler.service */ "./src/app/services/service-handler.service.ts");
-/* harmony import */ var _pages_article_details_article_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/article-details/article-details.component */ "./src/app/pages/article-details/article-details.component.ts");
-/* harmony import */ var _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
-/* harmony import */ var _pages_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/privacy/privacy.component */ "./src/app/pages/privacy/privacy.component.ts");
-/* harmony import */ var _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
-/* harmony import */ var _components_social_media_icons_social_media_icons_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/social-media-icons/social-media-icons.component */ "./src/app/components/social-media-icons/social-media-icons.component.ts");
-/* harmony import */ var _components_mobile_apps_icons_mobile_apps_icons_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/mobile-apps-icons/mobile-apps-icons.component */ "./src/app/components/mobile-apps-icons/mobile-apps-icons.component.ts");
-/* harmony import */ var _pages_search_search_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
-/* harmony import */ var _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
+/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/home-page/home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
+/* harmony import */ var _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/live-stream/live-stream.component */ "./src/app/pages/live-stream/live-stream.component.ts");
+/* harmony import */ var _pages_programs_schedule_programs_schedule_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/programs-schedule/programs-schedule.component */ "./src/app/pages/programs-schedule/programs-schedule.component.ts");
+/* harmony import */ var _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/programs/programs.component */ "./src/app/pages/programs/programs.component.ts");
+/* harmony import */ var _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/articles/articles.component */ "./src/app/pages/articles/articles.component.ts");
+/* harmony import */ var _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/sports/sports.component */ "./src/app/pages/sports/sports.component.ts");
+/* harmony import */ var _pages_video_video_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/video/video.component */ "./src/app/pages/video/video.component.ts");
+/* harmony import */ var _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/about-us/about-us.component */ "./src/app/pages/about-us/about-us.component.ts");
+/* harmony import */ var _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/contact-us/contact-us.component */ "./src/app/pages/contact-us/contact-us.component.ts");
+/* harmony import */ var _pages_team_team_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/team/team.component */ "./src/app/pages/team/team.component.ts");
+/* harmony import */ var _services_service_handler_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/service-handler.service */ "./src/app/services/service-handler.service.ts");
+/* harmony import */ var _pages_article_details_article_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/article-details/article-details.component */ "./src/app/pages/article-details/article-details.component.ts");
+/* harmony import */ var _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/program-details/program-details.component */ "./src/app/pages/program-details/program-details.component.ts");
+/* harmony import */ var _pages_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/privacy/privacy.component */ "./src/app/pages/privacy/privacy.component.ts");
+/* harmony import */ var _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/terms/terms.component */ "./src/app/pages/terms/terms.component.ts");
+/* harmony import */ var _components_social_media_icons_social_media_icons_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/social-media-icons/social-media-icons.component */ "./src/app/components/social-media-icons/social-media-icons.component.ts");
+/* harmony import */ var _components_mobile_apps_icons_mobile_apps_icons_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/mobile-apps-icons/mobile-apps-icons.component */ "./src/app/components/mobile-apps-icons/mobile-apps-icons.component.ts");
+/* harmony import */ var _pages_search_search_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/search/search.component */ "./src/app/pages/search/search.component.ts");
+/* harmony import */ var _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/team-detail/team-detail.component */ "./src/app/pages/team-detail/team-detail.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -569,36 +570,36 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
-                _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_10__["HomePageComponent"],
-                _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_11__["LiveStreamComponent"],
-                _pages_programs_schedule_programs_schedule_component__WEBPACK_IMPORTED_MODULE_12__["ProgramsScheduleComponent"],
-                _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_13__["ProgramsComponent"],
-                _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_14__["ArticlesComponent"],
-                _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_15__["SportsComponent"],
-                _pages_video_video_component__WEBPACK_IMPORTED_MODULE_16__["VideoComponent"],
-                _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_17__["AboutUsComponent"],
-                _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_18__["ContactUsComponent"],
-                _pages_team_team_component__WEBPACK_IMPORTED_MODULE_19__["TeamComponent"],
-                _pages_article_details_article_details_component__WEBPACK_IMPORTED_MODULE_21__["ArticleDetailsComponent"],
-                _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_22__["ProgramDetailsComponent"],
-                _pages_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_23__["PrivacyComponent"],
-                _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_24__["TermsComponent"],
-                _components_social_media_icons_social_media_icons_component__WEBPACK_IMPORTED_MODULE_25__["SocialMediaIconsComponent"],
-                _components_mobile_apps_icons_mobile_apps_icons_component__WEBPACK_IMPORTED_MODULE_26__["MobileAppsIconsComponent"],
-                _pages_search_search_component__WEBPACK_IMPORTED_MODULE_27__["SearchComponent"],
-                _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_28__["TeamDetailComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
+                _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_11__["HomePageComponent"],
+                _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_12__["LiveStreamComponent"],
+                _pages_programs_schedule_programs_schedule_component__WEBPACK_IMPORTED_MODULE_13__["ProgramsScheduleComponent"],
+                _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_14__["ProgramsComponent"],
+                _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_15__["ArticlesComponent"],
+                _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_16__["SportsComponent"],
+                _pages_video_video_component__WEBPACK_IMPORTED_MODULE_17__["VideoComponent"],
+                _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_18__["AboutUsComponent"],
+                _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_19__["ContactUsComponent"],
+                _pages_team_team_component__WEBPACK_IMPORTED_MODULE_20__["TeamComponent"],
+                _pages_article_details_article_details_component__WEBPACK_IMPORTED_MODULE_22__["ArticleDetailsComponent"],
+                _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_23__["ProgramDetailsComponent"],
+                _pages_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_24__["PrivacyComponent"],
+                _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_25__["TermsComponent"],
+                _components_social_media_icons_social_media_icons_component__WEBPACK_IMPORTED_MODULE_26__["SocialMediaIconsComponent"],
+                _components_mobile_apps_icons_mobile_apps_icons_component__WEBPACK_IMPORTED_MODULE_27__["MobileAppsIconsComponent"],
+                _pages_search_search_component__WEBPACK_IMPORTED_MODULE_28__["SearchComponent"],
+                _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_29__["TeamDetailComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'WTV' }),
-                // MetaModule.forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
                 ngx_youtube_player__WEBPACK_IMPORTED_MODULE_2__["YoutubePlayerModule"],
@@ -607,9 +608,10 @@ var AppModule = /** @class */ (function () {
                 _ngx_share_button__WEBPACK_IMPORTED_MODULE_6__["ShareButtonModule"].forRoot(),
             ],
             providers: [
-                _services_service_handler_service__WEBPACK_IMPORTED_MODULE_20__["ServiceHandlerProvider"]
+                _services_service_handler_service__WEBPACK_IMPORTED_MODULE_21__["ServiceHandlerProvider"],
+                _ngx_meta_core__WEBPACK_IMPORTED_MODULE_8__["MetaService"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -1027,6 +1029,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
+/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1081,10 +1084,10 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-// import { MetaService } from '@ngx-meta/core';
+
 
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId, meta) {
         var _this = this;
         this.route = route;
         this.articlesServices = articlesServices;
@@ -1092,6 +1095,7 @@ var ArticleDetailsComponent = /** @class */ (function () {
         this.location = location;
         this.router = router;
         this.platformId = platformId;
+        this.meta = meta;
         this.selectedArticle = {
             article: "",
             caption: "",
@@ -1199,7 +1203,8 @@ var ArticleDetailsComponent = /** @class */ (function () {
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            Object])
+            Object,
+            _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
 }());
