@@ -3104,17 +3104,17 @@ var ProgramDetailsComponent = /** @class */ (function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        _a = this;
-                        return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
-                    case 1:
-                        _a.selectedProgram = _b.sent();
-                        // if (isPlatformServer(this.platformId)) {
                         this.meta.setTag('og:title', "test");
                         this.meta.setTag('og:description', "test");
                         this.meta.setTag('og:image', "test");
                         this.meta.setTag('twitter:title', "test");
                         this.meta.setTag('twitter:description', "test");
                         this.meta.setTag('og:image', "test");
+                        _a = this;
+                        return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
+                    case 1:
+                        _a.selectedProgram = _b.sent();
+                        // if (isPlatformServer(this.platformId)) {
                         // }
                         this.getVideos();
                         return [2 /*return*/];
