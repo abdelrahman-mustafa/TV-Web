@@ -390,21 +390,21 @@ var routes = [
     {
         path: '', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"]
     },
-    { path: 'live', component: _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_3__["LiveStreamComponent"], },
-    { path: 'schedule', component: _pages_programs_schedule_programs_schedule_component__WEBPACK_IMPORTED_MODULE_4__["ProgramsScheduleComponent"] },
-    { path: 'programs', component: _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_5__["ProgramsComponent"] },
-    { path: 'articles', component: _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_6__["ArticlesComponent"] },
-    { path: 'sports', component: _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_7__["SportsComponent"] },
-    { path: 'video', component: _pages_video_video_component__WEBPACK_IMPORTED_MODULE_8__["VideoComponent"] },
-    { path: 'aboutUs', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_9__["AboutUsComponent"] },
-    { path: 'privacy', component: _pages_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_14__["PrivacyComponent"] },
-    { path: 'terms', component: _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_15__["TermsComponent"] },
-    { path: 'contactUs', component: _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_10__["ContactUsComponent"] },
-    { path: 'team', component: _pages_team_team_component__WEBPACK_IMPORTED_MODULE_11__["TeamComponent"] },
-    { path: 'articleDetails/:type/:id', component: _pages_article_details_article_details_component__WEBPACK_IMPORTED_MODULE_12__["ArticleDetailsComponent"] },
-    { path: 'program/:id', component: _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_13__["ProgramDetailsComponent"] },
-    { path: 'search', component: _pages_search_search_component__WEBPACK_IMPORTED_MODULE_16__["SearchComponent"] },
-    { path: 'team-detail/:id', component: _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_17__["TeamDetailComponent"] },
+    { path: 'live', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_3__["LiveStreamComponent"], },
+    { path: 'schedule', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_programs_schedule_programs_schedule_component__WEBPACK_IMPORTED_MODULE_4__["ProgramsScheduleComponent"] },
+    { path: 'programs', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_5__["ProgramsComponent"] },
+    { path: 'articles', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_6__["ArticlesComponent"] },
+    { path: 'sports', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_7__["SportsComponent"] },
+    { path: 'video', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_video_video_component__WEBPACK_IMPORTED_MODULE_8__["VideoComponent"] },
+    { path: 'aboutUs', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_9__["AboutUsComponent"] },
+    { path: 'privacy', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_14__["PrivacyComponent"] },
+    { path: 'terms', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_terms_terms_component__WEBPACK_IMPORTED_MODULE_15__["TermsComponent"] },
+    { path: 'contactUs', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_10__["ContactUsComponent"] },
+    { path: 'team', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_team_team_component__WEBPACK_IMPORTED_MODULE_11__["TeamComponent"] },
+    { path: 'articleDetails/:type/:id', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_article_details_article_details_component__WEBPACK_IMPORTED_MODULE_12__["ArticleDetailsComponent"] },
+    { path: 'program/:id', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_13__["ProgramDetailsComponent"] },
+    { path: 'search', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_search_search_component__WEBPACK_IMPORTED_MODULE_16__["SearchComponent"] },
+    { path: 'team-detail/:id', canActivateChild: [_ngx_meta_core__WEBPACK_IMPORTED_MODULE_18__["MetaGuard"]], component: _pages_team_detail_team_detail_component__WEBPACK_IMPORTED_MODULE_17__["TeamDetailComponent"] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -571,6 +571,22 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+// export function metaFactory(): MetaLoader {
+//   return new MetaStaticLoader({
+//     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
+//     pageTitleSeparator: ' - ',
+//     applicationName: 'Tour of (lazy/busy) heroes',
+//     defaults: {
+//       title: 'Mighty mighty mouse',
+//       description: 'Mighty Mouse is an animated superhero mouse character',
+//       'og:image': 'https://upload.wikimedia.org/wikipedia/commons/f/f8/superraton.jpg',
+//       'og:type': 'website',
+//       'og:locale': 'en_US',
+//       'og:locale:alternate': 'en_US,nl_NL,tr_TR'
+//     }
+//   });
+// }
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -606,6 +622,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_7__["HttpModule"],
                 _ngx_share_button__WEBPACK_IMPORTED_MODULE_6__["ShareButtonModule"].forRoot(),
+                _ngx_meta_core__WEBPACK_IMPORTED_MODULE_8__["MetaModule"].forRoot()
             ],
             providers: [
                 _services_service_handler_service__WEBPACK_IMPORTED_MODULE_21__["ServiceHandlerProvider"],
@@ -1029,7 +1046,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
-/* harmony import */ var _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-meta/core */ "./node_modules/@ngx-meta/core/fesm5/ngx-meta-core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1038,9 +1054,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
 };
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1084,18 +1097,17 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
-
+// import { MetaService } from '@ngx-meta/core';
+// import { PLATFORM_ID } from '@angular/core';
+// import {isPlatformServer } from '@angular/common';
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, platformId, meta) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router) {
         var _this = this;
         this.route = route;
         this.articlesServices = articlesServices;
         this.sanitizer = sanitizer;
         this.location = location;
         this.router = router;
-        this.platformId = platformId;
-        this.meta = meta;
         this.selectedArticle = {
             article: "",
             caption: "",
@@ -1197,14 +1209,11 @@ var ArticleDetailsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./article-details.component.html */ "./src/app/pages/article-details/article-details.component.html"),
             styles: [__webpack_require__(/*! ./article-details.component.css */ "./src/app/pages/article-details/article-details.component.css")],
         }),
-        __param(5, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"])),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             src_app_services_uiServices_articles_service__WEBPACK_IMPORTED_MODULE_2__["ArticlesService"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            Object,
-            _ngx_meta_core__WEBPACK_IMPORTED_MODULE_6__["MetaService"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
 }());
