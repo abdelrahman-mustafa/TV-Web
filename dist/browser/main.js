@@ -571,22 +571,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-// export function metaFactory(): MetaLoader {
-//   return new MetaStaticLoader({
-//     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
-//     pageTitleSeparator: ' - ',
-//     applicationName: 'Tour of (lazy/busy) heroes',
-//     defaults: {
-//       title: 'Mighty mighty mouse',
-//       description: 'Mighty Mouse is an animated superhero mouse character',
-//       'og:image': 'https://upload.wikimedia.org/wikipedia/commons/f/f8/superraton.jpg',
-//       'og:type': 'website',
-//       'og:locale': 'en_US',
-//       'og:locale:alternate': 'en_US,nl_NL,tr_TR'
-//     }
-//   });
-// }
+// import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -622,7 +607,6 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_7__["HttpModule"],
                 _ngx_share_button__WEBPACK_IMPORTED_MODULE_6__["ShareButtonModule"].forRoot(),
-                _ngx_meta_core__WEBPACK_IMPORTED_MODULE_8__["MetaModule"].forRoot()
             ],
             providers: [
                 _services_service_handler_service__WEBPACK_IMPORTED_MODULE_21__["ServiceHandlerProvider"],
@@ -1026,7 +1010,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"contain\">\r\n  <nav class=\"navbar navbar-expand-lg     navbar-inverse\" dir=\"rtl\">\r\n    <a class=\"navbar-brand\" routerLink=\"/\"><img src=\"assets/imgs/logo.png\" class=\"logo\" /></a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\r\n      aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\">\r\n        <i class=\"fas fa-bars bar\" aria-hidden=\"true\"></i>\r\n      </span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse  \" id=\"navbarSupportedContent\">\r\n      <ul class=\"navbar-nav   links\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link \" routerLink=\"/\">الرئيسية <span class=\"sr-only\">(current)</span></a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" routerLink=\"/live\">البث المباشر</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link lead\" routerLink=\"/schedule\">جدول البرامج</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" routerLink=\"/programs\">برامجنا</a>\r\n        </li>\r\n        <li class=\"nav-item\" [ngClass]=\"{\r\n          active: articleType == 'article',\r\n          inActive: articleType != 'article'\r\n        }\">\r\n          <a class=\"nav-link\" routerLink=\"/articles\">آخر الأخبار</a>\r\n        </li>\r\n        <li class=\"nav-item\" [ngClass]=\"{\r\n          active: articleType == 'sports',\r\n          inActive: articleType != 'sports'\r\n        }\">\r\n          <a class=\"nav-link\" routerLink=\"/sports\">رياضة</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" routerLink=\"/video\">فيديو</a>\r\n        </li>\r\n      </ul>\r\n      <app-social-media-icons type=\"header\"></app-social-media-icons>\r\n    </div>\r\n  </nav>\r\n\r\n  <main role=\"main\">\r\n    <div class=\"contained\">\r\n      <div class=\"video\">\r\n        <div class=\"row Subjects_row  Subjects2_row live_broadcast_row\">\r\n          <div class=\"col-lg-3 d-none d-lg-block  \tads_col\">\r\n            <!-- <img src=\"assets/imgs/sale1.jpg\" class=\"ads float-right\" style=\"margin-right: 12.5%;\" /> -->\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-12 Subjects\">\r\n            <div class=\"live_broadcast\">\r\n              <!-- <youtube-player\r\n              *ngIf=\"\r\n                selectedArticle.videos != null && selectedArticle.videos != ''\r\n              \"\r\n              class=\"new_img2 img-responsive\"\r\n              height=\"445\"\r\n              width=\"120%\"\r\n              [videoId]=\"selectedArticle.videos\"\r\n            ></youtube-player> -->\r\n              <!-- <img *ngIf=\"selectedArticle.videos == null || selectedArticle.videos == ''\" src=\"{{selectedArticle.images[0]}}\"\r\n              class=\"new_img2 img-responsive\"> -->\r\n\r\n              <div *ngIf=\"\r\n                  showCarousel &&\r\n                  selectedArticle.videos != null &&\r\n                  selectedArticle.videos != ''\r\n                \" id=\"carouselExampleControls\" class=\"carousel carousel_sports slide\" data-ride=\"carousel\"\r\n                data-interval=\"false\">\r\n                <div class=\"carousel-inner\">\r\n                  <div class=\"carousel-item active\">\r\n                    <youtube-player class=\"new_img2 img-responsive\" height=\"460\" width=\"100%\"\r\n                      [videoId]=\"selectedArticle.videos\"></youtube-player>\r\n                  </div>\r\n                  <div *ngFor=\"let image of selectedArticle.images\" class=\"carousel-item\">\r\n                    <img src=\"{{ image }}\" class=\"new_img2 img-responsive\" style=\"width: 100% !important\" />\r\n                  </div>\r\n                </div>\r\n                <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\r\n                  <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Previous</span>\r\n                </a>\r\n                <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\r\n                  <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Next</span>\r\n                </a>\r\n              </div>\r\n              <div *ngIf=\"\r\n                  showCarousel &&\r\n                  (selectedArticle.videos == null ||\r\n                    selectedArticle.videos == '')\r\n                \" id=\"carouselExampleControls\" class=\"carousel carousel_sports slide\" data-ride=\"carousel\">\r\n                <div class=\"carousel-inner\">\r\n                  <div *ngFor=\"let image of selectedArticle.images; let i = index\" class=\"carousel-item\"\r\n                    [ngClass]=\"{ active: i == 0, inActive: i != 0 }\">\r\n                    <img src=\"{{ image }}\" class=\"new_img2 img-responsive\" style=\"width: 100% !important\" />\r\n                  </div>\r\n                </div>\r\n                <a class=\"carousel-control-prev\" [ngClass]=\"{ hide_arrow: selectedArticle.images.length == 1 }\"\r\n                  href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\r\n                  <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Previous</span>\r\n                </a>\r\n                <a class=\"carousel-control-next \" [ngClass]=\"{ hide_arrow: selectedArticle.images.length == 1 }\"\r\n                  href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\r\n                  <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Next</span>\r\n                </a>\r\n              </div>\r\n            </div>\r\n            <div class=\"special\">\r\n              <div class=\"Subjects_description\">\r\n                <span class=\"share_icons\">\r\n                  <share-button button=\"facebook\" [url]=\"sharingLink\"></share-button>\r\n                  <share-button button=\"twitter\" [url]=\"sharingLink\"></share-button>\r\n                  <p class=\"share_word\">:مشاركة</p>\r\n                </span>\r\n                <p>{{ selectedArticle.writer }}</p>\r\n\r\n                <h6>\r\n                  {{ selectedArticle.publishDate | date }}\r\n                  {{ selectedArticle.publishTime }}\r\n                </h6>\r\n                <p>{{ selectedArticle.writer }}</p>\r\n\r\n                <h4 style=\"text-decoration: underline\">\r\n                  {{ selectedArticle.name }}\r\n                </h4>\r\n\r\n                <p [innerHTML]=\"articleBody\"></p>\r\n              </div>\r\n\r\n              <div class=\"col-xs-12 section_col2\">\r\n                <!--                   <i class=\"fa fa-minus section_bar\" aria-hidden=\"true\"></i>-->\r\n                <p>المزيد</p>\r\n              </div>\r\n\r\n              <div class=\"row Subjects_box\" *ngFor=\"let article of articles\">\r\n                <div class=\"col-lg-9 col-md-8 col-xs-12\">\r\n                  <span class=\"share_icons\">\r\n                    <share-button button=\"facebook\" [url]=\"getSharingLink(article.id)\"></share-button>\r\n                    <share-button button=\"twitter\" [url]=\"getSharingLink(article.id)\"></share-button>\r\n                    <p class=\"share_word\">مشاركة:</p>\r\n                  </span>\r\n                  <h4 routerLink=\"/articleDetails/{{ articleType }}/{{\r\n                      article.id\r\n                    }}\">\r\n                    {{ article.name }}\r\n                  </h4>\r\n                  <h6>{{ article.publishDate | date }}</h6>\r\n                  <p [innerHTML]=\"article.article\"></p>\r\n                </div>\r\n                <div class=\"col-lg-3 col-md-4 col-xs-12\">\r\n                  <a routerLink=\"/articleDetails/{{ articleType }}/{{\r\n                      article.id\r\n                    }}\">\r\n                    <img src=\"{{ article.images[0] }}\" class=\"new_img2 img-responsive\" />\r\n                  </a>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-xs-12\" style=\"text-align: center;margin-top: 8px;\">\r\n              <button (click)=\"loadMore()\" class=\"btn\">المزيد</button>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-3 d-none d-lg-block  ads_col\">\r\n            <!-- <img src=\"assets/imgs/sale1.jpg\" class=\"ads float-left\" style=\"margin-left: 12.5%;\" /> -->\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Fooooterrrrrrrrrrr  -->\r\n\r\n      <div class=\"footer\">\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-6  col-xs-12 footer_apps\">\r\n            <app-mobile-apps-icons></app-mobile-apps-icons>\r\n          </div>\r\n\r\n          <div class=\"col-lg-5  offest-lg-8 col-md-6  col-sm-6 col-xs-12 footer_map\">\r\n            <div>\r\n              <p>خريطه الموقع</p>\r\n              <p>\r\n                <a routerLink=\"/\">الرئيسية</a>\r\n                <a routerLink=\"/live\">البث&nbsp;المباشر</a>\r\n                <a routerLink=\"/schedule\">جدول&nbsp;البرامج</a>\r\n                <a routerLink=\"/programs\">برامجنا</a>\r\n                <a routerLink=\"/articles\" [ngClass]=\"{\r\n                    active: articleType == 'article',\r\n                    inActive: articleType != 'article'\r\n                  }\">آخر الأخبار</a>\r\n\r\n                <a routerLink=\"/sports\" [ngClass]=\"{\r\n                    active: articleType == 'sports',\r\n                    inActive: articleType != 'sports'\r\n                  }\">رياضة</a>\r\n                <a routerLink=\"/video\">فيديو</a>\r\n                <a routerLink=\"/aboutUs\">عن&nbsp;الوسط</a>\r\n                <a routerLink=\"/contactUs\">تواصل&nbsp;معنا</a>\r\n                <a routerLink=\"/team\">الفريق</a>\r\n                <a routerLink=\"/privacy\">الخصوصية</a>\r\n                <a routerLink=\"/terms\">شروط الاستخدام</a>\r\n              </p>\r\n            </div>\r\n          </div>\r\n          <hr />\r\n        </div>\r\n        <div class=\"row footer_row_p2\">\r\n          <div class=\"col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_icons\">\r\n            <app-social-media-icons type=\"footer\"></app-social-media-icons>\r\n          </div>\r\n          <div class=\"col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_dev\">\r\n            DEVELOPED BY: LIBYANA MEDIA PRODUCTION\r\n          </div>\r\n          <div class=\"col-lg-4   col-md-4  col-sm-4 col-xs-12  footer_copy\">\r\n            <p>جميع الحقوق الملكية تابعة لشبكة الوسط</p>\r\n          </div>\r\n        </div>\r\n\r\n        <span class=\"clearfix\"></span>\r\n\r\n        <div class=\"col-lg-12  col-md-12  col-xs-12  \" style=\"text-align: center\"></div>\r\n      </div>\r\n    </div>\r\n  </main>\r\n</div>\r\n"
+module.exports = "<div class=\"contain\">\r\n  <nav class=\"navbar navbar-expand-lg     navbar-inverse\" dir=\"rtl\">\r\n    <a class=\"navbar-brand\" routerLink=\"/\"><img src=\"assets/imgs/logo.png\" class=\"logo\" /></a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\r\n      aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\">\r\n        <i class=\"fas fa-bars bar\" aria-hidden=\"true\"></i>\r\n      </span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse  \" id=\"navbarSupportedContent\">\r\n      <ul class=\"navbar-nav   links\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link \" routerLink=\"/\">الرئيسية <span class=\"sr-only\">(current)</span></a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" routerLink=\"/live\">البث المباشر</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link lead\" routerLink=\"/schedule\">جدول البرامج</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" routerLink=\"/programs\">برامجنا</a>\r\n        </li>\r\n        <li class=\"nav-item\" [ngClass]=\"{\r\n          active: articleType == 'article',\r\n          inActive: articleType != 'article'\r\n        }\">\r\n          <a class=\"nav-link\" routerLink=\"/articles\">آخر الأخبار</a>\r\n        </li>\r\n        <li class=\"nav-item\" [ngClass]=\"{\r\n          active: articleType == 'sports',\r\n          inActive: articleType != 'sports'\r\n        }\">\r\n          <a class=\"nav-link\" routerLink=\"/sports\">رياضة</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" routerLink=\"/video\">فيديو</a>\r\n        </li>\r\n      </ul>\r\n      <app-social-media-icons type=\"header\"></app-social-media-icons>\r\n    </div>\r\n  </nav>\r\n\r\n  <main role=\"main\">\r\n    <div class=\"contained\">\r\n      <div class=\"video\">\r\n        <div class=\"row Subjects_row  Subjects2_row live_broadcast_row\">\r\n          <div class=\"col-lg-3 d-none d-lg-block  \tads_col\">\r\n            <!-- <img src=\"assets/imgs/sale1.jpg\" class=\"ads float-right\" style=\"margin-right: 12.5%;\" /> -->\r\n          </div>\r\n\r\n          <div class=\"col-lg-6 col-md-12 Subjects\">\r\n            <div class=\"live_broadcast\">\r\n              <!-- <youtube-player\r\n              *ngIf=\"\r\n                selectedArticle.videos != null && selectedArticle.videos != ''\r\n              \"\r\n              class=\"new_img2 img-responsive\"\r\n              height=\"445\"\r\n              width=\"120%\"\r\n              [videoId]=\"selectedArticle.videos\"\r\n            ></youtube-player> -->\r\n              <!-- <img *ngIf=\"selectedArticle.videos == null || selectedArticle.videos == ''\" src=\"{{selectedArticle.images[0]}}\"\r\n              class=\"new_img2 img-responsive\"> -->\r\n\r\n              <div *ngIf=\"\r\n                  showCarousel &&\r\n                  selectedArticle.videos != null &&\r\n                  selectedArticle.videos != ''\r\n                \" id=\"carouselExampleControls\" class=\"carousel carousel_sports slide\" data-ride=\"carousel\"\r\n                data-interval=\"false\">\r\n                <div class=\"carousel-inner\">\r\n                  <div class=\"carousel-item active\">\r\n                    <youtube-player class=\"new_img2 img-responsive\" height=\"460\" width=\"100%\"\r\n                      [videoId]=\"selectedArticle.videos\"></youtube-player>\r\n                  </div>\r\n                  <div *ngFor=\"let image of selectedArticle.images\" class=\"carousel-item\">\r\n                    <img src=\"{{ image }}\" class=\"new_img2 img-responsive\" style=\"width: 100% !important\" />\r\n                  </div>\r\n                </div>\r\n                <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\r\n                  <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Previous</span>\r\n                </a>\r\n                <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\r\n                  <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Next</span>\r\n                </a>\r\n              </div>\r\n              <div *ngIf=\"\r\n                  showCarousel &&\r\n                  (selectedArticle.videos == null ||\r\n                    selectedArticle.videos == '')\r\n                \" id=\"carouselExampleControls\" class=\"carousel carousel_sports slide\" data-ride=\"carousel\">\r\n                <div class=\"carousel-inner\">\r\n                  <div *ngFor=\"let image of selectedArticle.images; let i = index\" class=\"carousel-item\"\r\n                    [ngClass]=\"{ active: i == 0, inActive: i != 0 }\">\r\n                    <img src=\"{{ image }}\" class=\"new_img2 img-responsive\" style=\"width: 100% !important\" />\r\n                  </div>\r\n                </div>\r\n                <a class=\"carousel-control-prev\" [ngClass]=\"{ hide_arrow: selectedArticle.images.length == 1 }\"\r\n                  href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\r\n                  <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Previous</span>\r\n                </a>\r\n                <a class=\"carousel-control-next \" [ngClass]=\"{ hide_arrow: selectedArticle.images.length == 1 }\"\r\n                  href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\r\n                  <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n                  <span class=\"sr-only\">Next</span>\r\n                </a>\r\n              </div>\r\n            </div>\r\n            <div class=\"special\">\r\n              <div class=\"Subjects_description\">\r\n                <span class=\"share_icons\">\r\n                  <share-button button=\"facebook\" [url]=\"sharingLink\"></share-button>\r\n                  <share-button button=\"twitter\" [url]=\"sharingLink\"></share-button>\r\n                  <p class=\"share_word\">:مشاركة</p>\r\n                </span>\r\n                <p>{{ selectedArticle.caption }}</p>\r\n\r\n                <h6>\r\n                  {{ selectedArticle.publishDate | date }}\r\n                  {{ selectedArticle.publishTime }}\r\n                </h6>\r\n                <p>{{ selectedArticle.writer }}</p>\r\n\r\n                <h4 style=\"text-decoration: underline\">\r\n                  {{ selectedArticle.name }}\r\n                </h4>\r\n\r\n                <p [innerHTML]=\"articleBody\"></p>\r\n              </div>\r\n\r\n              <div class=\"col-xs-12 section_col2\">\r\n                <!--                   <i class=\"fa fa-minus section_bar\" aria-hidden=\"true\"></i>-->\r\n                <p>المزيد</p>\r\n              </div>\r\n\r\n              <div class=\"row Subjects_box\" *ngFor=\"let article of articles\">\r\n                <div class=\"col-lg-9 col-md-8 col-xs-12\">\r\n                  <span class=\"share_icons\">\r\n                    <share-button button=\"facebook\" [url]=\"getSharingLink(article.id)\"></share-button>\r\n                    <share-button button=\"twitter\" [url]=\"getSharingLink(article.id)\"></share-button>\r\n                    <p class=\"share_word\">مشاركة:</p>\r\n                  </span>\r\n                  <h4 routerLink=\"/articleDetails/{{ articleType }}/{{\r\n                      article.id\r\n                    }}\">\r\n                    {{ article.name }}\r\n                  </h4>\r\n                  <h6>{{ article.publishDate | date }}</h6>\r\n                  <p [innerHTML]=\"article.article\"></p>\r\n                </div>\r\n                <div class=\"col-lg-3 col-md-4 col-xs-12\">\r\n                  <a routerLink=\"/articleDetails/{{ articleType }}/{{\r\n                      article.id\r\n                    }}\">\r\n                    <img src=\"{{ article.images[0] }}\" class=\"new_img2 img-responsive\" />\r\n                  </a>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-xs-12\" style=\"text-align: center;margin-top: 8px;\">\r\n              <button (click)=\"loadMore()\" class=\"btn\">المزيد</button>\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"col-lg-3 d-none d-lg-block  ads_col\">\r\n            <!-- <img src=\"assets/imgs/sale1.jpg\" class=\"ads float-left\" style=\"margin-left: 12.5%;\" /> -->\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <!-- Fooooterrrrrrrrrrr  -->\r\n\r\n      <div class=\"footer\">\r\n        <div class=\"row\">\r\n          <div class=\"col-lg-6 col-md-6 col-sm-6  col-xs-12 footer_apps\">\r\n            <app-mobile-apps-icons></app-mobile-apps-icons>\r\n          </div>\r\n\r\n          <div class=\"col-lg-5  offest-lg-8 col-md-6  col-sm-6 col-xs-12 footer_map\">\r\n            <div>\r\n              <p>خريطه الموقع</p>\r\n              <p>\r\n                <a routerLink=\"/\">الرئيسية</a>\r\n                <a routerLink=\"/live\">البث&nbsp;المباشر</a>\r\n                <a routerLink=\"/schedule\">جدول&nbsp;البرامج</a>\r\n                <a routerLink=\"/programs\">برامجنا</a>\r\n                <a routerLink=\"/articles\" [ngClass]=\"{\r\n                    active: articleType == 'article',\r\n                    inActive: articleType != 'article'\r\n                  }\">آخر الأخبار</a>\r\n\r\n                <a routerLink=\"/sports\" [ngClass]=\"{\r\n                    active: articleType == 'sports',\r\n                    inActive: articleType != 'sports'\r\n                  }\">رياضة</a>\r\n                <a routerLink=\"/video\">فيديو</a>\r\n                <a routerLink=\"/aboutUs\">عن&nbsp;الوسط</a>\r\n                <a routerLink=\"/contactUs\">تواصل&nbsp;معنا</a>\r\n                <a routerLink=\"/team\">الفريق</a>\r\n                <a routerLink=\"/privacy\">الخصوصية</a>\r\n                <a routerLink=\"/terms\">شروط الاستخدام</a>\r\n              </p>\r\n            </div>\r\n          </div>\r\n          <hr />\r\n        </div>\r\n        <div class=\"row footer_row_p2\">\r\n          <div class=\"col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_icons\">\r\n            <app-social-media-icons type=\"footer\"></app-social-media-icons>\r\n          </div>\r\n          <div class=\"col-lg-4 col-md-4 col-sm-4  col-xs-12  footer_dev\">\r\n            DEVELOPED BY: LIBYANA MEDIA PRODUCTION\r\n          </div>\r\n          <div class=\"col-lg-4   col-md-4  col-sm-4 col-xs-12  footer_copy\">\r\n            <p>جميع الحقوق الملكية تابعة لشبكة الوسط</p>\r\n          </div>\r\n        </div>\r\n\r\n        <span class=\"clearfix\"></span>\r\n\r\n        <div class=\"col-lg-12  col-md-12  col-xs-12  \" style=\"text-align: center\"></div>\r\n      </div>\r\n    </div>\r\n  </main>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1046,6 +1030,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
+/* harmony import */ var ngx_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-seo */ "./node_modules/ngx-seo/fesm5/ngx-seo.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1097,17 +1082,16 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-// import { MetaService } from '@ngx-meta/core';
-// import { PLATFORM_ID } from '@angular/core';
-// import {isPlatformServer } from '@angular/common';
+
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, seoSocialShareService) {
         var _this = this;
         this.route = route;
         this.articlesServices = articlesServices;
         this.sanitizer = sanitizer;
         this.location = location;
         this.router = router;
+        this.seoSocialShareService = seoSocialShareService;
         this.selectedArticle = {
             article: "",
             caption: "",
@@ -1125,15 +1109,19 @@ var ArticleDetailsComponent = /** @class */ (function () {
         this.route.params.subscribe(function (params) {
             _this.articleId = params.id;
             _this.articleType = params.type;
+            var seoData = {
+                title: 'test',
+                description: 'test',
+                image: '',
+            };
+            _this.seoSocialShareService.setData(seoData);
             _this.getArticleDetails();
             _this.showCarousel = false;
             _this.loadArticles();
         });
-        // console.log(this.router.url);
         this.sharingLink = src_app_Constants__WEBPACK_IMPORTED_MODULE_5__["Constants"].SHARING_URL + this.router.url;
     }
     ArticleDetailsComponent.prototype.ngOnInit = function () {
-        // console.log(this.sharingLink);
     };
     ArticleDetailsComponent.prototype.getArticleDetails = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -1213,7 +1201,8 @@ var ArticleDetailsComponent = /** @class */ (function () {
             src_app_services_uiServices_articles_service__WEBPACK_IMPORTED_MODULE_2__["ArticlesService"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            ngx_seo__WEBPACK_IMPORTED_MODULE_6__["SeoSocialShareService"]])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
 }());
@@ -2227,9 +2216,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -2272,15 +2258,12 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-// import { MetaService } from '@ngx-meta/core';
-
 var ProgramDetailsComponent = /** @class */ (function () {
-    function ProgramDetailsComponent(programService, route, serviceHandeler, router, platformId) {
+    function ProgramDetailsComponent(programService, route, serviceHandeler, router) {
         this.programService = programService;
         this.route = route;
         this.serviceHandeler = serviceHandeler;
         this.router = router;
-        this.platformId = platformId;
         this.selectedProgram = {
             name: "",
             description: "",
@@ -2298,12 +2281,6 @@ var ProgramDetailsComponent = /** @class */ (function () {
     }
     ProgramDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        // this.meta.setTag('og:title', "test");
-        // this.meta.setTag('og:description', "test");
-        // this.meta.setTag('og:image', "test");
-        // this.meta.setTag('twitter:title', "test");
-        // this.meta.setTag('twitter:description', "test");
-        // this.meta.setTag('og:image', "test");
         this.route.params.subscribe(function (params) {
             _this.programId = params.id;
             _this.getProgramDetails();
@@ -2320,8 +2297,6 @@ var ProgramDetailsComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.programService.getProgramsDetails(this.programId)];
                     case 1:
                         _a.selectedProgram = _b.sent();
-                        // if (isPlatformServer(this.platformId)) {
-                        // }
                         this.getVideos();
                         return [2 /*return*/];
                 }
@@ -2337,14 +2312,6 @@ var ProgramDetailsComponent = /** @class */ (function () {
         }, function (error) {
             // console.log(error);
         });
-    };
-    ProgramDetailsComponent.prototype.ngOnDestroy = function () {
-        // this.meta.setTag('og:title', "قناة الوسط الليبية");
-        // this.meta.setTag('og:description', "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
-        // this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
-        // this.meta.setTag('twitter:title', "قناة الوسط الليبية");
-        // this.meta.setTag('twitter:description',  "قناة تلفزيونية متنوعة .. تطمح لتقديم مايخدم الهوية الليبية في إطار فني ثقافي متميز");
-        // this.meta.setTag('og:image', "http://wasat.tv/home/assets/imgs/logo.png");
     };
     ProgramDetailsComponent.prototype.loadMore = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -2365,12 +2332,10 @@ var ProgramDetailsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./program-details.component.html */ "./src/app/pages/program-details/program-details.component.html"),
             styles: [__webpack_require__(/*! ./program-details.component.css */ "./src/app/pages/program-details/program-details.component.css")]
         }),
-        __param(4, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"])),
         __metadata("design:paramtypes", [src_app_services_uiServices_programs_service__WEBPACK_IMPORTED_MODULE_1__["ProgramsService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
             src_app_services_service_handler_service__WEBPACK_IMPORTED_MODULE_3__["ServiceHandlerProvider"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-            Object])
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], ProgramDetailsComponent);
     return ProgramDetailsComponent;
 }());
