@@ -1030,7 +1030,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var src_app_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/Constants */ "./src/app/Constants.ts");
-/* harmony import */ var ngx_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-seo */ "./node_modules/ngx-seo/fesm5/ngx-seo.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1082,16 +1081,14 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
 var ArticleDetailsComponent = /** @class */ (function () {
-    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router, seoSocialShareService) {
+    function ArticleDetailsComponent(route, articlesServices, sanitizer, location, router) {
         var _this = this;
         this.route = route;
         this.articlesServices = articlesServices;
         this.sanitizer = sanitizer;
         this.location = location;
         this.router = router;
-        this.seoSocialShareService = seoSocialShareService;
         this.selectedArticle = {
             article: "",
             caption: "",
@@ -1109,12 +1106,6 @@ var ArticleDetailsComponent = /** @class */ (function () {
         this.route.params.subscribe(function (params) {
             _this.articleId = params.id;
             _this.articleType = params.type;
-            var seoData = {
-                title: 'test',
-                description: 'test',
-                image: '',
-            };
-            _this.seoSocialShareService.setData(seoData);
             _this.getArticleDetails();
             _this.showCarousel = false;
             _this.loadArticles();
@@ -1201,8 +1192,7 @@ var ArticleDetailsComponent = /** @class */ (function () {
             src_app_services_uiServices_articles_service__WEBPACK_IMPORTED_MODULE_2__["ArticlesService"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
             _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            ngx_seo__WEBPACK_IMPORTED_MODULE_6__["SeoSocialShareService"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ArticleDetailsComponent);
     return ArticleDetailsComponent;
 }());
