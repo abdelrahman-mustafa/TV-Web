@@ -4,18 +4,21 @@ const search = {
             const articles =  await context.prisma.query.articles({
                 where:{
                     name_contains: args.keyword,
-                }
+                },
+                orderBy: "publishDate_DESC",
+                first: 50
             },info)
             const sportsArticles =  await context.prisma.query.sportsArticles({
                 where:{
                     name_contains: args.keyword
-                }
+                },
+                orderBy: "publishDate_DESC",
+                first: 50
             },info)
             articles.forEach(element => {
                 element.type = 0
                 sportsArticles.push(element)
             });
-
 
             return sportsArticles
 
