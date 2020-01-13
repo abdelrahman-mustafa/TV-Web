@@ -10,6 +10,9 @@ type Mutation {
     updateAdmin(data: AdminUpdateInput!, where: AdminWhereUniqueInput!): Admin
     deleteAdmin(where: AdminWhereUniqueInput!): Admin
     login(username: String!, password: String!): AuthPayload
+    resetPassowrd(username: String!, password: String!, new_passowrd: String!): AuthPayload
+
+    resetPassowrd
 }
 
 type AuthPayload {

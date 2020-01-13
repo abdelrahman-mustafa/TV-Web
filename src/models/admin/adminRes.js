@@ -69,6 +69,42 @@ const Admin = {
            }
            return AuthPayload
         },
+        resetPassowrd: async (_, args, context, info) =>{
+            let userId;
+            let user;
+              try {
+              user = await context.prisma.query.admins({ where: { username: args.username } }, ` { id password } `);
+              if (! user[0].id) throw new Error('No such admin found')
+              else userId = user[0].id
+              } catch(err){
+                  throw new Error('No such admin found')
+  
+              }         
+             const valid = await bcrypt.compare(args.password, user[0].password)
+             if (!valid) {
+              throw new Error( 'Invalid password')
+             }
+
+             const password =  bcrypt.hashSync(args.new_passowrd, 10)
+           
+             await  context.prisma.mutation.updateAdmin({
+                data: {
+                    password
+                },
+                where: {
+                    id: userId
+                }
+                });
+
+             const token = await jwt.sign({ userId: userId}, APP_SECRET)
+             console.log(token)
+  
+             const AuthPayload = {
+               token, userId
+             }
+             return AuthPayload
+          },
+                  
 
     },
 }
