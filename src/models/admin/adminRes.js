@@ -103,9 +103,7 @@ const Admin = {
                token, userId
              }
              return AuthPayload
-          },
-                  
-
+        }      
     },
 }
 
