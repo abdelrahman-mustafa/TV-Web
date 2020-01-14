@@ -370,6 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/event-details/event-details.component */ "./src/app/pages/event-details/event-details.component.ts");
 /* harmony import */ var _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/edit-event-schedule/edit-event-schedule.component */ "./src/app/pages/edit-event-schedule/edit-event-schedule.component.ts");
 /* harmony import */ var _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/notification/notification.component */ "./src/app/pages/notification/notification.component.ts");
+/* harmony import */ var _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./pages/change-password/change-password.component */ "./src/app/pages/change-password/change-password.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -406,35 +407,141 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'live', component: _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_3__["LiveStreamComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'programs', component: _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_4__["ProgramsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'video', component: _pages_videos_videos_component__WEBPACK_IMPORTED_MODULE_5__["VideosComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'aboutUs', component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_6__["AboutUsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'aboutUsEdit', component: _pages_edit_about_us_edit_about_us_component__WEBPACK_IMPORTED_MODULE_7__["EditAboutUsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'editTerms', component: _pages_edit_use_terms_edit_use_terms_component__WEBPACK_IMPORTED_MODULE_8__["EditUseTermsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'terms', component: _pages_use_terms_use_terms_component__WEBPACK_IMPORTED_MODULE_9__["UseTermsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'privacy', component: _pages_privacy_terms_privacy_terms_component__WEBPACK_IMPORTED_MODULE_10__["PrivacyTermsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'editPrivacy', component: _pages_edit_privacy_edit_privacy_component__WEBPACK_IMPORTED_MODULE_11__["EditPrivacyComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'contacts', component: _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_12__["ContactUsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'events', component: _pages_news_news_component__WEBPACK_IMPORTED_MODULE_13__["NewsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'articles', component: _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_14__["ArticlesComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'sports', component: _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_15__["SportsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'links', component: _pages_links_links_component__WEBPACK_IMPORTED_MODULE_16__["LinksComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'team', component: _pages_our_team_our_team_component__WEBPACK_IMPORTED_MODULE_17__["OurTeamComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'editProgram/:id', component: _pages_add_or_remove_program_add_or_remove_program_component__WEBPACK_IMPORTED_MODULE_18__["AddOrRemoveProgramComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'editLink/:id', component: _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_20__["AddOrEditLinksComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'editMember/:id', component: _pages_add_or_edit_team_member_add_or_edit_team_member_component__WEBPACK_IMPORTED_MODULE_23__["AddOrEditTeamMemberComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'editArticle/:type/:id', component: _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_19__["AddOrEditArticleComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'programDetails/:id', component: _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_21__["ProgramDetailsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'programSchedule/:programId/:scheduleId', component: _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_22__["ProgramScheduleComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'login', component: _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_24__["LoginPageComponent"] },
-    { path: 'editEvent/:id', component: _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_26__["EditEventComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'eventDetails/:id', component: _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_27__["EventDetailsComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'eventSchedule/:eventId/:scheduleId', component: _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_28__["EditEventScheduleComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]] },
-    { path: 'Notification', component: _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_29__["NotificationComponent"] },
+    { path: "", redirectTo: "/home", pathMatch: "full" },
+    {
+        path: "home",
+        component: _pages_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_2__["HomePageComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "live",
+        component: _pages_live_stream_live_stream_component__WEBPACK_IMPORTED_MODULE_3__["LiveStreamComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "programs",
+        component: _pages_programs_programs_component__WEBPACK_IMPORTED_MODULE_4__["ProgramsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "video",
+        component: _pages_videos_videos_component__WEBPACK_IMPORTED_MODULE_5__["VideosComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "aboutUs",
+        component: _pages_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_6__["AboutUsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "aboutUsEdit",
+        component: _pages_edit_about_us_edit_about_us_component__WEBPACK_IMPORTED_MODULE_7__["EditAboutUsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "editTerms",
+        component: _pages_edit_use_terms_edit_use_terms_component__WEBPACK_IMPORTED_MODULE_8__["EditUseTermsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "terms",
+        component: _pages_use_terms_use_terms_component__WEBPACK_IMPORTED_MODULE_9__["UseTermsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "privacy",
+        component: _pages_privacy_terms_privacy_terms_component__WEBPACK_IMPORTED_MODULE_10__["PrivacyTermsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "editPrivacy",
+        component: _pages_edit_privacy_edit_privacy_component__WEBPACK_IMPORTED_MODULE_11__["EditPrivacyComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "contacts",
+        component: _pages_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_12__["ContactUsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "events",
+        component: _pages_news_news_component__WEBPACK_IMPORTED_MODULE_13__["NewsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "articles",
+        component: _pages_articles_articles_component__WEBPACK_IMPORTED_MODULE_14__["ArticlesComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "sports",
+        component: _pages_sports_sports_component__WEBPACK_IMPORTED_MODULE_15__["SportsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "links",
+        component: _pages_links_links_component__WEBPACK_IMPORTED_MODULE_16__["LinksComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "team",
+        component: _pages_our_team_our_team_component__WEBPACK_IMPORTED_MODULE_17__["OurTeamComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "editProgram/:id",
+        component: _pages_add_or_remove_program_add_or_remove_program_component__WEBPACK_IMPORTED_MODULE_18__["AddOrRemoveProgramComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "editLink/:id",
+        component: _pages_add_or_edit_links_add_or_edit_links_component__WEBPACK_IMPORTED_MODULE_20__["AddOrEditLinksComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "editMember/:id",
+        component: _pages_add_or_edit_team_member_add_or_edit_team_member_component__WEBPACK_IMPORTED_MODULE_23__["AddOrEditTeamMemberComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "editArticle/:type/:id",
+        component: _pages_add_or_edit_article_add_or_edit_article_component__WEBPACK_IMPORTED_MODULE_19__["AddOrEditArticleComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "programDetails/:id",
+        component: _pages_program_details_program_details_component__WEBPACK_IMPORTED_MODULE_21__["ProgramDetailsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "programSchedule/:programId/:scheduleId",
+        component: _pages_program_schedule_program_schedule_component__WEBPACK_IMPORTED_MODULE_22__["ProgramScheduleComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    { path: "login", component: _pages_login_page_login_page_component__WEBPACK_IMPORTED_MODULE_24__["LoginPageComponent"] },
+    {
+        path: "editEvent/:id",
+        component: _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_26__["EditEventComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "eventDetails/:id",
+        component: _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_27__["EventDetailsComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "eventSchedule/:eventId/:scheduleId",
+        component: _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_28__["EditEventScheduleComponent"],
+        canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "Notification", component: _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_29__["NotificationComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    },
+    {
+        path: "ChangePassword", component: _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_30__["ChangePasswordComponent"], canActivate: [_services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_25__["LoginActivateService"]]
+    }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -470,7 +577,7 @@ module.exports = ".inActive{\n    background: transparent !important;\n}\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"preloader\">\n  <svg class=\"circular\" viewBox=\"25 25 50 50\">\n    <circle\n      class=\"path\"\n      cx=\"50\"\n      cy=\"50\"\n      r=\"20\"\n      fill=\"none\"\n      stroke-width=\"2\"\n      stroke-miterlimit=\"10\"\n    />\n  </svg>\n</div>\n<!-- ============================================================== -->\n<!-- Wrapper -->\n<!-- ============================================================== -->\n<div id=\"wrapper\">\n  <!-- ============================================================== -->\n  <!-- Topbar header - style you can find in pages.scss -->\n  <!-- ============================================================== -->\n  <nav class=\"navbar navbar-default navbar-static-top m-b-0\">\n    <div class=\"navbar-header\">\n      <div class=\"top-left-part\">\n        <!-- Logo -->\n        <a class=\"logo\" routerLink=\"\">\n          <img src=\"assets/imgs/logo.png\" alt=\"home\" class=\"light-logo\" />\n        </a>\n      </div>\n      <!-- /Logo -->\n      <!-- Search input and Toggle icon -->\n      <ul class=\"nav navbar-top-links navbar-left\">\n        <li>\n          <a\n            routerLink=\"javascript:void(0)\"\n            class=\"open-close waves-effect waves-light\"\n            ><i class=\"ti-menu\"></i\n          ></a>\n        </li>\n      </ul>\n    </div>\n    <!-- /.navbar-header -->\n    <!-- /.navbar-top-links -->\n    <!-- /.navbar-static-side -->\n  </nav>\n  <!-- End Top Navigation -->\n  <!-- ============================================================== -->\n  <!-- Left Sidebar - style you can find in sidebar.scss  -->\n  <!-- ============================================================== -->\n  <div class=\"navbar-default sidebar\" role=\"navigation\">\n    <div class=\"sidebar-nav slimscrollsidebar\">\n      <ul class=\"nav\" id=\"side-menu\">\n        <li>\n          <a\n            routerLink=\"/\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'home',\n              inActive: _selectedSideMenuItem != 'home'\n            }\"\n            (click)=\"onMenuItemClicked('home')\"\n          >\n            <span class=\"hide-menu\"> اعدادات عامة</span></a\n          >\n        </li>\n\n        <li>\n          <a\n            routerLink=\"/live\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'live',\n              inActive: _selectedSideMenuItem != 'live'\n            }\"\n            (click)=\"onMenuItemClicked('live')\"\n          >\n            <span class=\"hide-menu\"> البث المباشر</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/programs\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'programs',\n              inActive: _selectedSideMenuItem != 'programs'\n            }\"\n            (click)=\"onMenuItemClicked('programs')\"\n          >\n            <span class=\"hide-menu\"> البرامج</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/events\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'events',\n              inActive: _selectedSideMenuItem != 'events'\n            }\"\n            (click)=\"onMenuItemClicked('events')\"\n          >\n            <span class=\"hide-menu\"> الأحداث</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/articles\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'articles',\n              inActive: _selectedSideMenuItem != 'articles'\n            }\"\n            (click)=\"onMenuItemClicked('articles')\"\n          >\n            <span class=\"hide-menu\"> اخر الاخبار</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/sports\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'sports',\n              inActive: _selectedSideMenuItem != 'sports'\n            }\"\n            (click)=\"onMenuItemClicked('sports')\"\n          >\n            <span class=\"hide-menu\"> الرياضة</span></a\n          >\n        </li>\n\n        <li>\n          <a\n            routerLink=\"/links\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'links',\n              inActive: _selectedSideMenuItem != 'links'\n            }\"\n            (click)=\"onMenuItemClicked('links')\"\n          >\n            <span class=\"hide-menu\"> الروابط</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/aboutUs\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'aboutUs',\n              inActive: _selectedSideMenuItem != 'aboutUs'\n            }\"\n            (click)=\"onMenuItemClicked('aboutUs')\"\n          >\n            <span class=\"hide-menu\"> عنا</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/terms\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'terms',\n              inActive: _selectedSideMenuItem != 'terms'\n            }\"\n            (click)=\"onMenuItemClicked('terms')\"\n          >\n            <span class=\"hide-menu\"> شروط الأستخدام</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/privacy\"\n            class=\"waves-effect \"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'privacy',\n              inActive: _selectedSideMenuItem != 'privacy'\n            }\"\n            (click)=\"onMenuItemClicked('privacy')\"\n          >\n            <span class=\"hide-menu\"> الخصوصية</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/contacts\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'contacts',\n              inActive: _selectedSideMenuItem != 'contacts'\n            }\"\n            (click)=\"onMenuItemClicked('contacts')\"\n          >\n            <span class=\"hide-menu\"> الاتصال</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/team\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'team',\n              inActive: _selectedSideMenuItem != 'team'\n            }\"\n            (click)=\"onMenuItemClicked('team')\"\n          >\n            <span class=\"hide-menu\"> الفريق</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/video\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'video',\n              inActive: _selectedSideMenuItem != 'video'\n            }\"\n            (click)=\"onMenuItemClicked('video')\"\n          >\n            <span class=\"hide-menu\"> فيديو</span></a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/Notification\"\n            class=\"waves-effect\"\n            [ngClass]=\"{\n              active: _selectedSideMenuItem == 'Notification',\n              inActive: _selectedSideMenuItem != 'Notification'\n            }\"\n            (click)=\"onMenuItemClicked('Notification')\"\n          >\n            <span class=\"hide-menu\"> الإشعارات</span></a\n          >\n        </li>\n      </ul>\n    </div>\n  </div>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<div class=\"preloader\">\n  <svg class=\"circular\" viewBox=\"25 25 50 50\">\n    <circle class=\"path\" cx=\"50\" cy=\"50\" r=\"20\" fill=\"none\" stroke-width=\"2\" stroke-miterlimit=\"10\" />\n  </svg>\n</div>\n<!-- ============================================================== -->\n<!-- Wrapper -->\n<!-- ============================================================== -->\n<div id=\"wrapper\">\n  <!-- ============================================================== -->\n  <!-- Topbar header - style you can find in pages.scss -->\n  <!-- ============================================================== -->\n  <nav class=\"navbar navbar-default navbar-static-top m-b-0\">\n    <div class=\"navbar-header\">\n      <div class=\"top-left-part\">\n        <!-- Logo -->\n        <a class=\"logo\" routerLink=\"\">\n          <img src=\"assets/imgs/logo.png\" alt=\"home\" class=\"light-logo\" />\n        </a>\n      </div>\n      <!-- /Logo -->\n      <!-- Search input and Toggle icon -->\n      <ul class=\"nav navbar-top-links navbar-left\">\n        <li>\n          <a routerLink=\"javascript:void(0)\" class=\"open-close waves-effect waves-light\"><i class=\"ti-menu\"></i></a>\n        </li>\n      </ul>\n    </div>\n    <!-- /.navbar-header -->\n    <!-- /.navbar-top-links -->\n    <!-- /.navbar-static-side -->\n  </nav>\n  <!-- End Top Navigation -->\n  <!-- ============================================================== -->\n  <!-- Left Sidebar - style you can find in sidebar.scss  -->\n  <!-- ============================================================== -->\n  <div class=\"navbar-default sidebar\" role=\"navigation\">\n    <div class=\"sidebar-nav slimscrollsidebar\">\n      <ul class=\"nav\" id=\"side-menu\">\n        <li>\n          <a routerLink=\"/\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'home',\n              inActive: _selectedSideMenuItem != 'home'\n            }\" (click)=\"onMenuItemClicked('home')\">\n            <span class=\"hide-menu\"> اعدادات عامة</span></a>\n        </li>\n\n        <li>\n          <a routerLink=\"/live\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'live',\n              inActive: _selectedSideMenuItem != 'live'\n            }\" (click)=\"onMenuItemClicked('live')\">\n            <span class=\"hide-menu\"> البث المباشر</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/programs\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'programs',\n              inActive: _selectedSideMenuItem != 'programs'\n            }\" (click)=\"onMenuItemClicked('programs')\">\n            <span class=\"hide-menu\"> البرامج</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/events\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'events',\n              inActive: _selectedSideMenuItem != 'events'\n            }\" (click)=\"onMenuItemClicked('events')\">\n            <span class=\"hide-menu\"> الأحداث</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/articles\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'articles',\n              inActive: _selectedSideMenuItem != 'articles'\n            }\" (click)=\"onMenuItemClicked('articles')\">\n            <span class=\"hide-menu\"> اخر الاخبار</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/sports\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'sports',\n              inActive: _selectedSideMenuItem != 'sports'\n            }\" (click)=\"onMenuItemClicked('sports')\">\n            <span class=\"hide-menu\"> الرياضة</span></a>\n        </li>\n\n        <li>\n          <a routerLink=\"/links\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'links',\n              inActive: _selectedSideMenuItem != 'links'\n            }\" (click)=\"onMenuItemClicked('links')\">\n            <span class=\"hide-menu\"> الروابط</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/aboutUs\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'aboutUs',\n              inActive: _selectedSideMenuItem != 'aboutUs'\n            }\" (click)=\"onMenuItemClicked('aboutUs')\">\n            <span class=\"hide-menu\"> عنا</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/terms\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'terms',\n              inActive: _selectedSideMenuItem != 'terms'\n            }\" (click)=\"onMenuItemClicked('terms')\">\n            <span class=\"hide-menu\"> شروط الأستخدام</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/privacy\" class=\"waves-effect \" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'privacy',\n              inActive: _selectedSideMenuItem != 'privacy'\n            }\" (click)=\"onMenuItemClicked('privacy')\">\n            <span class=\"hide-menu\"> الخصوصية</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/contacts\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'contacts',\n              inActive: _selectedSideMenuItem != 'contacts'\n            }\" (click)=\"onMenuItemClicked('contacts')\">\n            <span class=\"hide-menu\"> الاتصال</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/team\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'team',\n              inActive: _selectedSideMenuItem != 'team'\n            }\" (click)=\"onMenuItemClicked('team')\">\n            <span class=\"hide-menu\"> الفريق</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/video\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'video',\n              inActive: _selectedSideMenuItem != 'video'\n            }\" (click)=\"onMenuItemClicked('video')\">\n            <span class=\"hide-menu\"> فيديو</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/Notification\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'Notification',\n              inActive: _selectedSideMenuItem != 'Notification'\n            }\" (click)=\"onMenuItemClicked('Notification')\">\n            <span class=\"hide-menu\"> الإشعارات</span></a>\n        </li>\n        <li>\n          <a routerLink=\"/ChangePassword\" class=\"waves-effect\" [ngClass]=\"{\n              active: _selectedSideMenuItem == 'changePassword',\n              inActive: _selectedSideMenuItem != 'changePassword'\n            }\" (click)=\"onMenuItemClicked('changePassword')\">\n            <span class=\"hide-menu\"> تغيير كلمه السر</span></a>\n        </li>\n      </ul>\n    </div>\n  </div>\n  <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -575,12 +682,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./pages/edit-event/edit-event.component */ "./src/app/pages/edit-event/edit-event.component.ts");
 /* harmony import */ var _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./pages/edit-event-schedule/edit-event-schedule.component */ "./src/app/pages/edit-event-schedule/edit-event-schedule.component.ts");
 /* harmony import */ var _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./pages/notification/notification.component */ "./src/app/pages/notification/notification.component.ts");
+/* harmony import */ var _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./pages/change-password/change-password.component */ "./src/app/pages/change-password/change-password.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -658,7 +767,8 @@ var AppModule = /** @class */ (function () {
                 _pages_event_details_event_details_component__WEBPACK_IMPORTED_MODULE_40__["EventDetailsComponent"],
                 _pages_edit_event_edit_event_component__WEBPACK_IMPORTED_MODULE_41__["EditEventComponent"],
                 _pages_edit_event_schedule_edit_event_schedule_component__WEBPACK_IMPORTED_MODULE_42__["EditEventScheduleComponent"],
-                _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_43__["NotificationComponent"]
+                _pages_notification_notification_component__WEBPACK_IMPORTED_MODULE_43__["NotificationComponent"],
+                _pages_change_password_change_password_component__WEBPACK_IMPORTED_MODULE_44__["ChangePasswordComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -674,10 +784,7 @@ var AppModule = /** @class */ (function () {
                 amazing_time_picker__WEBPACK_IMPORTED_MODULE_11__["AmazingTimePickerModule"],
                 ngx_webstorage_service__WEBPACK_IMPORTED_MODULE_13__["StorageServiceModule"]
             ],
-            providers: [
-                _services_service_handler_service__WEBPACK_IMPORTED_MODULE_17__["ServiceHandlerProvider"],
-                _services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_12__["LoginActivateService"]
-            ],
+            providers: [_services_service_handler_service__WEBPACK_IMPORTED_MODULE_17__["ServiceHandlerProvider"], _services_uiServices_login_activate_service__WEBPACK_IMPORTED_MODULE_12__["LoginActivateService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_15__["AppComponent"]]
         })
     ], AppModule);
@@ -2244,6 +2351,137 @@ var ArticlesComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], src_app_services_uiServices_articles_service__WEBPACK_IMPORTED_MODULE_4__["ArticlesService"]])
     ], ArticlesComponent);
     return ArticlesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/change-password/change-password.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/change-password/change-password.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/pages/change-password/change-password.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/change-password/change-password.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"page-wrapper\">\n  <div class=\"container-fluid\">\n    <div class=\"row bg-title\">\n      <div class=\"  col-xs-12\">\n        <h1 class=\"page-title\">تغيير كمله السر</h1>\n      </div>\n      <!-- /.col-lg-12 -->\n    </div>\n    <div class=\"row\">\n      <div class=\"col-md-12\">\n        <div class=\"white-box \">\n          <form #changePasswordForm=\"ngForm\" (ngSubmit)=\"save(changePasswordForm)\">\n\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>اسم المستخدم</p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n                <input required type=\"text\" name=\"username\" [(ngModel)]=\"changePasswordObject.username\"\n                  class=\"form-control form-control-line text_filed_ios_android\" />\n              </div>\n            </div>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>كلمة السر القديمة</p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n                <input required type=\"password\" name=\"oldPassword\" [(ngModel)]=\"changePasswordObject.oldPassword\"\n                  class=\"form-control form-control-line text_filed_ios_android\" />\n              </div>\n            </div>\n\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>كلمة السر الجديدة</p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n                <input required type=\"password\" name=\"newPassword\" [(ngModel)]=\"changePasswordObject.newPassword\"\n                  class=\"form-control form-control-line text_filed_ios_android\" />\n              </div>\n            </div>\n            <div class=\"row choose_logo1\">\n              <div class=\"col-md-4 logo_channel_text\" style=\"float: right;\">\n                <p>تأكيد كلمة السر الجديدة</p>\n              </div>\n              <div class=\"col-md-6 \" style=\"float: right;\">\n                <input required type=\"password\" name=\"newPasswordConfirmation\"\n                  [(ngModel)]=\"changePasswordObject.newPasswordConfirmation\"\n                  class=\"form-control form-control-line text_filed_ios_android\" />\n              </div>\n            </div>\n            <br />\n            <div class=\"col-xs-12\" style=\"text-align: center\">\n              <button type=\"submit\" class=\"btn btn_submit btn-info waves-effect waves-light \">\n                حفظ\n              </button>\n            </div>\n          </form>\n\n          <br /><br />\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- /.container-fluid -->\n  <footer class=\"footer text-center\">\n    DEVELOPED BY: LIBYANA MEDIA PRODUCTION\n  </footer>\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #successfulDialog title=\"تمت العملية بنجاح\" type=\"success\"></swal>\n<swal #errorDialog title=\"حدث خطأ ما، برجاء الاتصال بالدعم الفني\" type=\"error\"></swal>\n<swal #imageValidation title=\"من فضلك قم باختيار صورة\" type=\"error\"></swal>"
+
+/***/ }),
+
+/***/ "./src/app/pages/change-password/change-password.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/change-password/change-password.component.ts ***!
+  \********************************************************************/
+/*! exports provided: ChangePasswordComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangePasswordComponent", function() { return ChangePasswordComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/fesm5/ngx-spinner.js");
+/* harmony import */ var _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @toverux/ngx-sweetalert2 */ "./node_modules/@toverux/ngx-sweetalert2/esm5/toverux-ngx-sweetalert2.js");
+/* harmony import */ var src_app_services_uiServices_home_page_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/uiServices/home-page-services.service */ "./src/app/services/uiServices/home-page-services.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_webstorage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-webstorage-service */ "./node_modules/ngx-webstorage-service/esm5/ngx-webstorage-service.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+var ChangePasswordComponent = /** @class */ (function () {
+    function ChangePasswordComponent(homeService, spinner, router, storage) {
+        this.homeService = homeService;
+        this.spinner = spinner;
+        this.router = router;
+        this.storage = storage;
+        this.changePasswordObject = {
+            username: "",
+            oldPassword: "",
+            newPassword: "",
+            newPasswordConfirmation: ""
+        };
+    }
+    ChangePasswordComponent.prototype.ngOnInit = function () {
+        this.errorDialog.options = {
+            confirmButtonText: "حسنا"
+        };
+        this.successfulDialog.options = {
+            confirmButtonText: "تم"
+        };
+    };
+    ChangePasswordComponent.prototype.save = function (changePasswordForm) {
+        var _this = this;
+        console.log("Save");
+        console.log(changePasswordForm);
+        if (changePasswordForm.valid && this.changePasswordObject.newPassword == this.changePasswordObject.newPasswordConfirmation) {
+            this.homeService.performChangePassword(this.changePasswordObject).then(function (response) {
+                console.log(response);
+                _this.successfulDialog.show();
+            }, function (error) {
+                _this.errorDialog.options = {
+                    title: error.toString()
+                };
+                _this.errorDialog.show();
+            });
+        }
+        else if (this.changePasswordObject.newPassword != this.changePasswordObject.newPasswordConfirmation) {
+            this.errorDialog.options = {
+                title: "كلمة السر والتأكيد غير متطابقين"
+            };
+            this.errorDialog.show();
+        }
+        else {
+            this.errorDialog.options = {
+                title: "من فضلك قم بملء البيانات المطلوبة"
+            };
+            this.errorDialog.show();
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('errorDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ChangePasswordComponent.prototype, "errorDialog", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('successfulDialog'),
+        __metadata("design:type", _toverux_ngx_sweetalert2__WEBPACK_IMPORTED_MODULE_2__["SwalComponent"])
+    ], ChangePasswordComponent.prototype, "successfulDialog", void 0);
+    ChangePasswordComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-change-password',
+            template: __webpack_require__(/*! ./change-password.component.html */ "./src/app/pages/change-password/change-password.component.html"),
+            styles: [__webpack_require__(/*! ./change-password.component.css */ "./src/app/pages/change-password/change-password.component.css")]
+        }),
+        __param(3, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])(ngx_webstorage_service__WEBPACK_IMPORTED_MODULE_5__["SESSION_STORAGE"])),
+        __metadata("design:paramtypes", [src_app_services_uiServices_home_page_services_service__WEBPACK_IMPORTED_MODULE_3__["HomePageServicesService"],
+            ngx_spinner__WEBPACK_IMPORTED_MODULE_1__["NgxSpinnerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], Object])
+    ], ChangePasswordComponent);
+    return ChangePasswordComponent;
 }());
 
 
@@ -4992,7 +5230,7 @@ module.exports = ".login_body{\n    background-color: #5a5a5a;\n    position: ab
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login_body\">\n  <div class=\"content\">\n\n    <img src=\"assets/imgs/logo-big.png\" class=\"logo\">\n\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"save(loginForm)\">\n      <div class=\"form-group\">\n        <label for=\"exampleInputEmail1\">إسم المستخدم</label>\n        <input type=\"Text\" required name=\"username\" [(ngModel)]=\"loginObject.username\" class=\"form-control\"\n          style=\"text-align: right\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputPassword1\">كلمة المرور</label>\n        <input type=\"password\" required name=\"password\" [(ngModel)]=\"loginObject.password\" class=\"form-control\"\n          style=\"text-align: right\">\n      </div>\n\n      <button type=\"submit\" class=\"btn btn-primary entre\">دخول</button>\n    </form>\n\n\n\n\n\n\n  </div>\n\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #errorDialog title=\"حدث خطأ ما، برجاء الاتصال بالدعم الفني\" type=\"error\"></swal>"
+module.exports = "<div class=\"login_body\">\n  <div class=\"content\">\n\n    <img src=\"assets/imgs/logo-big.png\" class=\"logo\">\n\n\n    <form #loginForm=\"ngForm\" (ngSubmit)=\"save(loginForm)\">\n      <div class=\"form-group\">\n        <label for=\"exampleInputEmail1\">اسم المستخدم</label>\n        <input type=\"Text\" required name=\"username\" [(ngModel)]=\"loginObject.username\" class=\"form-control\"\n          style=\"text-align: right\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputPassword1\">كلمة المرور</label>\n        <input type=\"password\" required name=\"password\" [(ngModel)]=\"loginObject.password\" class=\"form-control\"\n          style=\"text-align: right\">\n      </div>\n\n      <button type=\"submit\" class=\"btn btn-primary entre\">دخول</button>\n    </form>\n\n\n\n\n\n\n  </div>\n\n</div>\n\n<ngx-spinner></ngx-spinner>\n<swal #errorDialog title=\"حدث خطأ ما، برجاء الاتصال بالدعم الفني\" type=\"error\"></swal>"
 
 /***/ }),
 
@@ -8075,6 +8313,29 @@ var HomePageServicesService = /** @class */ (function () {
                             console.log(response);
                             if (response.data && response.data.login) {
                                 resolve(response.data.login);
+                            }
+                            else {
+                                reject(response.errors[0].message);
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            reject("Please check your internet connection");
+                        });
+                    })];
+            });
+        });
+    };
+    HomePageServicesService.prototype.performChangePassword = function (changePasswordFormValue) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var query;
+            return __generator(this, function (_a) {
+                query = "mutation{\n      resetPassowrd(username:\"" + changePasswordFormValue.username + "\",password:\"" + changePasswordFormValue.oldPassword + "\",new_passowrd:\"" + changePasswordFormValue.newPassword + "\"){\n        userId\n        token\n      }\n    }";
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        _this.serviceHadler.runService(src_app_Constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].BASE_URL, "POST", null, { "query": query }).subscribe(function (response) {
+                            console.log(response);
+                            if (response.data && response.data.resetPassowrd) {
+                                resolve(response.data.resetPassowrd);
                             }
                             else {
                                 reject(response.errors[0].message);
